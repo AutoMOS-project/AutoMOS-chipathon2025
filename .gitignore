@@ -6,6 +6,9 @@
 # Ignore all log files
 *.log
 
+# Ignore local environment variables file
+.env
+
 # Ignore all temp files
 temp/  
 

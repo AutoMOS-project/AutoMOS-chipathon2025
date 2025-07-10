@@ -28,6 +28,11 @@
 
 # Set the DESIGNS environment variable to the 'designs' subdirectory of the current directory
 export DESIGNS="$(pwd)/designs"
+ENVFILE=".env"
+
+if [ -f "${ENVFILE}" ]; then
+	source "${ENVFILE}"
+fi
 
 if [ -n "${DRY_RUN}" ]; then
 	echo "[INFO] This is a dry run, all commands will be printed to the shell (Commands printed but not executed are marked with $)!"
