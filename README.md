@@ -25,6 +25,16 @@ We are the AutoMOS team, and it is constituted by:
 - Rodrigo Marin 
 
 
+## Environment settings
+
+We use an image with the required GLayout installed packages. To use the same,
+please create a `.env` file at the repository root (will be ignored by git) and
+fill with the following configuration:
+
+```
+DOCKER_USER=luighiv
+DOCKER_TAG=klive
+```
 
 
 ## Library Structure Conventions
