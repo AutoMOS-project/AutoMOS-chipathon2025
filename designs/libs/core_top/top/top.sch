@@ -67,8 +67,8 @@ C {lab_wire.sym} 360 380 0 0 {name=p49 lab=TEST_SEL[2:0]}
 C {lab_wire.sym} 940 0 0 1 {name=p43 lab=VLDO_TEST}
 C {lab_wire.sym} 740 20 0 0 {name=p44 lab=TEST_EN}
 C {lab_wire.sym} 360 240 0 0 {name=p45 lab=VLDO_TEST}
-C {noconn.sym} 360 260 0 0 {name=l1}
 C {lab_wire.sym} 560 180 0 1 {name=p50 lab=TEST_OUT}
 C {lab_wire.sym} 740 180 0 0 {name=p51 lab=VCO_IN}
-C {noconn.sym} 360 280 0 0 {name=l2}
 C {noconn.sym} 600 -60 0 1 {name=l3[2:0]}
+C {lab_wire.sym} 360 260 0 0 {name=p52 lab=VSS}
+C {lab_wire.sym} 360 280 0 0 {name=p53 lab=VSS}
