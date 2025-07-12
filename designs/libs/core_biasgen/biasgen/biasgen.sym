@@ -1,0 +1,42 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 7 80 -20 80 0 {}
+L 7 -20 40 0 40 {}
+L 7 200 20 220 20 {}
+L 7 200 40 220 40 {}
+L 7 -20 80 0 80 {}
+L 7 200 80 220 80 {}
+L 7 -20 100 0 100 {}
+L 7 200 100 220 100 {}
+L 7 100 120 100 140 {}
+L 7 80 120 80 140 {}
+B 5 77.5 -22.5 82.5 -17.5 {name=VDD dir=inout}
+B 5 -22.5 37.5 -17.5 42.5 {name=VBG dir=inout}
+B 5 217.5 17.5 222.5 22.5 {name=IPTAT[2:0] dir=inout}
+B 5 217.5 37.5 222.5 42.5 {name=IZTC[2:0] dir=inout}
+B 5 -22.5 77.5 -17.5 82.5 {name=IPTAT_IN dir=inout}
+B 5 217.5 77.5 222.5 82.5 {name=VREF_1V dir=inout}
+B 5 -22.5 97.5 -17.5 102.5 {name=IZTC_IN dir=inout}
+B 5 217.5 97.5 222.5 102.5 {name=VREF_0P5V dir=inout}
+B 5 97.5 137.5 102.5 142.5 {name=SUB dir=inout}
+B 5 77.5 137.5 82.5 142.5 {name=VSS dir=inout}
+P 4 5 200 0 0 0 0 120 200 120 200 0 {}
+T {@symname} 50.5 44 0 0 0.3 0.3 {}
+T {@name} 155 -12 0 0 0.2 0.2 {}
+T {VDD} 76 5 3 1 0.2 0.2 {}
+T {VBG} 5 44 2 1 0.2 0.2 {}
+T {IPTAT[2:0]} 195 16 0 1 0.2 0.2 {}
+T {IZTC[2:0]} 195 36 0 1 0.2 0.2 {}
+T {IPTAT_IN} 5 84 2 1 0.2 0.2 {}
+T {VREF_1V} 195 76 0 1 0.2 0.2 {}
+T {IZTC_IN} 5 104 2 1 0.2 0.2 {}
+T {VREF_0P5V} 195 96 0 1 0.2 0.2 {}
+T {SUB} 104 115 1 1 0.2 0.2 {}
+T {VSS} 84 115 1 1 0.2 0.2 {}
