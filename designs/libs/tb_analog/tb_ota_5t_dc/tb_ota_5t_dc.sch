@@ -44,7 +44,7 @@ OP
 show all
 
 DC V3 0 3.3 0.01
-TRAN 10u
+*TRAN 10u
 write tb_ota_5t.raw
 .endc
 "}
