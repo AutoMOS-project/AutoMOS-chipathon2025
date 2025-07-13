@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-- ** Stage **: layout design
+- **Stage**: layout design
 
-- ** Block | subblock **: bandgap
+- **Block | subblock**: bandgap
 
-- ** Task ** : Layout completed with clean DRC
+- **Task**: Layout completed with clean DRC

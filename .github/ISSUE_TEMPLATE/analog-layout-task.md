@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-- ** Stage **: layout design
+- **Stage**: layout design
 
-- ** Block | subblock **: bandgap
+- **Block | subblock**: bandgap
 
-- ** Task ** : Task description
+- **Task**: Task description

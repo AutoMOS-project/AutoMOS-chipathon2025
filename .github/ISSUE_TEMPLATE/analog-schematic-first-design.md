@@ -11,4 +11,4 @@ assignees: ''
 
 - **Block | subblock**: bandgap
 
-- **Task** : First schematic with functional verification
+- **Task**: First schematic with functional verification

@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-- ** Stage **: layout design
+- **Stage**: layout design
 
-- ** Block | subblock **: bandgap
+- **Block | subblock**: bandgap
 
-- ** Task ** : Create/adapt GLayout templates for substructures inside block
+- **Task** : Create/adapt GLayout templates for substructures inside block
