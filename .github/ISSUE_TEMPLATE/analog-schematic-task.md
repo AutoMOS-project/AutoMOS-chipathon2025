@@ -11,4 +11,4 @@ assignees: ''
 
 - **Block | subblock**: bandgap
 
-- **Task** : Task description
+- **Task**: Task description
