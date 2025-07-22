@@ -10,6 +10,7 @@ tree() {
 }
 
 cd /foss/designs
+export PATH="$DESIGNS/scripts:$PATH"
 
 #==============================================================
 # PDK
