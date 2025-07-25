@@ -1,21 +1,16 @@
 # Layout Workflow with Klayout
 
-## Launch Klayout with library manager
+## Launch Klayout 
 
 ```bash
-cd /foss/designs
-./scripts/klayout_start.sh
+klayout
 ```
+The library management plugin is preloaded with shell alias.
 
-## Rebuild layout library
-The layout library needs to be rebuilt after you create a new gds file under the `/foss/designs/libs` directory hierarchy.
-```bash
-cd /foss/designs
-./scripts/klayout_rebuild_libraries.py
-```
-This creates a `libs.json` file under the `/foss/designs/libs` directory.
-In Klayout, click `Load Libraries` -> select `libs.json` -> open
-Each gds is loaded as a separate library, within which there is one top cell.
+## Reload layout library
+The layout library must be reloaded after you create a new gds file under the `/foss/designs/libs` directory hierarchy or make any changes to these files. This is critical to propagate the layout modifications across all hierarchies.
+
+Each gds is loaded as a separate library, within which there is usually only one top cell.
 This is not the most elegant way of organizing hierarchical layout database, but so far it works to avoid cell name collision and support dynamic reload. 
 
 
