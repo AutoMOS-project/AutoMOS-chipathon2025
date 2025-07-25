@@ -31,3 +31,25 @@ mkdir -p /headless/.xschem/simulations
 # export KLAYOUT_PATH=/foss/designs/klayout_lib:$KLAYOUT_PATH
 mkdir -p /headless/.klayout/libraries
 
+#==============================================================
+# GDS3D
+alias GDS3D="GDS3D -p /foss/designs/scripts/gf180mcu.txt -i"
+
+#==============================================================
+# Shell
+# Extend path so you can install local tools
+export PATH="/foss/designs/user_setup/bin:$PATH"
+
+# Show PDK in the prompt
+export PS1="\[\e[91m\]PDK: $(echo $PDK)\[\e[0m\] ${PS1}"
+export PS1='\[\e[91m\]PDK: $(echo $PDK) \[\033[0;32m\]\w >\[\033[0;38m\] '
+
+alias grep="grep -i"
+
+if [ ! -f "$HOME/.config/xfce4/.init_done" ]; then
+  if [ -d "/foss/designs/user_config/dot_config_xfce4" ]; then
+    mkdir -p "$HOME/.config/xfce4"
+    cp -r /foss/designs/user_config/dot_config_xfce4/* "$HOME/.config/xfce4"
+    touch "$HOME/.config/xfce4/.init_done"
+  fi
+fi
