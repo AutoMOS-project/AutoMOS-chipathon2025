@@ -4,25 +4,25 @@ K {}
 V {}
 S {}
 E {}
-N 1220 -500 1220 -480 {lab=ota}
+N 1220 -500 1220 -480 {lab=#net1}
 N 1300 -500 1300 -470 {lab=GND}
 N 860 -700 860 -660 {lab=VDD}
 N 1300 -700 1300 -660 {lab=VDD}
 N 860 -600 860 -560 {lab=GND}
 N 970 -700 970 -660 {lab=VDD}
-N 970 -600 970 -550 {lab=#net1}
-N 970 -550 1150 -550 {lab=#net1}
+N 970 -600 970 -550 {lab=#net2}
+N 970 -550 1150 -550 {lab=#net2}
 N 1080 -610 1080 -510 {lab=vref}
 N 1080 -610 1150 -610 {lab=vref}
 N 1520 -580 1520 -520 {lab=out}
 N 1450 -580 1520 -580 {lab=out}
 N 1620 -420 1620 -400 {lab=GND}
-N 1620 -500 1620 -480 {lab=#net2}
+N 1620 -500 1620 -480 {lab=#net3}
 N 1620 -580 1620 -560 {lab=out}
 N 1520 -580 1620 -580 {lab=out}
 N 1520 -460 1520 -400 {lab=GND}
 N 1080 -450 1080 -400 {lab=GND}
-N 1220 -480 1220 -440 {lab=ota}
+N 1220 -480 1220 -440 {lab=#net1}
 C {noconn.sym} 1220 -440 3 0 {name=l1}
 C {gnd.sym} 1300 -470 0 0 {name=l2 lab=GND}
 C {res.sym} 1520 -490 0 0 {name=RL
@@ -91,9 +91,8 @@ tran $&tstep $&tstop
 ** Plots
 setplot dc1
 let vout=v(out)
-let vota=v(ota)
 let vin=v(Vdd)
-plot vout ota vin
+plot vout vin
 
 setplot tran1
 let vout=v(out)
@@ -107,4 +106,3 @@ write tb_ldo.raw
 C {lab_wire.sym} 1570 -580 0 0 {name=p2 sig_type=std_logic lab=out}
 C {libs/core_ldo/ldo/ldo.sym} 1300 -580 0 0 {name=x2
 }
-C {lab_wire.sym} 1220 -460 0 0 {name=p3 sig_type=std_logic lab=ota}
