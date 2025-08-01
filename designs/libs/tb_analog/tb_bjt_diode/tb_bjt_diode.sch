@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1430 -510 2230 -190 {flags=graph
+B 2 1200 -680 2000 -360 {flags=graph
 y1=0.51
 y2=0.87
 ypos1=0
@@ -32,56 +32,56 @@ node="\\"Vbe2 (SS);vbe2 % $netlist_dir/tb_bjt_diode_ss.raw\\"
 \\"Vbe2 (FF);vbe2 % $netlist_dir/tb_bjt_diode_ff.raw\\"
 \\"Vbe1 (FF);vbe1 % $netlist_dir/tb_bjt_diode_ff.raw\\""
 rawfile=$netlist_dir/tb_bjt_diode.raw}
-N 1020 -190 1060 -190 {lab=GND}
-N 1060 -260 1060 -190 {lab=GND}
-N 1060 -420 1060 -320 {lab=vbe1}
-N 640 -300 640 -280 {lab=ibias}
-N 640 -300 680 -300 {lab=ibias}
-N 740 -300 780 -300 {lab=vsns}
-N 780 -300 780 -280 {lab=vsns}
-N 780 -220 780 -200 {lab=GND}
-N 640 -200 780 -200 {lab=GND}
-N 640 -210 640 -200 {lab=GND}
-N 640 -220 640 -210 {lab=GND}
-N 900 -220 900 -200 {lab=GND}
-N 780 -200 900 -200 {lab=GND}
-N 900 -300 900 -280 {lab=3V3}
-N 1210 -190 1250 -190 {lab=GND}
-N 1250 -260 1250 -190 {lab=GND}
-N 1250 -420 1250 -320 {lab=vbe2}
-N 1020 -290 1020 -260 {lab=#net1}
-N 1020 -200 1020 -190 {lab=GND}
-N 1210 -290 1210 -260 {lab=#net2}
-N 1210 -200 1210 -190 {lab=GND}
-C {symbols/pnp_05p00x00p42.sym} 1040 -290 0 0 {name=Q1
+N 790 -360 830 -360 {lab=GND}
+N 830 -430 830 -360 {lab=GND}
+N 830 -590 830 -490 {lab=vbe1}
+N 410 -470 410 -450 {lab=ibias}
+N 410 -470 450 -470 {lab=ibias}
+N 510 -470 550 -470 {lab=vsns}
+N 550 -470 550 -450 {lab=vsns}
+N 550 -390 550 -370 {lab=GND}
+N 410 -370 550 -370 {lab=GND}
+N 410 -380 410 -370 {lab=GND}
+N 410 -390 410 -380 {lab=GND}
+N 670 -390 670 -370 {lab=GND}
+N 550 -370 670 -370 {lab=GND}
+N 670 -470 670 -450 {lab=3V3}
+N 980 -360 1020 -360 {lab=GND}
+N 1020 -430 1020 -360 {lab=GND}
+N 1020 -590 1020 -490 {lab=vbe2}
+N 790 -460 790 -430 {lab=#net1}
+N 790 -370 790 -360 {lab=GND}
+N 980 -460 980 -430 {lab=#net2}
+N 980 -370 980 -360 {lab=GND}
+C {symbols/pnp_05p00x00p42.sym} 810 -460 0 0 {name=Q1
 model=pnp_05p00x00p42
 spiceprefix=X
 m=2}
-C {isource.sym} 640 -250 2 0 {name=I0 value=1u}
-C {res.sym} 710 -300 1 0 {name=Rsense
+C {isource.sym} 410 -420 2 0 {name=I0 value=1u}
+C {res.sym} 480 -470 1 0 {name=Rsense
 value=1k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} 780 -250 0 0 {name=vsense value=0 savecurrent=false}
-C {gnd.sym} 640 -200 0 0 {name=l1 lab=GND}
-C {lab_pin.sym} 640 -300 0 0 {name=p1 sig_type=std_logic lab=ibias}
-C {lab_pin.sym} 780 -300 2 0 {name=p2 sig_type=std_logic lab=vsns}
-C {vsource.sym} 900 -250 0 0 {name=V1 value=3.3 savecurrent=false}
-C {lab_pin.sym} 900 -300 0 0 {name=p22 sig_type=std_logic lab=3V3}
-C {cccs.sym} 1060 -450 0 0 {name=F1 vnam=vsense value=8}
-C {gnd.sym} 1060 -480 1 0 {name=l2 lab=GND}
-C {cccs.sym} 1250 -450 0 0 {name=F2 vnam=vsense value=8}
-C {gnd.sym} 1250 -480 1 0 {name=l3 lab=GND}
-C {symbols/pnp_05p00x00p42.sym} 1230 -290 0 0 {name=Q2
+C {vsource.sym} 550 -420 0 0 {name=vsense value=0 savecurrent=false}
+C {gnd.sym} 410 -370 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} 410 -470 0 0 {name=p1 sig_type=std_logic lab=ibias}
+C {lab_pin.sym} 550 -470 2 0 {name=p2 sig_type=std_logic lab=vsns}
+C {vsource.sym} 670 -420 0 0 {name=V1 value=3.3 savecurrent=false}
+C {lab_pin.sym} 670 -470 0 0 {name=p22 sig_type=std_logic lab=3V3}
+C {cccs.sym} 830 -620 0 0 {name=F1 vnam=vsense value=8}
+C {gnd.sym} 830 -650 1 0 {name=l2 lab=GND}
+C {cccs.sym} 1020 -620 0 0 {name=F2 vnam=vsense value=8}
+C {gnd.sym} 1020 -650 1 0 {name=l3 lab=GND}
+C {symbols/pnp_05p00x00p42.sym} 1000 -460 0 0 {name=Q2
 model=pnp_05p00x00p42
 spiceprefix=X
 m=16}
-C {gnd.sym} 1060 -190 0 0 {name=l4 lab=GND}
-C {gnd.sym} 1250 -190 0 0 {name=l5 lab=GND}
-C {ammeter.sym} 1020 -230 2 0 {name=Vbase1 savecurrent=true spice_ignore=0}
-C {ammeter.sym} 1210 -230 2 0 {name=Vbase2 savecurrent=true spice_ignore=0}
-C {devices/code_shown.sym} 0 -140 0 0 {name=MODELS only_toplevel=true
+C {gnd.sym} 830 -360 0 0 {name=l4 lab=GND}
+C {gnd.sym} 1020 -360 0 0 {name=l5 lab=GND}
+C {ammeter.sym} 790 -400 2 0 {name=Vbase1 savecurrent=true spice_ignore=0}
+C {ammeter.sym} 980 -400 2 0 {name=Vbase2 savecurrent=true spice_ignore=0}
+C {devices/code_shown.sym} 0 -240 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -91,7 +91,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice bjt_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 0 -410 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 0 -510 0 0 {name=NGSPICE only_toplevel=true
 value="
 .options savecurrents
 .control
@@ -101,9 +101,9 @@ dc temp -40 125 1
 write tb_bjt_diode.raw
 .endc
 "}
-C {lab_wire.sym} 1060 -370 0 0 {name=p3 sig_type=std_logic lab=vbe1}
-C {lab_wire.sym} 1250 -370 0 0 {name=p4 sig_type=std_logic lab=vbe2}
-C {launcher.sym} 420 -580 0 0 {name=h2
+C {lab_wire.sym} 830 -540 0 0 {name=p3 sig_type=std_logic lab=vbe1}
+C {lab_wire.sym} 1020 -540 0 0 {name=p4 sig_type=std_logic lab=vbe2}
+C {launcher.sym} 110 -680 0 0 {name=h2
 descr="Run PVT"
 tclcommand="
 set spicefile $netlist_dir/tb_bjt_diode.spice
@@ -120,3 +120,4 @@ exec sed -i \{/^\\.lib/s/ff/ss/\} $spicefile
 exec sed -i \{s/tb_bjt_diode_ff.raw/tb_bjt_diode_ss.raw/\} $spicefile
 simulate
 "}
+C {title.sym} 160 -40 0 0 {name=l6 author="Luighi Viton"}
