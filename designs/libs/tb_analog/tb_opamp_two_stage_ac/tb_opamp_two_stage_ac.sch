@@ -50,37 +50,37 @@ logy=0
 rawfile=$netlist_dir/tb_opamp_two_stage_ac.raw
 sim_type=ac
 autoload=1}
-N 590 -440 590 -390 {lab=VSS}
-N 590 -420 660 -420 {lab=VSS}
-N 660 -440 660 -420 {lab=VSS}
-N 590 -550 590 -500 {lab=VDD}
-N 660 -580 660 -530 {lab=vp}
-N 970 -500 1050 -500 {lab=vout}
-N 1050 -500 1050 -480 {lab=vout}
-N 760 -620 1000 -620 {lab=vout}
-N 1000 -620 1000 -500 {lab=vout}
-N 520 -440 520 -420 {lab=VSS}
-N 520 -420 590 -420 {lab=VSS}
-N 520 -540 520 -500 {lab=ibias}
-N 760 -500 830 -500 {lab=vout}
-N 760 -620 760 -500 {lab=vout}
-N 660 -470 660 -440 {lab=VSS}
-C {gnd.sym} 590 -330 0 0 {name=l1 lab=GND}
-C {lab_pin.sym} 1050 -500 0 1 {name=p4 lab=vout}
-C {vsource.sym} 590 -470 0 0 {name=V1 value="3 AC \{ac_psrr\}" savecurrent=false}
-C {vsource.sym} 660 -500 0 0 {name=V2 
+N 600 -610 600 -560 {lab=VSS}
+N 600 -590 670 -590 {lab=VSS}
+N 670 -610 670 -590 {lab=VSS}
+N 600 -720 600 -670 {lab=VDD}
+N 670 -750 670 -700 {lab=vp}
+N 980 -670 1060 -670 {lab=vout}
+N 1060 -670 1060 -650 {lab=vout}
+N 770 -790 1010 -790 {lab=vout}
+N 1010 -790 1010 -670 {lab=vout}
+N 530 -610 530 -590 {lab=VSS}
+N 530 -590 600 -590 {lab=VSS}
+N 530 -710 530 -670 {lab=ibias}
+N 770 -670 840 -670 {lab=vout}
+N 770 -790 770 -670 {lab=vout}
+N 670 -640 670 -610 {lab=VSS}
+C {gnd.sym} 600 -500 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} 1060 -670 0 1 {name=p4 lab=vout}
+C {vsource.sym} 600 -640 0 0 {name=V1 value="3 AC \{ac_psrr\}" savecurrent=false}
+C {vsource.sym} 670 -670 0 0 {name=V2 
 value="1.65 AC \{ac_buffer\}"}
-C {vsource.sym} 590 -360 0 0 {name=VSS_sense value=0 savecurrent=false}
-C {lab_pin.sym} 660 -420 2 0 {name=p7 lab=VSS}
-C {lab_wire.sym} 590 -530 0 0 {name=p8  lab=VDD}
-C {lab_wire.sym} 660 -560 0 0 {name=p9  lab=vp}
-C {capa.sym} 1050 -450 0 0 {name=C2
+C {vsource.sym} 600 -530 0 0 {name=VSS_sense value=0 savecurrent=false}
+C {lab_pin.sym} 670 -590 2 0 {name=p7 lab=VSS}
+C {lab_wire.sym} 600 -700 0 0 {name=p8  lab=VDD}
+C {lab_wire.sym} 670 -730 0 0 {name=p9  lab=vp}
+C {capa.sym} 1060 -620 0 0 {name=C2
 m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 1050 -420 1 1 {name=p11 lab=VSS}
-C {devices/code_shown.sym} 10 -150 0 0 {name=MODELS only_toplevel=true
+C {lab_pin.sym} 1060 -590 1 1 {name=p11 lab=VSS}
+C {devices/code_shown.sym} 20 -320 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -89,7 +89,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} -10 -910 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 0 -1080 0 0 {name=NGSPICE only_toplevel=true
 value="
 .param ac_buffer=0
 .param ac_psrr=0
@@ -120,17 +120,18 @@ write tb_opamp_two_stage_ac.raw
 
 .endc
 "}
-C {isource.sym} 520 -470 0 0 {name=I0 value=2u}
-C {lab_pin.sym} 520 -520 2 1 {name=p12 lab=ibias}
-C {libs/core_analog/opamp_two_stage/opamp_two_stage.sym} 830 -440 0 0 {name=x1}
-C {lab_pin.sym} 890 -560 0 1 {name=p1 lab=VDD}
-C {lab_pin.sym} 830 -520 0 0 {name=p2 lab=ibias}
-C {lab_pin.sym} 830 -480 0 0 {name=p5 lab=vp}
-C {lab_pin.sym} 890 -440 0 1 {name=p6 lab=VSS}
-C {launcher.sym} 780 -850 0 0 {name=h5
+C {isource.sym} 530 -640 0 0 {name=I0 value=2u}
+C {lab_pin.sym} 530 -690 2 1 {name=p12 lab=ibias}
+C {libs/core_analog/opamp_two_stage/opamp_two_stage.sym} 840 -610 0 0 {name=x1}
+C {lab_pin.sym} 900 -730 0 1 {name=p1 lab=VDD}
+C {lab_pin.sym} 840 -690 0 0 {name=p2 lab=ibias}
+C {lab_pin.sym} 840 -650 0 0 {name=p5 lab=vp}
+C {lab_pin.sym} 900 -610 0 1 {name=p6 lab=VSS}
+C {launcher.sym} 790 -1020 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_opamp_two_stage_dc.raw"
 }
-C {launcher.sym} 780 -810 0 0 {name=h1
+C {launcher.sym} 790 -980 0 0 {name=h1
 descr="Backannotate" 
 tclcommand="xschem annotate_op"}
+C {title.sym} 160 -30 0 0 {name=l2 author="Luighi Viton"}

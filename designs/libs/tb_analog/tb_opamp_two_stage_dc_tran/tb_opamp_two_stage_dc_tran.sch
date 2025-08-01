@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1190 -1250 1990 -850 {flags=graph
+B 2 1190 -1370 1990 -970 {flags=graph
 y1=0
 y2=3.3
 ypos1=0
@@ -30,7 +30,7 @@ color="4 7"
 node="vout
 vp"
 dataset=-1}
-B 2 1190 -400 1990 0 {flags=graph
+B 2 1190 -520 1990 -120 {flags=graph
 y1=0
 y2=1.7
 ypos1=0
@@ -54,7 +54,7 @@ logy=0
 rawfile=$netlist_dir/tb_opamp_two_stage_dc_tran.raw
 sim_type=tran
 autoload=1}
-B 2 1190 -850 1990 -450 {flags=graph
+B 2 1190 -970 1990 -570 {flags=graph
 y1=3.6e-06
 y2=0.2
 ypos1=0
@@ -76,36 +76,36 @@ logx=0
 logy=0
 rawfile=$netlist_dir/tb_opamp_two_stage_dc_tran.raw
 sim_type=dc}
-N 590 -440 590 -390 {lab=VSS}
-N 590 -420 660 -420 {lab=VSS}
-N 660 -440 660 -420 {lab=VSS}
-N 590 -550 590 -500 {lab=VDD}
-N 660 -550 660 -500 {lab=vp}
-N 970 -500 1050 -500 {lab=vout}
-N 1050 -500 1050 -480 {lab=vout}
-N 760 -620 1000 -620 {lab=vout}
-N 1000 -620 1000 -500 {lab=vout}
-N 520 -440 520 -420 {lab=VSS}
-N 520 -420 590 -420 {lab=VSS}
-N 520 -540 520 -500 {lab=ibias}
-N 760 -500 830 -500 {lab=vout}
-N 760 -620 760 -500 {lab=vout}
-C {gnd.sym} 590 -330 0 0 {name=l1 lab=GND}
-C {lab_pin.sym} 1050 -500 0 1 {name=p4 lab=vout}
-C {vsource.sym} 590 -470 0 0 {name=V1 value=3 savecurrent=false}
-C {vsource.sym} 660 -470 0 0 {name=V2 
+N 590 -560 590 -510 {lab=VSS}
+N 590 -540 660 -540 {lab=VSS}
+N 660 -560 660 -540 {lab=VSS}
+N 590 -670 590 -620 {lab=VDD}
+N 660 -670 660 -620 {lab=vp}
+N 970 -620 1050 -620 {lab=vout}
+N 1050 -620 1050 -600 {lab=vout}
+N 760 -740 1000 -740 {lab=vout}
+N 1000 -740 1000 -620 {lab=vout}
+N 520 -560 520 -540 {lab=VSS}
+N 520 -540 590 -540 {lab=VSS}
+N 520 -660 520 -620 {lab=ibias}
+N 760 -620 830 -620 {lab=vout}
+N 760 -740 760 -620 {lab=vout}
+C {gnd.sym} 590 -450 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} 1050 -620 0 1 {name=p4 lab=vout}
+C {vsource.sym} 590 -590 0 0 {name=V1 value=3 savecurrent=false}
+C {vsource.sym} 660 -590 0 0 {name=V2 
 value="1.65"}
-C {vsource.sym} 590 -360 0 0 {name=VSS_sense value=0 savecurrent=false}
-C {lab_pin.sym} 660 -420 2 0 {name=p7 lab=VSS}
-C {lab_wire.sym} 590 -530 0 0 {name=p8  lab=VDD}
-C {lab_wire.sym} 660 -530 0 0 {name=p9  lab=vp}
-C {capa.sym} 1050 -450 0 0 {name=C2
+C {vsource.sym} 590 -480 0 0 {name=VSS_sense value=0 savecurrent=false}
+C {lab_pin.sym} 660 -540 2 0 {name=p7 lab=VSS}
+C {lab_wire.sym} 590 -650 0 0 {name=p8  lab=VDD}
+C {lab_wire.sym} 660 -650 0 0 {name=p9  lab=vp}
+C {capa.sym} 1050 -570 0 0 {name=C2
 m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 1050 -420 1 1 {name=p11 lab=VSS}
-C {devices/code_shown.sym} 10 -150 0 0 {name=MODELS only_toplevel=true
+C {lab_pin.sym} 1050 -540 1 1 {name=p11 lab=VSS}
+C {devices/code_shown.sym} 10 -270 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -114,7 +114,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 0 -830 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 0 -950 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 ** Define input signal
@@ -148,17 +148,18 @@ write tb_opamp_two_stage_dc_tran.raw
 
 .endc
 "}
-C {isource.sym} 520 -470 0 0 {name=I0 value=2u}
-C {lab_pin.sym} 520 -520 2 1 {name=p12 lab=ibias}
-C {libs/core_analog/opamp_two_stage/opamp_two_stage.sym} 830 -440 0 0 {name=x1}
-C {lab_pin.sym} 890 -560 0 1 {name=p1 lab=VDD}
-C {lab_pin.sym} 830 -520 0 0 {name=p2 lab=ibias}
-C {lab_pin.sym} 830 -480 0 0 {name=p5 lab=vp}
-C {lab_pin.sym} 890 -440 0 1 {name=p6 lab=VSS}
-C {launcher.sym} 780 -850 0 0 {name=h5
+C {isource.sym} 520 -590 0 0 {name=I0 value=2u}
+C {lab_pin.sym} 520 -640 2 1 {name=p12 lab=ibias}
+C {libs/core_analog/opamp_two_stage/opamp_two_stage.sym} 830 -560 0 0 {name=x1}
+C {lab_pin.sym} 890 -680 0 1 {name=p1 lab=VDD}
+C {lab_pin.sym} 830 -640 0 0 {name=p2 lab=ibias}
+C {lab_pin.sym} 830 -600 0 0 {name=p5 lab=vp}
+C {lab_pin.sym} 890 -560 0 1 {name=p6 lab=VSS}
+C {launcher.sym} 780 -970 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_opamp_two_stage_dc.raw"
 }
-C {launcher.sym} 780 -810 0 0 {name=h1
+C {launcher.sym} 780 -930 0 0 {name=h1
 descr="Backannotate" 
 tclcommand="xschem annotate_op"}
+C {title.sym} 160 -40 0 0 {name=l2 author="Luighi Viton"}

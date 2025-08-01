@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1180 -780 1980 -380 {flags=graph
+B 2 1170 -920 1970 -520 {flags=graph
 y1=-266
 y2=204
 ypos1=0
@@ -35,51 +35,51 @@ T {tcleval([xschem raw read $netlist_dir/[file tail [file rootname [xschem get c
     append table \\\\n [to_eng $gm] \{,\} [to_eng $pm] \{,\} [to_eng $fzdb] \{,\} [to_eng $fzph]
   \}
   xschem raw switch 0
-  return [tabulate $table ,]])} 2010 -780 0 0 0.4 0.4 {floater=1 font=monospace}
-N 590 -460 590 -410 {lab=VSS}
-N 590 -440 660 -440 {lab=VSS}
-N 660 -460 660 -440 {lab=VSS}
-N 590 -570 590 -520 {lab=VDD}
-N 660 -570 660 -520 {lab=vp}
-N 970 -520 1050 -520 {lab=vout}
-N 1050 -520 1050 -500 {lab=vout}
-N 760 -640 830 -640 {lab=#net1}
-N 890 -640 1000 -640 {lab=vout}
-N 1000 -640 1000 -520 {lab=vout}
-N 520 -460 520 -440 {lab=VSS}
-N 520 -440 590 -440 {lab=VSS}
-N 520 -560 520 -520 {lab=ibias}
-N 760 -480 760 -460 {lab=#net1}
-N 760 -520 830 -520 {lab=#net1}
-N 760 -640 760 -520 {lab=#net1}
-N 760 -520 760 -480 {lab=#net1}
-C {capa.sym} 760 -430 0 0 {name=C1
+  return [tabulate $table ,]])} 1180 -420 0 0 0.4 0.4 {floater=1 font=monospace}
+N 580 -600 580 -550 {lab=VSS}
+N 580 -580 650 -580 {lab=VSS}
+N 650 -600 650 -580 {lab=VSS}
+N 580 -710 580 -660 {lab=VDD}
+N 650 -710 650 -660 {lab=vp}
+N 960 -660 1040 -660 {lab=vout}
+N 1040 -660 1040 -640 {lab=vout}
+N 750 -780 820 -780 {lab=#net1}
+N 880 -780 990 -780 {lab=vout}
+N 990 -780 990 -660 {lab=vout}
+N 510 -600 510 -580 {lab=VSS}
+N 510 -580 580 -580 {lab=VSS}
+N 510 -700 510 -660 {lab=ibias}
+N 750 -620 750 -600 {lab=#net1}
+N 750 -660 820 -660 {lab=#net1}
+N 750 -780 750 -660 {lab=#net1}
+N 750 -660 750 -620 {lab=#net1}
+C {capa.sym} 750 -570 0 0 {name=C1
 m=1
 value=1k
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} 590 -350 0 0 {name=l1 lab=GND}
-C {lab_pin.sym} 1050 -520 0 1 {name=p4 lab=vout}
-C {vsource.sym} 590 -490 0 0 {name=V1 value=3 savecurrent=false}
-C {vsource.sym} 660 -490 0 0 {name=V2 
+C {gnd.sym} 580 -490 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} 1040 -660 0 1 {name=p4 lab=vout}
+C {vsource.sym} 580 -630 0 0 {name=V1 value=3 savecurrent=false}
+C {vsource.sym} 650 -630 0 0 {name=V2 
 value="1.65 AC 1"}
-C {vsource.sym} 590 -380 0 0 {name=VSS_sense value=0 savecurrent=false}
-C {lab_pin.sym} 660 -440 2 0 {name=p7 lab=VSS}
-C {lab_wire.sym} 590 -550 0 0 {name=p8  lab=VDD}
-C {lab_wire.sym} 660 -550 0 0 {name=p9  lab=vp}
-C {lab_pin.sym} 760 -400 3 0 {name=p10 lab=VSS}
-C {capa.sym} 1050 -470 0 0 {name=C2
+C {vsource.sym} 580 -520 0 0 {name=VSS_sense value=0 savecurrent=false}
+C {lab_pin.sym} 650 -580 2 0 {name=p7 lab=VSS}
+C {lab_wire.sym} 580 -690 0 0 {name=p8  lab=VDD}
+C {lab_wire.sym} 650 -690 0 0 {name=p9  lab=vp}
+C {lab_pin.sym} 750 -540 3 0 {name=p10 lab=VSS}
+C {capa.sym} 1040 -610 0 0 {name=C2
 m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 1050 -440 1 1 {name=p11 lab=VSS}
-C {ind.sym} 860 -640 3 0 {name=L2
+C {lab_pin.sym} 1040 -580 1 1 {name=p11 lab=VSS}
+C {ind.sym} 850 -780 3 0 {name=L2
 m=1
 value=10G
 footprint=1206
 device=inductor}
-C {devices/code_shown.sym} 10 -130 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 0 -270 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -88,7 +88,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} -10 -950 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -20 -1090 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -131,17 +131,18 @@ settype frequency fzph
 write tb_opamp_two_stage_stb_meas.raw
 .endc
 "}
-C {isource.sym} 520 -490 0 0 {name=I0 value=2u}
-C {lab_pin.sym} 520 -540 2 1 {name=p12 lab=ibias}
-C {libs/core_analog/opamp_two_stage/opamp_two_stage.sym} 830 -460 0 0 {name=x1}
-C {lab_pin.sym} 890 -580 0 1 {name=p1 lab=VDD}
-C {lab_pin.sym} 830 -540 0 0 {name=p2 lab=ibias}
-C {lab_pin.sym} 830 -500 0 0 {name=p5 lab=vp}
-C {lab_pin.sym} 890 -460 0 1 {name=p6 lab=VSS}
-C {launcher.sym} 1250 -820 0 0 {name=h5
+C {isource.sym} 510 -630 0 0 {name=I0 value=2u}
+C {lab_pin.sym} 510 -680 2 1 {name=p12 lab=ibias}
+C {libs/core_analog/opamp_two_stage/opamp_two_stage.sym} 820 -600 0 0 {name=x1}
+C {lab_pin.sym} 880 -720 0 1 {name=p1 lab=VDD}
+C {lab_pin.sym} 820 -680 0 0 {name=p2 lab=ibias}
+C {lab_pin.sym} 820 -640 0 0 {name=p5 lab=vp}
+C {lab_pin.sym} 880 -600 0 1 {name=p6 lab=VSS}
+C {launcher.sym} 1240 -960 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_opamp.raw ac"
 }
-C {launcher.sym} 2080 -830 0 0 {name=h1
+C {launcher.sym} 1250 -470 0 0 {name=h1
 descr="Reference print measurements"
 url=https://medium.com/@f.hormot/displaying-measurements-and-waveforms-simultaneously-in-xschem-2ae0c71ecfb0}
+C {title.sym} 160 -40 0 0 {name=l3 author="Luighi Viton"}
