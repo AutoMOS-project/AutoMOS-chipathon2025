@@ -110,7 +110,7 @@ write tb_OTA.raw
 .endc
 "}
 C {lab_wire.sym} 1520 -600 0 0 {name=p2 sig_type=std_logic lab=out}
-C {libs/core_ldo/ldo/OTA.sym} 1280 -600 0 0 {name=x1}
 C {vsource.sym} 1030 -510 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 1030 -430 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 1130 -560 0 0 {name=p3 sig_type=std_logic lab=in}
+C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1280 -600 0 0 {name=x1}
