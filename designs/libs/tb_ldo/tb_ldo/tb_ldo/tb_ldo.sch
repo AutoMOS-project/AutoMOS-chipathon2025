@@ -62,7 +62,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 30 -990 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 40 -1300 0 0 {name=NGSPICE only_toplevel=true
 value="
 
 .control
@@ -79,14 +79,15 @@ let tstop = 2*tper
 let tstep = 0.001*tper
 
 ** Set sources
-**alter @V3[AC] = 1
+alter @v.x1.vtest[AC] = 1
+alter @v.x1.vtest[DC] = 0
 alter @V1[PULSE] = [ 0 2 0 $&tfr $&tfr $&ton $&tper 0 ]
 
 ** Simulations
 op
 dc V1 0 5 0.001
 tran $&tstep $&tstop
-**ac dec 100 1 10G
+ac dec 100 1 1G
 
 ** Plots
 setplot dc1
@@ -99,10 +100,25 @@ let vout=v(out)
 let vin=v(Vdd)
 plot vout vin
 
+setplot ac1
+let gain_db = db(v(x1.vy))
+plot gain_db
+let phase_deg = cph(v(x1.vy))*180/pi
+plot phase_deg
+
+meas ac DC_gain FIND gain_db AT=1Hz
+let gain_3db = DC_gain-3
+meas ac f_3db WHEN gain_db=$&gain_3db
+meas ac f_0db WHEN gain_db=0
+meas ac phase_0db FIND phase_deg WHEN gain_db=0
+let phase_margin = 180 + phase_0db
+print DC_gain
+print f_3db 
+print f_0db
+print phase_margin
 
 write tb_ldo.raw
 .endc
 "}
 C {lab_wire.sym} 1570 -580 0 0 {name=p2 sig_type=std_logic lab=out}
-C {libs/core_ldo/ldo/ldo.sym} 1300 -580 0 0 {name=x2
-}
+C {libs/core_ldo/ldo/ldo_main/ldo.sym} 1300 -580 0 0 {name=x1}
