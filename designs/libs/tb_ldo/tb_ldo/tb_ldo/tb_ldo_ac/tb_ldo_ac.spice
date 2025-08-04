@@ -1,0 +1,116 @@
+** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo/tb_ldo_ac/tb_ldo_ac.sch
+**.subckt tb_ldo_ac
+* noconn #net1
+RL ldo GND 360 m=1
+V1 VDD GND 2
+V2 vref GND 1.5
+I0 VDD ibias 20u
+CL net2 GND 1.0u m=1
+Resr ldo net2 0.2 m=1
+x1 VDD vref ldo ibias in out net1 GND ldo_OL
+V3 in GND 1.5
+* noconn out
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice cap_mim
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+* .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_statistical
+
+
+
+.control
+save all
+
+** Set sources
+alter @v3[AC] = 1
+
+** Simulations
+ac dec 100 1 1G
+
+** Plots
+setplot ac1
+let gain_db = db(v(out))
+let phase_deg = cph(-1*v(out))*180/pi
+let gain_db_ota = db(v(x1.vota))
+let phase_deg_ota = cph(v(x1.vota))*180/pi
+plot gain_db gain_db_ota
+plot phase_deg phase_deg_ota
+
+** Measurements
+meas ac DC_gain FIND gain_db AT=1Hz
+let gain_3db = DC_gain-3
+meas ac f_3db WHEN gain_db=$&gain_3db
+meas ac f_0db WHEN gain_db=0
+meas ac phase_0db FIND phase_deg WHEN gain_db=0
+let phase_margin = 180 + phase_0db
+print phase_margin
+
+write tb_ldo_ac.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sym # of pins=8
+** sym_path: /foss/designs/libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sym
+** sch_path: /foss/designs/libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sch
+.subckt ldo_OL VDD VREF VOUT IBIAS Vx Vy SUB VSS
+*.iopin VDD
+*.iopin VSS
+*.iopin VOUT
+*.iopin SUB
+*.iopin VREF
+*.iopin IBIAS
+*.iopin Vx
+*.iopin Vy
+XM11 VOUT Vota VDD VDD pfet_05v0 L=0.50u W=100.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=5
+* noconn SUB
+x1 VDD VREF Vx Vota IBIAS VSS OTA
+XR1 Vy VOUT VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
+XR2 VSS Vy VDD ppolyf_u_1k r_width=1e-6 r_length=50e-6 m=1
+XRc VOUT net1 VDD ppolyf_u_1k r_width=1e-6 r_length=1e-6 m=1
+XCc Vota net1 cap_mim_1f0fF c_width=10e-6 c_length=10e-6 m=10
+.ends
+
+
+* expanding   symbol:  libs/core_ldo/ldo/ldo_OTA/OTA.sym # of pins=6
+** sym_path: /foss/designs/libs/core_ldo/ldo/ldo_OTA/OTA.sym
+** sch_path: /foss/designs/libs/core_ldo/ldo/ldo_OTA/OTA.sch
+.subckt OTA VDD VREF VFB VOTA IBIAS VSS
+*.iopin VDD
+*.iopin VSS
+*.iopin VOTA
+*.iopin VREF
+*.iopin IBIAS
+*.iopin VFB
+XM3 net2 net2 VDD VDD pfet_05v0 L=2.00u W=25.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 net3 net3 VDD VDD pfet_05v0 L=2.00u W=25.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 net4 net2 VDD VDD pfet_05v0 L=2.00u W=25.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 VOTA net3 VDD VDD pfet_05v0 L=2.00u W=25.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XM9 IBIAS IBIAS VSS VSS nfet_05v0 L=2.00u W=8.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM10 net1 IBIAS VSS VSS nfet_05v0 L=2.00u W=8.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7 net4 net4 VSS VSS nfet_05v0 L=2.00u W=4.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM8 VOTA net4 VSS VSS nfet_05v0 L=2.00u W=4.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XM1 net2 VREF net1 VSS nfet_05v0 L=0.60u W=40.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 net3 VFB net1 VSS nfet_05v0 L=0.60u W=40.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
