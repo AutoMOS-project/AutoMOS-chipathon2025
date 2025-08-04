@@ -1,0 +1,3 @@
+[submodule "designs/gLayout"]
+	path = designs/gLayout
+	url = https://github.com/AutoMOS-project/gLayout-AutoMOS-cp25
