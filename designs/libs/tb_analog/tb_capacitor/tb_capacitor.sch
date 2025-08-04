@@ -81,8 +81,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.1
-x2=3.2667945
+x1=-0.0005185205
+x2=3.2987217
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,8 +103,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.1
-x2=3.2667945
+x1=-0.0005185205
+x2=3.2987217
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -117,18 +117,18 @@ logx=0
 logy=0
 sweep=v_cap_mim_1f0
 rainbow=0
-rawfile=$netlist_dir/tb_capacitor_ff.raw
+rawfile=$netlist_dir/tb_capacitor.raw
 autoload=1}
-N 560 -860 560 -840 {lab=GND}
-N 560 -940 560 -920 {lab=VDD}
-N 880 -880 880 -860 {lab=v_cap_nmos_03v3}
-N 880 -960 880 -940 {lab=VDD}
-N 890 -550 890 -530 {lab=v_cap_mim_1f0}
-N 890 -630 890 -610 {lab=VDD}
-C {gnd.sym} 560 -840 0 0 {name=l1 lab=GND}
-C {vsource.sym} 560 -890 0 0 {name=V1 value=3.3 savecurrent=false}
-C {lab_pin.sym} 560 -940 0 0 {name=p22 sig_type=std_logic lab=VDD}
-C {devices/code_shown.sym} 10 -250 0 0 {name=MODELS only_toplevel=true
+N 550 -700 550 -680 {lab=GND}
+N 550 -780 550 -760 {lab=VDD}
+N 870 -720 870 -700 {lab=v_cap_nmos_03v3}
+N 870 -800 870 -780 {lab=VDD}
+N 880 -390 880 -370 {lab=v_cap_mim_1f0}
+N 880 -470 880 -450 {lab=VDD}
+C {gnd.sym} 550 -680 0 0 {name=l1 lab=GND}
+C {vsource.sym} 550 -730 0 0 {name=V1 value=3.3 savecurrent=false}
+C {lab_pin.sym} 550 -780 0 0 {name=p22 sig_type=std_logic lab=VDD}
+C {devices/code_shown.sym} 0 -90 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -171,11 +171,11 @@ set appendwrite
 end
 .endc
 "}
-C {gnd.sym} 880 -800 0 0 {name=l3 lab=GND}
-C {lab_wire.sym} 880 -870 0 0 {name=p3 sig_type=std_logic lab=v_cap_nmos_03v3}
-C {symbols/cap_nmos_03v3.sym} 880 -830 0 0 {name=C1
-W=1e-6
-L=1e-6
+C {gnd.sym} 870 -640 0 0 {name=l3 lab=GND}
+C {lab_wire.sym} 870 -710 0 0 {name=p3 sig_type=std_logic lab=v_cap_nmos_03v3}
+C {symbols/cap_nmos_03v3.sym} 870 -670 0 0 {name=C1
+W=10e-6
+L=10e-6
 model=cap_nmos_03v3
 spiceprefix=X
 m=1}
