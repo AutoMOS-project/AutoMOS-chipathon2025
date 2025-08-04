@@ -29,11 +29,11 @@ C {gnd.sym} 1300 -450 0 0 {name=l2 lab=GND}
 C {vsource.sym} 810 -560 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 810 -490 0 0 {name=l3 lab=GND}
 C {vsource.sym} 940 -510 0 0 {name=V2 value=1.5 savecurrent=false}
-C {isource.sym} 1190 -350 0 0 {name=I0 value=2u}
+C {isource.sym} 1190 -350 0 0 {name=I0 value=10u}
 C {gnd.sym} 940 -430 0 0 {name=l4 lab=GND}
 C {capa.sym} 1570 -510 0 0 {name=CL
 m=1
-value=0.6p
+value=0.52p
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 1570 -420 0 0 {name=l6 lab=GND}
@@ -52,61 +52,34 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 20 -1320 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 40 -870 0 0 {name=NGSPICE only_toplevel=true
 value="
-
 .control
 save all
 
-** Define input signal
-let fsig = 1k
-let tper = 1/fsig
-let tfr = 0.01*tper
-let ton = 0.5*tper-2*tfr
-
-** Define transient params
-let tstop = 2*tper
-let tstep = 0.001*tper
-
 ** Set sources
 alter @V3[AC] = 1
-alter @V3[PULSE] = [ 0 2 0 $&tfr $&tfr $&ton $&tper 0 ]
 
 ** Simulations
-op
-dc V3 0.7 1.1 0.001
-tran $&tstep $&tstop
-ac dec 100 1 10G
+ac dec 100 1 1G
 
 ** Plots
-setplot dc1
-let vout=v(out)
-plot vout
-
-setplot tran1
-let vout=v(out)
-let vin=v(in)
-plot vout vin
-
 setplot ac1
 let gain_db = db(v(out))
 plot gain_db
 let phase_deg = cph(v(out))*180/pi
 plot phase_deg
 
+** Measurements
 meas ac DC_gain FIND gain_db AT=1Hz
 let gain_3db = DC_gain-3
 meas ac f_3db WHEN gain_db=$&gain_3db
 meas ac f_0db WHEN gain_db=0
 meas ac phase_0db FIND phase_deg WHEN gain_db=0
 let phase_margin = 180 + phase_0db
-print DC_gain
-print f_3db 
-print f_0db
 print phase_margin
 
-
-write tb_OTA.raw
+write tb_ldo_OTA_ac.raw
 .endc
 "}
 C {lab_wire.sym} 1520 -600 0 0 {name=p2 sig_type=std_logic lab=out}

@@ -26,19 +26,19 @@ N 1220 -480 1220 -440 {lab=#net1}
 C {noconn.sym} 1220 -440 3 0 {name=l1}
 C {gnd.sym} 1300 -470 0 0 {name=l2 lab=GND}
 C {res.sym} 1520 -490 0 0 {name=RL
-value=1k
+value=360
 footprint=1206
 device=resistor
 m=1}
 C {vsource.sym} 860 -630 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 860 -560 0 0 {name=l3 lab=GND}
-C {vsource.sym} 1080 -480 0 0 {name=V2 value=0.9 savecurrent=false}
-C {isource.sym} 970 -630 0 0 {name=I0 value=2u}
+C {vsource.sym} 1080 -480 0 0 {name=V2 value=1.5 savecurrent=false}
+C {isource.sym} 970 -630 0 0 {name=I0 value=10u}
 C {gnd.sym} 1080 -400 0 0 {name=l4 lab=GND}
 C {gnd.sym} 1520 -400 0 0 {name=l5 lab=GND}
 C {capa.sym} 1620 -450 0 0 {name=CL
 m=1
-value=0.1u
+value=1.0u
 footprint=1206
 device="ceramic capacitor"}
 C {res.sym} 1620 -530 0 0 {name=Resr
@@ -62,62 +62,18 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 40 -1300 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 40 -590 0 0 {name=NGSPICE only_toplevel=true
 value="
-
 .control
 save all
 
-** Define input signal
-let fsig = 1k
-let tper = 1/fsig
-let tfr = 0.01*tper
-let ton = 0.5*tper-2*tfr
-
-** Define transient params
-let tstop = 2*tper
-let tstep = 0.001*tper
-
-** Set sources
-alter @v.x1.vtest[AC] = 1
-alter @v.x1.vtest[DC] = 0
-alter @V1[PULSE] = [ 0 2 0 $&tfr $&tfr $&ton $&tper 0 ]
-
 ** Simulations
 op
-dc V1 0 5 0.001
-tran $&tstep $&tstop
-ac dec 100 1 1G
 
 ** Plots
-setplot dc1
-let vout=v(out)
-let vin=v(Vdd)
-plot vout vin
+show all
 
-setplot tran1
-let vout=v(out)
-let vin=v(Vdd)
-plot vout vin
-
-setplot ac1
-let gain_db = db(v(x1.vy))
-plot gain_db
-let phase_deg = cph(v(x1.vy))*180/pi
-plot phase_deg
-
-meas ac DC_gain FIND gain_db AT=1Hz
-let gain_3db = DC_gain-3
-meas ac f_3db WHEN gain_db=$&gain_3db
-meas ac f_0db WHEN gain_db=0
-meas ac phase_0db FIND phase_deg WHEN gain_db=0
-let phase_margin = 180 + phase_0db
-print DC_gain
-print f_3db 
-print f_0db
-print phase_margin
-
-write tb_ldo.raw
+write tb_ldo_op.raw
 .endc
 "}
 C {lab_wire.sym} 1570 -580 0 0 {name=p2 sig_type=std_logic lab=out}
