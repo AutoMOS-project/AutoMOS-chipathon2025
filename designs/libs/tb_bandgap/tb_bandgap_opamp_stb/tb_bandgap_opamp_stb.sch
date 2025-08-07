@@ -145,3 +145,6 @@ C {launcher.sym} 2080 -830 0 0 {name=h1
 descr="Reference print measurements"
 url=https://medium.com/@f.hormot/displaying-measurements-and-waveforms-simultaneously-in-xschem-2ae0c71ecfb0}
 C {libs/core_bandgap/bandgap_opamp/bandgap_opamp.sym} 830 -460 0 0 {name=x1}
+C {launcher.sym} 780 -810 0 0 {name=h2
+descr="Backannotate" 
+tclcommand="xschem annotate_op"}
