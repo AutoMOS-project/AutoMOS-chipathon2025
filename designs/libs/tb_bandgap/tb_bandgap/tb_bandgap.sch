@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 910 -930 1710 -530 {flags=graph
+B 2 1020 -930 1820 -530 {flags=graph
 y1=0.37
 y2=2
 ypos1=0
@@ -21,20 +21,20 @@ ylabmag=1.0
 node="vbg
 vdd
 xi_bandgap.vbjt_ptat[0]
-xi_bandgap.vbjt_ptat[2]
+xi_bandgap.vbjt_ptat[6]
 xi_bandgap.vbe"
 color="4 7 13 12 13"
-dataset=-1
 unitx=1
 logx=0
 logy=0
 rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1
-hilight_wave=2}
-B 2 910 -530 1710 -130 {flags=graph
-y1=1
-y2=1.2
+hilight_wave=2
+dataset=0}
+B 2 1020 -530 1820 -130 {flags=graph
+y1=1.1875395
+y2=1.2090144
 ypos1=0
 ypos2=2
 divy=5
@@ -57,10 +57,10 @@ logy=0
 rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1
-hilight_wave=1}
-B 2 1770 -520 2570 -120 {flags=graph
-y1=0.98
-y2=1.4
+hilight_wave=2}
+B 2 1880 -520 2680 -120 {flags=graph
+y1=1.14
+y2=1.24
 ypos1=0
 ypos2=2
 divy=5
@@ -72,7 +72,6 @@ divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -80,10 +79,13 @@ rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1
 hilight_wave=0
-color=13
-node=xi_bandgap.vztc}
-B 2 1770 -1320 2570 -920 {flags=graph
-y1=7.7e-07
+color="7 13 12"
+node="vztc (ff); vztc % $\{netlist_dir\}/tb_bandgap_ff.raw
+vztc (tt); vztc % $\{netlist_dir\}/tb_bandgap.raw
+vztc (ss); vztc % $\{netlist_dir\}/tb_bandgap_ss.raw"
+dataset=-1}
+B 2 1880 -1320 2680 -920 {flags=graph
+y1=1.3e-06
 y2=2.8e-06
 ypos1=0
 ypos2=2
@@ -107,9 +109,9 @@ logy=0
 rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1}
-B 2 1770 -920 2570 -520 {flags=graph
-y1=3.4e-06
-y2=4.4e-06
+B 2 1880 -920 2680 -520 {flags=graph
+y1=1.9e-06
+y2=4.5e-06
 ypos1=0
 ypos2=2
 divy=5
@@ -129,16 +131,55 @@ rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1
 hilight_wave=2
-color=13
-node=i(@m.xi_bandgap.xmpref12.m0[id])}
+color="13 7 7 12"
+node="i(@m.xi_bandgap.xmpref12.m0[id])
+ctat_m (tt);i(@m.xi_bandgap.xmpref15.m0[id]) % $netlist_dir/tb_bandgap.raw
+ctat_m (ss);i(@m.xi_bandgap.xmpref15.m0[id]) % $netlist_dir/tb_bandgap_ss.raw
+i(@m.xi_bandgap.xmpref17.m0[id])"}
 N 420 -490 420 -460 {lab=VSS}
 N 420 -570 420 -550 {lab=VDD}
-N 620 -410 640 -410 {lab=VSS}
-N 720 -510 830 -510 {lab=VBG}
-N 830 -450 830 -440 {lab=VSS}
-C {lab_pin.sym} 620 -570 0 1 {name=p1 lab=VDD}
-C {lab_pin.sym} 720 -510 0 1 {name=p2 lab=VBG}
-C {lab_pin.sym} 620 -410 1 1 {name=p6 lab=VSS}
+N 600 -410 620 -410 {lab=VSS}
+N 740 -510 850 -510 {lab=VBG}
+N 850 -450 850 -440 {lab=VSS}
+N 520 -470 520 -450 {lab=vpref}
+N 800 -530 910 -530 {lab=VZTC}
+N 910 -470 910 -460 {lab=VSS}
+N 700 -530 800 -530 {lab=VZTC}
+N 710 -160 710 -140 {lab=VSS}
+N 710 -190 720 -190 {lab=VSS}
+N 720 -190 720 -140 {lab=VSS}
+N 710 -140 720 -140 {lab=VSS}
+N 670 -240 670 -190 {lab=IZTC}
+N 670 -240 710 -240 {lab=IZTC}
+N 710 -240 710 -220 {lab=IZTC}
+N 710 -450 710 -240 {lab=IZTC}
+N 810 -160 810 -140 {lab=VSS}
+N 810 -190 820 -190 {lab=VSS}
+N 820 -190 820 -140 {lab=VSS}
+N 810 -140 820 -140 {lab=VSS}
+N 770 -240 770 -190 {lab=IPTAT}
+N 770 -240 810 -240 {lab=IPTAT}
+N 810 -240 810 -220 {lab=IPTAT}
+N 910 -160 910 -140 {lab=VSS}
+N 910 -190 920 -190 {lab=VSS}
+N 920 -190 920 -140 {lab=VSS}
+N 910 -140 920 -140 {lab=VSS}
+N 870 -240 870 -190 {lab=ICTAT}
+N 870 -240 910 -240 {lab=ICTAT}
+N 910 -240 910 -220 {lab=ICTAT}
+N 700 -450 710 -450 {lab=IZTC}
+N 700 -470 760 -470 {lab=IPTAT}
+N 760 -470 760 -260 {lab=IPTAT}
+N 760 -260 810 -260 {lab=IPTAT}
+N 810 -260 810 -240 {lab=IPTAT}
+N 700 -490 780 -490 {lab=ICTAT}
+N 780 -490 780 -280 {lab=ICTAT}
+N 780 -280 910 -280 {lab=ICTAT}
+N 910 -280 910 -240 {lab=ICTAT}
+N 700 -510 740 -510 {lab=VBG}
+C {lab_pin.sym} 600 -570 0 1 {name=p1 lab=VDD}
+C {lab_pin.sym} 700 -510 0 1 {name=p2 lab=VBG}
+C {lab_pin.sym} 600 -410 1 1 {name=p6 lab=VSS}
 C {devices/code_shown.sym} 0 -230 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -146,11 +187,14 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice bjt_typical
+.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
 C {devices/code_shown.sym} 0 -600 0 0 {name=NGSPICE only_toplevel=true
 value="
 .options savecurrents
+.nodeset v(xI_bandgap.vpref)=1
+.nodeset v(xI_bandgap.vstart_up)=1
 .control
 save all
 op
@@ -180,13 +224,70 @@ exec sed -i \{/^\\.lib/s/ff/ss/\} $spicefile
 exec sed -i \{s/tb_bandgap_ff.raw/tb_bandgap_ss.raw/\} $spicefile
 simulate
 "}
-C {capa.sym} 830 -480 0 0 {name=C1
+C {capa.sym} 850 -480 0 0 {name=C1
 m=1
 value=100f
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 830 -440 1 1 {name=p5 lab=VSS}
-C {noconn.sym} 720 -470 0 1 {name=l2}
-C {noconn.sym} 720 -450 0 1 {name=l3}
-C {libs/core_bandgap/bandgap/bandgap.sym} 560 -550 0 0 {name=xI_bandgap}
+C {lab_pin.sym} 850 -440 1 1 {name=p5 lab=VSS}
+C {libs/core_bandgap/bandgap/bandgap.sym} 540 -550 0 0 {name=xI_bandgap}
 C {title.sym} 160 -40 0 0 {name=l4 author="Luighi Viton (AutoMOS-Project)"}
+C {launcher.sym} 1190 -1090 0 0 {name=h1
+descr="Backannotate" 
+tclcommand="xschem annotate_op"}
+C {lab_wire.sym} 520 -470 0 0 {name=p3 sig_type=std_logic lab=vpref}
+C {lab_pin.sym} 700 -470 0 1 {name=p4 lab=IPTAT}
+C {lab_pin.sym} 700 -450 0 1 {name=p8 lab=IZTC}
+C {lab_pin.sym} 700 -490 0 1 {name=p9 lab=ICTAT}
+C {lab_pin.sym} 700 -530 0 1 {name=p10 lab=VZTC}
+C {capa.sym} 910 -500 0 0 {name=C2
+m=1
+value=100f
+footprint=1206
+device="ceramic capacitor"}
+C {lab_pin.sym} 910 -460 1 1 {name=p11 lab=VSS}
+C {symbols/nfet_05v0.sym} 690 -190 0 0 {name=M1
+L=2u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
+spiceprefix=X
+}
+C {lab_wire.sym} 710 -140 0 0 {name=p12 sig_type=std_logic lab=VSS}
+C {symbols/nfet_05v0.sym} 790 -190 0 0 {name=M2
+L=2u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
+spiceprefix=X
+}
+C {lab_wire.sym} 810 -140 0 0 {name=p13 sig_type=std_logic lab=VSS}
+C {symbols/nfet_05v0.sym} 890 -190 0 0 {name=M3
+L=2u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
+spiceprefix=X
+}
+C {lab_wire.sym} 910 -140 0 0 {name=p14 sig_type=std_logic lab=VSS}
