@@ -27,7 +27,7 @@ B 5 137.5 -2.5 142.5 2.5 {name=VOTA dir=inout}
 B 5 -22.5 117.5 -17.5 122.5 {name=IBIAS dir=inout}
 B 5 17.5 117.5 22.5 122.5 {name=VSS dir=inout}
 T {@symname} -37.5 -17.5 0 0 0.6 0.6 {}
-T {@spiceprefix@name} 85 -132 0 0 0.2 0.2 {}
+T {@spiceprefix@name} 125 -132 0 0 0.2 0.2 {}
 T {VDD} 14 -85 1 1 0.2 0.2 {}
 T {VREF} -67.5 -54 0 1 0.2 0.2 {}
 T {VFB} -75 26 0 1 0.2 0.2 {}

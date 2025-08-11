@@ -20,8 +20,8 @@ B 5 -152.5 27.5 -147.5 32.5 {name=IBIAS dir=inout}
 B 5 -82.5 77.5 -77.5 82.5 {name=SUB dir=inout}
 B 5 -2.5 77.5 2.5 82.5 {name=VSS dir=inout}
 P 4 5 130 -60 -130 -60 -130 60 130 60 130 -60 {}
-T {@symname} -81.5 -16 0 0 0.6 0.6 {}
-T {@spiceprefix@name} 135 -72 0 0 0.2 0.2 {}
+T {@symname} -21.5 -16 0 0 0.6 0.6 {}
+T {@spiceprefix@name} 115 -72 0 0 0.2 0.2 {}
 T {VDD} 15 -54 0 1 0.2 0.2 {}
 T {VREF} -95 -34 0 1 0.2 0.2 {}
 T {VOUT} 125 -4 0 1 0.2 0.2 {}
