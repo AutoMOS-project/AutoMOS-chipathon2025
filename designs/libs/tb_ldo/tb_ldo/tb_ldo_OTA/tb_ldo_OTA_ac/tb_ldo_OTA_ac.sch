@@ -4,55 +4,102 @@ K {}
 V {}
 S {}
 E {}
-N 1300 -480 1300 -450 {lab=GND}
-N 810 -630 810 -590 {lab=VDD}
-N 1300 -760 1300 -720 {lab=VDD}
-N 810 -530 810 -490 {lab=GND}
-N 1190 -420 1190 -380 {lab=VDD}
-N 940 -640 940 -540 {lab=vref}
-N 940 -640 1010 -640 {lab=vref}
-N 1570 -440 1570 -420 {lab=GND}
-N 1570 -600 1570 -580 {lab=out}
-N 1470 -600 1570 -600 {lab=out}
-N 940 -480 940 -430 {lab=GND}
-N 1570 -580 1570 -540 {lab=out}
-N 1570 -480 1570 -440 {lab=GND}
-N 1190 -290 1260 -290 {lab=#net1}
-N 1030 -480 1030 -430 {lab=GND}
-N 1030 -560 1030 -540 {lab=in}
-N 1190 -320 1190 -290 {lab=#net1}
-N 1260 -480 1260 -290 {lab=#net1}
-N 1420 -600 1470 -600 {lab=out}
-N 1010 -640 1180 -640 {lab=vref}
-N 1030 -560 1180 -560 {lab=in}
-C {gnd.sym} 1300 -450 0 0 {name=l2 lab=GND}
-C {vsource.sym} 810 -560 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 810 -490 0 0 {name=l3 lab=GND}
-C {vsource.sym} 940 -510 0 0 {name=V2 value=1.5 savecurrent=false}
-C {isource.sym} 1190 -350 0 0 {name=I0 value=10u}
-C {gnd.sym} 940 -430 0 0 {name=l4 lab=GND}
-C {capa.sym} 1570 -510 0 0 {name=CL
+B 2 1620 -1200 2420 -800 {flags=graph
+y1=-60
+y2=50
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+node="OTA Gain
+re(gain_db)"
+color="4 7"
+dataset=-1
+unitx=1
+logx=1
+logy=0
+rawfile=$netlist_dir/tb_ldo_OTA_ac.raw
+sim_type=ac
+autoload=1
+legend=1
+mode=Line
+x2=10
+x1=0}
+B 2 1620 -720 2420 -320 {flags=graph
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+node="OTA Phase
+re(phase_deg)"
+color="4 7"
+dataset=0
+unitx=1
+logx=1
+logy=0
+rainbow=0
+rawfile=$netlist_dir/tb_ldo_OTA_ac.raw
+autoload=1
+y1=-350
+y2=0
+sim_type=ac
+x2=10
+x1=0}
+N 1140 -670 1140 -640 {lab=GND}
+N 650 -820 650 -780 {lab=VDD}
+N 1140 -950 1140 -910 {lab=VDD}
+N 650 -720 650 -680 {lab=GND}
+N 1030 -610 1030 -570 {lab=VDD}
+N 780 -830 780 -730 {lab=vref}
+N 780 -830 850 -830 {lab=vref}
+N 1410 -630 1410 -610 {lab=GND}
+N 1410 -790 1410 -770 {lab=out}
+N 1310 -790 1410 -790 {lab=out}
+N 780 -670 780 -620 {lab=GND}
+N 1410 -770 1410 -730 {lab=out}
+N 1410 -670 1410 -630 {lab=GND}
+N 1030 -480 1100 -480 {lab=#net1}
+N 870 -670 870 -620 {lab=GND}
+N 870 -750 870 -730 {lab=in}
+N 1030 -510 1030 -480 {lab=#net1}
+N 1100 -670 1100 -480 {lab=#net1}
+N 1260 -790 1310 -790 {lab=out}
+N 850 -830 1020 -830 {lab=vref}
+N 870 -750 1020 -750 {lab=in}
+C {gnd.sym} 1140 -640 0 0 {name=l2 lab=GND}
+C {vsource.sym} 650 -750 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 650 -680 0 0 {name=l3 lab=GND}
+C {vsource.sym} 780 -700 0 0 {name=V2 value=1.5 savecurrent=false}
+C {isource.sym} 1030 -540 0 0 {name=I0 value=10u}
+C {gnd.sym} 780 -620 0 0 {name=l4 lab=GND}
+C {capa.sym} 1410 -700 0 0 {name=CL
 m=1
 value=0.52p
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} 1570 -420 0 0 {name=l6 lab=GND}
-C {vdd.sym} 810 -630 0 0 {name=l7 lab=VDD}
-C {vdd.sym} 1300 -760 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 1190 -420 0 0 {name=l9 lab=VDD}
-C {lab_wire.sym} 990 -640 0 0 {name=p1 sig_type=std_logic lab=vref}
-C {devices/code_shown.sym} 40 -240 0 0 {name=MODELS only_toplevel=true
-format="tcleval( @value )"
-value="
-.include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
-.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
-.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
-.lib $::180MCU_MODELS/sm141064.ngspice res_typical
-* .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
-"}
-C {devices/code_shown.sym} 40 -870 0 0 {name=NGSPICE only_toplevel=true
+C {gnd.sym} 1410 -610 0 0 {name=l6 lab=GND}
+C {vdd.sym} 650 -820 0 0 {name=l7 lab=VDD}
+C {vdd.sym} 1140 -950 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 1030 -610 0 0 {name=l9 lab=VDD}
+C {lab_wire.sym} 830 -830 0 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 1360 -790 0 0 {name=p2 sig_type=std_logic lab=out}
+C {vsource.sym} 870 -700 0 0 {name=V3 value=1.5 savecurrent=false}
+C {gnd.sym} 870 -620 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 970 -750 0 0 {name=p3 sig_type=std_logic lab=in}
+C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1120 -790 0 0 {name=x1}
+C {simulator_commands.sym} 250 -930 0 0 {name=SIMULATIONS
+simulator=ngspice
+only_toplevel=false 
 value="
 .control
 save all
@@ -61,7 +108,7 @@ save all
 alter @V3[AC] = 1
 
 ** Simulations
-ac dec 100 1 1G
+ac dec 100 1 10G
 
 ** Plots
 setplot ac1
@@ -80,10 +127,26 @@ let phase_margin = 180 + phase_0db
 print phase_margin
 
 write tb_ldo_OTA_ac.raw
+
 .endc
+* ngspice commands
 "}
-C {lab_wire.sym} 1520 -600 0 0 {name=p2 sig_type=std_logic lab=out}
-C {vsource.sym} 1030 -510 0 0 {name=V3 value=1.5 savecurrent=false}
-C {gnd.sym} 1030 -430 0 0 {name=l1 lab=GND}
-C {lab_wire.sym} 1130 -560 0 0 {name=p3 sig_type=std_logic lab=in}
-C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1280 -600 0 0 {name=x1}
+C {simulator_commands.sym} 250 -690 0 0 {name=MODELS
+simulator=ngspice
+only_toplevel=false
+format="tcleval( @value )" 
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice res_typical
+* .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
+* ngspice commands
+"}
+C {launcher.sym} 300 -200 0 0 {name=h5
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/tb_ldo_OTA_ac.raw"
+}
+C {title-3.sym} 0 0 0 0 {name=l5 author="Julio Vilca" rev=1.0 lock=true page=3 pages=6}
