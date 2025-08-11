@@ -4,16 +4,16 @@ K {}
 V {}
 S {}
 E {}
-B 2 1240 -1070 2600 -670 {flags=graph
-y1=0
-y2=3.3
+B 2 2680 -1080 4040 -680 {flags=graph
+y1=-1.9e-29
+y2=5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=5.3520345e-09
-x2=3.3
+x1=0
+x2=5
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -32,9 +32,9 @@ VDD
 vpref
 xi_bandgap.vpcas"
 dataset=-1}
-B 2 1240 -520 2600 -120 {flags=graph
-y1=-0.92435834
-y2=2.9741421
+B 2 1240 -1080 2600 -680 {flags=graph
+y1=-0.52
+y2=2
 ypos1=0
 ypos2=2
 divy=5
@@ -52,8 +52,11 @@ xi_bandgap.vstart_up
 vpref
 xi_bandgap.vbe
 xi_bandgap.vpcas
-xi_bandgap.vbjt_ptat[6]"
-color="7 4 13 17 18 11 12"
+xi_bandgap.vbjt_ptat[6]
+vztc
+xi_bandgap.vgs_ctat
+xi_bandgap.vpcas_ctat"
+color="7 4 13 17 18 11 12 4 21 17"
 dataset=-1
 unitx=1
 logx=0
@@ -61,7 +64,34 @@ logy=0
 rawfile=$netlist_dir/tb_bandgap_dc_tran.raw
 sim_type=tran
 autoload=1
-hilight_wave=6}
+hilight_wave=-1}
+B 2 1240 -680 2600 -280 {flags=graph
+y1=-8.3e-05
+y2=4.6e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=0.00016
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_bandgap_dc_tran.raw
+sim_type=tran
+autoload=1
+hilight_wave=-1
+color="4 15 17"
+node="i(v1)
+i(@m.xi_bandgap.xmpref1.m0[id])
+i(@m.xi_bandgap.xmpref11.m0[id])"
+rainbow=0}
 N 680 -640 680 -610 {lab=VSS}
 N 680 -720 680 -700 {lab=VDD}
 N 840 -570 860 -570 {lab=VSS}
@@ -113,20 +143,22 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 0 -950 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -10 -950 0 0 {name=NGSPICE only_toplevel=true
 value="
+.options savecurrents
+*.option method=gear
 .control
 ** Define input signal
 let VDD=5.0
 let Vstep=2.0
 let T=80u
 let td=1u
-let trf=1u
+let trf=10u
 let tON=0.5*T-trf
 
 ** Define transient params
 let Tstop=2*T
-let Tstep=0.01*T
+let Tstep=0.02*T
 
 ** Set sources
 alter @V1[DC] = $&VDD

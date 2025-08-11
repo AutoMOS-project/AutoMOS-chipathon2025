@@ -4,7 +4,24 @@ K {}
 V {}
 S {}
 E {}
+L 3 110 -710 110 -670 {}
+L 3 110 -670 120 -680 {}
+L 3 100 -680 120 -680 {}
+L 3 100 -680 110 -670 {}
+L 3 350 -710 350 -670 {}
+L 3 350 -670 360 -680 {}
+L 3 340 -680 360 -680 {}
+L 3 340 -680 350 -670 {}
+L 3 660 -710 660 -670 {}
+L 3 660 -670 670 -680 {}
+L 3 650 -680 670 -680 {}
+L 3 650 -680 660 -670 {}
+A 3 47.43902439024399 -662.80487804878 46.22096014206645 126.416378519886 360 {}
 P 4 1 720 -490 {}
+T {2u} 100 -740 0 0 0.4 0.4 {}
+T {2u} 340 -740 0 0 0.4 0.4 {}
+T {8u} 650 -740 0 0 0.4 0.4 {}
+T {IDC (typ)=12u} -100 -740 0 0 0.4 0.4 {}
 N 260 -480 260 -430 {lab=#net1}
 N 260 -480 350 -480 {lab=#net1}
 N 350 -520 350 -480 {lab=#net1}
@@ -80,13 +97,13 @@ C {ipin.sym} 110 -480 3 0 {name=p8 lab=ibias
 C {iopin.sym} 80 -660 2 0 {name=p9 lab=VDD}
 C {iopin.sym} 220 -150 2 0 {name=p10 lab=VSS}
 C {title.sym} 170 -30 0 0 {name=l1 author="Luighi Viton"}
-C {symbols/cap_nmos_03v3_b.sym} 540 -330 0 0 {name=C1
+C {symbols/cap_nmos_03v3_b.sym} 540 -330 0 0 {name=CM
 W=15u
 L=15u
 model=cap_nmos_03v3_b
 spiceprefix=X
 m=1}
-C {symbols/pfet_05v0.sym} 130 -590 0 1 {name=M9
+C {symbols/pfet_05v0.sym} 130 -590 0 1 {name=Mpref0
 L=1u
 W=1u
 nf=1
@@ -100,7 +117,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {symbols/nfet_05v0.sym} 280 -210 0 1 {name=M10
+C {symbols/nfet_05v0.sym} 280 -210 0 1 {name=Mnload0
 L=2u
 W=1u
 nf=1
@@ -114,7 +131,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 330 -590 0 0 {name=M3
+C {symbols/pfet_05v0.sym} 330 -590 0 0 {name=Mpref1
 L=1u
 W=1u
 nf=1
@@ -128,7 +145,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 640 -590 0 0 {name=M4
+C {symbols/pfet_05v0.sym} 640 -590 0 0 {name=Mpref2
 L=1u
 W=1u
 nf=1
@@ -142,7 +159,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 240 -400 0 0 {name=M1
+C {symbols/pfet_05v0.sym} 240 -400 0 0 {name=Mpdiff0
 L=1u
 W=4u
 nf=1
@@ -156,7 +173,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 460 -400 0 1 {name=M2
+C {symbols/pfet_05v0.sym} 460 -400 0 1 {name=Mpdiff1
 L=1u
 W=4u
 nf=1
@@ -170,7 +187,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {symbols/nfet_05v0.sym} 420 -210 0 0 {name=M5
+C {symbols/nfet_05v0.sym} 420 -210 0 0 {name=Mnload1
 L=2u
 W=1u
 nf=1
@@ -184,7 +201,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {symbols/nfet_05v0.sym} 640 -210 0 0 {name=M6
+C {symbols/nfet_05v0.sym} 640 -210 0 0 {name=Mncs
 L=2u
 W=1u
 nf=1
