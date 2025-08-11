@@ -1,0 +1,32 @@
+Iteration	Title	URL	Assignees	Status	Milestone	Labels	Linked pull requests
+Week 28, 29	[Schematic] - [Common] - [Example of design and verification two stage opamp]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/31	LuighiV	Done	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/33
+Week 28, 29	[Schematic] - [TOP] - [Create initial structure]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/1	LuighiV	Done	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/30
+Week 30,31	[Schematic] - [Common] - [Characterization of PDK devices]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/32	LuighiV	Done	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/34
+Week 30,31	[SChematic] - [Bandgap] - [First schematic - functional verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/2	LuighiV	In Progress	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/35
+Week 30,31	[Schematic] - [LDO] - [First design - functional verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/4	jvilcap	In Progress	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/38
+Week 30,31	[Schematic] - [VCO] - [First design - functional verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/5	madorat	In Progress	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/39
+Week 30,31	[Schematic] - [Biasgen] - [First schematic  - functional verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/3	LuighiV	In Progress	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/37
+Week 30,31	[Schematic] - [Test] - [First design - functional verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/6	madorat	In Progress	Schematic freeze	feature, schematic	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/pull/40
+Week 32	[Schematic] - [VCO] - [Design completed - parameter optimization]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/10	madorat	In Progress	Schematic freeze	feature, schematic	
+Week 32	[Schematic] - [LDO] - [Design completed - parameter optimization]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/9	jvilcap	In Progress	Schematic freeze	feature, schematic	
+Week 32	[Schematic] - [Bandgap] - [Design completed - parameter optimization]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/7	LuighiV	In Progress	Schematic freeze	feature, schematic	
+Week 33	[Schematic] - [Biasgen] - [Design completed - parameter optimization]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/8	LuighiV	Backlog	Schematic freeze	feature, schematic	
+Week 33	[Schematic] - [Test] - [Design completed - parameter optimization]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/11	madorat	Backlog	Schematic freeze	feature, schematic	
+Week 33	[Schematic] - [TOP] - [Design completed]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/12	jvilcap, LuighiV, madorat	Backlog	Schematic freeze	feature, schematic	
+Week 33	[Layout] - [Bandgap] - [GLayout template sub structures]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/13	LuighiV	Backlog	Layout clean DRC	feature, layout	
+Week 33	[Layout] - [LDO] - [GLayout template sub structures]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/15	jvilcap	Backlog	Layout clean DRC	feature, layout	
+Week 33	[Layout] - [VCO] - [GLayout template sub structures]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/16	madorat	Backlog	Layout clean DRC	feature, layout	
+Week 34	[Layout] - [Biasgen] - [GLayout template sub structures]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/14	LuighiV	Backlog	Layout clean DRC	feature, layout	
+Week 34	[Layout] - [Test] - [GLayout template sub structures]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/17	madorat	Backlog	Layout clean DRC	feature, layout	
+Week 34	[Layout] - [LDO] - [Layout completed - clean DRC]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/20	jvilcap	Backlog	Layout clean DRC	feature, layout	
+Week 35	[Layout] - [Bandgap] - [Layout completed - clean DRC]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/18	LuighiV	Backlog	Layout clean DRC	feature, layout	
+Week 35	[Layout] - [VCO] - [Layout completed - clean DRC]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/21	madorat	Backlog	Layout clean DRC	feature, layout	
+Week 36	[Layout] - [Biasgen] - [Layout completed - clean DRC]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/19	LuighiV	Backlog	Layout clean DRC	feature, layout	
+Week 36	[Layout] - [Test] - [Layout completed - clean DRC]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/22	madorat	Backlog	Layout clean DRC	feature, layout	
+Week 36	[Post-Layout] - [LDO] - [PEX verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/26	jvilcap	Backlog	Tapeout - final submission	feature	
+Week 36	[Post-Layout] - [VCO] - [PEX verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/27	madorat	Backlog	Tapeout - final submission	feature	
+Week 37	[Layout] - [TOP] - [Layout completed - clean DRC]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/23	jvilcap, LuighiV, madorat	Backlog	Layout clean DRC	feature, layout	
+Week 37	[Post-Layout] - [Bandgap] - [PEX verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/24	LuighiV	Backlog	Tapeout - final submission	feature	
+Week 38	[Post-Layout] - [Biasgen] - [PEX verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/25	LuighiV	Backlog	Tapeout - final submission	feature	
+Week 38	[Post-Layout] - [Test] - [PEX verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/28	madorat	Backlog	Tapeout - final submission	feature	
+Week 39	[Post-Layout] - [TOP] - [PEX verification]	https://github.com/AutoMOS-project/AutoMOS-chipathon2025/issues/29	jvilcap, LuighiV, madorat	Backlog	Tapeout - final submission	feature	
