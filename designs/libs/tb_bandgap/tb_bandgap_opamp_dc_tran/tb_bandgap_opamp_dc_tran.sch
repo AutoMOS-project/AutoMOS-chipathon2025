@@ -32,18 +32,18 @@ vp"
 dataset=-1}
 B 2 1190 -400 1990 0 {flags=graph
 y1=0
-y2=0.019
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=6.4327675e-07
+x2=4e-05
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 node="vout
 vp"
 color="7 4"

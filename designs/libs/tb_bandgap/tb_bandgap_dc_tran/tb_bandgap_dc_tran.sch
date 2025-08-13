@@ -4,9 +4,9 @@ K {}
 V {}
 S {}
 E {}
-B 2 2680 -1080 4040 -680 {flags=graph
-y1=-1.9e-29
-y2=5
+B 2 2680 -1080 4030 -280 {flags=graph
+y1=10
+y2=15
 ypos1=0
 ypos2=2
 divy=5
@@ -16,8 +16,8 @@ x1=0
 x2=5
 divx=5
 subdivx=4
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 unitx=1
 logx=0
 logy=0
@@ -26,7 +26,7 @@ sim_type=dc
 rawfile=$netlist_dir/tb_bandgap_dc_tran.raw
 rainbow=1
 hilight_wave=-1
-color="4 7 17 17"
+color="4 7 20 6"
 node="VBG
 VDD
 vpref
@@ -40,12 +40,12 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00016
+x1=-1e-14
+x2=2.1163236e-05
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 node="VBG
 VDD
 xi_bandgap.vstart_up
@@ -56,7 +56,7 @@ xi_bandgap.vbjt_ptat[6]
 vztc
 xi_bandgap.vgs_ctat
 xi_bandgap.vpcas_ctat"
-color="7 4 13 17 18 11 12 4 21 17"
+color="7 4 13 18 18 11 12 4 21 19"
 dataset=-1
 unitx=1
 logx=0
@@ -73,12 +73,12 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00016
+x1=-1e-14
+x2=2.1163236e-05
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 dataset=-1
 unitx=1
 logx=0
@@ -87,7 +87,7 @@ rawfile=$netlist_dir/tb_bandgap_dc_tran.raw
 sim_type=tran
 autoload=1
 hilight_wave=-1
-color="4 15 17"
+color="4 15 7"
 node="i(v1)
 i(@m.xi_bandgap.xmpref1.m0[id])
 i(@m.xi_bandgap.xmpref11.m0[id])"
@@ -158,7 +158,8 @@ let tON=0.5*T-trf
 
 ** Define transient params
 let Tstop=2*T
-let Tstep=0.02*T
+* let Tstop=td+trf+tON
+let Tstep=0.01*T
 
 ** Set sources
 alter @V1[DC] = $&VDD

@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1020 -930 1820 -530 {flags=graph
+B 2 1210 -930 2010 -530 {flags=graph
 y1=0.37
 y2=2
 ypos1=0
@@ -16,8 +16,8 @@ x1=-40
 x2=125
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 node="vbg
 vdd
 xi_bandgap.vbjt_ptat[0]
@@ -32,7 +32,7 @@ sim_type=dc
 autoload=1
 hilight_wave=2
 dataset=0}
-B 2 1020 -530 1820 -130 {flags=graph
+B 2 1210 -530 2010 -130 {flags=graph
 y1=1.1875395
 y2=1.2090144
 ypos1=0
@@ -44,8 +44,8 @@ x1=-40
 x2=125
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 node="vgb(FF); vbg % $netlist_dir/tb_bandgap_ff.raw
 vgb(TT); vbg % $netlist_dir/tb_bandgap.raw
 vgb(SS); vbg % $netlist_dir/tb_bandgap_ss.raw"
@@ -58,9 +58,9 @@ rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1
 hilight_wave=2}
-B 2 1880 -520 2680 -120 {flags=graph
-y1=1.14
-y2=1.24
+B 2 2070 -520 2870 -120 {flags=graph
+y1=1.1
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
@@ -70,8 +70,8 @@ x1=-40
 x2=125
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 unitx=1
 logx=0
 logy=0
@@ -84,7 +84,7 @@ node="vztc (ff); vztc % $\{netlist_dir\}/tb_bandgap_ff.raw
 vztc (tt); vztc % $\{netlist_dir\}/tb_bandgap.raw
 vztc (ss); vztc % $\{netlist_dir\}/tb_bandgap_ss.raw"
 dataset=-1}
-B 2 1880 -1320 2680 -920 {flags=graph
+B 2 2070 -1320 2870 -920 {flags=graph
 y1=1.3e-06
 y2=2.8e-06
 ypos1=0
@@ -97,7 +97,7 @@ x2=125
 divx=5
 subdivx=1
 xlabmag=1.0
-ylabmag=1.0
+ylabmag=0.75
 node="i(@q.xi_bandgap.xq1.q0[ie])
 i(@q.xi_bandgap.xq2.q0[ie])
 i(@q.xi_bandgap.xq3.q0[ie])"
@@ -109,9 +109,9 @@ logy=0
 rawfile=$netlist_dir/tb_bandgap.raw
 sim_type=dc
 autoload=1}
-B 2 1880 -920 2680 -520 {flags=graph
-y1=1.9e-06
-y2=4.5e-06
+B 2 2070 -920 2870 -520 {flags=graph
+y1=1.3e-06
+y2=5.5e-06
 ypos1=0
 ypos2=2
 divy=5
@@ -121,8 +121,8 @@ x1=-40
 x2=125
 divx=5
 subdivx=1
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 dataset=-1
 unitx=1
 logx=0
@@ -136,6 +136,106 @@ node="i(@m.xi_bandgap.xmpref12.m0[id])
 ctat_m (tt);i(@m.xi_bandgap.xmpref15.m0[id]) % $netlist_dir/tb_bandgap.raw
 ctat_m (ss);i(@m.xi_bandgap.xmpref15.m0[id]) % $netlist_dir/tb_bandgap_ss.raw
 i(@m.xi_bandgap.xmpref17.m0[id])"}
+B 2 2900 -1320 3700 -920 {flags=graph
+y1=-9.7e-05
+y2=-4e-05
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=-40
+x2=125
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=0.75
+node="IQ (FF); i(v1) % $netlist_dir/tb_bandgap_ff.raw
+IQ (TT); i(v1) % $netlist_dir/tb_bandgap.raw
+IQ (SS); i(v1) % $netlist_dir/tb_bandgap_ss.raw"
+color="5 4 12"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_bandgap.raw
+sim_type=dc
+autoload=1}
+B 2 2900 -920 3700 -520 {flags=graph
+y1=1.1e-06
+y2=3.4e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=-40
+x2=125
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=0.75
+node="IPTAT (SS);i(@m.xm2.m0[id]) % $netlist_dir/tb_bandgap_ss.raw
+IPTAT (TT);i(@m.xm2.m0[id]) % $netlist_dir/tb_bandgap.raw
+IPTAT (FF);i(@m.xm2.m0[id]) % $netlist_dir/tb_bandgap_ff.raw"
+color="6 4 5"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_bandgap.raw
+sim_type=dc
+autoload=1}
+B 2 2900 -520 3700 -120 {flags=graph
+y1=2.9e-06
+y2=5.5e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=-40
+x2=125
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=0.75
+node="CPTAT (SS);i(@m.xm3.m0[id]) % $netlist_dir/tb_bandgap_ss.raw
+CPTAT (TT);i(@m.xm3.m0[id]) % $netlist_dir/tb_bandgap.raw
+CPTAT (FF);i(@m.xm3.m0[id]) % $netlist_dir/tb_bandgap_ff.raw"
+color="6 4 5"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_bandgap.raw
+sim_type=dc
+autoload=1}
+B 2 3750 -1320 4550 -920 {flags=graph
+y1=5.3e-06
+y2=9.4e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=-40
+x2=125
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=0.75
+node="IZTC (SS);i(@m.xm1.m0[id]) % $netlist_dir/tb_bandgap_ss.raw
+IZTC (TT);i(@m.xm1.m0[id]) % $netlist_dir/tb_bandgap.raw
+IZTC (FF);i(@m.xm1.m0[id]) % $netlist_dir/tb_bandgap_ff.raw"
+color="6 4 5"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_bandgap.raw
+sim_type=dc
+autoload=1}
 N 420 -490 420 -460 {lab=VSS}
 N 420 -570 420 -550 {lab=VDD}
 N 600 -410 620 -410 {lab=VSS}
@@ -232,7 +332,7 @@ device="ceramic capacitor"}
 C {lab_pin.sym} 850 -440 1 1 {name=p5 lab=VSS}
 C {libs/core_bandgap/bandgap/bandgap.sym} 540 -550 0 0 {name=xI_bandgap}
 C {title.sym} 160 -40 0 0 {name=l4 author="Luighi Viton (AutoMOS-Project)"}
-C {launcher.sym} 1190 -1090 0 0 {name=h1
+C {launcher.sym} 180 -730 0 0 {name=h1
 descr="Backannotate" 
 tclcommand="xschem annotate_op"}
 C {lab_wire.sym} 520 -470 0 0 {name=p3 sig_type=std_logic lab=vpref}

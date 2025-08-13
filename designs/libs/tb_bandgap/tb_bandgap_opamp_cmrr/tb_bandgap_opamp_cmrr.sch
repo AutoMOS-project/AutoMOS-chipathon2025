@@ -5,8 +5,8 @@ V {}
 S {}
 E {}
 B 2 1230 -1120 2030 -720 {flags=graph
-y1=-71
-y2=110
+y1=-59
+y2=46
 ypos1=0
 ypos2=2
 divy=5
@@ -16,8 +16,8 @@ x1=-1
 x2=10
 divx=5
 subdivx=8
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 node="Common mode; vout db20() %0
 Differential mode; vout db20() %1"
 color="7 4"
@@ -36,20 +36,20 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.1
-x2=11.1
+x1=-1
+x2=10
 divx=5
 subdivx=8
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 dataset=-1
 unitx=1
 logx=1
 logy=0
 rawfile=$netlist_dir/tb_opamp_two_stage_cmrr_result.raw
 autoload=1
-sim_type=table
-color=11
+sim_type=ac
+color=6
 node=cmrr}
 N 580 -410 580 -360 {lab=VSS}
 N 580 -390 650 -390 {lab=VSS}
@@ -78,9 +78,9 @@ N 710 -690 710 -630 {lab=vn}
 N 400 -390 440 -390 {lab=VSS}
 C {gnd.sym} 580 -300 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} 1040 -470 0 1 {name=p4 lab=vout}
-C {vsource.sym} 580 -440 0 0 {name=V1 value="3.3" savecurrent=false}
+C {vsource.sym} 580 -440 0 0 {name=V1 value="2" savecurrent=false}
 C {vsource.sym} 650 -470 0 0 {name=V2 
-value="1.65 AC \{ac_cm\}"}
+value="1.2 AC \{ac_cm\}"}
 C {vsource.sym} 580 -330 0 0 {name=VSS_sense value=0 savecurrent=false}
 C {lab_pin.sym} 650 -390 2 0 {name=p7 lab=VSS}
 C {lab_wire.sym} 580 -500 0 0 {name=p8  lab=VDD}
