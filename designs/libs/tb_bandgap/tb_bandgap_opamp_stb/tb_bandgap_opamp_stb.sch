@@ -16,8 +16,8 @@ x1=0
 x2=10
 divx=5
 subdivx=8
-xlabmag=1.0
-ylabmag=1.0
+xlabmag=0.75
+ylabmag=0.75
 node="\\"Magnitude; vout db20()\\"
 \\"Phase;ph(vout) cph()\\""
 color="12 7"
@@ -35,7 +35,7 @@ T {tcleval([xschem raw read $netlist_dir/[file tail [file rootname [xschem get c
     append table \\\\n [to_eng $gm] \{,\} [to_eng $pm] \{,\} [to_eng $fzdb] \{,\} [to_eng $fzph]
   \}
   xschem raw switch 0
-  return [tabulate $table ,]])} 2010 -780 0 0 0.4 0.4 {floater=1 font=monospace}
+  return [tabulate $table ,]])} 2010 -780 0 0 0.3 0.3 {floater=1 font=monospace}
 N 590 -460 590 -410 {lab=VSS}
 N 590 -440 660 -440 {lab=VSS}
 N 660 -460 660 -440 {lab=VSS}
