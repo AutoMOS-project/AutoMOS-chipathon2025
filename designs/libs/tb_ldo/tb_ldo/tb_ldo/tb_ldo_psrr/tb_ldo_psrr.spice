@@ -7,15 +7,19 @@ V2 vref GND 1.5
 I0 VDD ibias 10u
 CL net3 GND 0.1u m=1
 Resr out net3 0.2 m=1
-x1 VDD vref out ibias net1 GND ldo
+x1 VDD vref out ibias net1 GND net4 ldo
 Ri net2 VDD 1 m=1
 Ci VDD GND 10u m=1
+* noconn #net4
 **** begin user architecture code
 
 
 
 .control
 save all
+
+run
+set color0 = white
 
 ** Set sources
 alter @V1[AC] = 1
@@ -31,8 +35,6 @@ plot psrr_db
 
 ** Measurements
 meas ac PSRR_gain FIND psrr_db AT=1Hz
-let psrr_3db = PSRR_gain+3
-meas ac f_3db WHEN psrr_db=$&psrr_3db
 
 write tb_ldo_psrr.raw
 
@@ -53,16 +55,17 @@ write tb_ldo_psrr.raw
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=6
+* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=7
 ** sym_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sym
 ** sch_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sch
-.subckt ldo VDD VREF VOUT IBIAS SUB VSS
+.subckt ldo VDD VREF VOUT IBIAS SUB VSS LDO_EN
 *.iopin VDD
 *.iopin VSS
 *.iopin VOUT
 *.iopin SUB
 *.iopin VREF
 *.iopin IBIAS
+*.ipin LDO_EN
 XMpass VOUT Vota VDD VDD pfet_05v0 L=0.50u W=50.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=10
 * noconn SUB
@@ -140,6 +143,7 @@ XRfb_dummy_TB[3] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRfb_dummy_TB[2] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRfb_dummy_TB[1] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRfb_dummy_TB[0] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+* noconn LDO_EN
 .ends
 
 

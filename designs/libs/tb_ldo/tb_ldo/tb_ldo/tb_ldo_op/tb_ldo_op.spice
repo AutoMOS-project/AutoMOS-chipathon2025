@@ -1,14 +1,15 @@
 ** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo/tb_ldo_op/tb_ldo_op.sch
 **.subckt tb_ldo_op
 * noconn #net1
-RL out GND 1.8k m=1
 V1 VDD GND 2
 V2 vref GND 0.9
 I0 VDD net2 10u
 CL net3 GND 0.1u m=1
 Resr out net3 0.2 m=1
-x1 VDD vref net4 net2 net1 GND ldo
+x1 VDD vref net4 net2 net1 GND net5 ldo
 V3 net4 out 0
+* noconn #net5
+IL out GND 0
 **** begin user architecture code
 
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
@@ -54,18 +55,19 @@ write tb_ldo_op.raw
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=6
+* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=7
 ** sym_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sym
 ** sch_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sch
-.subckt ldo VDD VREF VOUT IBIAS SUB VSS
+.subckt ldo VDD VREF VOUT IBIAS SUB VSS LDO_EN
 *.iopin VDD
 *.iopin VSS
 *.iopin VOUT
 *.iopin SUB
 *.iopin VREF
 *.iopin IBIAS
-XMpass VOUT Vota VDD VDD pfet_05v0 L=0.50u W=100.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=5
+*.ipin LDO_EN
+XMpass VOUT Vota VDD VDD pfet_05v0 L=0.50u W=50.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=10
 * noconn SUB
 x1 VDD VREF Vfb Vota IBIAS VSS OTA
 XR1[9] Vr_fb1[9] VOUT VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
@@ -141,6 +143,7 @@ XRfb_dummy_TB[3] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRfb_dummy_TB[2] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRfb_dummy_TB[1] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRfb_dummy_TB[0] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+* noconn LDO_EN
 .ends
 
 
