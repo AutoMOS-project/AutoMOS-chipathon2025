@@ -1,22 +1,14 @@
-** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo/tb_ldo_dc/tb_ldo_dc.sch
-**.subckt tb_ldo_dc
+** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo/tb_ldo.sch
+**.subckt tb_ldo
 * noconn #net1
-RL out GND {RL_val} m=1
 V1 VDD GND 2
 V2 vref GND 0.9
 I0 VDD net2 10u
 CL net3 GND 0.1u m=1
 Resr out net3 0.2 m=1
-x1 VDD vref out net2 net1 GND net7 ldo
-IL out1 GND 1m
+x1 VDD vref out net2 net1 GND net4 ldo
 * noconn #net4
-V3 vref1 GND 0.9
-I1 VDD net5 10u
-CL1 net6 GND 0.1u m=1
-Resr1 out1 net6 0.2 m=1
-x2 VDD vref1 out1 net5 net4 GND net8 ldo
-* noconn #net7
-* noconn #net8
+IL out GND 1m
 **** begin user architecture code
 
 
@@ -27,78 +19,27 @@ save all
 run
 set color0 = white
 
-** Define param
-.param RL_val = 1.8k
-
-** Max load current simulation
-dc IL 0 5m 0.01m
-
-**Measurements
-meas dc ILOAD_max WHEN v(out1)=1.8
-print ILOAD_max
-
-** Plots
-setplot dc1
-let vout=v(out1)
-plot vout
-
-write tb_ldo_dc1.raw
-
-** Dropout voltage simulation
-alter RL = {RL_val}
-dc V1 0 5 0.01
-
-** Measurements
-meas dc Vdd_min FIND v(vdd) WHEN v(out)=1.8 RISE=1
-let Vdropout=Vdd_min-1.8
-print Vdropout
-
-** Plots
-setplot dc2
-let vout=v(out)
-let vin=v(vdd)
-plot vout vin
-
-write tb_ldo_dc2.raw
-
-** Line regulation simulation
-alter RL = {RL_val}
-dc V1 2 5 0.01
+** Simulations Temperature and Line Regulation
+dc TEMP -40 125 1  V1 2 5 0.25
 
 ** Measurements
 meas dc Vout_max MAX v(out)
 meas dc Vout_min MIN v(out)
-let DeltaVdd=5-2
-let DeltaVout=Vout_max-Vout_min
-let Line_reg=DeltaVout/DeltaVdd
-print Line_reg
+let dev_max = abs(Vout_max - 1.8)
+print dev_max
+let dev_min = abs(Vout_min - 1.8)
+print dev_min
+let Vout_acc_abs = max(dev_max, dev_min)
+print Vout_acc_abs
+let Vout_acc_rel = (Vout_acc_abs / 1.8) * 100
+print Vout_acc_rel
 
 ** Plots
-setplot dc3
+setplot dc1
 let vout=v(out)
 plot vout
 
-write tb_ldo_dc3.raw
-
-** Load regulation simulation
-dc IL 0 1m 0.01m
-
-** Measurements
-meas dc Vout_max MAX v(out1)
-meas dc Vout_min MIN v(out1)
-let DeltaVout = Vout_max-Vout_min
-let DeltaIload = 0-1m
-let Load_reg = abs(DeltaVout/DeltaIload)
-let Load_reg_por = (DeltaVout/1.8)*100
-print Load_reg
-print Load_reg_por
-
-** Plots
-setplot dc4
-let vout=v(out1)
-plot vout
-
-write tb_ldo_dc4.raw
+write tb_ldo_ss.raw
 
 .endc
 * ngspice commands
@@ -106,11 +47,11 @@ write tb_ldo_dc4.raw
 
 
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
-.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice ss
 .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice cap_mim
-.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_typical
-.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
-.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_ss
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_ss
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_ss
 * .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_statistical
 * ngspice commands
 

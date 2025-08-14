@@ -151,6 +151,9 @@ value="
 .control
 save all
 
+run
+set color0 = white   
+
 ** Set sources
 alter @V3[AC] = 1
 
@@ -160,22 +163,15 @@ ac dec 100 1 10G
 ** Plots
 setplot ac1
 let gain_db = db(v(out))
-let phase_deg = cph(-1*v(out))*180/pi
 let gain_db_ota = db(v(x1.vota))
-let phase_deg_ota = cph(v(x1.vota))*180/pi
 plot gain_db 
-plot phase_deg
 plot gain_db_ota
-plot phase_deg_ota
 
 ** Measurements
 meas ac DC_gain FIND gain_db AT=1Hz
 let gain_3db = DC_gain-3
 meas ac f_3db WHEN gain_db = $&gain_3db
 meas ac f_0db WHEN gain_db = 0
-meas ac phase_0db FIND phase_deg WHEN gain_db = 0
-let phase_margin = 180 + phase_0db
-print phase_margin
 
 write tb_ldo_ac.raw
 .endc

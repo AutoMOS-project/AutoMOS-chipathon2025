@@ -16,7 +16,7 @@ N 1530 -1070 1530 -1020 {lab=VDD}
 N 1510 -1070 1530 -1070 {lab=VDD}
 N 990 -1220 990 -1140 {lab=VDD}
 N 1510 -910 1590 -910 {lab=VOUT}
-N 790 -410 790 -390 {lab=SUB}
+N 710 -410 710 -390 {lab=SUB}
 N 1520 -470 1520 -430 {lab=Vr_fb2[9:1],VSS
 bus=true}
 N 1510 -820 1510 -780 {lab=VOUT}
@@ -53,10 +53,11 @@ N 1020 -1570 1030 -1570 {lab=VDD}
 N 1230 -1570 1240 -1570 {lab=VDD}
 N 1020 -1600 1050 -1600 {lab=VDD}
 N 1230 -1600 1260 -1600 {lab=VDD}
+N 820 -450 820 -430 {lab=LDO_EN}
 C {iopin.sym} 990 -1220 3 0 {name=p1 lab=VDD}
 C {iopin.sym} 990 -390 1 0 {name=p2 lab=VSS}
 C {iopin.sym} 1590 -910 0 0 {name=p3 lab=VOUT}
-C {iopin.sym} 790 -390 1 0 {name=p4 lab=SUB}
+C {iopin.sym} 710 -390 1 0 {name=p4 lab=SUB}
 C {iopin.sym} 810 -1060 2 0 {name=p5 lab=VREF}
 C {iopin.sym} 950 -840 1 0 {name=p6 lab=IBIAS}
 C {symbols/pfet_05v0.sym} 1490 -1020 0 0 {name=Mpass
@@ -74,7 +75,7 @@ model=pfet_05v0
 spiceprefix=X
 }
 C {title-3.sym} 0 0 0 0 {name=l2 author="Julio Vilca" rev=1.0 lock=true page=2 pages=2}
-C {noconn.sym} 790 -410 1 0 {name=l1}
+C {noconn.sym} 710 -410 1 0 {name=l1}
 C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 970 -1020 0 0 {name=x1}
 C {lab_wire.sym} 1390 -750 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1350 -1020 0 0 {name=p8 sig_type=std_logic lab=Vota}
@@ -130,3 +131,6 @@ spiceprefix=X
 m=1}
 C {lab_wire.sym} 1030 -1520 2 0 {name=p17 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1240 -1520 2 0 {name=p18 sig_type=std_logic lab=VDD}
+C {ipin.sym} 820 -430 3 0 {name=p19 lab=LDO_EN}
+C {noconn.sym} 820 -450 1 0 {name=l3
+lab=EN}

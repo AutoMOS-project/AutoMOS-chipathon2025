@@ -4,16 +4,15 @@ K {}
 V {}
 S {}
 E {}
-B 2 1620 -720 2420 -320 {flags=graph
-y1=1.7970
+B 2 1620 -720 2420 -320 {flags=graph,unlocked
+y1=1.80
 y2=1.804
 ypos1=0
 ypos2=2
-divy=5
 subdivy=1
 unity=1
 x1=0
-x2=2e-3
+x2=0.001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -27,8 +26,9 @@ sim_type=dc
 color="4 7"
 node="Load regulation
 vout"
-rawfile=$netlist_dir/tb_ldo_dc3.raw}
-B 2 1620 -1200 2420 -800 {flags=graph
+rawfile=$netlist_dir/tb_ldo_dc4.raw
+divy=5}
+B 2 1620 -1200 2420 -800 {flags=graph,unlocked
 y1=1.8
 y2=1.825
 ypos1=0
@@ -49,7 +49,7 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/tb_ldo_dc2.raw
+rawfile=$netlist_dir/tb_ldo_dc3.raw
 sim_type=dc
 autoload=1}
 B 2 1620 -1680 2420 -1280 {flags=graph
@@ -66,7 +66,7 @@ divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="LDO Output vs Input voltage
+node="LDO Output vs VDD
 vout
 vdd"
 color="4 7 12"
@@ -74,8 +74,34 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/tb_ldo_dc1.raw
+rawfile=$netlist_dir/tb_ldo_dc2.raw
 autoload=1}
+B 2 740 -1680 1540 -1280 {flags=graph
+y1=1.784
+y2=1.804
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=0.005
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="LDO Output vs ILOAD 
+vout"
+color="4 7"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+autoload=1
+rawfile=$netlist_dir/tb_ldo_dc1.raw
+sim_type=dc
+rainbow=1
+hilight_wave=1}
 N 870 -960 870 -940 {lab=#net1}
 N 950 -960 950 -930 {lab=GND}
 N 510 -1160 510 -1120 {lab=VDD}
@@ -115,10 +141,12 @@ N 1170 -510 1170 -460 {lab=GND}
 N 1170 -1040 1170 -1020 {lab=out}
 N 1170 -1020 1170 -980 {lab=out}
 N 1170 -920 1170 -880 {lab=GND}
+N 1030 -960 1030 -900 {lab=#net7}
+N 1030 -560 1030 -500 {lab=#net8}
 C {noconn.sym} 870 -900 3 0 {name=l1}
 C {gnd.sym} 950 -930 0 0 {name=l2 lab=GND}
 C {res.sym} 1170 -950 0 0 {name=RL
-value=1.8k
+value=\{RL_val\}
 footprint=1206
 device=resistor
 m=1}
@@ -168,14 +196,35 @@ C {lab_wire.sym} 780 -670 0 0 {name=p3 sig_type=std_logic lab=vref1}
 C {lab_wire.sym} 1220 -640 0 0 {name=p4 sig_type=std_logic lab=out1}
 C {libs/core_ldo/ldo/ldo/ldo.sym} 950 -640 0 0 {name=x2}
 C {gnd.sym} 1170 -460 0 0 {name=l18 lab=GND}
-C {simulator_commands.sym} 250 -990 0 0 {name=SIMULATIONS
+C {simulator_commands.sym} 250 -1000 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
 value="
 .control
 save all
 
+run
+set color0 = white      
+
+** Define param
+.param RL_val = 1.8k
+
+** Max load current simulation
+dc IL 0 5m 0.01m
+
+**Measurements
+meas dc ILOAD_max WHEN v(out1)=1.8
+print ILOAD_max
+
+** Plots
+setplot dc1
+let vout=v(out1)
+plot vout
+
+write tb_ldo_dc1.raw
+
 ** Dropout voltage simulation
+alter RL = \{RL_val\}
 dc V1 0 5 0.01
 
 ** Measurements
@@ -184,15 +233,16 @@ let Vdropout=Vdd_min-1.8
 print Vdropout
 
 ** Plots
-setplot dc1
+setplot dc2
 let vout=v(out)
 let vin=v(vdd)
 plot vout vin
 
-write tb_ldo_dc1.raw
+write tb_ldo_dc2.raw
 
 ** Line regulation simulation
-dc V1 2 5 0.001
+alter RL = \{RL_val\}
+dc V1 2 5 0.01
 
 ** Measurements
 meas dc Vout_max MAX v(out)
@@ -203,31 +253,31 @@ let Line_reg=DeltaVout/DeltaVdd
 print Line_reg
 
 ** Plots
-setplot dc2
+setplot dc3
 let vout=v(out)
 plot vout
 
-write tb_ldo_dc2.raw
+write tb_ldo_dc3.raw
 
 ** Load regulation simulation
-dc IL 0 2m 0.01m
+dc IL 0 1m 0.01m
 
 ** Measurements
 meas dc Vout_max MAX v(out1)
 meas dc Vout_min MIN v(out1)
 let DeltaVout = Vout_max-Vout_min
-let DeltaIload = 0-2m
+let DeltaIload = 0-1m
 let Load_reg = abs(DeltaVout/DeltaIload)
 let Load_reg_por = (DeltaVout/1.8)*100
 print Load_reg
 print Load_reg_por
 
 ** Plots
-setplot dc3
+setplot dc4
 let vout=v(out1)
 plot vout
 
-write tb_ldo_dc3.raw
+write tb_ldo_dc4.raw
 
 .endc
 * ngspice commands
@@ -246,8 +296,10 @@ value="
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 * ngspice commands
 "}
-C {title-3.sym} 0 0 0 0 {name=l10 author="Julio Vilca" rev=1.0 lock=true page=2 pages=6}
+C {title-3.sym} 0 0 0 0 {name=l10 author="Julio Vilca" rev=1.0 lock=true page=3 pages=8}
 C {launcher.sym} 300 -200 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/tb_ldo_dc1.raw; xschem raw_read $netlist_dir/tb_ldo_dc2.raw; xschem raw_read $netlist_dir/tb_ldo_dc3.raw"
+tclcommand="xschem raw_read $netlist_dir/tb_ldo_dc1.raw; xschem raw_read $netlist_dir/tb_ldo_dc2.raw; xschem raw_read $netlist_dir/tb_ldo_dc3.raw; xschem raw_read $netlist_dir/tb_ldo_dc4.raw"
 }
+C {noconn.sym} 1030 -900 3 0 {name=l11}
+C {noconn.sym} 1030 -500 3 0 {name=l19}

@@ -25,13 +25,10 @@ N 1610 -870 1670 -870 {lab=out}
 N 1500 -870 1550 -870 {lab=#net4}
 N 1670 -840 1670 -810 {lab=out}
 N 1670 -870 1670 -840 {lab=out}
+N 1430 -790 1430 -770 {lab=#net5}
+N 1430 -770 1430 -730 {lab=#net5}
 C {noconn.sym} 1270 -730 3 0 {name=l1}
 C {gnd.sym} 1350 -760 0 0 {name=l2 lab=GND}
-C {res.sym} 1670 -780 0 0 {name=RL
-value=1.8k
-footprint=1206
-device=resistor
-m=1}
 C {vsource.sym} 910 -920 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 910 -850 0 0 {name=l3 lab=GND}
 C {vsource.sym} 1130 -770 0 0 {name=V2 value=0.9 savecurrent=false}
@@ -69,7 +66,7 @@ value="
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 * ngspice commands
 "}
-C {title-3.sym} 0 0 0 0 {name=l10 author="Julio Vilca" rev=1.0 lock=true page=1 pages=6}
+C {title-3.sym} 0 0 0 0 {name=l10 author="Julio Vilca" rev=1.0 lock=true page=2 pages=8}
 C {vsource.sym} 1580 -870 3 1 {name=V3 value= 0 savecurrent=false}
 C {simulator_commands.sym} 250 -1030 0 0 {name=SIMULATIONS
 simulator=ngspice
@@ -102,3 +99,5 @@ write tb_ldo_op.raw
 .endc
 * ngspice commands
 "}
+C {noconn.sym} 1430 -730 3 0 {name=l11}
+C {isource.sym} 1670 -780 0 0 {name=IL value=0}
