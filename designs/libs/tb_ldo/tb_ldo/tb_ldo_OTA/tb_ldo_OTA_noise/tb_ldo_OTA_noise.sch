@@ -30,7 +30,7 @@ x1=0
 x2=10}
 B 2 1620 -1200 2420 -800 {flags=graph
 y1=0
-y2=400e-3
+y2=350e-3
 ypos1=0
 ypos2=2
 divy=5
@@ -123,7 +123,7 @@ C {title-3.sym} 0 0 0 0 {name=l1 author="Julio Vilca" rev=1.0 lock=true page=6 p
 C {gnd.sym} 1130 -710 0 0 {name=l11 lab=GND}
 C {vsource.sym} 640 -820 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 640 -750 0 0 {name=l12 lab=GND}
-C {vsource.sym} 770 -770 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 770 -770 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 1020 -610 0 0 {name=I1 value=10u}
 C {gnd.sym} 770 -690 0 0 {name=l13 lab=GND}
 C {capa.sym} 1400 -770 0 0 {name=CL1
@@ -137,7 +137,7 @@ C {vdd.sym} 1130 -1020 0 0 {name=l16 lab=VDD}
 C {vdd.sym} 1020 -680 0 0 {name=l17 lab=VDD}
 C {lab_wire.sym} 820 -900 0 0 {name=p3 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 1350 -860 0 0 {name=p4 sig_type=std_logic lab=out}
-C {vsource.sym} 860 -770 0 0 {name=V3 value=1.5 savecurrent=false}
+C {vsource.sym} 860 -770 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 860 -690 0 0 {name=l18 lab=GND}
 C {lab_wire.sym} 960 -820 0 0 {name=p5 sig_type=std_logic lab=in}
 C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1110 -860 0 0 {name=x2}

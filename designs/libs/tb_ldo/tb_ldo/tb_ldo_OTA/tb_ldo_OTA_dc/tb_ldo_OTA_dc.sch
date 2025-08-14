@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.4
-x2=1.6
+x1=0.8
+x2=1.0
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,7 +76,7 @@ N 870 -800 1020 -800 {lab=in}
 C {gnd.sym} 1140 -690 0 0 {name=l2 lab=GND}
 C {vsource.sym} 650 -800 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 650 -730 0 0 {name=l3 lab=GND}
-C {vsource.sym} 780 -750 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 780 -750 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 1030 -590 0 0 {name=I0 value=10u}
 C {gnd.sym} 780 -670 0 0 {name=l4 lab=GND}
 C {capa.sym} 1410 -750 0 0 {name=CL
@@ -90,7 +90,7 @@ C {vdd.sym} 1140 -1000 0 0 {name=l8 lab=VDD}
 C {vdd.sym} 1030 -660 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} 830 -880 0 0 {name=p1 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 1360 -840 0 0 {name=p2 sig_type=std_logic lab=out}
-C {vsource.sym} 870 -750 0 0 {name=V3 value=1.5 savecurrent=false}
+C {vsource.sym} 870 -750 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 870 -670 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 970 -800 0 0 {name=p3 sig_type=std_logic lab=in}
 C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1120 -840 0 0 {name=x1}
@@ -116,14 +116,14 @@ value="
 save all
 
 ** Voltage offset simulation
-dc V3 1.4 1.6 0.001
+dc V3 0.8 1.0 0.001
 
 ** Measurements
 let vtarget = v(vdd)/2
 let vin = v(in)
 let vout = v(out)
 meas dc offset FIND vin WHEN vout=vtarget RISE=1
-let vos = 1.5 - offset
+let vos = 0.9 - offset
 print vos
 
 ** Plots

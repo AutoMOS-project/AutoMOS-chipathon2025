@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 1620 -720 2420 -320 {flags=graph
-y1=1.7985
-y2=1.803
+y1=1.7970
+y2=1.804
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.002
+x2=2e-3
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,7 +30,7 @@ vout"
 rawfile=$netlist_dir/tb_ldo_dc3.raw}
 B 2 1620 -1200 2420 -800 {flags=graph
 y1=1.8
-y2=1.814
+y2=1.825
 ypos1=0
 ypos2=2
 divy=5
@@ -124,7 +124,7 @@ device=resistor
 m=1}
 C {vsource.sym} 510 -1090 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 510 -1020 0 0 {name=l3 lab=GND}
-C {vsource.sym} 730 -940 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 730 -940 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 620 -1090 0 0 {name=I0 value=10u}
 C {gnd.sym} 730 -860 0 0 {name=l4 lab=GND}
 C {gnd.sym} 1170 -860 0 0 {name=l5 lab=GND}
@@ -148,7 +148,7 @@ C {libs/core_ldo/ldo/ldo/ldo.sym} 950 -1040 0 0 {name=x1}
 C {isource.sym} 1170 -540 0 0 {name=IL value=1m}
 C {noconn.sym} 870 -500 3 0 {name=l12}
 C {gnd.sym} 950 -530 0 0 {name=l13 lab=GND}
-C {vsource.sym} 730 -540 0 0 {name=V3 value=1.5 savecurrent=false}
+C {vsource.sym} 730 -540 0 0 {name=V3 value=0.9 savecurrent=false}
 C {isource.sym} 620 -690 0 0 {name=I1 value=10u}
 C {gnd.sym} 730 -460 0 0 {name=l14 lab=GND}
 C {capa.sym} 1270 -510 0 0 {name=CL1

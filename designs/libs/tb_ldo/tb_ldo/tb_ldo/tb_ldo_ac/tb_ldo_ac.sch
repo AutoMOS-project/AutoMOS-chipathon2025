@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 B 2 1620 -1680 2420 -1280 {flags=graph
-y1=-120
+y1=-140
 y2=60
 ypos1=0
 ypos2=2
@@ -50,14 +50,14 @@ logy=0
 rainbow=0
 rawfile=$netlist_dir/tb_ldo_ac.raw
 autoload=1
-y1=-500
+y1=-600
 y2=0
 sim_type=ac
 x2=10
 x1=0}
 B 2 1620 -720 2420 -320 {flags=graph
 y1=-60
-y2=50
+y2=60
 ypos1=0
 ypos2=2
 divy=5
@@ -112,7 +112,7 @@ device=resistor
 m=1}
 C {vsource.sym} 710 -1060 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 710 -990 0 0 {name=l3 lab=GND}
-C {vsource.sym} 850 -1060 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 850 -1060 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 780 -1060 0 0 {name=I0 value=10u}
 C {gnd.sym} 850 -990 0 0 {name=l4 lab=GND}
 C {gnd.sym} 1170 -550 0 0 {name=l5 lab=GND}
@@ -137,7 +137,7 @@ C {lab_wire.sym} 780 -980 1 0 {name=p3 sig_type=std_logic lab=ibias
 C {lab_wire.sym} 660 -670 0 1 {name=p4 sig_type=std_logic lab=ibias
 }
 C {lab_wire.sym} 660 -730 0 1 {name=p5 sig_type=std_logic lab=vref}
-C {vsource.sym} 920 -1060 0 0 {name=V3 value=1.5 savecurrent=false}
+C {vsource.sym} 920 -1060 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 920 -990 0 0 {name=l10 lab=GND}
 C {lab_wire.sym} 920 -1150 3 0 {name=p6 sig_type=std_logic lab=in}
 C {lab_wire.sym} 660 -700 0 1 {name=p7 sig_type=std_logic lab=in}

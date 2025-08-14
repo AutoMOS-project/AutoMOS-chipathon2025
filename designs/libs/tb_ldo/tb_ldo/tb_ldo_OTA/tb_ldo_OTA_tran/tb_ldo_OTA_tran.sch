@@ -29,8 +29,8 @@ rawfile=$netlist_dir/tb_ldo_OTA_tran.raw
 sim_type=tran
 autoload=1}
 B 2 1620 -1200 2420 -800 {flags=graph
-y1=1.49
-y2=1.51
+y1=0.89
+y2=0.91
 ypos1=0
 ypos2=2
 divy=5
@@ -76,7 +76,7 @@ N 840 -750 990 -750 {lab=in}
 C {gnd.sym} 1110 -640 0 0 {name=l2 lab=GND}
 C {vsource.sym} 620 -750 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 620 -680 0 0 {name=l3 lab=GND}
-C {vsource.sym} 750 -700 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 750 -700 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 1000 -540 0 0 {name=I0 value=10u}
 C {gnd.sym} 750 -620 0 0 {name=l4 lab=GND}
 C {capa.sym} 1380 -700 0 0 {name=CL
@@ -90,7 +90,7 @@ C {vdd.sym} 1110 -950 0 0 {name=l8 lab=VDD}
 C {vdd.sym} 1000 -610 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} 800 -830 0 0 {name=p1 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 1330 -790 0 0 {name=p2 sig_type=std_logic lab=out}
-C {vsource.sym} 840 -700 0 0 {name=V3 value=1.5 savecurrent=false}
+C {vsource.sym} 840 -700 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 840 -620 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 940 -750 0 0 {name=p3 sig_type=std_logic lab=in}
 C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1090 -790 0 0 {name=x1}
@@ -126,7 +126,7 @@ let tstop = 2*tper
 let tstep = 0.001*tper
 
 ** Set sources
-alter @V3[PULSE] = [ 1.51 1.49 0 $&tfr $&tfr $&ton $&tper 0]
+alter @V3[PULSE] = [ 0.91 0.89 0 $&tfr $&tfr $&ton $&tper 0]
 
 ** Simulations
 tran $&tstep $&tstop
