@@ -160,7 +160,7 @@ C {iopin.sym} 1590 -820 0 0 {name=p7 lab=VFB}
 C {title-3.sym} 0 0 0 0 {name=l2 author="Julio Vilca" rev=1.0 lock=true page=1 pages=2}
 C {symbols/pfet_05v0.sym} 1170 -1000 0 0 {name=M3
 L=1.00u
-W=13.00u
+W=11.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -174,7 +174,7 @@ spiceprefix=X
 }
 C {symbols/pfet_05v0.sym} 1530 -1000 0 1 {name=M4
 L=1.00u
-W=13.00u
+W=11.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -188,7 +188,7 @@ spiceprefix=X
 }
 C {symbols/pfet_05v0.sym} 970 -1000 0 1 {name=M5
 L=1.00u
-W=13.00u
+W=11.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -202,7 +202,7 @@ spiceprefix=X
 }
 C {symbols/pfet_05v0.sym} 1730 -1000 0 0 {name=M6
 L=1.00u
-W=13.00u
+W=11.00u
 nf=1
 m=3
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -244,7 +244,7 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 970 -440 0 1 {name=M7
 L=1.00u
-W=3.00u
+W=2.50u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -258,7 +258,7 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 1730 -440 0 0 {name=M8
 L=1.00u
-W=3.00u
+W=2.50u
 nf=1
 m=3
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -272,7 +272,7 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 1170 -820 0 0 {name=M1
 L=0.60u
-W=60.00u
+W=70.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -286,7 +286,7 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 1530 -820 0 1 {name=M2
 L=0.60u
-W=60.00u
+W=70.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -302,7 +302,7 @@ C {lab_wire.sym} 1290 -820 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1410 -820 0 1 {name=p8 sig_type=std_logic lab=VSS}
 C {symbols/pfet_05v0.sym} 490 -1530 0 1 {name=Mpota_dummy_L[3:0]
 L=1.00u
-W=13.00u
+W=11.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -317,7 +317,7 @@ spiceprefix=X
 C {lab_wire.sym} 500 -1580 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {symbols/pfet_05v0.sym} 700 -1530 0 1 {name=Mpota_dummy_TB[9:0]
 L=0.50u
-W=13.00u
+W=11.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -333,7 +333,7 @@ C {lab_wire.sym} 710 -1580 0 0 {name=Mpota_dummie_TB1[3:0] sig_type=std_logic la
 L=0.50u}
 C {symbols/nfet_05v0.sym} 920 -1550 0 1 {name=Mndiff_dummy_L[1:0]
 L=0.60u
-W=60.00u
+W=70.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -349,7 +349,7 @@ C {lab_wire.sym} 930 -1500 2 1 {name=Mpota_dummie_TB2[3:0] sig_type=std_logic la
 L=0.50u}
 C {symbols/nfet_05v0.sym} 1130 -1550 0 1 {name=Mndiff_dummy_TB[7:0]
 L=0.60u
-W=60.00u
+W=70.00u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -365,7 +365,7 @@ C {lab_wire.sym} 1140 -1500 2 1 {name=Mpota_dummie_TB3[3:0] sig_type=std_logic l
 L=0.50u}
 C {symbols/nfet_05v0.sym} 1350 -1550 0 1 {name=Mnota_dummy_L[3:0]
 L=1.00u
-W=3.00u
+W=2.50u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -381,7 +381,7 @@ C {lab_wire.sym} 1360 -1500 2 1 {name=Mpota_dummie_TB4[3:0] sig_type=std_logic l
 L=0.50u}
 C {symbols/nfet_05v0.sym} 1560 -1550 0 1 {name=Mnota_dummy_TB[7:0]
 L=0.60u
-W=3.00u
+W=2.50u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

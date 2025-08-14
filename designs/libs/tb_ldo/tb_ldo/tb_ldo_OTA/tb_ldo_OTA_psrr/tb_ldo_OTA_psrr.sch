@@ -51,7 +51,7 @@ N 880 -780 1030 -780 {lab=in}
 C {gnd.sym} 1150 -670 0 0 {name=l2 lab=GND}
 C {vsource.sym} 660 -780 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 660 -710 0 0 {name=l3 lab=GND}
-C {vsource.sym} 790 -730 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 790 -730 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 1040 -570 0 0 {name=I0 value=10u}
 C {gnd.sym} 790 -650 0 0 {name=l4 lab=GND}
 C {capa.sym} 1420 -730 0 0 {name=CL
@@ -65,7 +65,7 @@ C {vdd.sym} 1150 -980 0 0 {name=l8 lab=VDD}
 C {vdd.sym} 1040 -640 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} 840 -860 0 0 {name=p1 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 1370 -820 0 0 {name=p2 sig_type=std_logic lab=out}
-C {vsource.sym} 880 -730 0 0 {name=V3 value=1.5 savecurrent=false}
+C {vsource.sym} 880 -730 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 880 -650 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 980 -780 0 0 {name=p3 sig_type=std_logic lab=in}
 C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1130 -820 0 0 {name=x1}

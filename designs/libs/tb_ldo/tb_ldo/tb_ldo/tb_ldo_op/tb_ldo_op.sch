@@ -14,7 +14,6 @@ N 1020 -890 1020 -840 {lab=#net2}
 N 1020 -840 1200 -840 {lab=#net2}
 N 1130 -900 1130 -800 {lab=vref}
 N 1130 -900 1200 -900 {lab=vref}
-N 1670 -870 1670 -810 {lab=out}
 N 1770 -710 1770 -690 {lab=GND}
 N 1770 -790 1770 -770 {lab=#net3}
 N 1770 -870 1770 -850 {lab=out}
@@ -24,6 +23,8 @@ N 1130 -740 1130 -690 {lab=GND}
 N 1270 -770 1270 -730 {lab=#net1}
 N 1610 -870 1670 -870 {lab=out}
 N 1500 -870 1550 -870 {lab=#net4}
+N 1670 -840 1670 -810 {lab=out}
+N 1670 -870 1670 -840 {lab=out}
 C {noconn.sym} 1270 -730 3 0 {name=l1}
 C {gnd.sym} 1350 -760 0 0 {name=l2 lab=GND}
 C {res.sym} 1670 -780 0 0 {name=RL
@@ -33,7 +34,7 @@ device=resistor
 m=1}
 C {vsource.sym} 910 -920 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 910 -850 0 0 {name=l3 lab=GND}
-C {vsource.sym} 1130 -770 0 0 {name=V2 value=1.5 savecurrent=false}
+C {vsource.sym} 1130 -770 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 1020 -920 0 0 {name=I0 value=10u}
 C {gnd.sym} 1130 -690 0 0 {name=l4 lab=GND}
 C {gnd.sym} 1670 -690 0 0 {name=l5 lab=GND}
