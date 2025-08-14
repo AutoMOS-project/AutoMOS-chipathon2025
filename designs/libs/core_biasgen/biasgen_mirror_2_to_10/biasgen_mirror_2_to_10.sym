@@ -62,7 +62,7 @@ B 5 217.5 -72.5 222.5 -67.5 {name=Iout_10u_snk dir=inout}
 B 5 37.5 17.5 42.5 22.5 {name=VSS dir=inout}
 B 5 107.5 17.5 112.5 22.5 {name=SUB dir=inout}
 B 5 217.5 -112.5 222.5 -107.5 {name=Iout_2u_src dir=inout}
-B 5 217.5 -52.5 222.5 -47.5 {name=Iout_10u_snk dir=inout}
+B 5 217.5 -52.5 222.5 -47.5 {name=Iout_2u_snk dir=inout}
 P 4 5 200 -140 0 -140 0 0 200 0 200 -140 {}
 T {@symname} 53 -36 0 0 0.3 0.3 {}
 T {@name} 155 -152 0 0 0.2 0.2 {}
@@ -71,8 +71,8 @@ T {Ibias_2u} 65 -134 0 1 0.2 0.2 {}
 T {EN} 5 -124 0 0 0.2 0.2 {}
 T {ENB} 5 -104 0 0 0.2 0.2 {}
 T {Iout_10u_src} 195 -104 0 1 0.2 0.2 {}
-T {Iout_10u_snk} 195 -64 0 1 0.2 0.2 {}
+T {Iout_10u_snk} 195 -74 0 1 0.2 0.2 {}
 T {VSS} 35 -6 2 1 0.2 0.2 {}
 T {SUB} 105 -6 2 1 0.2 0.2 {}
-T {Iout_2u_snk} 195 -44 0 1 0.2 0.2 {}
+T {Iout_2u_snk} 195 -54 0 1 0.2 0.2 {}
 T {Iout_2u_src} 195 -124 0 1 0.2 0.2 {}

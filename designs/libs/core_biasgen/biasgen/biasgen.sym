@@ -26,6 +26,8 @@ L 7 200 120 220 120 {}
 L 7 200 140 220 140 {}
 L 7 200 160 220 160 {}
 L 7 200 180 220 180 {}
+L 7 -20 260 0 260 {}
+L 7 200 200 220 200 {}
 B 5 77.5 -22.5 82.5 -17.5 {name=VDD dir=inout}
 B 5 -22.5 37.5 -17.5 42.5 {name=VBG dir=inout}
 B 5 217.5 17.5 222.5 22.5 {name=IPTAT_2u_src dir=inout}
@@ -36,15 +38,17 @@ B 5 217.5 257.5 222.5 262.5 {name=VREF_0P5V dir=inout}
 B 5 97.5 297.5 102.5 302.5 {name=SUB dir=inout}
 B 5 77.5 297.5 82.5 302.5 {name=VSS dir=inout}
 B 5 217.5 237.5 222.5 242.5 {name=VREF_0P9V dir=inout}
-B 5 -22.5 97.5 -17.5 102.5 {name=CPTAT_IN dir=inout}
+B 5 -22.5 97.5 -17.5 102.5 {name=ICTAT_IN dir=inout}
 B 5 217.5 37.5 222.5 42.5 {name=IPTAT_10u_src dir=inout}
 B 5 217.5 57.5 222.5 62.5 {name=IPTAT_10u_snk dir=inout}
-B 5 217.5 77.5 222.5 82.5 {name=CPTAT_2u_src dir=inout}
-B 5 217.5 97.5 222.5 102.5 {name=CPTAT_10u_src dir=inout}
-B 5 217.5 117.5 222.5 122.5 {name=CPTAT_10u_snk dir=inout}
-B 5 217.5 137.5 222.5 142.5 {name=ZTC_2u_src dir=inout}
-B 5 217.5 157.5 222.5 162.5 {name=ZTC_10u_src dir=inout}
-B 5 217.5 177.5 222.5 182.5 {name=ZTC_10u_snk dir=inout}
+B 5 217.5 77.5 222.5 82.5 {name=ICTAT_2u_src dir=inout}
+B 5 217.5 97.5 222.5 102.5 {name=ICTAT_10u_src dir=inout}
+B 5 217.5 117.5 222.5 122.5 {name=ICTAT_10u_snk dir=inout}
+B 5 217.5 137.5 222.5 142.5 {name=IZTC_2u_src dir=inout}
+B 5 217.5 157.5 222.5 162.5 {name=IZTC_10u_src dir=inout}
+B 5 217.5 177.5 222.5 182.5 {name=IZTC_10u_snk dir=inout}
+B 5 -22.5 257.5 -17.5 262.5 {name=EN dir=in}
+B 5 217.5 197.5 222.5 202.5 {name=VBG_buf dir=inout}
 P 4 5 200 0 0 0 0 280 200 280 200 0 {}
 T {@symname} 30.5 44 0 0 0.3 0.3 {}
 T {@name} 155 -12 0 0 0.2 0.2 {}
@@ -58,12 +62,14 @@ T {VREF_0P5V} 195 256 0 1 0.2 0.2 {}
 T {SUB} 104 275 1 1 0.2 0.2 {}
 T {VSS} 84 275 1 1 0.2 0.2 {}
 T {VREF_0P9V} 195 236 0 1 0.2 0.2 {}
-T {CPTAT_IN} 5 104 2 1 0.2 0.2 {}
+T {ICTAT_IN} 5 104 2 1 0.2 0.2 {}
 T {IPTAT_10u_src} 195 36 0 1 0.2 0.2 {}
 T {IPTAT_10u_snk} 195 56 0 1 0.2 0.2 {}
-T {CPTAT_2u_src} 195 76 0 1 0.2 0.2 {}
-T {CPTAT_10u_src} 195 96 0 1 0.2 0.2 {}
-T {CPTAT_10u_snk} 195 116 0 1 0.2 0.2 {}
-T {ZTC_2u_src} 195 136 0 1 0.2 0.2 {}
-T {ZTC_10u_src} 195 156 0 1 0.2 0.2 {}
-T {ZTC_10u_snk} 195 176 0 1 0.2 0.2 {}
+T {ICTAT_2u_src} 195 76 0 1 0.2 0.2 {}
+T {ICTAT_10u_src} 195 96 0 1 0.2 0.2 {}
+T {ICTAT_10u_snk} 195 116 0 1 0.2 0.2 {}
+T {IZTC_2u_src} 195 136 0 1 0.2 0.2 {}
+T {IZTC_10u_src} 195 156 0 1 0.2 0.2 {}
+T {IZTC_10u_snk} 195 176 0 1 0.2 0.2 {}
+T {EN} 5 264 2 1 0.2 0.2 {}
+T {VBG_buf} 195 196 0 1 0.2 0.2 {}

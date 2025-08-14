@@ -16,6 +16,31 @@ L 3 660 -710 660 -670 {}
 L 3 660 -670 670 -680 {}
 L 3 650 -680 670 -680 {}
 L 3 650 -680 660 -670 {}
+B 2 2900 -1320 3700 -920 {flags=graph
+y1=-9.7e-05
+y2=-4e-05
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=-40
+x2=125
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=0.75
+node="IQ (FF); i(v1) % $netlist_dir/tb_bandgap_ff.raw
+IQ (TT); i(v1) % $netlist_dir/tb_bandgap.raw
+IQ (SS); i(v1) % $netlist_dir/tb_bandgap_ss.raw"
+color="5 4 12"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_bandgap.raw
+sim_type=dc
+autoload=1}
 B 3 60 -930 660 -770 {fill=false}
 B 3 10 -630 730 -550 {fill=false}
 B 3 210 -250 710 -170 {fill=false}

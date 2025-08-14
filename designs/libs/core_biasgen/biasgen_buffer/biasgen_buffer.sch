@@ -14,22 +14,29 @@ L 3 320 -150 480 -150 {}
 N 230 -420 260 -420 {lab=vn}
 N 230 -420 230 -270 {lab=vn}
 N 230 -270 500 -270 {lab=vn}
-N 480 -370 480 -320 {lab=SUB}
+N 480 -370 480 -320 {lab=vn_fb}
 N 130 -380 260 -380 {lab=vin}
 N 320 -490 320 -460 {lab=VDD}
 N 480 -470 480 -430 {lab=VDD}
 N 320 -470 480 -470 {lab=VDD}
-N 400 -400 440 -400 {lab=#net1}
+N 400 -400 440 -400 {lab=v_out}
 N 320 -340 320 -150 {lab=VSS}
-N 480 -320 480 -300 {lab=SUB}
-N 480 -300 500 -300 {lab=SUB}
-N 480 -400 490 -400 {lab=SUB}
-N 490 -400 490 -350 {lab=SUB}
-N 480 -350 490 -350 {lab=SUB}
+N 480 -320 480 -300 {lab=vn_fb}
+N 480 -300 500 -300 {lab=vn_fb}
+N 480 -400 490 -400 {lab=vn_fb}
+N 490 -400 490 -350 {lab=vn_fb}
+N 480 -350 490 -350 {lab=vn_fb}
+N 410 -400 410 -230 {lab=v_out}
+N 340 -200 370 -200 {lab=ENB}
+N 410 -170 410 -150 {lab=VSS}
+N 320 -150 410 -150 {lab=VSS}
+N 410 -200 420 -200 {lab=VSS}
+N 420 -200 420 -150 {lab=VSS}
+N 410 -150 420 -150 {lab=VSS}
 C {libs/core_biasgen/biasgen_opamp/biasgen_opamp.sym} 260 -340 0 0 {name=x1}
 C {title.sym} 160 -40 0 0 {name=l1 author="Luighi Viton"}
 C {symbols/nfet_05v0.sym} 460 -400 0 0 {name=Mncs
-L=1u
+L=0.6u
 W=0.5u
 nf=1
 m=32
@@ -51,3 +58,19 @@ C {iopin.sym} 130 -380 2 0 {name=p3 lab=vin}
 C {iopin.sym} 340 -340 1 0 {name=p4 lab=SUB}
 C {iopin.sym} 500 -270 0 0 {name=p5 lab=vn}
 C {iopin.sym} 500 -300 0 0 {name=p6 lab=vn_fb}
+C {lab_wire.sym} 430 -400 0 0 {name=p7 sig_type=std_logic lab=v_out}
+C {symbols/nfet_05v0.sym} 390 -200 0 0 {name=Mnencs
+L=0.6u
+W=0.5u
+nf=1
+m=2
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
+spiceprefix=X
+}
+C {lab_wire.sym} 350 -200 0 0 {name=p8 sig_type=std_logic lab=ENB}

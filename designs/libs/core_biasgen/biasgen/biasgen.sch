@@ -5,14 +5,14 @@ V {}
 S {}
 E {}
 N 250 -540 250 -520 {lab=SUB}
-N 420 -840 450 -840 {lab=IPTAT_10u_snk}
-N 450 -840 450 -400 {lab=IPTAT_10u_snk}
-N 450 -400 710 -400 {lab=IPTAT_10u_snk}
-N 710 -450 710 -400 {lab=IPTAT_10u_snk}
-N 840 -530 840 -510 {lab=VBG_buff}
-N 850 -470 850 -420 {lab=VBG_buff}
-N 850 -510 850 -470 {lab=VBG_buff}
-N 840 -510 850 -510 {lab=VBG_buff}
+N 420 -840 450 -840 {lab=ibias}
+N 450 -840 450 -400 {lab=ibias}
+N 450 -400 710 -400 {lab=ibias}
+N 710 -450 710 -400 {lab=ibias}
+N 840 -530 840 -510 {lab=VBG_buf}
+N 850 -470 850 -420 {lab=VBG_buf}
+N 850 -510 850 -470 {lab=VBG_buf}
+N 840 -510 850 -510 {lab=VBG_buf}
 N 910 -340 990 -340 {lab=VREF_1V}
 N 910 -320 990 -320 {lab=VREF_0P9V}
 N 910 -260 990 -260 {lab=VREF_0P5V}
@@ -60,10 +60,9 @@ C {lab_pin.sym} 590 -550 0 0 {name=p33 lab=EN}
 C {lab_pin.sym} 590 -530 0 0 {name=p34 lab=ENB}
 C {lab_pin.sym} 650 -450 1 1 {name=p35 lab=SUB}
 C {lab_pin.sym} 710 -450 0 1 {name=p36 lab=ibias}
-C {lab_pin.sym} 850 -490 0 1 {name=p38 lab=VBG_buff}
+C {lab_pin.sym} 850 -490 0 1 {name=p38 lab=VBG_buf}
 C {lab_pin.sym} 630 -450 1 1 {name=p39 lab=VSS}
 C {lab_pin.sym} 420 -900 0 1 {name=p40 lab=IPTAT_2u_src}
-C {lab_pin.sym} 420 -840 0 1 {name=p41 lab=IPTAT_2u_snk}
 C {lab_pin.sym} 830 -900 0 1 {name=p42 lab=ICTAT_2u_src}
 C {lab_pin.sym} 1240 -900 0 1 {name=p43 lab=IZTC_2u_src}
 C {libs/core_biasgen/biasgen_resistor_divider/biasgen_resistor_divider.sym} 810 -140 0 0 {name=xI_divider}
@@ -90,3 +89,5 @@ C {libs/core_biasgen/biasgen_inverter/biasgen_inverter.sym} 140 -620 0 0 {name=x
 C {lab_wire.sym} 280 -660 0 1 {name=p44 sig_type=std_logic lab=ENB}
 C {lab_wire.sym} 190 -700 0 1 {name=p55 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 190 -620 2 0 {name=p56 sig_type=std_logic lab=VSS}
+C {iopin.sym} 1100 -390 0 0 {name=p41 lab=VBG_buf
+}
