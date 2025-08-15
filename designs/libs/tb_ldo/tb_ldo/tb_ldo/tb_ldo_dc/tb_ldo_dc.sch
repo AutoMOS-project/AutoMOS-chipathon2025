@@ -5,8 +5,8 @@ V {}
 S {}
 E {}
 B 2 1620 -720 2420 -320 {flags=graph,unlocked
-y1=1.80
-y2=1.804
+y1=1.8016
+y2=1.8056
 ypos1=0
 ypos2=2
 subdivy=1
@@ -102,100 +102,101 @@ rawfile=$netlist_dir/tb_ldo_dc1.raw
 sim_type=dc
 rainbow=1
 hilight_wave=1}
-N 870 -960 870 -940 {lab=#net1}
-N 950 -960 950 -930 {lab=GND}
-N 510 -1160 510 -1120 {lab=VDD}
-N 950 -1160 950 -1120 {lab=VDD}
-N 510 -1060 510 -1020 {lab=GND}
-N 620 -1160 620 -1120 {lab=VDD}
-N 620 -1060 620 -1010 {lab=#net2}
-N 620 -1010 800 -1010 {lab=#net2}
-N 730 -1070 730 -970 {lab=vref}
-N 730 -1070 800 -1070 {lab=vref}
-N 1100 -1040 1170 -1040 {lab=out}
-N 1270 -880 1270 -860 {lab=GND}
-N 1270 -960 1270 -940 {lab=#net3}
-N 1270 -1040 1270 -1020 {lab=out}
-N 1170 -1040 1270 -1040 {lab=out}
-N 730 -910 730 -860 {lab=GND}
-N 870 -940 870 -900 {lab=#net1}
-N 1170 -880 1170 -860 {lab=GND}
-N 870 -560 870 -540 {lab=#net4}
-N 950 -560 950 -530 {lab=GND}
-N 950 -760 950 -720 {lab=VDD}
-N 620 -760 620 -720 {lab=VDD}
-N 620 -660 620 -610 {lab=#net5}
-N 620 -610 800 -610 {lab=#net5}
-N 730 -670 730 -570 {lab=vref1}
-N 730 -670 800 -670 {lab=vref1}
-N 1100 -640 1170 -640 {lab=out1}
-N 1270 -480 1270 -460 {lab=GND}
-N 1270 -560 1270 -540 {lab=#net6}
-N 1270 -640 1270 -620 {lab=out1}
-N 1170 -640 1270 -640 {lab=out1}
-N 730 -510 730 -460 {lab=GND}
-N 870 -540 870 -500 {lab=#net4}
-N 1170 -630 1170 -570 {lab=out1}
-N 1170 -640 1170 -630 {lab=out1}
-N 1170 -510 1170 -460 {lab=GND}
-N 1170 -1040 1170 -1020 {lab=out}
-N 1170 -1020 1170 -980 {lab=out}
-N 1170 -920 1170 -880 {lab=GND}
-N 1030 -960 1030 -900 {lab=#net7}
-N 1030 -560 1030 -500 {lab=#net8}
-C {noconn.sym} 870 -900 3 0 {name=l1}
-C {gnd.sym} 950 -930 0 0 {name=l2 lab=GND}
-C {res.sym} 1170 -950 0 0 {name=RL
+N 890 -960 890 -930 {lab=GND}
+N 520 -1170 520 -1130 {lab=VDD}
+N 890 -1160 890 -1120 {lab=VDD}
+N 520 -1070 520 -1030 {lab=GND}
+N 620 -1170 620 -1130 {lab=VDD}
+N 620 -1070 620 -1020 {lab=#net1}
+N 620 -1020 800 -1020 {lab=#net1}
+N 730 -1080 730 -980 {lab=vref}
+N 730 -1080 800 -1080 {lab=vref}
+N 970 -1040 1040 -1040 {lab=out}
+N 1140 -880 1140 -860 {lab=GND}
+N 1140 -960 1140 -940 {lab=#net2}
+N 1140 -1040 1140 -1020 {lab=out}
+N 1040 -1040 1140 -1040 {lab=out}
+N 730 -920 730 -870 {lab=GND}
+N 1040 -880 1040 -860 {lab=GND}
+N 890 -560 890 -530 {lab=GND}
+N 890 -760 890 -720 {lab=VDD}
+N 620 -770 620 -730 {lab=VDD}
+N 620 -670 620 -620 {lab=#net3}
+N 620 -620 800 -620 {lab=#net3}
+N 730 -680 730 -580 {lab=vref1}
+N 730 -680 800 -680 {lab=vref1}
+N 970 -640 1040 -640 {lab=out1}
+N 1140 -480 1140 -460 {lab=GND}
+N 1140 -560 1140 -540 {lab=#net4}
+N 1140 -640 1140 -620 {lab=out1}
+N 1040 -640 1140 -640 {lab=out1}
+N 730 -520 730 -470 {lab=GND}
+N 1040 -630 1040 -570 {lab=out1}
+N 1040 -640 1040 -630 {lab=out1}
+N 1040 -510 1040 -460 {lab=GND}
+N 1040 -1040 1040 -1020 {lab=out}
+N 1040 -1020 1040 -980 {lab=out}
+N 1040 -920 1040 -880 {lab=GND}
+N 910 -960 910 -950 {lab=#net5}
+N 790 -1000 800 -1000 {lab=#net6}
+N 800 -1060 800 -1040 {lab=#net7}
+N 910 -560 910 -550 {lab=#net8}
+N 800 -660 800 -640 {lab=#net9}
+N 790 -1000 800 -1000 {lab=#net6}
+N 790 -600 800 -600 {lab=#net6}
+N 790 -600 800 -600 {lab=#net6}
+C {noconn.sym} 790 -1000 0 0 {name=l1}
+C {gnd.sym} 890 -930 0 0 {name=l2 lab=GND}
+C {res.sym} 1040 -950 0 0 {name=RL
 value=\{RL_val\}
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} 510 -1090 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 510 -1020 0 0 {name=l3 lab=GND}
-C {vsource.sym} 730 -940 0 0 {name=V2 value=0.9 savecurrent=false}
-C {isource.sym} 620 -1090 0 0 {name=I0 value=10u}
-C {gnd.sym} 730 -860 0 0 {name=l4 lab=GND}
-C {gnd.sym} 1170 -860 0 0 {name=l5 lab=GND}
-C {capa.sym} 1270 -910 0 0 {name=CL
+C {vsource.sym} 520 -1100 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 520 -1030 0 0 {name=l3 lab=GND}
+C {vsource.sym} 730 -950 0 0 {name=V2 value=0.9 savecurrent=false}
+C {isource.sym} 620 -1100 0 0 {name=I0 value=10u}
+C {gnd.sym} 730 -870 0 0 {name=l4 lab=GND}
+C {gnd.sym} 1040 -860 0 0 {name=l5 lab=GND}
+C {capa.sym} 1140 -910 0 0 {name=CL
 m=1
 value=0.1u
 footprint=1206
 device="ceramic capacitor"}
-C {res.sym} 1270 -990 0 0 {name=Resr
+C {res.sym} 1140 -990 0 0 {name=Resr
 value=0.2
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1270 -860 0 0 {name=l6 lab=GND}
-C {vdd.sym} 510 -1160 0 0 {name=l7 lab=VDD}
-C {vdd.sym} 950 -1160 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 620 -1160 0 0 {name=l9 lab=VDD}
-C {lab_wire.sym} 780 -1070 0 0 {name=p1 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1220 -1040 0 0 {name=p2 sig_type=std_logic lab=out}
+C {gnd.sym} 1140 -860 0 0 {name=l6 lab=GND}
+C {vdd.sym} 520 -1170 0 0 {name=l7 lab=VDD}
+C {vdd.sym} 890 -1160 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 620 -1170 0 0 {name=l9 lab=VDD}
+C {lab_wire.sym} 780 -1080 0 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 1090 -1040 0 0 {name=p2 sig_type=std_logic lab=out}
 C {libs/core_ldo/ldo/ldo/ldo.sym} 950 -1040 0 0 {name=x1}
-C {isource.sym} 1170 -540 0 0 {name=IL value=1m}
-C {noconn.sym} 870 -500 3 0 {name=l12}
-C {gnd.sym} 950 -530 0 0 {name=l13 lab=GND}
-C {vsource.sym} 730 -540 0 0 {name=V3 value=0.9 savecurrent=false}
-C {isource.sym} 620 -690 0 0 {name=I1 value=10u}
-C {gnd.sym} 730 -460 0 0 {name=l14 lab=GND}
-C {capa.sym} 1270 -510 0 0 {name=CL1
+C {isource.sym} 1040 -540 0 0 {name=IL value=1m}
+C {gnd.sym} 890 -530 0 0 {name=l13 lab=GND}
+C {vsource.sym} 730 -550 0 0 {name=V3 value=0.9 savecurrent=false}
+C {isource.sym} 620 -700 0 0 {name=I1 value=10u}
+C {gnd.sym} 730 -470 0 0 {name=l14 lab=GND}
+C {capa.sym} 1140 -510 0 0 {name=CL1
 m=1
 value=0.1u
 footprint=1206
 device="ceramic capacitor"}
-C {res.sym} 1270 -590 0 0 {name=Resr1
+C {res.sym} 1140 -590 0 0 {name=Resr1
 value=0.2
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1270 -460 0 0 {name=l15 lab=GND}
-C {vdd.sym} 950 -760 0 0 {name=l16 lab=VDD}
-C {vdd.sym} 620 -760 0 0 {name=l17 lab=VDD}
-C {lab_wire.sym} 780 -670 0 0 {name=p3 sig_type=std_logic lab=vref1}
-C {lab_wire.sym} 1220 -640 0 0 {name=p4 sig_type=std_logic lab=out1}
+C {gnd.sym} 1140 -460 0 0 {name=l15 lab=GND}
+C {vdd.sym} 890 -760 0 0 {name=l16 lab=VDD}
+C {vdd.sym} 620 -770 0 0 {name=l17 lab=VDD}
+C {lab_wire.sym} 780 -680 0 0 {name=p3 sig_type=std_logic lab=vref1}
+C {lab_wire.sym} 1090 -640 0 0 {name=p4 sig_type=std_logic lab=out1}
 C {libs/core_ldo/ldo/ldo/ldo.sym} 950 -640 0 0 {name=x2}
-C {gnd.sym} 1170 -460 0 0 {name=l18 lab=GND}
+C {gnd.sym} 1040 -460 0 0 {name=l18 lab=GND}
 C {simulator_commands.sym} 250 -1000 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
@@ -301,5 +302,6 @@ C {launcher.sym} 300 -200 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_dc1.raw; xschem raw_read $netlist_dir/tb_ldo_dc2.raw; xschem raw_read $netlist_dir/tb_ldo_dc3.raw; xschem raw_read $netlist_dir/tb_ldo_dc4.raw"
 }
-C {noconn.sym} 1030 -900 3 0 {name=l11}
-C {noconn.sym} 1030 -500 3 0 {name=l19}
+C {noconn.sym} 910 -950 3 0 {name=l20}
+C {noconn.sym} 910 -550 3 0 {name=l11}
+C {noconn.sym} 790 -600 0 0 {name=l12}

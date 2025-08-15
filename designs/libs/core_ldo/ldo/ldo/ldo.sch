@@ -10,7 +10,6 @@ T {Matching (interdigitated)} 1670 -790 0 0 0.2 0.2 {}
 T {Dummies} 980 -1650 0 0 0.4 0.4 {}
 N 810 -1060 870 -1060 {lab=VREF}
 N 950 -900 950 -840 {lab=IBIAS}
-N 830 -980 870 -980 {lab=Vfb}
 N 1510 -1020 1530 -1020 {lab=VDD}
 N 1530 -1070 1530 -1020 {lab=VDD}
 N 1510 -1070 1530 -1070 {lab=VDD}
@@ -21,9 +20,9 @@ N 1520 -470 1520 -430 {lab=Vr_fb2[9:1],VSS
 bus=true}
 N 1510 -820 1510 -780 {lab=VOUT}
 N 1520 -570 1520 -530 {lab=Vfb,Vr_fb2[9:1] bus=true}
-N 1520 -670 1520 -630 {lab=Vr_fb1[9:1],Vfb bus=true}
+N 1520 -670 1520 -630 {lab=Vr_fb1[9:1],VFB_res bus=true}
 N 1520 -770 1520 -730 {lab=VOUT,Vr_fb1[9:1] bus=true}
-N 1510 -620 1510 -580 {lab=Vfb}
+N 1510 -620 1510 -580 {lab=VFB_res}
 N 1420 -830 1460 -830 {lab=Vr_mc[29:1],VOUT bus=true}
 N 1320 -830 1360 -830 {lab=Vmc,Vr_mc[29:1] bus=true}
 N 1510 -840 1510 -820 {lab=VOUT}
@@ -40,8 +39,6 @@ N 1170 -1020 1170 -840 {lab=Vota}
 N 990 -1190 1510 -1190 {lab=VDD}
 N 1510 -1190 1510 -1050 {lab=VDD}
 N 990 -420 1510 -420 {lab=VSS}
-N 830 -600 1510 -600 {lab=Vfb}
-N 830 -980 830 -600 {lab=Vfb}
 N 990 -900 990 -390 {lab=VSS}
 N 1050 -1540 1050 -1520 {lab=VDD}
 N 1020 -1520 1050 -1520 {lab=VDD}
@@ -54,6 +51,8 @@ N 1230 -1570 1240 -1570 {lab=VDD}
 N 1020 -1600 1050 -1600 {lab=VDD}
 N 1230 -1600 1260 -1600 {lab=VDD}
 N 820 -450 820 -430 {lab=LDO_EN}
+N 810 -980 870 -980 {lab=VFB_ota}
+N 1340 -600 1510 -600 {lab=VFB_res}
 C {iopin.sym} 990 -1220 3 0 {name=p1 lab=VDD}
 C {iopin.sym} 990 -390 1 0 {name=p2 lab=VSS}
 C {iopin.sym} 1590 -910 0 0 {name=p3 lab=VOUT}
@@ -105,13 +104,12 @@ spiceprefix=X
 m=4}
 C {bus_connect_nolab.sym} 1520 -430 3 1 {name=r2}
 C {lab_wire.sym} 1520 -440 0 1 {name=p9 sig_type=std_logic lab=Vr_fb2[9:1],VSS}
-C {lab_wire.sym} 1520 -540 0 1 {name=p10 sig_type=std_logic lab=Vfb,Vr_fb2[9:1]}
+C {lab_wire.sym} 1520 -540 0 1 {name=p10 sig_type=std_logic lab=VFB_res,Vr_fb2[9:1]}
 C {bus_connect_nolab.sym} 1520 -570 3 0 {name=r3}
 C {lab_wire.sym} 1520 -740 0 1 {name=p11 sig_type=std_logic lab=VOUT,Vr_fb1[9:1]}
-C {lab_wire.sym} 1520 -640 0 1 {name=p12 sig_type=std_logic lab=Vr_fb1[9:1],Vfb}
+C {lab_wire.sym} 1520 -640 0 1 {name=p12 sig_type=std_logic lab=Vr_fb1[9:1],VFB_res}
 C {bus_connect_nolab.sym} 1520 -770 0 1 {name=r1}
 C {bus_connect_nolab.sym} 1520 -630 2 0 {name=r4}
-C {lab_wire.sym} 1250 -600 0 0 {name=p13 sig_type=std_logic lab=Vfb}
 C {bus_connect_nolab.sym} 1460 -830 0 0 {name=r5}
 C {bus_connect_nolab.sym} 1320 -830 3 0 {name=r6 }
 C {lab_wire.sym} 1450 -830 3 1 {name=p14 sig_type=std_logic lab=Vr_mc[29:1],VOUT}
@@ -134,3 +132,5 @@ C {lab_wire.sym} 1240 -1520 2 0 {name=p18 sig_type=std_logic lab=VDD}
 C {ipin.sym} 820 -430 3 0 {name=p19 lab=LDO_EN}
 C {noconn.sym} 820 -450 1 0 {name=l3
 lab=EN}
+C {iopin.sym} 810 -980 2 0 {name=p13 lab=VFB_ota}
+C {iopin.sym} 1340 -600 2 0 {name=p20 lab=VFB_res}
