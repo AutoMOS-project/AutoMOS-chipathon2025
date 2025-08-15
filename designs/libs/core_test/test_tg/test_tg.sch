@@ -14,8 +14,12 @@ N 240 -310 320 -310 {lab=VOUT}
 N 320 -310 320 -140 {lab=VOUT}
 N 40 -230 100 -230 {lab=VIN}
 N 320 -230 380 -230 {lab=VOUT}
-N 210 -380 210 -350 {lab=VDD}
-N 210 -100 210 -60 {lab=VSS}
+N 210 -380 210 -350 {lab=ENB}
+N 210 -100 210 -60 {lab=EN}
+N 140 -600 210 -600 {lab=VDD}
+N 210 -600 210 -580 {lab=VDD}
+N 140 -440 210 -440 {lab=VSS}
+N 210 -460 210 -440 {lab=VSS}
 C {symbols/nfet_05v0.sym} 210 -120 3 0 {name=M1
 L=0.60u
 W=2u
@@ -46,7 +50,12 @@ spiceprefix=X
 }
 C {iopin.sym} 40 -230 0 1 {name=p1 lab=VIN}
 C {iopin.sym} 380 -230 0 0 {name=p2 lab=VOUT}
-C {iopin.sym} 210 -380 2 0 {name=p3 lab=VDD}
-C {iopin.sym} 210 -60 2 0 {name=p4 lab=VSS}
+C {iopin.sym} 210 -60 2 0 {name=p4 lab=EN}
 C {lab_wire.sym} 210 -160 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 210 -280 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 210 -380 0 0 {name=p3 sig_type=std_logic lab=ENB}
+C {libs/core_test/test_inv/test_inv.sym} 140 -460 0 0 {name=x1}
+C {lab_wire.sym} 330 -520 0 1 {name=p7 sig_type=std_logic lab=ENB}
+C {lab_wire.sym} 140 -520 0 0 {name=p8 sig_type=std_logic lab=EN}
+C {iopin.sym} 140 -600 0 1 {name=p9 lab=VDD}
+C {iopin.sym} 140 -440 0 1 {name=p10 lab=VSS}
