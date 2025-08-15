@@ -22,9 +22,9 @@ N 140 -440 210 -440 {lab=VSS}
 N 210 -460 210 -440 {lab=VSS}
 C {symbols/nfet_05v0.sym} 210 -120 3 0 {name=M1
 L=0.60u
-W=2u
+W=1.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -36,9 +36,9 @@ spiceprefix=X
 }
 C {symbols/pfet_05v0.sym} 210 -330 3 1 {name=M2
 L=0.50u
-W=2u
+W=1.5u
 nf=1
-m=1
+m=6
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -50,7 +50,7 @@ spiceprefix=X
 }
 C {iopin.sym} 40 -230 0 1 {name=p1 lab=VIN}
 C {iopin.sym} 380 -230 0 0 {name=p2 lab=VOUT}
-C {iopin.sym} 210 -60 2 0 {name=p4 lab=EN}
+C {ipin.sym} 210 -60 2 1 {name=p4 lab=EN}
 C {lab_wire.sym} 210 -160 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 210 -280 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 210 -380 0 0 {name=p3 sig_type=std_logic lab=ENB}
