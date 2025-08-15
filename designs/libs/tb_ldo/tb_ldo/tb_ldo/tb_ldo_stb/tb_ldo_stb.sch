@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1620 -1200 2420 -800 {flags=graph
+B 2 1620 -1000 2420 -600 {flags=graph
 ypos1=0
 ypos2=2
 divy=5
@@ -29,72 +29,32 @@ y2=0
 sim_type=ac
 x2=10
 x1=0}
-N 760 -820 760 -790 {lab=GND}
-N 620 -1330 620 -1290 {lab=VDD}
-N 760 -1020 760 -980 {lab=VDD}
-N 620 -1230 620 -1190 {lab=GND}
-N 690 -1330 690 -1290 {lab=VDD}
-N 690 -1230 690 -1180 {lab=ibias}
-N 1180 -770 1180 -750 {lab=GND}
-N 1180 -850 1180 -830 {lab=#net1}
-N 1180 -930 1180 -910 {lab=#net2}
-N 1080 -930 1180 -930 {lab=#net2}
-N 1080 -810 1080 -750 {lab=GND}
-N 680 -820 680 -780 {lab=#net3}
-N 910 -930 1030 -930 {lab=#net2}
-N 1030 -930 1080 -930 {lab=#net2}
-N 560 -870 610 -870 {lab=ibias}
-N 760 -1230 760 -1190 {lab=GND}
-N 760 -1350 760 -1290 {lab=vref}
-N 560 -930 610 -930 {lab=vref}
-N 830 -1230 830 -1190 {lab=GND}
-N 830 -1350 830 -1290 {lab=in}
-N 560 -900 610 -900 {lab=in}
-N 910 -870 980 -870 {lab=out}
-N 1080 -900 1080 -870 {lab=#net2}
-N 1080 -930 1080 -900 {lab=#net2}
-C {noconn.sym} 680 -780 3 0 {name=l1}
-C {gnd.sym} 760 -790 0 0 {name=l2 lab=GND}
-C {res.sym} 1080 -840 0 0 {name=RL
-value=1.8k
-footprint=1206
-device=resistor
-m=1}
-C {vsource.sym} 620 -1260 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 620 -1190 0 0 {name=l3 lab=GND}
-C {vsource.sym} 760 -1260 0 0 {name=V2 value=0.9 savecurrent=false}
-C {isource.sym} 690 -1260 0 0 {name=I0 value=10u}
-C {gnd.sym} 760 -1190 0 0 {name=l4 lab=GND}
-C {gnd.sym} 1080 -750 0 0 {name=l5 lab=GND}
-C {capa.sym} 1180 -800 0 0 {name=CL
-m=1
-value=0.1u
-footprint=1206
-device="ceramic capacitor"}
-C {res.sym} 1180 -880 0 0 {name=Resr
-value=0.2
-footprint=1206
-device=resistor
-m=1}
-C {gnd.sym} 1180 -750 0 0 {name=l6 lab=GND}
-C {vdd.sym} 620 -1330 0 0 {name=l7 lab=VDD}
-C {vdd.sym} 760 -1020 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 690 -1330 0 0 {name=l9 lab=VDD}
-C {lab_wire.sym} 760 -1350 3 0 {name=p1 sig_type=std_logic lab=vref}
-C {libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sym} 760 -900 0 0 {name=x1}
-C {lab_wire.sym} 690 -1180 1 0 {name=p3 sig_type=std_logic lab=ibias
-}
-C {lab_wire.sym} 570 -870 0 1 {name=p4 sig_type=std_logic lab=ibias
-}
-C {lab_wire.sym} 570 -930 0 1 {name=p5 sig_type=std_logic lab=vref}
-C {vsource.sym} 830 -1260 0 0 {name=V3 value=0.9 savecurrent=false}
-C {gnd.sym} 830 -1190 0 0 {name=l10 lab=GND}
-C {lab_wire.sym} 830 -1350 3 0 {name=p6 sig_type=std_logic lab=in}
-C {lab_wire.sym} 570 -900 0 1 {name=p7 sig_type=std_logic lab=in}
-C {noconn.sym} 980 -870 0 1 {name=l11}
-C {lab_wire.sym} 960 -870 0 0 {name=p8 sig_type=std_logic lab=out
-}
-C {simulator_commands.sym} 250 -1250 0 0 {name=SIMULATIONS
+N 930 -760 930 -730 {lab=GND}
+N 490 -860 490 -820 {lab=VDD}
+N 930 -960 930 -920 {lab=VDD}
+N 490 -760 490 -720 {lab=GND}
+N 560 -860 560 -820 {lab=VDD}
+N 560 -760 560 -710 {lab=ibias}
+N 1280 -680 1280 -660 {lab=GND}
+N 1280 -760 1280 -740 {lab=#net1}
+N 1280 -840 1280 -820 {lab=#net2}
+N 1180 -840 1280 -840 {lab=#net2}
+N 1180 -720 1180 -660 {lab=GND}
+N 1010 -840 1130 -840 {lab=#net2}
+N 1130 -840 1180 -840 {lab=#net2}
+N 790 -820 840 -820 {lab=ibias}
+N 630 -760 630 -720 {lab=GND}
+N 630 -880 630 -820 {lab=vref}
+N 790 -880 840 -880 {lab=vref}
+N 700 -760 700 -720 {lab=GND}
+N 700 -880 700 -820 {lab=in}
+N 790 -860 840 -860 {lab=in}
+N 770 -840 840 -840 {lab=out}
+N 1180 -810 1180 -780 {lab=#net2}
+N 1180 -840 1180 -810 {lab=#net2}
+N 950 -760 950 -750 {lab=#net3}
+N 820 -800 840 -800 {lab=#net4}
+C {simulator_commands.sym} 250 -970 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
 value="
@@ -128,7 +88,7 @@ write tb_ldo_stb.raw
 .endc
 * ngspice commands
 "}
-C {simulator_commands.sym} 250 -1010 0 0 {name=MODELS
+C {simulator_commands.sym} 250 -730 0 0 {name=MODELS
 simulator=ngspice
 only_toplevel=false
 format="tcleval( @value )" 
@@ -146,3 +106,46 @@ C {launcher.sym} 300 -200 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_stb.raw"
 }
+C {title-3.sym} 0 0 0 0 {name=l12 author="Julio Vilca" rev=1.0 lock=true page=5 pages=8}
+C {gnd.sym} 930 -730 0 0 {name=l2 lab=GND}
+C {res.sym} 1180 -750 0 0 {name=RL
+value=1.8k
+footprint=1206
+device=resistor
+m=1}
+C {vsource.sym} 490 -790 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 490 -720 0 0 {name=l3 lab=GND}
+C {vsource.sym} 630 -790 0 0 {name=V2 value=0.9 savecurrent=false}
+C {isource.sym} 560 -790 0 0 {name=I0 value=10u}
+C {gnd.sym} 630 -720 0 0 {name=l4 lab=GND}
+C {gnd.sym} 1180 -660 0 0 {name=l5 lab=GND}
+C {capa.sym} 1280 -710 0 0 {name=CL
+m=1
+value=0.1u
+footprint=1206
+device="ceramic capacitor"}
+C {res.sym} 1280 -790 0 0 {name=Resr
+value=0.2
+footprint=1206
+device=resistor
+m=1}
+C {gnd.sym} 1280 -660 0 0 {name=l6 lab=GND}
+C {vdd.sym} 490 -860 0 0 {name=l7 lab=VDD}
+C {vdd.sym} 930 -960 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 560 -860 0 0 {name=l9 lab=VDD}
+C {lab_wire.sym} 630 -880 3 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 560 -720 1 0 {name=p3 sig_type=std_logic lab=ibias
+}
+C {lab_wire.sym} 800 -820 0 1 {name=p4 sig_type=std_logic lab=ibias
+}
+C {lab_wire.sym} 800 -880 0 1 {name=p5 sig_type=std_logic lab=vref}
+C {vsource.sym} 700 -790 0 0 {name=V3 value=0.9 savecurrent=false}
+C {gnd.sym} 700 -720 0 0 {name=l10 lab=GND}
+C {lab_wire.sym} 700 -880 3 0 {name=p6 sig_type=std_logic lab=in}
+C {lab_wire.sym} 800 -860 0 1 {name=p7 sig_type=std_logic lab=in}
+C {noconn.sym} 770 -840 0 0 {name=l11}
+C {lab_wire.sym} 800 -840 0 1 {name=p8 sig_type=std_logic lab=out
+}
+C {libs/core_ldo/ldo/ldo/ldo.sym} 990 -840 0 0 {name=x1}
+C {noconn.sym} 950 -750 3 0 {name=l13}
+C {noconn.sym} 820 -800 0 0 {name=l1}

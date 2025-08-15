@@ -4,3 +4,4 @@ K {}
 V {}
 S {}
 E {}
+C {libs/core_ldo/ldo/ldo/ldo.sym} 690 -410 0 0 {name=x1}

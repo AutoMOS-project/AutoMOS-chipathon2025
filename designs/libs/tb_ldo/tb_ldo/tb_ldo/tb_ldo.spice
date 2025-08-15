@@ -1,13 +1,13 @@
 ** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo/tb_ldo.sch
 **.subckt tb_ldo
-* noconn #net1
+* noconn #net5
 V1 VDD GND 2
 V2 vref GND 0.9
-I0 VDD net2 10u
-CL net3 GND 0.1u m=1
-Resr out net3 0.2 m=1
-x1 VDD vref out net2 net1 GND net4 ldo
-* noconn #net4
+I0 VDD net3 10u
+CL net1 GND 0.1u m=1
+Resr out net1 0.2 m=1
+x1 VDD vref out net3 net2 GND net5 net4 net4 ldo
+* noconn #net2
 IL out GND 1m
 **** begin user architecture code
 
@@ -58,10 +58,10 @@ write tb_ldo_ss.raw
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=7
+* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=9
 ** sym_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sym
 ** sch_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sch
-.subckt ldo VDD VREF VOUT IBIAS SUB VSS LDO_EN
+.subckt ldo VDD VREF VOUT IBIAS SUB VSS LDO_EN VFB_ota VFB_res
 *.iopin VDD
 *.iopin VSS
 *.iopin VOUT
@@ -69,10 +69,12 @@ write tb_ldo_ss.raw
 *.iopin VREF
 *.iopin IBIAS
 *.ipin LDO_EN
+*.iopin VFB_ota
+*.iopin VFB_res
 XMpass VOUT Vota VDD VDD pfet_05v0 L=0.50u W=50.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=10
 * noconn SUB
-x1 VDD VREF Vfb Vota IBIAS VSS OTA
+x1 VDD VREF VFB_ota Vota IBIAS VSS OTA
 XR1[9] Vr_fb1[9] VOUT VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR1[8] Vr_fb1[8] Vr_fb1[9] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR1[7] Vr_fb1[7] Vr_fb1[8] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
@@ -82,8 +84,8 @@ XR1[4] Vr_fb1[4] Vr_fb1[5] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR1[3] Vr_fb1[3] Vr_fb1[4] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR1[2] Vr_fb1[2] Vr_fb1[3] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR1[1] Vr_fb1[1] Vr_fb1[2] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[0] Vfb Vr_fb1[1] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[9] Vr_fb2[9] Vfb VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[0] VFB_res Vr_fb1[1] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[9] Vr_fb2[9] VFB_res VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR2[8] Vr_fb2[8] Vr_fb2[9] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR2[7] Vr_fb2[7] Vr_fb2[8] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XR2[6] Vr_fb2[6] Vr_fb2[7] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1

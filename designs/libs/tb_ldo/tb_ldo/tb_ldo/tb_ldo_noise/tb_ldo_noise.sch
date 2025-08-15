@@ -50,60 +50,60 @@ logy=0
 x1=0
 x2=10
 rawfile=$netlist_dir/tb_ldo_noise.raw}
-N 900 -660 900 -640 {lab=#net1}
-N 980 -660 980 -630 {lab=GND}
-N 540 -850 540 -810 {lab=VDD}
-N 980 -860 980 -820 {lab=VDD}
-N 540 -750 540 -710 {lab=GND}
-N 650 -860 650 -820 {lab=VDD}
-N 650 -760 650 -710 {lab=#net2}
-N 650 -710 830 -710 {lab=#net2}
-N 760 -770 760 -670 {lab=vref}
-N 760 -770 830 -770 {lab=vref}
-N 1130 -740 1200 -740 {lab=out}
-N 1300 -580 1300 -560 {lab=GND}
-N 1300 -660 1300 -640 {lab=#net3}
-N 1300 -740 1300 -720 {lab=out}
-N 1200 -740 1300 -740 {lab=out}
-N 760 -610 760 -560 {lab=GND}
-N 900 -640 900 -600 {lab=#net1}
-N 1200 -580 1200 -560 {lab=GND}
-N 1200 -620 1200 -580 {lab=GND}
-N 1060 -660 1060 -600 {lab=#net4}
-N 1200 -710 1200 -680 {lab=out}
-N 1200 -740 1200 -710 {lab=out}
+N 860 -750 860 -720 {lab=GND}
+N 500 -960 500 -920 {lab=VDD}
+N 860 -950 860 -910 {lab=VDD}
+N 500 -860 500 -820 {lab=GND}
+N 590 -960 590 -920 {lab=VDD}
+N 590 -860 590 -810 {lab=#net1}
+N 590 -810 770 -810 {lab=#net1}
+N 700 -870 700 -770 {lab=vref}
+N 700 -870 770 -870 {lab=vref}
+N 940 -830 1010 -830 {lab=out}
+N 1110 -670 1110 -650 {lab=GND}
+N 1110 -750 1110 -730 {lab=#net2}
+N 1110 -830 1110 -810 {lab=out}
+N 1010 -830 1110 -830 {lab=out}
+N 700 -710 700 -660 {lab=GND}
+N 1010 -670 1010 -650 {lab=GND}
+N 1010 -710 1010 -670 {lab=GND}
+N 1010 -800 1010 -770 {lab=out}
+N 1010 -830 1010 -800 {lab=out}
+N 770 -850 770 -830 {lab=#net3}
+N 880 -750 880 -740 {lab=#net4}
+N 760 -790 770 -790 {lab=#net5}
 C {title-3.sym} 0 0 0 0 {name=l1 author="Julio Vilca" rev=1.0 lock=true page=8 pages=8}
-C {noconn.sym} 900 -600 3 0 {name=l2}
-C {gnd.sym} 980 -630 0 0 {name=l3 lab=GND}
-C {res.sym} 1200 -650 0 0 {name=RL
+C {noconn.sym} 760 -790 0 0 {name=l2}
+C {gnd.sym} 860 -720 0 0 {name=l3 lab=GND}
+C {res.sym} 1010 -740 0 0 {name=RL
 value=1.8k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} 540 -780 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 540 -710 0 0 {name=l4 lab=GND}
-C {vsource.sym} 760 -640 0 0 {name=V2 value=0.9 savecurrent=false}
-C {isource.sym} 650 -790 0 0 {name=I0 value=10u}
-C {gnd.sym} 760 -560 0 0 {name=l5 lab=GND}
-C {gnd.sym} 1200 -560 0 0 {name=l6 lab=GND}
-C {capa.sym} 1300 -610 0 0 {name=CL
+C {vsource.sym} 500 -890 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 500 -820 0 0 {name=l4 lab=GND}
+C {vsource.sym} 700 -740 0 0 {name=V2 value=0.9 savecurrent=false}
+C {isource.sym} 590 -890 0 0 {name=I0 value=10u}
+C {gnd.sym} 700 -660 0 0 {name=l5 lab=GND}
+C {gnd.sym} 1010 -650 0 0 {name=l6 lab=GND}
+C {capa.sym} 1110 -700 0 0 {name=CL
 m=1
 value=0.1u
 footprint=1206
 device="ceramic capacitor"}
-C {res.sym} 1300 -690 0 0 {name=Resr
+C {res.sym} 1110 -780 0 0 {name=Resr
 value=0.2
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1300 -560 0 0 {name=l7 lab=GND}
-C {vdd.sym} 540 -850 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 980 -860 0 0 {name=l9 lab=VDD}
-C {vdd.sym} 650 -860 0 0 {name=l10 lab=VDD}
-C {lab_wire.sym} 810 -770 0 0 {name=p1 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1250 -740 0 0 {name=p2 sig_type=std_logic lab=out}
-C {libs/core_ldo/ldo/ldo/ldo.sym} 980 -740 0 0 {name=x1}
-C {simulator_commands.sym} 250 -830 0 0 {name=SIMULATIONS
+C {gnd.sym} 1110 -650 0 0 {name=l7 lab=GND}
+C {vdd.sym} 500 -960 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 860 -950 0 0 {name=l9 lab=VDD}
+C {vdd.sym} 590 -960 0 0 {name=l10 lab=VDD}
+C {lab_wire.sym} 750 -870 0 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 1060 -830 0 0 {name=p2 sig_type=std_logic lab=out}
+C {libs/core_ldo/ldo/ldo/ldo.sym} 920 -830 0 0 {name=x1}
+C {simulator_commands.sym} 250 -950 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
 value="
@@ -133,7 +133,7 @@ write tb_ldo_noise.raw
 .endc
 * ngspice commands
 "}
-C {simulator_commands.sym} 250 -600 0 0 {name=MODELS
+C {simulator_commands.sym} 250 -720 0 0 {name=MODELS
 simulator=ngspice
 only_toplevel=false
 format="tcleval( @value )" 
@@ -151,4 +151,4 @@ C {launcher.sym} 300 -210 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_noise.raw"
 }
-C {noconn.sym} 1060 -600 3 0 {name=l11}
+C {noconn.sym} 880 -740 3 0 {name=l12}

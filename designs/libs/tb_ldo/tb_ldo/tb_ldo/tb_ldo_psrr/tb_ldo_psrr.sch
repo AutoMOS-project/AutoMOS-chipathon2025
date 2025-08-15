@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1620 -1000 2420 -600 {flags=graph
+B 2 1620 -1140 2420 -740 {flags=graph
 ypos1=0
 ypos2=2
 divy=5
@@ -29,72 +29,70 @@ rawfile=$netlist_dir/tb_ldo_psrr.raw
 color="4 7"
 node="LDO Power supply rejection ratio (PSRR)
 out db20()"}
-N 640 -700 640 -680 {lab=#net1}
-N 720 -700 720 -670 {lab=GND}
-N 540 -1180 540 -1140 {lab=#net2}
-N 720 -900 720 -860 {lab=VDD}
-N 540 -1080 540 -1040 {lab=GND}
-N 750 -1180 750 -1140 {lab=VDD}
-N 750 -1080 750 -1030 {lab=ibias}
-N 1140 -620 1140 -600 {lab=GND}
-N 1140 -700 1140 -680 {lab=#net3}
-N 1140 -780 1140 -760 {lab=out}
-N 1040 -780 1140 -780 {lab=out}
-N 1040 -660 1040 -600 {lab=GND}
-N 640 -680 640 -640 {lab=#net1}
-N 870 -780 990 -780 {lab=out}
-N 990 -780 1040 -780 {lab=out}
-N 520 -750 570 -750 {lab=ibias}
-N 860 -1080 860 -1040 {lab=GND}
-N 860 -1200 860 -1140 {lab=vref}
-N 520 -810 570 -810 {lab=vref}
-N 1040 -750 1040 -720 {lab=out}
-N 1040 -780 1040 -750 {lab=out}
-N 540 -1180 560 -1180 {lab=#net2}
-N 620 -1180 650 -1180 {lab=VDD}
-N 650 -1180 650 -1140 {lab=VDD}
-N 650 -1080 650 -1040 {lab=GND}
-N 540 -1040 650 -1040 {lab=GND}
-N 540 -1040 540 -1020 {lab=GND}
-N 650 -1180 670 -1180 {lab=VDD}
-N 800 -700 800 -640 {lab=#net4}
-C {noconn.sym} 640 -640 3 0 {name=l1}
-C {gnd.sym} 720 -670 0 0 {name=l2 lab=GND}
-C {res.sym} 1040 -690 0 0 {name=RL
+N 910 -880 910 -850 {lab=GND}
+N 470 -1020 470 -980 {lab=#net1}
+N 910 -1080 910 -1040 {lab=VDD}
+N 470 -920 470 -880 {lab=GND}
+N 650 -1020 650 -980 {lab=VDD}
+N 650 -920 650 -870 {lab=ibias}
+N 1170 -800 1170 -780 {lab=GND}
+N 1170 -880 1170 -860 {lab=#net2}
+N 1170 -960 1170 -940 {lab=out}
+N 1070 -960 1170 -960 {lab=out}
+N 1070 -840 1070 -780 {lab=GND}
+N 770 -940 820 -940 {lab=ibias}
+N 710 -920 710 -880 {lab=GND}
+N 710 -1040 710 -980 {lab=vref}
+N 770 -1000 820 -1000 {lab=vref}
+N 1070 -930 1070 -900 {lab=out}
+N 1070 -960 1070 -930 {lab=out}
+N 470 -1020 490 -1020 {lab=#net1}
+N 550 -1020 580 -1020 {lab=VDD}
+N 580 -1020 580 -980 {lab=VDD}
+N 580 -920 580 -880 {lab=GND}
+N 470 -880 580 -880 {lab=GND}
+N 470 -880 470 -860 {lab=GND}
+N 580 -1040 580 -1020 {lab=VDD}
+N 930 -880 930 -870 {lab=#net3}
+N 820 -980 820 -960 {lab=#net4}
+N 810 -920 820 -920 {lab=#net5}
+N 990 -960 1070 -960 {lab=out}
+C {gnd.sym} 910 -850 0 0 {name=l2 lab=GND}
+C {res.sym} 1070 -870 0 0 {name=RL
 value=1.8k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} 540 -1110 0 0 {name=V1 value=3.3 savecurrent=false}
-C {gnd.sym} 540 -1020 0 0 {name=l3 lab=GND}
-C {vsource.sym} 860 -1110 0 0 {name=V2 value=1.5 savecurrent=false}
-C {isource.sym} 750 -1110 0 0 {name=I0 value=10u}
-C {gnd.sym} 860 -1040 0 0 {name=l4 lab=GND}
-C {gnd.sym} 1040 -600 0 0 {name=l5 lab=GND}
-C {capa.sym} 1140 -650 0 0 {name=CL
+C {vsource.sym} 470 -950 0 0 {name=V1 value=3.3 savecurrent=false}
+C {gnd.sym} 470 -860 0 0 {name=l3 lab=GND}
+C {vsource.sym} 710 -950 0 0 {name=V2 value=1.5 savecurrent=false}
+C {isource.sym} 650 -950 0 0 {name=I0 value=10u}
+C {gnd.sym} 710 -880 0 0 {name=l4 lab=GND}
+C {gnd.sym} 1070 -780 0 0 {name=l5 lab=GND}
+C {capa.sym} 1170 -830 0 0 {name=CL
 m=1
 value=0.1u
 footprint=1206
 device="ceramic capacitor"}
-C {res.sym} 1140 -730 0 0 {name=Resr
+C {res.sym} 1170 -910 0 0 {name=Resr
 value=0.2
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1140 -600 0 0 {name=l6 lab=GND}
-C {vdd.sym} 670 -1180 0 0 {name=l7 lab=VDD}
-C {vdd.sym} 720 -900 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 750 -1180 0 0 {name=l9 lab=VDD}
-C {lab_wire.sym} 860 -1200 3 0 {name=p1 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1090 -780 0 0 {name=p2 sig_type=std_logic lab=out
+C {gnd.sym} 1170 -780 0 0 {name=l6 lab=GND}
+C {vdd.sym} 580 -1040 0 0 {name=l7 lab=VDD}
+C {vdd.sym} 910 -1080 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 650 -1020 0 0 {name=l9 lab=VDD}
+C {lab_wire.sym} 710 -1030 3 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 1120 -960 0 0 {name=p2 sig_type=std_logic lab=out
 }
-C {lab_wire.sym} 750 -1030 1 0 {name=p3 sig_type=std_logic lab=ibias
+C {lab_wire.sym} 650 -870 1 0 {name=p3 sig_type=std_logic lab=ibias
 }
-C {lab_wire.sym} 530 -750 0 1 {name=p4 sig_type=std_logic lab=ibias
+C {lab_wire.sym} 780 -940 0 1 {name=p4 sig_type=std_logic lab=ibias
 }
-C {lab_wire.sym} 530 -810 0 1 {name=p5 sig_type=std_logic lab=vref}
-C {libs/core_ldo/ldo/ldo/ldo.sym} 720 -780 0 0 {name=x1}
-C {title-3.sym} 0 0 0 0 {name=l10 author="Julio Vilca" rev=1.0 lock=true page=4 pages=6}
+C {lab_wire.sym} 780 -1000 0 1 {name=p5 sig_type=std_logic lab=vref}
+C {libs/core_ldo/ldo/ldo/ldo.sym} 970 -960 0 0 {name=x1}
+C {title-3.sym} 0 0 0 0 {name=l10 author="Julio Vilca" rev=1.0 lock=true page=6 pages=8}
 C {simulator_commands.sym} 250 -1070 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
@@ -143,14 +141,15 @@ C {launcher.sym} 300 -210 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_psrr.raw"
 }
-C {res.sym} 590 -1180 3 1 {name=Ri
+C {res.sym} 520 -1020 3 1 {name=Ri
 value=1
 footprint=1206
 device=resistor
 m=1}
-C {capa.sym} 650 -1110 0 0 {name=Ci
+C {capa.sym} 580 -950 0 0 {name=Ci
 m=1
 value=10u
 footprint=1206
 device="ceramic capacitor"}
-C {noconn.sym} 800 -640 3 0 {name=l11}
+C {noconn.sym} 930 -870 3 0 {name=l11}
+C {noconn.sym} 810 -920 0 0 {name=l1}

@@ -1,15 +1,16 @@
 ** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo/tb_ldo_ac/tb_ldo_ac.sch
 **.subckt tb_ldo_ac
-* noconn #net3
 RL net2 GND 1.8k m=1
 V1 VDD GND 2
 V2 vref GND 0.9
 I0 VDD ibias 10u
 CL net1 GND 0.1u m=1
 Resr net2 net1 0.2 m=1
-x1 VDD vref net2 ibias in out net3 GND ldo_OL
 V3 in GND 0.9
 * noconn out
+x1 VDD vref net2 ibias net3 GND net4 in out ldo
+* noconn #net3
+* noconn #net4
 **** begin user architecture code
 
 
@@ -57,22 +58,43 @@ write tb_ldo_ac.raw
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sym # of pins=8
-** sym_path: /foss/designs/libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sym
-** sch_path: /foss/designs/libs/core_ldo/ldo/ldo_ldo_OL/ldo_OL.sch
-.subckt ldo_OL VDD VREF VOUT IBIAS VFB_in VFB_out SUB VSS
-*.iopin VFB_out
+* expanding   symbol:  libs/core_ldo/ldo/ldo/ldo.sym # of pins=9
+** sym_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sym
+** sch_path: /foss/designs/libs/core_ldo/ldo/ldo/ldo.sch
+.subckt ldo VDD VREF VOUT IBIAS SUB VSS LDO_EN VFB_ota VFB_res
 *.iopin VDD
 *.iopin VSS
 *.iopin VOUT
 *.iopin SUB
 *.iopin VREF
 *.iopin IBIAS
-*.iopin VFB_in
-XMp VOUT Vota VDD VDD pfet_05v0 L=0.50u W=100.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=5
+*.ipin LDO_EN
+*.iopin VFB_ota
+*.iopin VFB_res
+XMpass VOUT Vota VDD VDD pfet_05v0 L=0.50u W=50.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=10
 * noconn SUB
-x1 VDD VREF VFB_in Vota IBIAS VSS OTA
+x1 VDD VREF VFB_ota Vota IBIAS VSS OTA
+XR1[9] Vr_fb1[9] VOUT VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[8] Vr_fb1[8] Vr_fb1[9] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[7] Vr_fb1[7] Vr_fb1[8] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[6] Vr_fb1[6] Vr_fb1[7] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[5] Vr_fb1[5] Vr_fb1[6] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[4] Vr_fb1[4] Vr_fb1[5] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[3] Vr_fb1[3] Vr_fb1[4] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[2] Vr_fb1[2] Vr_fb1[3] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[1] Vr_fb1[1] Vr_fb1[2] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR1[0] VFB_res Vr_fb1[1] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[9] Vr_fb2[9] VFB_res VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[8] Vr_fb2[8] Vr_fb2[9] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[7] Vr_fb2[7] Vr_fb2[8] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[6] Vr_fb2[6] Vr_fb2[7] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[5] Vr_fb2[5] Vr_fb2[6] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[4] Vr_fb2[4] Vr_fb2[5] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[3] Vr_fb2[3] Vr_fb2[4] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[2] Vr_fb2[2] Vr_fb2[3] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[1] Vr_fb2[1] Vr_fb2[2] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XR2[0] VSS Vr_fb2[1] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
 XRc[29] Vr_mc[29] Vmc VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
 XRc[28] Vr_mc[28] Vr_mc[29] VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
 XRc[27] Vr_mc[27] Vr_mc[28] VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
@@ -104,48 +126,29 @@ XRc[2] Vr_mc[2] Vr_mc[3] VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
 XRc[1] Vr_mc[1] Vr_mc[2] VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
 XRc[0] VOUT Vr_mc[1] VDD ppolyf_u_1k r_width=1e-6 r_length=10e-6 m=1
 XCc Vota Vmc cap_mim_1f0fF c_width=25e-6 c_length=25e-6 m=4
-XRfb_dummy_L[7] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[6] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[5] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[4] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[3] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[2] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[1] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_L[0] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[13] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[12] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[11] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[10] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[9] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[8] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[7] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[6] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[5] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[4] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[3] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[2] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[1] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XRfb_dummy_TB[0] VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[9] Vr_fb1[9] VOUT VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[8] Vr_fb1[8] Vr_fb1[9] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[7] Vr_fb1[7] Vr_fb1[8] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[6] Vr_fb1[6] Vr_fb1[7] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[5] Vr_fb1[5] Vr_fb1[6] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[4] Vr_fb1[4] Vr_fb1[5] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[3] Vr_fb1[3] Vr_fb1[4] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[2] Vr_fb1[2] Vr_fb1[3] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[1] Vr_fb1[1] Vr_fb1[2] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR1[0] VFB_out Vr_fb1[1] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[9] Vr_fb2[9] VFB_out VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[8] Vr_fb2[8] Vr_fb2[9] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[7] Vr_fb2[7] Vr_fb2[8] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[6] Vr_fb2[6] Vr_fb2[7] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[5] Vr_fb2[5] Vr_fb2[6] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[4] Vr_fb2[4] Vr_fb2[5] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[3] Vr_fb2[3] Vr_fb2[4] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[2] Vr_fb2[2] Vr_fb2[3] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[1] Vr_fb2[1] Vr_fb2[2] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
-XR2[0] VSS Vr_fb2[1] VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[7] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[6] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[5] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[4] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[3] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[2] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[1] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[0] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[13] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[12] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[11] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[10] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[9] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[8] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[7] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[6] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[5] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[4] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[3] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[2] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[1] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[0] VDD VDD VDD ppolyf_u_1k r_width=1e-6 r_length=5e-6 m=1
+* noconn LDO_EN
 .ends
 
 
