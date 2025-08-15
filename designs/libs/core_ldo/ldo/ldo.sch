@@ -19,7 +19,7 @@ N 710 -410 710 -390 {lab=SUB}
 N 1520 -470 1520 -430 {lab=Vr_fb2[9:1],VSS
 bus=true}
 N 1510 -820 1510 -780 {lab=VOUT}
-N 1520 -570 1520 -530 {lab=Vfb,Vr_fb2[9:1] bus=true}
+N 1520 -570 1520 -530 {lab=VFB_res,Vr_fb2[9:1] bus=true}
 N 1520 -670 1520 -630 {lab=Vr_fb1[9:1],VFB_res bus=true}
 N 1520 -770 1520 -730 {lab=VOUT,Vr_fb1[9:1] bus=true}
 N 1510 -620 1510 -580 {lab=VFB_res}
@@ -75,7 +75,6 @@ spiceprefix=X
 }
 C {title-3.sym} 0 0 0 0 {name=l2 author="Julio Vilca" rev=1.0 lock=true page=2 pages=2}
 C {noconn.sym} 710 -410 1 0 {name=l1}
-C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 970 -1020 0 0 {name=x1}
 C {lab_wire.sym} 1390 -750 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1350 -1020 0 0 {name=p8 sig_type=std_logic lab=Vota}
 C {symbols/ppolyf_u_1k.sym} 1520 -700 0 0 {name=R1[9:0]
@@ -134,3 +133,4 @@ C {noconn.sym} 820 -450 1 0 {name=l3
 lab=EN}
 C {iopin.sym} 810 -980 2 0 {name=p13 lab=VFB_ota}
 C {iopin.sym} 1340 -600 2 0 {name=p20 lab=VFB_res}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 970 -1020 0 0 {name=x1}

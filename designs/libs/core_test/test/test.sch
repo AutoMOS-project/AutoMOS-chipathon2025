@@ -13,10 +13,8 @@ N 150 -440 190 -440 {lab=IN4}
 N 150 -420 190 -420 {lab=IN5}
 N 150 -400 190 -400 {lab=IN6}
 N 150 -380 190 -380 {lab=IN7}
-N 150 -360 190 -360 {lab=EN}
 N 150 -540 190 -540 {lab=IBIAS}
 N 150 -560 190 -560 {lab=VDD}
-N 160 -340 200 -340 {lab=SEL[2]}
 N 150 -280 190 -280 {lab=VOUT}
 N 150 -260 190 -260 {lab=VSS}
 N 460 -1700 490 -1700 {lab=IN0}
@@ -95,13 +93,11 @@ N 930 -1320 950 -1320 {lab=VDD}
 N 930 -1170 930 -1140 {lab=VSS}
 N 930 -1140 950 -1140 {lab=VSS}
 N 1330 -1230 1380 -1230 {lab=VOUT}
-N 160 -320 200 -320 {lab=SEL[1]}
-N 160 -300 200 -300 {lab=SEL[0]}
 N 580 -530 580 -510 {lab=VDD}
 N 580 -530 600 -530 {lab=VDD}
 N 580 -310 580 -290 {lab=VSS}
 N 580 -290 600 -290 {lab=VSS}
-N 400 -400 430 -400 {lab=SEL[2]}
+N 400 -400 430 -400 {lab=TEST_SEL[2]}
 N 400 -440 430 -440 {lab=SEL[0]}
 N 400 -420 430 -420 {lab=SEL[1]}
 N 730 -480 760 -480 {lab=EN0}
@@ -137,7 +133,7 @@ N 780 -1360 780 -1250 {lab=VOUT}
 N 780 -1360 1060 -1360 {lab=VOUT}
 N 1060 -1360 1060 -1230 {lab=VOUT}
 N 950 -1170 980 -1170 {lab=SUB}
-N 910 -1170 910 -1120 {lab=#net3}
+N 910 -1170 910 -1120 {lab=IBIAS}
 C {iopin.sym} 150 -560 2 0 {name=p1 lab=VDD}
 C {iopin.sym} 150 -260 2 0 {name=p2 lab=VSS}
 C {iopin.sym} 150 -230 2 0 {name=p3 lab=SUB}
@@ -145,7 +141,7 @@ C {noconn.sym} 170 -230 1 0 {name=l1}
 C {iopin.sym} 150 -280 0 1 {name=p4 lab=VOUT}
 C {iopin.sym} 150 -540 2 0 {name=p6 lab=IBIAS}
 C {ipin.sym} 150 -360 0 0 {name=p5 lab=EN}
-C {ipin.sym} 160 -340 0 0 {name=p7 lab=SEL[2]}
+C {ipin.sym} 160 -340 0 0 {name=p7 lab=SEL[2:0]}
 C {iopin.sym} 150 -520 2 0 {name=p8 lab=IN0}
 C {iopin.sym} 150 -500 2 0 {name=p9 lab=IN1
 }
@@ -166,7 +162,6 @@ C {lab_pin.sym} 190 -400 0 1 {name=p22 sig_type=std_logic lab=IN6}
 C {lab_pin.sym} 190 -380 0 1 {name=p23 sig_type=std_logic lab=IN7}
 C {lab_pin.sym} 190 -540 0 1 {name=p25 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 190 -560 0 1 {name=p26 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 200 -340 0 1 {name=p27 sig_type=std_logic lab=SEL[2]}
 C {lab_pin.sym} 190 -280 0 1 {name=p28 sig_type=std_logic lab=VOUT}
 C {lab_pin.sym} 190 -260 0 1 {name=p29 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 460 -1700 0 0 {name=p30 sig_type=std_logic lab=IN0}
@@ -212,10 +207,6 @@ C {lab_pin.sym} 570 -1760 0 1 {name=p61 sig_type=std_logic lab=EN0}
 C {lab_pin.sym} 950 -1320 0 1 {name=p62 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 950 -1140 0 1 {name=p63 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1380 -1230 0 1 {name=p64 sig_type=std_logic lab=VOUT}
-C {ipin.sym} 160 -320 0 0 {name=p24 lab=SEL[1]}
-C {lab_pin.sym} 200 -320 0 1 {name=p65 sig_type=std_logic lab=SEL[1]}
-C {ipin.sym} 160 -300 0 0 {name=p66 lab=SEL[0]}
-C {lab_pin.sym} 200 -300 0 1 {name=p67 sig_type=std_logic lab=SEL[0]}
 C {libs/core_test/test_decoder/test_decoder.sym} 430 -310 0 0 {name=xI_decoder}
 C {lab_pin.sym} 600 -530 0 1 {name=p68 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 600 -290 0 1 {name=p69 sig_type=std_logic lab=VSS}

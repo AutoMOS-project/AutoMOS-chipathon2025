@@ -7,14 +7,6 @@ template="name=x1"
 V {}
 S {}
 E {}
-N 750 -3080 750 -3060 {lab=VDD}
-N 750 -3080 770 -3080 {lab=VDD}
-N 750 -2940 750 -2920 {lab=VSS}
-N 750 -2920 770 -2920 {lab=VSS}
-N 1010 -3070 1010 -3050 {lab=VDD}
-N 1010 -3070 1030 -3070 {lab=VDD}
-N 1010 -2930 1010 -2910 {lab=VSS}
-N 1010 -2910 1030 -2910 {lab=VSS}
 N 770 -2750 770 -2730 {lab=VDD}
 N 770 -2750 790 -2750 {lab=VDD}
 N 770 -2610 770 -2590 {lab=VSS}
@@ -168,19 +160,13 @@ N -0 -620 40 -620 {lab=SEL[0]}
 N 0 -590 40 -590 {lab=SEL[1]}
 N 0 -560 40 -560 {lab=SEL[2]}
 N -0 -470 40 -470 {lab=EN0}
-N 0 -450 40 -450 {lab=EN0}
-N 0 -430 40 -430 {lab=EN0}
-N 0 -410 40 -410 {lab=EN0}
-N 0 -390 40 -390 {lab=EN0}
-N 0 -370 40 -370 {lab=EN0}
-N 0 -350 40 -350 {lab=EN0}
-N 0 -330 40 -330 {lab=EN0}
-C {libs/core_test/test_and/test_and.sym} 700 -2940 0 0 {name=x1}
-C {libs/core_test/test_inv/test_inv.sym} 940 -2930 0 0 {name=x2}
-C {lab_pin.sym} 770 -3080 0 1 {name=p1 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 770 -2920 0 1 {name=p2 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1030 -3070 0 1 {name=p3 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1030 -2910 0 1 {name=p4 sig_type=std_logic lab=VSS}
+N 0 -450 40 -450 {lab=EN1}
+N 0 -430 40 -430 {lab=EN2}
+N 0 -410 40 -410 {lab=EN3}
+N 0 -390 40 -390 {lab=EN4}
+N 0 -370 40 -370 {lab=EN5}
+N 0 -350 40 -350 {lab=EN6}
+N 0 -330 40 -330 {lab=EN7}
 C {lab_pin.sym} 40 -620 0 1 {name=p5 sig_type=std_logic lab=SEL[0]}
 C {lab_pin.sym} 40 -590 0 1 {name=p6 sig_type=std_logic lab=SEL[1]}
 C {lab_pin.sym} 40 -560 0 1 {name=p7 sig_type=std_logic lab=SEL[2]}
