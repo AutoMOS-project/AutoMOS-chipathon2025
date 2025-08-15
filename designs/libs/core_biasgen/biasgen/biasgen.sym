@@ -12,12 +12,12 @@ L 7 -20 40 0 40 {}
 L 7 200 20 220 20 {}
 L 7 -20 80 0 80 {}
 L 7 200 220 220 220 {}
-L 7 -20 120 0 120 {}
+L 7 -20 100 0 100 {}
 L 7 200 260 220 260 {}
 L 7 100 280 100 300 {}
 L 7 80 280 80 300 {}
 L 7 200 240 220 240 {}
-L 7 -20 100 0 100 {}
+L 7 -20 60 0 60 {}
 L 7 200 40 220 40 {}
 L 7 200 60 220 60 {}
 L 7 200 80 220 80 {}
@@ -33,12 +33,12 @@ B 5 -22.5 37.5 -17.5 42.5 {name=VBG dir=inout}
 B 5 217.5 17.5 222.5 22.5 {name=IPTAT_2u_src dir=inout}
 B 5 -22.5 77.5 -17.5 82.5 {name=IPTAT_IN dir=inout}
 B 5 217.5 217.5 222.5 222.5 {name=VREF_1V dir=inout}
-B 5 -22.5 117.5 -17.5 122.5 {name=IZTC_IN dir=inout}
+B 5 -22.5 97.5 -17.5 102.5 {name=IZTC_IN dir=inout}
 B 5 217.5 257.5 222.5 262.5 {name=VREF_0P5V dir=inout}
 B 5 97.5 297.5 102.5 302.5 {name=SUB dir=inout}
 B 5 77.5 297.5 82.5 302.5 {name=VSS dir=inout}
 B 5 217.5 237.5 222.5 242.5 {name=VREF_0P9V dir=inout}
-B 5 -22.5 97.5 -17.5 102.5 {name=ICTAT_IN dir=inout}
+B 5 -22.5 57.5 -17.5 62.5 {name=ICTAT_IN dir=inout}
 B 5 217.5 37.5 222.5 42.5 {name=IPTAT_10u_src dir=inout}
 B 5 217.5 57.5 222.5 62.5 {name=IPTAT_10u_snk dir=inout}
 B 5 217.5 77.5 222.5 82.5 {name=ICTAT_2u_src dir=inout}
@@ -50,19 +50,19 @@ B 5 217.5 177.5 222.5 182.5 {name=IZTC_10u_snk dir=inout}
 B 5 -22.5 257.5 -17.5 262.5 {name=EN dir=in}
 B 5 217.5 197.5 222.5 202.5 {name=VBG_buf dir=inout}
 P 4 5 200 0 0 0 0 280 200 280 200 0 {}
-T {@symname} 30.5 44 0 0 0.3 0.3 {}
+T {@symname} 30.5 134 0 0 0.3 0.3 {}
 T {@name} 155 -12 0 0 0.2 0.2 {}
 T {VDD} 76 5 3 1 0.2 0.2 {}
 T {VBG} 5 44 2 1 0.2 0.2 {}
 T {IPTAT_2u_src} 195 16 0 1 0.2 0.2 {}
 T {IPTAT_IN} 5 84 2 1 0.2 0.2 {}
 T {VREF_1V} 195 216 0 1 0.2 0.2 {}
-T {IZTC_IN} 5 124 2 1 0.2 0.2 {}
+T {IZTC_IN} 5 104 2 1 0.2 0.2 {}
 T {VREF_0P5V} 195 256 0 1 0.2 0.2 {}
 T {SUB} 104 275 1 1 0.2 0.2 {}
 T {VSS} 84 275 1 1 0.2 0.2 {}
 T {VREF_0P9V} 195 236 0 1 0.2 0.2 {}
-T {ICTAT_IN} 5 104 2 1 0.2 0.2 {}
+T {ICTAT_IN} 5 64 2 1 0.2 0.2 {}
 T {IPTAT_10u_src} 195 36 0 1 0.2 0.2 {}
 T {IPTAT_10u_snk} 195 56 0 1 0.2 0.2 {}
 T {ICTAT_2u_src} 195 76 0 1 0.2 0.2 {}
