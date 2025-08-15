@@ -491,9 +491,9 @@ C {lab_pin.sym} 1160 -450 1 1 {name=p15 lab=VSS}
 C {lab_pin.sym} 900 -800 0 1 {name=p16 lab=VDD}
 C {lab_pin.sym} 800 -740 0 0 {name=p17 lab=VBG}
 C {lab_pin.sym} 800 -700 0 0 {name=p19 lab=IPTAT}
-C {lab_pin.sym} 800 -660 0 0 {name=p21 lab=IZTC}
+C {lab_pin.sym} 800 -680 0 0 {name=p21 lab=IZTC}
 C {lab_pin.sym} 900 -480 1 1 {name=p25 lab=VSS}
-C {lab_pin.sym} 800 -680 0 0 {name=p27 lab=ICTAT}
+C {lab_pin.sym} 800 -720 0 0 {name=p27 lab=ICTAT}
 C {symbols/nfet_05v0.sym} 1340 -370 0 0 {name=Mztc_10
 L=2u
 W=1u
