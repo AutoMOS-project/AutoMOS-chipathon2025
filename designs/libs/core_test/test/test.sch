@@ -97,7 +97,7 @@ N 580 -530 580 -510 {lab=VDD}
 N 580 -530 600 -530 {lab=VDD}
 N 580 -310 580 -290 {lab=VSS}
 N 580 -290 600 -290 {lab=VSS}
-N 400 -400 430 -400 {lab=TEST_SEL[2]}
+N 400 -400 430 -400 {lab=SEL[2]}
 N 400 -440 430 -440 {lab=SEL[0]}
 N 400 -420 430 -420 {lab=SEL[1]}
 N 730 -480 760 -480 {lab=EN0}
@@ -134,6 +134,7 @@ N 780 -1360 1060 -1360 {lab=VOUT}
 N 1060 -1360 1060 -1230 {lab=VOUT}
 N 950 -1170 980 -1170 {lab=SUB}
 N 910 -1170 910 -1120 {lab=IBIAS}
+N 400 -470 430 -470 {lab=EN}
 C {iopin.sym} 150 -560 2 0 {name=p1 lab=VDD}
 C {iopin.sym} 150 -260 2 0 {name=p2 lab=VSS}
 C {iopin.sym} 150 -230 2 0 {name=p3 lab=SUB}
@@ -195,7 +196,7 @@ C {libs/core_test/test_tg/test_tg.sym} 920 -1500 0 0 {name=x8}
 C {lab_pin.sym} 890 -1540 0 0 {name=p51 sig_type=std_logic lab=IN7}
 C {lab_pin.sym} 940 -1480 0 0 {name=p52 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1040 -1480 0 1 {name=p53 sig_type=std_logic lab=VSS}
-C {libs/core_test/test_buffer/test_buffer.sym} 870 -1170 0 0 {name=x9}
+C {libs/core_test/test_buffer/test_buffer.sym} 870 -1170 0 0 {name=xbuffer}
 C {lab_pin.sym} 1000 -1600 0 1 {name=p54 sig_type=std_logic lab=EN7}
 C {lab_pin.sym} 1000 -1760 0 1 {name=p55 sig_type=std_logic lab=EN6}
 C {lab_pin.sym} 1000 -1930 0 1 {name=p56 sig_type=std_logic lab=EN5}
@@ -222,7 +223,6 @@ C {lab_pin.sym} 760 -380 0 1 {name=p78 sig_type=std_logic lab=EN5}
 C {lab_pin.sym} 760 -360 0 1 {name=p79 sig_type=std_logic lab=EN6}
 C {lab_pin.sym} 760 -340 0 1 {name=p80 sig_type=std_logic lab=EN7}
 C {libs/core_test/test_and/test_and.sym} 750 -720 0 0 {name=x10}
-C {libs/core_test/test_nor3/test_nor3.sym} 550 -710 0 0 {}
 C {lab_pin.sym} 550 -790 0 0 {name=p81 sig_type=std_logic lab=IN5}
 C {lab_pin.sym} 550 -770 0 0 {name=p82 sig_type=std_logic lab=IN6}
 C {lab_pin.sym} 550 -750 0 0 {name=p83 sig_type=std_logic lab=IN7}
@@ -240,3 +240,5 @@ C {lab_wire.sym} 870 -1270 0 0 {name=p93 sig_type=std_logic lab=EN_BUFB}
 C {lab_wire.sym} 870 -1290 0 0 {name=p94 sig_type=std_logic lab=EN_BUF}
 C {lab_pin.sym} 980 -1170 0 1 {name=p95 sig_type=std_logic lab=SUB}
 C {lab_wire.sym} 910 -1120 3 0 {name=p96 sig_type=std_logic lab=IBIAS}
+C {libs/core_test/test_nor3/test_nor3.sym} 550 -710 0 0 {name=x12}
+C {lab_pin.sym} 400 -470 0 0 {name=p24 sig_type=std_logic lab=EN}

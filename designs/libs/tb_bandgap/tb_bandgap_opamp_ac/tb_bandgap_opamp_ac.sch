@@ -80,16 +80,18 @@ value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1050 -420 1 1 {name=p11 lab=VSS}
-C {devices/code_shown.sym} 10 -150 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 10 -240 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} -10 -910 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 10 -910 0 0 {name=NGSPICE only_toplevel=true
 value="
 .param ac_buffer=0
 .param ac_psrr=0
@@ -134,3 +136,4 @@ C {launcher.sym} 780 -810 0 0 {name=h1
 descr="Backannotate" 
 tclcommand="xschem annotate_op"}
 C {libs/core_bandgap/bandgap_opamp/bandgap_opamp.sym} 830 -440 0 0 {name=x1}
+C {title.sym} 160 -40 0 0 {name=l3 author="Luighi Viton"}

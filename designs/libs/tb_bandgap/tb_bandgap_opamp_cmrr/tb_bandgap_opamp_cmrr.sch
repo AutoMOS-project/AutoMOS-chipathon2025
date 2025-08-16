@@ -27,10 +27,10 @@ logx=1
 logy=0
 sim_type=ac
 autoload=1
-rawfile=$netlist_dir/tb_opamp_two_stage_cmrr.raw}
+rawfile=$netlist_dir/tb_bandgap_opamp_cmrr.raw}
 B 2 1230 -630 2030 -230 {flags=graph
-y1=0.007
-y2=98
+y1=0.046
+y2=56
 ypos1=0
 ypos2=2
 divy=5
@@ -46,7 +46,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-rawfile=$netlist_dir/tb_opamp_two_stage_cmrr_result.raw
+rawfile=$netlist_dir/tb_bandgap_opamp_cmrr_result.raw
 autoload=1
 sim_type=ac
 color=6
@@ -91,16 +91,18 @@ value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1040 -390 1 1 {name=p11 lab=VSS}
-C {devices/code_shown.sym} 0 -120 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 0 -240 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} -20 -890 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 0 -1010 0 0 {name=NGSPICE only_toplevel=true
 value="
 .param ac_cm=0
 .param ac_diff=0
@@ -114,27 +116,27 @@ alter @V1[DC] = $&VDD
 ** Simulations
 op
 save all
-write tb_opamp_two_stage_cmrr.raw
+write tb_bandgap_opamp_cmrr.raw
 set appendwrite
 
 alterparam ac_cm=1
 reset
 ac dec 100 0.1 10G
-write tb_opamp_two_stage_cmrr.raw
+write tb_bandgap_opamp_cmrr.raw
 set appendwrite
 
 alterparam ac_cm=0
 alterparam ac_diff=1
 reset
 ac dec 100 0.1 10G
-write tb_opamp_two_stage_cmrr.raw
+write tb_bandgap_opamp_cmrr.raw
 *unset appendwrite
 
 *setplot new
 let frequency=ac1.frequency
 let cmrr_real=ac2.vout/ac1.vout
 let cmrr=db(ac2.vout)-db(ac1.vout)
-write tb_opamp_two_stage_cmrr_result.raw
+write tb_bandgap_opamp_cmrr_result.raw
 
 .endc
 "}
@@ -163,3 +165,4 @@ C {lab_pin.sym} 660 -580 0 0 {name=p15 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 820 -470 0 0 {name=p16 lab=vn}
 C {lab_pin.sym} 590 -670 0 0 {name=p17 sig_type=std_logic lab=vp}
 C {lab_pin.sym} 710 -670 0 0 {name=p18 sig_type=std_logic lab=vn}
+C {title.sym} 160 -40 0 0 {name=l3 author="Luighi Viton"}

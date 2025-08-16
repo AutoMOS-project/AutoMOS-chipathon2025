@@ -7,7 +7,6 @@ E {}
 T {In CHIP package this pin appears as VIN,
 however to indicate that this is power supply 
 internally I considered as VDD} -490 -940 0 0 0.4 0.4 {}
-N 420 -760 500 -760 {lab=VBG}
 N 420 -720 500 -720 {lab=IPTAT}
 N 420 -700 500 -700 {lab=IZTC}
 N 240 -720 240 -700 {lab=bandgap_fb}
@@ -24,6 +23,7 @@ N 1240 -890 1240 -820 {lab=#net2}
 N 1240 -890 1330 -890 {lab=#net2}
 N 1190 -600 1330 -600 {lab=#net3}
 N 1190 -380 1330 -380 {lab=#net4}
+N 420 -760 500 -760 {lab=VBG}
 C {ipin.sym} 180 -560 0 0 {name=p1 lab=TEST_SEL_0}
 C {ipin.sym} 180 -930 0 0 {name=p2 lab=VCO_IN}
 C {iopin.sym} 320 -870 3 0 {name=p4 lab=VDD}
@@ -61,7 +61,6 @@ C {lab_wire.sym} 1510 -640 0 1 {name=p40 lab=VCO_OUT}
 C {lab_wire.sym} 1430 -540 1 1 {name=p41 lab=SUB}
 C {lab_wire.sym} 1410 -540 1 1 {name=p42 lab=VSS}
 C {lab_wire.sym} 1330 -580 0 0 {name=p30 lab=VCO_EN}
-C {lab_wire.sym} 1330 -360 0 0 {name=p32 lab=VBG}
 C {lab_wire.sym} 1330 -320 0 0 {name=p33 lab=VREF_1V}
 C {lab_wire.sym} 1330 -300 0 0 {name=p35 lab=VREF_0P9V}
 C {lab_wire.sym} 1330 -180 0 0 {name=p48 lab=TEST_EN}
@@ -76,7 +75,6 @@ C {lab_wire.sym} 420 -780 0 1 {name=p21 lab=VZTC}
 C {lab_wire.sym} 740 -560 0 1 {name=p44 lab=VREF_0P9V}
 C {lab_wire.sym} 740 -540 0 1 {name=p45 lab=VREF_0P5V}
 C {lab_wire.sym} 740 -580 0 1 {name=p54 lab=VREF_1V}
-C {lab_wire.sym} 1330 -340 0 0 {name=p52 lab=VBG_buf}
 C {lab_wire.sym} 740 -600 0 1 {name=p55 lab=VBG_buf}
 C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -890 0 0 {name=xI_mux_ldoref}
 C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -740 0 0 {name=xI_mux_ldobias}
@@ -131,3 +129,5 @@ C {noconn.sym} 420 -780 2 0 {name=l1}
 C {lab_wire.sym} 1330 -870 0 0 {name=p91 lab=LDO_EN}
 C {ipin.sym} 180 -960 0 0 {name=p94 lab=LDO_EN}
 C {iopin.sym} 900 -430 2 0 {name=p95 lab=VTEST}
+C {lab_wire.sym} 1330 -360 0 0 {name=p32 lab=VSS}
+C {lab_wire.sym} 1330 -340 0 0 {name=p52 lab=VSS}

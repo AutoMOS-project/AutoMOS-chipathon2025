@@ -148,12 +148,6 @@ C {ipin.sym} 110 -410 3 0 {name=p8 lab=ibias
 C {iopin.sym} 80 -660 2 0 {name=p9 lab=VDD}
 C {iopin.sym} 70 -150 2 0 {name=p10 lab=VSS}
 C {title.sym} 170 -30 0 0 {name=l1 author="Luighi Viton"}
-C {symbols/cap_nmos_03v3_b.sym} 540 -330 0 0 {name=CM
-W=15u
-L=15u
-model=cap_nmos_03v3_b
-spiceprefix=X
-m=1}
 C {symbols/pfet_05v0.sym} 130 -590 0 1 {name=Mpref0
 L=1u
 W=0.5u
@@ -365,3 +359,9 @@ spiceprefix=X
 C {lab_wire.sym} 780 -210 0 0 {name=p18 sig_type=std_logic lab=ENB}
 C {iopin.sym} 70 -110 2 0 {name=p19 lab=SUB}
 C {noconn.sym} 70 -110 2 0 {name=l2}
+C {symbols/cap_mim_1f0fF.sym} 540 -330 0 0 {name=C1[5:0]
+W=10e-6
+L=10e-6
+model=cap_mim_1f0fF
+spiceprefix=X
+m=1}

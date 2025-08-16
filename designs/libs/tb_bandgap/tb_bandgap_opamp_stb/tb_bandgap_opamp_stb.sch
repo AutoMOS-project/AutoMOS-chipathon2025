@@ -79,16 +79,18 @@ m=1
 value=10G
 footprint=1206
 device=inductor}
-C {devices/code_shown.sym} 10 -130 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 10 -240 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} -10 -950 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 10 -1070 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -148,3 +150,4 @@ C {libs/core_bandgap/bandgap_opamp/bandgap_opamp.sym} 830 -460 0 0 {name=x1}
 C {launcher.sym} 780 -810 0 0 {name=h2
 descr="Backannotate" 
 tclcommand="xschem annotate_op"}
+C {title.sym} 160 -40 0 0 {name=l3 author="Luighi Viton"}
