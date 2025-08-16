@@ -5,8 +5,8 @@ V {}
 S {}
 E {}
 B 2 2680 -1080 4030 -280 {flags=graph
-y1=10
-y2=15
+y1=0
+y2=5
 ypos1=0
 ypos2=2
 divy=5
@@ -141,6 +141,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice bjt_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
 C {devices/code_shown.sym} -10 -950 0 0 {name=NGSPICE only_toplevel=true

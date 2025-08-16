@@ -198,6 +198,15 @@ N 1340 -320 1340 -290 {lab=#net1}
 N 1000 -320 1340 -320 {lab=#net1}
 N 1000 -410 1000 -320 {lab=#net1}
 N 1210 -160 1340 -160 {lab=VSS}
+N 1480 -220 1490 -220 {lab=VSS}
+N 1490 -220 1490 -160 {lab=VSS}
+N 1480 -160 1490 -160 {lab=VSS}
+N 1480 -190 1480 -160 {lab=VSS}
+N 1410 -220 1440 -220 {lab=ENB}
+N 1480 -290 1480 -250 {lab=vout}
+N 1350 -160 1480 -160 {lab=VSS}
+N 1480 -370 1480 -290 {lab=vout}
+N 1080 -370 1480 -370 {lab=vout}
 C {ipin.sym} 190 -410 0 0 {name=p2 lab=vn
 }
 C {ipin.sym} 480 -410 2 0 {name=p3 lab=vp}
@@ -209,12 +218,6 @@ C {ipin.sym} 100 -420 3 0 {name=p8 lab=ibias
 C {iopin.sym} 70 -670 2 0 {name=p9 lab=VDD}
 C {iopin.sym} 60 -160 2 0 {name=p10 lab=VSS}
 C {title.sym} 160 -40 0 0 {name=l1 author="Luighi Viton"}
-C {symbols/cap_nmos_03v3_b.sym} 530 -340 0 0 {name=CM
-W=15u
-L=15u
-model=cap_nmos_03v3_b
-spiceprefix=X
-m=1}
 C {symbols/pfet_05v0.sym} 120 -600 0 1 {name=Mpref0
 L=1u
 W=0.5u
@@ -512,3 +515,24 @@ model=nfet_05v0
 spiceprefix=X
 }
 C {lab_wire.sym} 1290 -220 0 0 {name=p21 sig_type=std_logic lab=ENB}
+C {symbols/nfet_05v0.sym} 1460 -220 0 0 {name=Mnennref4
+L=0.6u
+W=2u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
+spiceprefix=X
+}
+C {lab_wire.sym} 1430 -220 0 0 {name=p22 sig_type=std_logic lab=ENB}
+C {symbols/cap_mim_1f0fF.sym} 530 -340 0 0 {name=C1[6:0]
+W=10e-6
+L=10e-6
+model=cap_mim_1f0fF
+spiceprefix=X
+m=1}

@@ -117,7 +117,7 @@ N 1020 -850 1150 -850 {lab=ICTAT_q}
 N 1150 -850 1150 -810 {lab=ICTAT_q}
 N 940 -1080 980 -1080 {lab=VBG_q}
 N 760 -1040 760 -1020 {lab=vpref_q}
-C {devices/code_shown.sym} 0 -220 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 0 -270 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -125,6 +125,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice bjt_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
 C {devices/code_shown.sym} 10 -630 0 0 {name=NGSPICE only_toplevel=true

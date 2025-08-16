@@ -280,7 +280,7 @@ N 700 -510 740 -510 {lab=VBG}
 C {lab_pin.sym} 600 -570 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 700 -510 0 1 {name=p2 lab=VBG}
 C {lab_pin.sym} 600 -410 1 1 {name=p6 lab=VSS}
-C {devices/code_shown.sym} 0 -230 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 0 -290 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -288,6 +288,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice bjt_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
 C {devices/code_shown.sym} 0 -600 0 0 {name=NGSPICE only_toplevel=true

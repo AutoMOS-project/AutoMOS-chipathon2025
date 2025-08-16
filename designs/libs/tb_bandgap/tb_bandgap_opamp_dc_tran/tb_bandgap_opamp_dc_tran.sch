@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 1190 -1250 1990 -850 {flags=graph
+B 2 1290 -1250 2090 -850 {flags=graph
 y1=0
 y2=5.1
 ypos1=0
@@ -30,7 +30,7 @@ color="4 7"
 node="vout
 vp"
 dataset=-1}
-B 2 1190 -400 1990 0 {flags=graph
+B 2 1290 -400 2090 0 {flags=graph
 y1=0
 y2=1.3
 ypos1=0
@@ -54,7 +54,7 @@ logy=0
 rawfile=$netlist_dir/tb_bandgap_opamp_dc_tran.raw
 sim_type=tran
 autoload=1}
-B 2 1190 -850 1990 -450 {flags=graph
+B 2 1290 -850 2090 -450 {flags=graph
 y1=-4.8e-06
 y2=0.31
 ypos1=0
@@ -106,16 +106,18 @@ value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1050 -420 1 1 {name=p11 lab=VSS}
-C {devices/code_shown.sym} 10 -150 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 0 -250 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {devices/code_shown.sym} 0 -830 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 0 -890 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 ** Define input signal
@@ -163,3 +165,4 @@ C {launcher.sym} 780 -810 0 0 {name=h1
 descr="Backannotate" 
 tclcommand="xschem annotate_op"}
 C {libs/core_bandgap/bandgap_opamp/bandgap_opamp.sym} 830 -440 0 0 {name=x1}
+C {title.sym} 160 -40 0 0 {name=l3 author="Luighi Viton"}
