@@ -54,9 +54,9 @@ autoload=1
 sim_type=ac
 x1=0
 x2=10}
-N 910 -810 910 -780 {lab=GND}
+N 990 -810 990 -780 {lab=GND}
 N 470 -910 470 -870 {lab=VDD}
-N 910 -1010 910 -970 {lab=VDD}
+N 990 -1010 990 -970 {lab=VDD}
 N 470 -810 470 -770 {lab=GND}
 N 540 -910 540 -870 {lab=VDD}
 N 540 -810 540 -760 {lab=ibias}
@@ -65,21 +65,23 @@ N 1260 -810 1260 -790 {lab=#net1}
 N 1260 -890 1260 -870 {lab=#net2}
 N 1160 -890 1260 -890 {lab=#net2}
 N 1160 -770 1160 -710 {lab=GND}
-N 990 -890 1110 -890 {lab=#net2}
-N 1110 -890 1160 -890 {lab=#net2}
-N 770 -870 820 -870 {lab=ibias}
+N 850 -870 900 -870 {lab=ibias}
 N 610 -810 610 -770 {lab=GND}
 N 610 -930 610 -870 {lab=vref}
-N 770 -930 820 -930 {lab=vref}
+N 850 -930 900 -930 {lab=vref}
 N 680 -810 680 -770 {lab=GND}
 N 680 -930 680 -870 {lab=in}
-N 770 -910 820 -910 {lab=in}
-N 750 -890 820 -890 {lab=out}
+N 850 -910 900 -910 {lab=in}
+N 830 -890 900 -890 {lab=out}
 N 1160 -860 1160 -830 {lab=#net2}
 N 1160 -890 1160 -860 {lab=#net2}
-N 930 -810 930 -800 {lab=#net3}
-N 800 -850 820 -850 {lab=#net4}
-C {gnd.sym} 910 -780 0 0 {name=l2 lab=GND}
+N 1010 -810 1010 -800 {lab=#net3}
+N 1070 -890 1160 -890 {lab=#net2}
+N 860 -850 900 -850 {lab=EN}
+N 750 -910 750 -870 {lab=EN}
+N 750 -810 750 -770 {lab=GND}
+N 750 -930 750 -910 {lab=EN}
+C {gnd.sym} 990 -780 0 0 {name=l2 lab=GND}
 C {res.sym} 1160 -800 0 0 {name=RL
 value=1.8k
 footprint=1206
@@ -103,20 +105,20 @@ device=resistor
 m=1}
 C {gnd.sym} 1260 -710 0 0 {name=l6 lab=GND}
 C {vdd.sym} 470 -910 0 0 {name=l7 lab=VDD}
-C {vdd.sym} 910 -1010 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 990 -1010 0 0 {name=l8 lab=VDD}
 C {vdd.sym} 540 -910 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} 610 -930 3 0 {name=p1 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 540 -770 1 0 {name=p3 sig_type=std_logic lab=ibias
 }
-C {lab_wire.sym} 780 -870 0 1 {name=p4 sig_type=std_logic lab=ibias
+C {lab_wire.sym} 860 -870 0 1 {name=p4 sig_type=std_logic lab=ibias
 }
-C {lab_wire.sym} 780 -930 0 1 {name=p5 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 860 -930 0 1 {name=p5 sig_type=std_logic lab=vref}
 C {vsource.sym} 680 -840 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 680 -770 0 0 {name=l10 lab=GND}
 C {lab_wire.sym} 680 -930 3 0 {name=p6 sig_type=std_logic lab=in}
-C {lab_wire.sym} 780 -910 0 1 {name=p7 sig_type=std_logic lab=in}
-C {noconn.sym} 750 -890 0 0 {name=l11}
-C {lab_wire.sym} 780 -890 0 1 {name=p8 sig_type=std_logic lab=out
+C {lab_wire.sym} 860 -910 0 1 {name=p7 sig_type=std_logic lab=in}
+C {noconn.sym} 830 -890 0 0 {name=l11}
+C {lab_wire.sym} 860 -890 0 1 {name=p8 sig_type=std_logic lab=out
 }
 C {simulator_commands.sym} 250 -1030 0 0 {name=SIMULATIONS
 simulator=ngspice
@@ -170,6 +172,9 @@ C {launcher.sym} 300 -200 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_ac.raw"
 }
-C {libs/core_ldo/ldo/ldo/ldo.sym} 970 -890 0 0 {name=x1}
-C {noconn.sym} 930 -800 3 0 {name=l13}
-C {noconn.sym} 800 -850 0 0 {name=l1}
+C {noconn.sym} 1010 -800 3 0 {name=l13}
+C {libs/core_ldo/ldo/ldo.sym} 1050 -890 0 0 {name=x1}
+C {lab_wire.sym} 880 -850 0 0 {name=p2 sig_type=std_logic lab=EN}
+C {vsource.sym} 750 -840 0 0 {name=V4 value=2 savecurrent=false}
+C {gnd.sym} 750 -770 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 750 -920 3 0 {name=p9 sig_type=std_logic lab=EN}

@@ -1,11 +1,11 @@
-** sch_path: /foss/designs/libs/tb_ldo/tb_ldo/tb_ldo_OTA/tb_ldo_OTA_tran/tb_ldo_OTA_tran.sch
+** sch_path: /foss/designs/libs/tb_ldo/tb_ldo_OTA_tran/tb_ldo_OTA_tran.sch
 **.subckt tb_ldo_OTA_tran
 V1 VDD GND 2
 V2 vref GND 0.9
 I0 VDD net1 10u
 CL out GND 0.52p m=1
 V3 in GND 0.9
-x1 VDD vref in out net1 GND OTA
+x1 VDD vref in out net1 GND VDD GND OTA
 **** begin user architecture code
 
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
@@ -55,16 +55,18 @@ write tb_ldo_OTA_tran.raw
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  libs/core_ldo/ldo/ldo_OTA/OTA.sym # of pins=6
-** sym_path: /foss/designs/libs/core_ldo/ldo/ldo_OTA/OTA.sym
-** sch_path: /foss/designs/libs/core_ldo/ldo/ldo_OTA/OTA.sch
-.subckt OTA VDD VREF VFB VOTA IBIAS VSS
+* expanding   symbol:  libs/core_ldo/ldo_OTA/OTA.sym # of pins=8
+** sym_path: /foss/designs/libs/core_ldo/ldo_OTA/OTA.sym
+** sch_path: /foss/designs/libs/core_ldo/ldo_OTA/OTA.sch
+.subckt OTA VDD VREF VFB VOTA IBIAS VSS ENp ENn
 *.iopin VDD
 *.iopin VSS
 *.iopin VOTA
 *.iopin VREF
 *.iopin IBIAS
 *.iopin VFB
+*.iopin ENp
+*.iopin ENn
 XM3 net2 net2 VDD VDD pfet_05v0 L=1.00u W=11.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM4 net3 net3 VDD VDD pfet_05v0 L=1.00u W=11.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
@@ -73,9 +75,9 @@ XM5 net4 net2 VDD VDD pfet_05v0 L=1.00u W=11.00u nf=1 ad='int((nf+1)/2) * W/nf *
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM6 VOTA net3 VDD VDD pfet_05v0 L=1.00u W=11.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=3
-XM9 IBIAS IBIAS VSS VSS nfet_05v0 L=1.00u W=6.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM9 net5 net5 VSS VSS nfet_05v0 L=1.00u W=6.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM10 net1 IBIAS VSS VSS nfet_05v0 L=1.00u W=6.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM10 net1 net5 VSS VSS nfet_05v0 L=1.00u W=6.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM7 net4 net4 VSS VSS nfet_05v0 L=1.00u W=2.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
@@ -177,6 +179,16 @@ XMnbias_dummy_TB[1] VSS VSS VSS VSS nfet_05v0 L=0.60u W=6.00u nf=1 ad='int((nf+1
 + pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XMnbias_dummy_TB[0] VSS VSS VSS VSS nfet_05v0 L=0.60u W=6.00u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
 + pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpenota1 net3 ENp VDD VDD pfet_05v0 L=0.5u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpenota2 net2 ENp VDD VDD pfet_05v0 L=0.5u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMnenota1 net4 ENn VSS VSS nfet_05v0 L=0.6u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMnenota2 net5 ENn VSS VSS nfet_05v0 L=0.6u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMnenota3 IBIAS ENp net5 net5 nfet_05v0 L=0.6u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 .ends
 
 .GLOBAL GND

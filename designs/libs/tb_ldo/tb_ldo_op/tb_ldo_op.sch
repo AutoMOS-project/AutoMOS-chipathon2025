@@ -5,9 +5,9 @@ V {}
 S {}
 E {}
 N 1010 -800 1010 -770 {lab=GND}
-N 640 -1010 640 -970 {lab=VDD}
+N 560 -1010 560 -970 {lab=VDD}
 N 1010 -1000 1010 -960 {lab=VDD}
-N 640 -910 640 -870 {lab=GND}
+N 560 -910 560 -870 {lab=GND}
 N 740 -1010 740 -970 {lab=VDD}
 N 740 -910 740 -860 {lab=#net1}
 N 740 -860 920 -860 {lab=#net1}
@@ -25,10 +25,12 @@ N 1260 -850 1260 -820 {lab=out}
 N 1260 -880 1260 -850 {lab=out}
 N 920 -900 920 -880 {lab=#net4}
 N 1030 -800 1030 -790 {lab=#net5}
-N 910 -840 920 -840 {lab=#net6}
+N 640 -1010 640 -970 {lab=EN}
+N 640 -910 640 -870 {lab=GND}
+N 880 -840 920 -840 {lab=EN}
 C {gnd.sym} 1010 -770 0 0 {name=l2 lab=GND}
-C {vsource.sym} 640 -940 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 640 -870 0 0 {name=l3 lab=GND}
+C {vsource.sym} 560 -940 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 560 -870 0 0 {name=l3 lab=GND}
 C {vsource.sym} 850 -790 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 740 -940 0 0 {name=I0 value=10u}
 C {gnd.sym} 850 -710 0 0 {name=l4 lab=GND}
@@ -44,12 +46,11 @@ footprint=1206
 device=resistor
 m=1}
 C {gnd.sym} 1360 -700 0 0 {name=l6 lab=GND}
-C {vdd.sym} 640 -1010 0 0 {name=l7 lab=VDD}
+C {vdd.sym} 560 -1010 0 0 {name=l7 lab=VDD}
 C {vdd.sym} 1010 -1000 0 0 {name=l8 lab=VDD}
 C {vdd.sym} 740 -1010 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} 900 -920 0 0 {name=p1 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 1310 -880 0 0 {name=p2 sig_type=std_logic lab=out}
-C {libs/core_ldo/ldo/ldo/ldo.sym} 1070 -880 0 0 {name=x1}
 C {simulator_commands.sym} 250 -790 0 0 {name=MODELS
 simulator=ngspice
 only_toplevel=false
@@ -99,4 +100,8 @@ write tb_ldo_op.raw
 "}
 C {noconn.sym} 1030 -790 3 0 {name=l11}
 C {isource.sym} 1260 -790 0 0 {name=IL value=0}
-C {noconn.sym} 910 -840 0 0 {name=l1}
+C {libs/core_ldo/ldo/ldo.sym} 1070 -880 0 0 {name=x1}
+C {vsource.sym} 640 -940 0 0 {name=V4 value=2 savecurrent=false}
+C {gnd.sym} 640 -870 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 640 -1000 3 0 {name=p3 sig_type=std_logic lab=EN}
+C {lab_wire.sym} 900 -840 0 0 {name=p4 sig_type=std_logic lab=EN}

@@ -57,28 +57,30 @@ N 620 -820 620 -780 {lab=VDD}
 N 1110 -950 1110 -910 {lab=VDD}
 N 620 -720 620 -680 {lab=GND}
 N 1000 -610 1000 -570 {lab=VDD}
-N 750 -830 750 -730 {lab=vref}
-N 750 -830 820 -830 {lab=vref}
+N 750 -810 750 -710 {lab=vref}
+N 750 -810 820 -810 {lab=vref}
 N 1380 -630 1380 -610 {lab=GND}
 N 1380 -790 1380 -770 {lab=out}
 N 1280 -790 1380 -790 {lab=out}
-N 750 -670 750 -620 {lab=GND}
+N 750 -650 750 -600 {lab=GND}
 N 1380 -770 1380 -730 {lab=out}
 N 1380 -670 1380 -630 {lab=GND}
 N 1000 -480 1070 -480 {lab=#net1}
-N 840 -670 840 -620 {lab=GND}
-N 840 -750 840 -730 {lab=in}
+N 840 -690 840 -640 {lab=GND}
 N 1000 -510 1000 -480 {lab=#net1}
 N 1070 -670 1070 -480 {lab=#net1}
 N 1230 -790 1280 -790 {lab=out}
-N 820 -830 990 -830 {lab=vref}
-N 840 -750 990 -750 {lab=in}
+N 820 -810 990 -810 {lab=vref}
+N 840 -770 990 -770 {lab=in}
+N 840 -770 840 -750 {lab=in}
+N 950 -850 990 -850 {lab=VDD}
+N 950 -730 990 -730 {lab=#net2}
 C {gnd.sym} 1110 -640 0 0 {name=l2 lab=GND}
 C {vsource.sym} 620 -750 0 0 {name=V1 value=2 savecurrent=false}
 C {gnd.sym} 620 -680 0 0 {name=l3 lab=GND}
-C {vsource.sym} 750 -700 0 0 {name=V2 value=0.9 savecurrent=false}
+C {vsource.sym} 750 -680 0 0 {name=V2 value=0.9 savecurrent=false}
 C {isource.sym} 1000 -540 0 0 {name=I0 value=10u}
-C {gnd.sym} 750 -620 0 0 {name=l4 lab=GND}
+C {gnd.sym} 750 -600 0 0 {name=l4 lab=GND}
 C {capa.sym} 1380 -700 0 0 {name=CL
 m=1
 value=0.52p
@@ -88,12 +90,11 @@ C {gnd.sym} 1380 -610 0 0 {name=l6 lab=GND}
 C {vdd.sym} 620 -820 0 0 {name=l7 lab=VDD}
 C {vdd.sym} 1110 -950 0 0 {name=l8 lab=VDD}
 C {vdd.sym} 1000 -610 0 0 {name=l9 lab=VDD}
-C {lab_wire.sym} 800 -830 0 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 800 -810 0 0 {name=p1 sig_type=std_logic lab=vref}
 C {lab_wire.sym} 1330 -790 0 0 {name=p2 sig_type=std_logic lab=out}
-C {vsource.sym} 840 -700 0 0 {name=V3 value=0.9 savecurrent=false}
-C {gnd.sym} 840 -620 0 0 {name=l1 lab=GND}
-C {lab_wire.sym} 940 -750 0 0 {name=p3 sig_type=std_logic lab=in}
-C {libs/core_ldo/ldo/ldo_OTA/OTA.sym} 1090 -790 0 0 {name=x1}
+C {vsource.sym} 840 -720 0 0 {name=V3 value=0.9 savecurrent=false}
+C {gnd.sym} 840 -640 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 940 -770 0 0 {name=p3 sig_type=std_logic lab=in}
 C {simulator_commands.sym} 250 -650 0 0 {name=MODELS
 simulator=ngspice
 only_toplevel=false
@@ -148,3 +149,6 @@ C {launcher.sym} 320 -210 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_OTA_tran.raw"
 }
+C {libs/core_ldo/ldo_OTA/OTA.sym} 1090 -790 0 0 {name=x1}
+C {vdd.sym} 950 -850 0 0 {name=l5 lab=VDD}
+C {gnd.sym} 950 -730 0 0 {name=l10 lab=GND}
