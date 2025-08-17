@@ -99,60 +99,62 @@ logy=0
 sim_type=tran
 rawfile=$netlist_dir/tb_ldo_tran1.raw
 autoload=1}
-N 850 -710 850 -680 {lab=GND}
-N 480 -920 480 -880 {lab=VDD}
-N 850 -910 850 -870 {lab=VDD}
-N 480 -820 480 -780 {lab=GND}
-N 580 -920 580 -880 {lab=VDD}
-N 580 -820 580 -770 {lab=#net1}
-N 580 -770 760 -770 {lab=#net1}
-N 690 -830 690 -730 {lab=vref}
-N 690 -830 760 -830 {lab=vref}
-N 1200 -630 1200 -610 {lab=GND}
-N 1200 -710 1200 -690 {lab=#net2}
-N 1200 -790 1200 -770 {lab=out}
-N 1100 -790 1200 -790 {lab=out}
-N 690 -670 690 -620 {lab=GND}
-N 1100 -630 1100 -610 {lab=GND}
-N 1100 -790 1100 -770 {lab=out}
-N 1100 -770 1100 -730 {lab=out}
-N 1100 -670 1100 -630 {lab=GND}
-N 930 -790 1100 -790 {lab=out}
-N 1010 -630 1010 -610 {lab=GND}
-N 1010 -710 1010 -690 {lab=#net3}
-N 1010 -790 1010 -770 {lab=out}
-N 870 -710 870 -700 {lab=#net4}
-N 750 -750 760 -750 {lab=#net5}
-N 760 -810 760 -790 {lab=#net6}
+N 890 -710 890 -680 {lab=GND}
+N 450 -920 450 -880 {lab=VDD}
+N 890 -910 890 -870 {lab=VDD}
+N 450 -820 450 -780 {lab=GND}
+N 620 -920 620 -880 {lab=VDD}
+N 620 -820 620 -770 {lab=#net1}
+N 620 -770 800 -770 {lab=#net1}
+N 730 -830 730 -730 {lab=vref}
+N 730 -830 800 -830 {lab=vref}
+N 1240 -630 1240 -610 {lab=GND}
+N 1240 -710 1240 -690 {lab=#net2}
+N 1240 -790 1240 -770 {lab=out}
+N 1140 -790 1240 -790 {lab=out}
+N 730 -670 730 -620 {lab=GND}
+N 1140 -630 1140 -610 {lab=GND}
+N 1140 -790 1140 -770 {lab=out}
+N 1140 -770 1140 -730 {lab=out}
+N 1140 -670 1140 -630 {lab=GND}
+N 970 -790 1140 -790 {lab=out}
+N 1050 -630 1050 -610 {lab=GND}
+N 1050 -710 1050 -690 {lab=#net3}
+N 1050 -790 1050 -770 {lab=out}
+N 910 -710 910 -700 {lab=#net4}
+N 800 -810 800 -790 {lab=#net5}
+N 530 -920 530 -880 {lab=EN}
+N 530 -820 530 -780 {lab=GND}
+N 760 -750 800 -750 {lab=EN}
 C {title-3.sym} 0 0 0 0 {name=l1 author="Julio Vilca" rev=1.0 lock=true page=7 pages=8}
-C {gnd.sym} 850 -680 0 0 {name=l3 lab=GND}
-C {res.sym} 1100 -700 0 0 {name=RL
+C {gnd.sym} 890 -680 0 0 {name=l3 lab=GND}
+C {res.sym} 1140 -700 0 0 {name=RL
 value=\{RL_val\}
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} 480 -850 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 480 -780 0 0 {name=l4 lab=GND}
-C {vsource.sym} 690 -700 0 0 {name=V2 value=0.9 savecurrent=false}
-C {isource.sym} 580 -850 0 0 {name=I0 value=10u}
-C {gnd.sym} 690 -620 0 0 {name=l5 lab=GND}
-C {gnd.sym} 1100 -610 0 0 {name=l6 lab=GND}
-C {capa.sym} 1200 -660 0 0 {name=CL
+C {vsource.sym} 450 -850 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 450 -780 0 0 {name=l4 lab=GND}
+C {vsource.sym} 730 -700 0 0 {name=V2 value=0.9 savecurrent=false}
+C {isource.sym} 620 -850 0 0 {name=I0 value=10u}
+C {gnd.sym} 730 -620 0 0 {name=l5 lab=GND}
+C {gnd.sym} 1140 -610 0 0 {name=l6 lab=GND}
+C {capa.sym} 1240 -660 0 0 {name=CL
 m=1
 value=0.1u
 footprint=1206
 device="ceramic capacitor"}
-C {res.sym} 1200 -740 0 0 {name=Resr
+C {res.sym} 1240 -740 0 0 {name=Resr
 value=0.2
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1200 -610 0 0 {name=l7 lab=GND}
-C {vdd.sym} 480 -920 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 850 -910 0 0 {name=l9 lab=VDD}
-C {vdd.sym} 580 -920 0 0 {name=l10 lab=VDD}
-C {lab_wire.sym} 740 -830 0 0 {name=p1 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1150 -790 0 0 {name=p2 sig_type=std_logic lab=out}
+C {gnd.sym} 1240 -610 0 0 {name=l7 lab=GND}
+C {vdd.sym} 450 -920 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 890 -910 0 0 {name=l9 lab=VDD}
+C {vdd.sym} 620 -920 0 0 {name=l10 lab=VDD}
+C {lab_wire.sym} 780 -830 0 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 1190 -790 0 0 {name=p2 sig_type=std_logic lab=out}
 C {simulator_commands.sym} 240 -930 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
@@ -227,6 +229,22 @@ plot vin vout vota
 
 write tb_ldo_tran3.raw
 
+** LDO ENABLE SIMULATION
+alter @V1[PULSE] = [ 3.3 3.3 0 1u 1u 498u 1m 0 ]
+alter RL = \{RL_val\}
+alter @IL[PULSE] = [ 0 0 0 1u 1u 498u 1m 0 ]
+alter @V4[PULSE] = [ 0 2 499u 1u 1u 498u 500u 0 ]
+tran 0.5u 1m
+
+** Plots
+setplot tran4
+let vin = v(vdd)
+let vout = v(out)
+let ENABLE = v(EN)
+plot vin vout ENABLE
+
+write tb_ldo_tran4.raw
+
 .endc
 * ngspice commands
 "}
@@ -244,13 +262,16 @@ value="
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 * ngspice commands
 "}
-C {isource.sym} 1010 -740 0 0 {name=IL value=0}
-C {gnd.sym} 1010 -610 0 0 {name=l11 lab=GND}
-C {vsource.sym} 1010 -660 0 0 {name=V3 value=0 savecurrent=false}
+C {isource.sym} 1050 -740 0 0 {name=IL value=0}
+C {gnd.sym} 1050 -610 0 0 {name=l11 lab=GND}
+C {vsource.sym} 1050 -660 0 0 {name=V3 value=0 savecurrent=false}
 C {launcher.sym} 300 -190 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_tran1.raw; xschem raw_read $netlist_dir/tb_ldo_tran2.raw
 }
-C {libs/core_ldo/ldo/ldo/ldo.sym} 910 -790 0 0 {name=x1}
-C {noconn.sym} 870 -700 3 0 {name=l13}
-C {noconn.sym} 750 -750 0 0 {name=l2}
+C {libs/core_ldo/ldo/ldo.sym} 950 -790 0 0 {name=x1}
+C {noconn.sym} 910 -700 3 0 {name=l13}
+C {vsource.sym} 530 -850 0 0 {name=V4 value=2 savecurrent=false}
+C {gnd.sym} 530 -780 0 0 {name=l12 lab=GND}
+C {lab_wire.sym} 530 -910 3 0 {name=p3 sig_type=std_logic lab=EN}
+C {lab_wire.sym} 780 -750 0 0 {name=p4 sig_type=std_logic lab=EN}

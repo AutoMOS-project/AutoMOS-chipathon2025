@@ -50,59 +50,60 @@ logy=0
 x1=0
 x2=10
 rawfile=$netlist_dir/tb_ldo_noise.raw}
-N 860 -750 860 -720 {lab=GND}
-N 500 -960 500 -920 {lab=VDD}
-N 860 -950 860 -910 {lab=VDD}
-N 500 -860 500 -820 {lab=GND}
-N 590 -960 590 -920 {lab=VDD}
-N 590 -860 590 -810 {lab=#net1}
-N 590 -810 770 -810 {lab=#net1}
-N 700 -870 700 -770 {lab=vref}
-N 700 -870 770 -870 {lab=vref}
-N 940 -830 1010 -830 {lab=out}
-N 1110 -670 1110 -650 {lab=GND}
-N 1110 -750 1110 -730 {lab=#net2}
-N 1110 -830 1110 -810 {lab=out}
-N 1010 -830 1110 -830 {lab=out}
-N 700 -710 700 -660 {lab=GND}
-N 1010 -670 1010 -650 {lab=GND}
-N 1010 -710 1010 -670 {lab=GND}
-N 1010 -800 1010 -770 {lab=out}
-N 1010 -830 1010 -800 {lab=out}
-N 770 -850 770 -830 {lab=#net3}
-N 880 -750 880 -740 {lab=#net4}
-N 760 -790 770 -790 {lab=#net5}
+N 910 -750 910 -720 {lab=GND}
+N 480 -960 480 -920 {lab=VDD}
+N 910 -950 910 -910 {lab=VDD}
+N 480 -860 480 -820 {lab=GND}
+N 640 -960 640 -920 {lab=VDD}
+N 640 -860 640 -810 {lab=#net1}
+N 640 -810 820 -810 {lab=#net1}
+N 750 -870 750 -770 {lab=vref}
+N 750 -870 820 -870 {lab=vref}
+N 990 -830 1060 -830 {lab=out}
+N 1160 -670 1160 -650 {lab=GND}
+N 1160 -750 1160 -730 {lab=#net2}
+N 1160 -830 1160 -810 {lab=out}
+N 1060 -830 1160 -830 {lab=out}
+N 750 -710 750 -660 {lab=GND}
+N 1060 -670 1060 -650 {lab=GND}
+N 1060 -710 1060 -670 {lab=GND}
+N 1060 -800 1060 -770 {lab=out}
+N 1060 -830 1060 -800 {lab=out}
+N 820 -850 820 -830 {lab=#net3}
+N 930 -750 930 -740 {lab=#net4}
+N 780 -790 820 -790 {lab=EN}
+N 560 -960 560 -920 {lab=EN}
+N 560 -860 560 -820 {lab=GND}
+N 560 -980 560 -960 {lab=EN}
 C {title-3.sym} 0 0 0 0 {name=l1 author="Julio Vilca" rev=1.0 lock=true page=8 pages=8}
-C {noconn.sym} 760 -790 0 0 {name=l2}
-C {gnd.sym} 860 -720 0 0 {name=l3 lab=GND}
-C {res.sym} 1010 -740 0 0 {name=RL
+C {gnd.sym} 910 -720 0 0 {name=l3 lab=GND}
+C {res.sym} 1060 -740 0 0 {name=RL
 value=1.8k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} 500 -890 0 0 {name=V1 value=2 savecurrent=false}
-C {gnd.sym} 500 -820 0 0 {name=l4 lab=GND}
-C {vsource.sym} 700 -740 0 0 {name=V2 value=0.9 savecurrent=false}
-C {isource.sym} 590 -890 0 0 {name=I0 value=10u}
-C {gnd.sym} 700 -660 0 0 {name=l5 lab=GND}
-C {gnd.sym} 1010 -650 0 0 {name=l6 lab=GND}
-C {capa.sym} 1110 -700 0 0 {name=CL
+C {vsource.sym} 480 -890 0 0 {name=V1 value=2 savecurrent=false}
+C {gnd.sym} 480 -820 0 0 {name=l4 lab=GND}
+C {vsource.sym} 750 -740 0 0 {name=V2 value=0.9 savecurrent=false}
+C {isource.sym} 640 -890 0 0 {name=I0 value=10u}
+C {gnd.sym} 750 -660 0 0 {name=l5 lab=GND}
+C {gnd.sym} 1060 -650 0 0 {name=l6 lab=GND}
+C {capa.sym} 1160 -700 0 0 {name=CL
 m=1
 value=0.1u
 footprint=1206
 device="ceramic capacitor"}
-C {res.sym} 1110 -780 0 0 {name=Resr
+C {res.sym} 1160 -780 0 0 {name=Resr
 value=0.2
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1110 -650 0 0 {name=l7 lab=GND}
-C {vdd.sym} 500 -960 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 860 -950 0 0 {name=l9 lab=VDD}
-C {vdd.sym} 590 -960 0 0 {name=l10 lab=VDD}
-C {lab_wire.sym} 750 -870 0 0 {name=p1 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1060 -830 0 0 {name=p2 sig_type=std_logic lab=out}
-C {libs/core_ldo/ldo/ldo/ldo.sym} 920 -830 0 0 {name=x1}
+C {gnd.sym} 1160 -650 0 0 {name=l7 lab=GND}
+C {vdd.sym} 480 -960 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 910 -950 0 0 {name=l9 lab=VDD}
+C {vdd.sym} 640 -960 0 0 {name=l10 lab=VDD}
+C {lab_wire.sym} 800 -870 0 0 {name=p1 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 1110 -830 0 0 {name=p2 sig_type=std_logic lab=out}
 C {simulator_commands.sym} 250 -950 0 0 {name=SIMULATIONS
 simulator=ngspice
 only_toplevel=false 
@@ -151,4 +152,9 @@ C {launcher.sym} 300 -210 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_noise.raw"
 }
-C {noconn.sym} 880 -740 3 0 {name=l12}
+C {noconn.sym} 930 -740 3 0 {name=l12}
+C {libs/core_ldo/ldo/ldo.sym} 970 -830 0 0 {name=x1}
+C {lab_wire.sym} 800 -790 0 0 {name=p3 sig_type=std_logic lab=EN}
+C {vsource.sym} 560 -890 0 0 {name=V4 value=2 savecurrent=false}
+C {gnd.sym} 560 -820 0 0 {name=l2 lab=GND}
+C {lab_wire.sym} 560 -970 3 0 {name=p9 sig_type=std_logic lab=EN}
