@@ -36,7 +36,6 @@ N 990 -1180 990 -1170 {lab=GND}
 N 1170 -1260 1170 -1230 {lab=EN}
 N 1170 -1180 1170 -1170 {lab=GND}
 N 1180 -800 1210 -800 {lab=EN}
-N 770 -910 780 -910 {lab=#net1}
 N 890 -870 890 -860 {lab=#net2}
 N 1310 -760 1310 -750 {lab=#net3}
 N 780 -970 780 -950 {lab=#net4}
@@ -64,6 +63,9 @@ N 950 -950 1150 -950 {lab=VLDO}
 N 1480 -860 1480 -830 {lab=VVCO}
 N 1480 -770 1480 -750 {lab=GND}
 N 1150 -950 1210 -950 {lab=VLDO}
+N 1410 -1170 1410 -1160 {lab=GND}
+N 1410 -1250 1410 -1230 {lab=LDO_EN}
+N 750 -910 780 -910 {lab=LDO_EN}
 C {vsource.sym} 990 -1210 0 0 {name=V3 value=1.2 savecurrent=false}
 C {gnd.sym} 990 -1170 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} 990 -1260 0 0 {name=p9 sig_type=std_logic lab=VCON}
@@ -80,7 +82,6 @@ C {libs/core_vco/vco/vco.sym} 1230 -900 0 0 {name=x1}
 C {libs/core_ldo/ldo/ldo.sym} 930 -950 0 0 {name=x4}
 C {lab_wire.sym} 1090 -950 0 0 {name=p2 sig_type=std_logic lab=VLDO}
 C {gnd.sym} 870 -870 0 1 {name=l11 lab=GND}
-C {noconn.sym} 770 -910 0 0 {name=l12}
 C {noconn.sym} 890 -860 3 0 {name=l13}
 C {noconn.sym} 1310 -750 3 0 {name=l10}
 C {lab_wire.sym} 1450 -860 0 0 {name=p7 sig_type=std_logic lab=VVCO}
@@ -199,3 +200,7 @@ exec sed -i \{/^\\.lib/s/ff/ss/\} $spicefile
 exec sed -i \{s/tb_top_ldo_vco_ff.raw/tb_top_ldo_vco_ss.raw/\} $spicefile
 simulate
 "}
+C {vsource.sym} 1410 -1200 0 0 {name=V6 value=2 savecurrent=false}
+C {gnd.sym} 1410 -1160 0 0 {name=l12 lab=GND}
+C {lab_pin.sym} 1410 -1250 0 0 {name=p13 sig_type=std_logic lab=LDO_EN}
+C {lab_pin.sym} 750 -910 0 0 {name=p14 sig_type=std_logic lab=LDO_EN}

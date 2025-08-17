@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 B 2 1620 -940 2420 -540 {flags=graph
-y1=1.802
+y1=1.80
 ypos1=0
 ypos2=2
 divy=5
@@ -25,7 +25,7 @@ logy=0
 rawfile=$netlist_dir/tb_top_ldo_vco_dc.raw
 autoload=1
 sim_type=dc
-y2=1.826
+y2=1.825
 x1=2
 x2=5}
 N 1020 -1010 1020 -980 {lab=IBIAS2}
@@ -33,10 +33,9 @@ N 1070 -550 1100 -550 {lab=IBIAS2}
 N 930 -930 930 -920 {lab=GND}
 N 1100 -930 1100 -920 {lab=GND}
 N 1070 -530 1100 -530 {lab=EN}
-N 660 -640 670 -640 {lab=#net1}
-N 780 -600 780 -590 {lab=#net2}
-N 1200 -490 1200 -480 {lab=#net3}
-N 670 -700 670 -680 {lab=#net4}
+N 780 -600 780 -590 {lab=#net1}
+N 1200 -490 1200 -480 {lab=#net2}
+N 670 -700 670 -680 {lab=#net3}
 N 640 -660 670 -660 {lab=IBIAS1}
 N 1180 -680 1180 -670 {lab=VLDO}
 N 1180 -670 1180 -650 {lab=VLDO}
@@ -44,7 +43,7 @@ N 1070 -590 1100 -590 {lab=VCON}
 N 750 -930 750 -920 {lab=GND}
 N 640 -720 670 -720 {lab=VREF}
 N 930 -520 930 -500 {lab=GND}
-N 930 -600 930 -580 {lab=#net5}
+N 930 -600 930 -580 {lab=#net4}
 N 930 -680 930 -660 {lab=VLDO}
 N 1280 -590 1370 -590 {lab=VVCO}
 N 830 -930 830 -910 {lab=IBIAS1}
@@ -52,8 +51,8 @@ N 840 -680 930 -680 {lab=VLDO}
 N 1170 -680 1180 -680 {lab=VLDO}
 N 930 -680 1170 -680 {lab=VLDO}
 N 560 -920 560 -910 {lab=GND}
-N 560 -990 560 -980 {lab=#net6}
-N 560 -990 580 -990 {lab=#net6}
+N 560 -990 560 -980 {lab=#net5}
+N 560 -990 580 -990 {lab=#net5}
 N 640 -990 660 -990 {lab=VDD}
 N 660 -990 660 -980 {lab=VDD}
 N 660 -920 660 -910 {lab=GND}
@@ -63,6 +62,9 @@ N 1370 -500 1370 -480 {lab=GND}
 N 750 -1010 750 -990 {lab=VREF}
 N 930 -1010 930 -990 {lab=VCON}
 N 1100 -1010 1100 -990 {lab=EN}
+N 1210 -930 1210 -920 {lab=GND}
+N 1210 -1010 1210 -990 {lab=LDO_EN}
+N 640 -640 670 -640 {lab=LDO_EN}
 C {vdd.sym} 660 -990 0 0 {name=l5 lab=VDD}
 C {vsource.sym} 930 -960 0 0 {name=V3 value=0.6 savecurrent=false}
 C {gnd.sym} 930 -920 0 0 {name=l3 lab=GND}
@@ -80,7 +82,6 @@ C {libs/core_vco/vco/vco.sym} 1120 -630 0 0 {name=x1}
 C {libs/core_ldo/ldo/ldo.sym} 820 -680 0 0 {name=x2}
 C {lab_wire.sym} 900 -680 0 0 {name=p2 sig_type=std_logic lab=VLDO}
 C {gnd.sym} 760 -600 0 1 {name=l11 lab=GND}
-C {noconn.sym} 660 -640 0 0 {name=l12}
 C {noconn.sym} 780 -590 3 0 {name=l13}
 C {noconn.sym} 1200 -480 3 0 {name=l10}
 C {lab_wire.sym} 1340 -590 0 0 {name=p7 sig_type=std_logic lab=VVCO}
@@ -171,3 +172,7 @@ C {launcher.sym} 340 -150 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_top_ldo_vco_dc.raw tran"
 }
+C {vsource.sym} 1210 -960 0 0 {name=V6 value=3.3 savecurrent=false}
+C {gnd.sym} 1210 -920 0 0 {name=l17 lab=GND}
+C {lab_pin.sym} 1210 -1010 0 0 {name=p13 sig_type=std_logic lab=LDO_EN}
+C {lab_pin.sym} 640 -640 0 0 {name=p14 sig_type=std_logic lab=LDO_EN}
