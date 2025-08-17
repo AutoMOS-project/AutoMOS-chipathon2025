@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/libs/tb_top/tb_top/tb_top_ldo_vco_tran/tb_top_ldo_vco_tran.sch
+** sch_path: /foss/designs/libs/tb_top/tb_top_ldo_vco_tran/tb_top_ldo_vco_tran.sch
 **.subckt tb_top_ldo_vco_tran
 V3 VCON GND 1.8
 I2 IBIAS2 GND 10u
