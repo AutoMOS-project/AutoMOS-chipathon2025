@@ -145,7 +145,6 @@ C {lab_wire.sym} 1330 -1520 2 0 {name=p18 sig_type=std_logic lab=VDD}
 C {ipin.sym} 630 -580 0 0 {name=p19 lab=LDO_EN}
 C {iopin.sym} 900 -1000 2 0 {name=p13 lab=VFB_ota}
 C {iopin.sym} 1430 -600 2 0 {name=p20 lab=VFB_res}
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1060 -1020 0 0 {name=x1}
 C {iopin.sym} 960 -390 1 0 {name=p21 lab=SUB}
 C {noconn.sym} 960 -410 1 0 {name=l1}
 C {libs/core_biasgen/biasgen_inverter/biasgen_inverter.sym} 650 -540 0 0 {name=x2}
@@ -171,3 +170,4 @@ model=pfet_05v0
 spiceprefix=X
 }
 C {lab_wire.sym} 1290 -1100 0 0 {name=p27 sig_type=std_logic lab=ENp}
+C {libs/core_ldo/ldo_OTA/OTA.sym} 1060 -1020 0 0 {name=x1}
