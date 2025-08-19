@@ -7,7 +7,6 @@
   "core_vco_vco_layout": "/foss/designs/libs/core_vco/vco/vco_layout.gds",
   "core_bandgap_bandgap_opamp_layout": "/foss/designs/libs/core_bandgap/bandgap_opamp/bandgap_opamp_layout.gds",
   "core_top_A1_AutoMOS": "/foss/designs/libs/core_top/top/A1_AutoMOS.gds",
-  "core_top_top_io": "/foss/designs/libs/core_top/top_io/top_io.gds",
   "core_ldo_ldo_layout": "/foss/designs/libs/core_ldo/ldo_OTA/ldo_layout.gds",
   "core_ldo_ldo_OTA_layout": "/foss/designs/libs/core_ldo/ldo_OTA/ldo_OTA_layout.gds"
 }
