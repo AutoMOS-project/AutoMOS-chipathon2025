@@ -1,0 +1,21 @@
+** sch_path: /foss/designs/libs/core_top/top_io/top_io.sch
+.include "/foss/designs/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
+.subckt top_io
+XIO1 DVSS DVDD VSS VDD PAD ASIG5V gf180mcu_fd_io__asig_5p0_extracted
+XIO2 DVDD DVSS VSS gf180mcu_fd_io__dvdd
+XIO3 DVDD DVSS VDD gf180mcu_fd_io__dvss
+XIO4 DVDD DVSS PAD PD PU VDD VSS Y gf180mcu_fd_io__in_c
+XIO5 DVDD DVSS PAD PD PU VDD VSS Y gf180mcu_fd_io__in_s
+XIO6 A CS DVDD DVSS IE OE PAD PD PDRV0 PDRV1 PU SL VDD VSS Y gf180mcu_fd_io__bi_t
+XIO7 A CS DVDD DVSS IE OE PAD PD PU SL VDD VSS Y gf180mcu_fd_io__bi_24t
+R1 VSS IE 1k m=1
+R2 VSS CS 1k m=1
+R3 VSS PU 1k m=1
+R4 VSS PD 1k m=1
+R5 VSS PDRV0 1k m=1
+R6 VSS PDRV1 1k m=1
+R7 VSS A 1k m=1
+R8 VSS SL 1k m=1
+R9 VSS OE 1k m=1
+.ends
+.end
