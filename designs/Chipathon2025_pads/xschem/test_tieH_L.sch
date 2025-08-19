@@ -1,20 +1,19 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
 E {}
 B 2 1200 -440 1790 20 {flags=graph
-y1=2.4e-19
-y2=3.3
+y1=-30.547443
+y2=20.010549
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=5e-09
+x2=1.05e-07
 divx=5
 subdivx=1
 
@@ -23,10 +22,12 @@ subdivx=1
 unitx=1
 dataset=-1
 color="5 4"
-node="z
-z2"
+node="z_2
+z_1"
 sim_type=tran
-digital=0}
+digital=0
+autoload=1
+rawfile=$netlist_dir/test_tieH_L.raw}
 N 650 -130 650 -20 {
 lab=G}
 N 690 -70 690 -50 {
@@ -101,17 +102,15 @@ vb b 0 0
 save all
 
 
-
 tran 1p 100n
 write test_tieH_L.raw
-set apendwrite
+set appendwrite
 
 op
 write test_tieH_L.raw
-set apendwrite
 
 .endc
-.save all
+*.save all
 "}
 C {symbols/nfet_03v3.sym} 670 -20 0 0 {name=M1
 L=0.6u
