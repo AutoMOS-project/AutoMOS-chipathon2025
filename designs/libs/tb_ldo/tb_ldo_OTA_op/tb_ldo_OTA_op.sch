@@ -84,6 +84,6 @@ write tb_ldo_OTA_op.raw
 * ngspice commands
 "}
 C {title-3.sym} 0 0 0 0 {name=l5 author="Julio Vilca" rev=1.0 lock=true page=1 pages=6}
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1410 -790 0 0 {name=x1}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 1410 -790 0 0 {name=x1}
 C {vdd.sym} 1270 -850 0 0 {name=l10 lab=VDD}
 C {gnd.sym} 1270 -730 0 0 {name=l11 lab=GND}

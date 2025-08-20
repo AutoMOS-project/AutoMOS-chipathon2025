@@ -142,6 +142,6 @@ C {lab_wire.sym} 1350 -860 0 0 {name=p4 sig_type=std_logic lab=out}
 C {vsource.sym} 860 -790 0 0 {name=V3 value=0.9 savecurrent=false}
 C {gnd.sym} 860 -710 0 0 {name=l18 lab=GND}
 C {lab_wire.sym} 960 -840 0 0 {name=p5 sig_type=std_logic lab=in}
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1110 -860 0 0 {name=x1}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 1110 -860 0 0 {name=x1}
 C {vdd.sym} 970 -920 0 0 {name=l10 lab=VDD}
 C {gnd.sym} 970 -800 0 0 {name=l2 lab=GND}
