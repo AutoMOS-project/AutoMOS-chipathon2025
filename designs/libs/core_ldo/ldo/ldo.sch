@@ -170,4 +170,4 @@ model=pfet_05v0
 spiceprefix=X
 }
 C {lab_wire.sym} 1290 -1100 0 0 {name=p27 sig_type=std_logic lab=ENp}
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1060 -1020 0 0 {name=x1}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 1060 -1020 0 0 {name=x1}

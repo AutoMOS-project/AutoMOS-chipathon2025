@@ -30,7 +30,7 @@ B 5 -22.5 117.5 -17.5 122.5 {name=IBIAS dir=inout}
 B 5 17.5 117.5 22.5 122.5 {name=VSS dir=inout}
 B 5 -102.5 -62.5 -97.5 -57.5 {name=ENp dir=in}
 B 5 -102.5 57.5 -97.5 62.5 {name=ENn dir=in}
-T {@symname} -37.5 -17.5 0 0 0.6 0.6 {}
+T {@symname} -47.5 -17.5 0 0 0.5 0.5 {}
 T {@spiceprefix@name} 125 -132 0 0 0.2 0.2 {}
 T {VDD} 14 -85 1 1 0.2 0.2 {}
 T {VREF} -67.5 -34 0 1 0.2 0.2 {}

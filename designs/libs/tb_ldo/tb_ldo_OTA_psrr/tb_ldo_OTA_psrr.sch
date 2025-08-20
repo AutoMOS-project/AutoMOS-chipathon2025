@@ -117,6 +117,6 @@ C {launcher.sym} 300 -210 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_OTA_psrr.raw"
 }
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1130 -820 0 0 {name=x1}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 1130 -820 0 0 {name=x1}
 C {vdd.sym} 990 -880 0 0 {name=l10 lab=VDD}
 C {gnd.sym} 990 -760 0 0 {name=l11 lab=GND}

@@ -73,7 +73,7 @@ N 1100 -720 1100 -530 {lab=#net1}
 N 1260 -840 1310 -840 {lab=out}
 N 860 -860 1030 -860 {lab=vref}
 N 870 -820 1020 -820 {lab=in}
-N 980 -900 1020 -900 {lab=#net2}
+N 980 -900 1020 -900 {lab=VDD}
 N 980 -780 1020 -780 {lab=GND}
 C {gnd.sym} 1140 -690 0 0 {name=l2 lab=GND}
 C {vsource.sym} 650 -800 0 0 {name=V1 value=2 savecurrent=false}
@@ -151,6 +151,6 @@ C {launcher.sym} 300 -210 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_OTA_dc1.raw; xschem raw_read $netlist_dir/tb_ldo_OTA_dc2.raw "
 }
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1120 -840 0 0 {name=x1}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 1120 -840 0 0 {name=x1}
 C {vdd.sym} 980 -900 0 0 {name=l10 lab=VDD}
 C {gnd.sym} 980 -780 0 0 {name=l11 lab=GND}

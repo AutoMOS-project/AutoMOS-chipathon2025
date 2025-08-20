@@ -151,6 +151,6 @@ descr="load waves"
 tclcommand="xschem raw_read $netlist_dir/tb_ldo_OTA_ac.raw"
 }
 C {title-3.sym} 0 0 0 0 {name=l5 author="Julio Vilca" rev=1.0 lock=true page=3 pages=6}
-C {libs/core_ldo/ldo_OTA/OTA.sym} 1120 -790 0 0 {name=x1}
+C {libs/core_ldo/ldo_OTA/ldo_OTA.sym} 1120 -790 0 0 {name=x1}
 C {vdd.sym} 980 -850 0 0 {name=l10 lab=VDD}
 C {gnd.sym} 980 -730 0 0 {name=l11 lab=GND}
