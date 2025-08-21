@@ -253,7 +253,7 @@ N 2450 -1260 2470 -1260 {lab=vpcas_ctat}
 N 2510 -1260 2520 -1260 {lab=VDD}
 N 2510 -1340 2510 -1290 {lab=#net8}
 N 2520 -1370 2520 -1260 {lab=VDD}
-N 2650 -600 2650 -550 {lab=VZTC,v_ztc[31:1]
+N 2650 -600 2650 -550 {lab=VZTC,v_ztc[30:1]
 bus=true}
 N 2650 -490 2650 -450 {lab=v_ztc[30:1],VSS
 bus=true}
@@ -903,7 +903,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 530 -1760 0 0 {name=p48 sig_type=std_logic lab=VDD}
 C {symbols/pfet_05v0.sym} 720 -1710 0 1 {name=Mpref_dumm_TP[17:0]
-L=0.6u
+L=0.8u
 W=3.2u
 nf=1
 m=1
@@ -951,9 +951,9 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 1150 -470 0 0 {name=M1
 L=2u
-W=1u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -965,9 +965,9 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 810 -470 0 1 {name=M2
 L=2u
-W=1u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -979,9 +979,9 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 500 -470 0 1 {name=M3
 L=2u
-W=1u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -1021,7 +1021,7 @@ C {symbols/pfet_05v0.sym} 190 -1210 0 1 {name=Mpref23
 L=0.5u
 W=4u
 nf=1
-m=64
+m=16
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -1034,8 +1034,8 @@ spiceprefix=X
 C {lab_wire.sym} 270 -700 0 0 {name=p24 sig_type=std_logic lab=vstart_up}
 C {bus_connect.sym} 160 -540 0 0 {name=l7 lab=vstart_up}
 C {symbols/pfet_05v0.sym} 310 -440 0 0 {name=Mpref24
-L=0.6u
-W=3.2u
+L=0.5u
+W=4u
 nf=1
 m=32
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1135,7 +1135,7 @@ spiceprefix=X
 C {iopin.sym} 2660 -720 0 0 {name=p26 lab=VZTC}
 C {symbols/nfet_05v0.sym} 250 -360 3 1 {name=M5
 L=1u
-W=3.2u
+W=4u
 nf=1
 m=32
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1163,8 +1163,8 @@ spiceprefix=X
 }
 C {lab_wire.sym} 830 -650 0 1 {name=p23 sig_type=std_logic lab=vstart_up}
 C {symbols/pfet_05v0.sym} 390 -700 0 0 {name=Mpref22
-L=0.6u
-W=3.2u
+L=0.5u
+W=4u
 nf=1
 m=32
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1206,7 +1206,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 930 -1760 0 0 {name=p27 sig_type=std_logic lab=VDD}
 C {symbols/pfet_05v0.sym} 1120 -1710 0 1 {name=Mpcas_dumm_TP[35:0]
-L=0.6u
+L=0.8u
 W=3.2u
 nf=1
 m=1
@@ -1237,7 +1237,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 1920 -1760 0 0 {name=p29 sig_type=std_logic lab=VDD}
 C {symbols/pfet_05v0.sym} 2110 -1710 0 1 {name=Mpref_dumm_TP1[19:0]
-L=0.6u
+L=0.8u
 W=3.2u
 nf=1
 m=1
@@ -1268,7 +1268,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 2320 -1760 0 0 {name=p30 sig_type=std_logic lab=VDD}
 C {symbols/pfet_05v0.sym} 2510 -1710 0 1 {name=Mpcas_dumm_TP1[39:0]
-L=0.6u
+L=0.8u
 W=3.2u
 nf=1
 m=1
