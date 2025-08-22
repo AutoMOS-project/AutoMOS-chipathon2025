@@ -76,3 +76,6 @@ tree() {
   find "$dir" -maxdepth "$depth" -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
 #==============================================================
+#
+# Avoid using empty .spiceinit file under this directory and use the one located at the home
+unset SPICE_USERINIT_DIR
