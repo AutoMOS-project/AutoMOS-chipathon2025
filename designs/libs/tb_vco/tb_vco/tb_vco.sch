@@ -35,7 +35,7 @@ only_toplevel=true
 value="
 .control
 tran 100p 500n
-meas TRAN tdiff TRIG v(VOUT) VAL=0.9 RISE=500 TARG v(VOUT) VAL=0.9 RISE=501
+meas TRAN tdiff TRIG v(VOUT) VAL=0.9 RISE=100 TARG v(VOUT) VAL=0.9 RISE=101
 let freq = 1 / tdiff
 print freq
 .endc
@@ -58,3 +58,9 @@ C {gnd.sym} -450 -60 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} -450 -150 0 0 {name=p4 sig_type=std_logic lab=EN}
 C {lab_pin.sym} 20 -40 0 0 {name=p5 sig_type=std_logic lab=EN}
 C {libs/core_vco/vco/vco.sym} 70 -140 0 0 {name=x1}
+C {capa-2.sym} 440 -60 0 0 {name=C1
+m=1
+value=10f
+footprint=1206
+device=polarized_capacitor}
+C {gnd.sym} 270 -40 0 0 {name=l4 lab=GND}

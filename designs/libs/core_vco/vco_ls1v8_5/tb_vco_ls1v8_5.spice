@@ -1,0 +1,50 @@
+** sch_path: /foss/designs/libs/tb_vco/tb_vco_ls1v8_5/tb_vco_ls1v8_5.sch
+**.subckt tb_vco_ls1v8_5
+V1 VDDH GND 5
+V3 VSS GND 0
+V2 VDDL GND 3.3
+x1 VSS VDDH VDDL out in vco_ls1v8_5
+V4 in GND PULSE(0 1.8 0 10p 10p 0.833n 1.667n)
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+
+
+
+.control
+save all
+tran 100p 500n 0 10p
+plot in out
+write tran_ls.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  libs/core_vco/vco_ls1v8_5/vco_ls1v8_5.sym # of pins=5
+** sym_path: /foss/designs/libs/core_vco/vco_ls1v8_5/vco_ls1v8_5.sym
+** sch_path: /foss/designs/libs/core_vco/vco_ls1v8_5/vco_ls1v8_5.sch
+.subckt vco_ls1v8_5 VSS VDDH VDDL out in
+*.iopin VDDH
+*.iopin VDDL
+*.opin out
+*.iopin VSS
+*.ipin in
+XM1 out net1 VDDH VDDH pfet_05v0 L=2u W=1u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 net1 out VDDH VDDH pfet_05v0 L=2u W=1u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 net1 in VSS VSS nfet_05v0 L=0.60u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 out net2 VSS VSS nfet_05v0 L=0.60u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 net2 in VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 net2 in VDDL VDDL pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+.GLOBAL GND
+.end
