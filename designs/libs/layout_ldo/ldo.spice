@@ -1,0 +1,194 @@
+** sch_path: /foss/designs/libs/layout_ldo/ldo.sch
+.subckt ldo VDD VSS VOUT VREF IBIAS VFB VFB_res SUB LDO_EN
+*.PININFO VDD:B VSS:B VOUT:B VREF:B IBIAS:B VFB:B VFB_res:B SUB:B LDO_EN:I
+Mpass VOUT VOTA VDD VDD pfet_05v0 L=0.50u W=50.00u nf=1 m=10
+XRfb_dummy_L[7] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[6] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[5] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[4] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[3] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[2] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[1] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_L[0] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[13] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[12] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[11] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[10] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[9] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[8] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[7] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[6] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[5] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[4] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[3] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[2] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[1] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XRfb_dummy_TB[0] VDD VDD VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+* noconn SUB
+Mpenpass VOTA ENp VDD VDD pfet_05v0 L=0.5u W=2u nf=1 m=1
+x1 VDD VREF VFB VOTA IBIAS VSS ENp ENn ldo_OTA
+XRc[29] Vr_mc[29] Vmc VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[28] Vr_mc[28] Vr_mc[29] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[27] Vr_mc[27] Vr_mc[28] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[26] Vr_mc[26] Vr_mc[27] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[25] Vr_mc[25] Vr_mc[26] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[24] Vr_mc[24] Vr_mc[25] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[23] Vr_mc[23] Vr_mc[24] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[22] Vr_mc[22] Vr_mc[23] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[21] Vr_mc[21] Vr_mc[22] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[20] Vr_mc[20] Vr_mc[21] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[19] Vr_mc[19] Vr_mc[20] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[18] Vr_mc[18] Vr_mc[19] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[17] Vr_mc[17] Vr_mc[18] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[16] Vr_mc[16] Vr_mc[17] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[15] Vr_mc[15] Vr_mc[16] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[14] Vr_mc[14] Vr_mc[15] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[13] Vr_mc[13] Vr_mc[14] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[12] Vr_mc[12] Vr_mc[13] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[11] Vr_mc[11] Vr_mc[12] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[10] Vr_mc[10] Vr_mc[11] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[9] Vr_mc[9] Vr_mc[10] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[8] Vr_mc[8] Vr_mc[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[7] Vr_mc[7] Vr_mc[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[6] Vr_mc[6] Vr_mc[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[5] Vr_mc[5] Vr_mc[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[4] Vr_mc[4] Vr_mc[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[3] Vr_mc[3] Vr_mc[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[2] Vr_mc[2] Vr_mc[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[1] Vr_mc[1] Vr_mc[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XRc[0] VOUT Vr_mc[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=10e-6 m=1
+XR1[9] Vr_fb1[9] VOUT VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[8] Vr_fb1[8] Vr_fb1[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[7] Vr_fb1[7] Vr_fb1[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[6] Vr_fb1[6] Vr_fb1[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[5] Vr_fb1[5] Vr_fb1[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[4] Vr_fb1[4] Vr_fb1[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[3] Vr_fb1[3] Vr_fb1[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[2] Vr_fb1[2] Vr_fb1[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[1] Vr_fb1[1] Vr_fb1[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR1[0] VFB_res Vr_fb1[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[9] Vr_fb2[9] VFB_res VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[8] Vr_fb2[8] Vr_fb2[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[7] Vr_fb2[7] Vr_fb2[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[6] Vr_fb2[6] Vr_fb2[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[5] Vr_fb2[5] Vr_fb2[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[4] Vr_fb2[4] Vr_fb2[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[3] Vr_fb2[3] Vr_fb2[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[2] Vr_fb2[2] Vr_fb2[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[1] Vr_fb2[1] Vr_fb2[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XR2[0] VSS Vr_fb2[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=5e-6 m=1
+XCc[3] VOTA Vmc cap_mim_2f0fF c_width=25e-6 c_length=25e-6 m=1
+XCc[2] VOTA Vmc cap_mim_2f0fF c_width=25e-6 c_length=25e-6 m=1
+XCc[1] VOTA Vmc cap_mim_2f0fF c_width=25e-6 c_length=25e-6 m=1
+XCc[0] VOTA Vmc cap_mim_2f0fF c_width=25e-6 c_length=25e-6 m=1
+x4 ENn VDD ENp LDO_EN VSS ldo_BUFFER
+.ends
+
+* expanding   symbol:  libs/core_ldo/ldo_OTA/ldo_OTA.sym # of pins=8
+** sym_path: /foss/designs/libs/core_ldo/ldo_OTA/ldo_OTA.sym
+** sch_path: /foss/designs/libs/core_ldo/ldo_OTA/ldo_OTA.sch
+.subckt ldo_OTA VDD VREF VFB VOTA IBIAS VSS ENp ENn
+*.PININFO VDD:B VSS:B VOTA:B VREF:B IBIAS:B VFB:B ENp:I ENn:I
+M3 Vbp1 Vbp1 VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=2
+M4 Vbp2 Vbp2 VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=2
+M5 Vbn2 Vbp1 VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=2
+M6 VOTA Vbp2 VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=6
+M9 Vbn1 Vbn1 VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=2
+M10 Vtail Vbn1 VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=2
+M7 Vbn2 Vbn2 VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=2
+M8 VOTA Vbn2 VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=6
+M1 Vbp1 VREF Vtail VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=14
+M2 Vbp2 VFB Vtail VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=14
+Mpota_dummy_L[3] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_L[2] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_L[1] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_L[0] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[15] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[14] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[13] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[12] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[11] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[10] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[9] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[8] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[7] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[6] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[5] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[4] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[3] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[2] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[1] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mpota_dummy_TB[0] VDD VDD VDD VDD pfet_05v0 L=1.00u W=5.50u nf=1 m=1
+Mndiff_dummy_L[7] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[6] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[5] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[4] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[3] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[2] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[1] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_L[0] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[17] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[16] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[15] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[14] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[13] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[12] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[11] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[10] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[9] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[8] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[7] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[6] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[5] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[4] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[3] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[2] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[1] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mndiff_dummy_TB[0] VSS VSS VSS VSS nfet_05v0 L=0.60u W=5.00u nf=1 m=1
+Mnota_dummy_L[3] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_L[2] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_L[1] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_L[0] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[11] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[10] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[9] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[8] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[7] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[6] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[5] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[4] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[3] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[2] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[1] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnota_dummy_TB[0] VSS VSS VSS VSS nfet_05v0 L=1.00u W=1.25u nf=1 m=1
+Mnbias_dummy_L[3] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_L[2] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_L[1] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_L[0] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[7] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[6] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[5] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[4] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[3] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[2] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[1] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mnbias_dummy_TB[0] VSS VSS VSS VSS nfet_05v0 L=1.00u W=3.00u nf=1 m=1
+Mpenota1 Vbp2 ENp VDD VDD pfet_05v0 L=0.5u W=2u nf=1 m=1
+Mpenota2 Vbp1 ENp VDD VDD pfet_05v0 L=0.5u W=2u nf=1 m=1
+Mnenota1 Vbn2 ENn VSS VSS nfet_05v0 L=0.6u W=2u nf=1 m=1
+Mnenota2 Vbn1 ENn VSS VSS nfet_05v0 L=0.6u W=2u nf=1 m=1
+Mnenota3 IBIAS ENp Vbn1 VSS nfet_05v0 L=0.6u W=2u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_ldo/ldo_BUFFER/ldo_BUFFER.sym # of pins=5
+** sym_path: /foss/designs/libs/core_ldo/ldo_BUFFER/ldo_BUFFER.sym
+** sch_path: /foss/designs/libs/core_ldo/ldo_BUFFER/ldo_BUFFER.sch
+.subckt ldo_BUFFER ENn VDD ENp LDO_EN VSS
+*.PININFO VSS:B LDO_EN:I VDD:B ENp:O ENn:O
+Minvn1 ENn LDO_EN VSS VSS nfet_05v0 L=0.60u W=0.42u nf=1 m=1
+Minvp1 ENn LDO_EN VDD VDD pfet_05v0 L=0.50u W=0.60u nf=1 m=1
+Minvn2 ENp ENn VSS VSS nfet_05v0 L=0.60u W=0.42u nf=1 m=1
+Minvp2 ENp ENn VDD VDD pfet_05v0 L=0.50u W=0.60u nf=1 m=1
+.ends
+

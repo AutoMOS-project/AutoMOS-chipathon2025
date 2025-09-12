@@ -1,0 +1,8 @@
+** sch_path: /foss/designs/libs/core_ldo/ldo_BUFFER/ldo_BUFFER.sch
+.subckt ldo_BUFFER ENn VDD ENp LDO_EN VSS
+*.PININFO VSS:B LDO_EN:I VDD:B ENp:O ENn:O
+Minvn1 ENn LDO_EN VSS VSS nfet_05v0 L=0.60u W=0.42u nf=1 m=1
+Minvp1 ENn LDO_EN VDD VDD pfet_05v0 L=0.50u W=0.60u nf=1 m=1
+Minvn2 ENp ENn VSS VSS nfet_05v0 L=0.60u W=0.42u nf=1 m=1
+Minvp2 ENp ENn VDD VDD pfet_05v0 L=0.50u W=0.60u nf=1 m=1
+.ends
