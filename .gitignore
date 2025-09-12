@@ -40,3 +40,10 @@ tools/
 context/
 
 *.gds.backup
+
+extfiles/
+gf180mcuD_setup.tcl
+run_lvs.sh
+run_lvs.tcl
+
+.Trash*
