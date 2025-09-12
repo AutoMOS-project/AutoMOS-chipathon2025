@@ -96,14 +96,32 @@ N 220 -830 220 -800 {lab=VDD}
 N 220 -800 230 -800 {lab=VDD}
 N 270 -880 270 -830 {lab=VDD}
 N 230 -880 270 -880 {lab=VDD}
-N 420 -830 430 -830 {lab=VDD}
-N 420 -880 420 -830 {lab=VDD}
-N 420 -880 430 -880 {lab=VDD}
-N 430 -880 430 -860 {lab=VDD}
-N 420 -830 420 -800 {lab=VDD}
-N 420 -800 430 -800 {lab=VDD}
-N 470 -880 470 -830 {lab=VDD}
-N 430 -880 470 -880 {lab=VDD}
+N 360 -830 370 -830 {lab=VDD}
+N 360 -880 360 -830 {lab=VDD}
+N 360 -880 370 -880 {lab=VDD}
+N 370 -880 370 -860 {lab=VDD}
+N 360 -830 360 -800 {lab=VDD}
+N 360 -800 370 -800 {lab=VDD}
+N 410 -880 410 -830 {lab=VDD}
+N 370 -880 410 -880 {lab=VDD}
+N 140 -210 140 -150 {lab=VSS}
+N 100 -150 140 -150 {lab=VSS}
+N 100 -180 100 -150 {lab=VSS}
+N 90 -210 100 -210 {lab=VSS}
+N 90 -210 90 -150 {lab=VSS}
+N 90 -150 100 -150 {lab=VSS}
+N 90 -240 100 -240 {lab=VSS}
+N 90 -240 90 -210 {lab=VSS}
+N 140 -150 220 -150 {lab=VSS}
+N 760 -210 760 -150 {lab=VSS}
+N 670 -150 760 -150 {lab=VSS}
+N 760 -150 800 -150 {lab=VSS}
+N 800 -180 800 -150 {lab=VSS}
+N 800 -210 810 -210 {lab=VSS}
+N 810 -210 810 -150 {lab=VSS}
+N 800 -150 810 -150 {lab=VSS}
+N 810 -240 810 -210 {lab=VSS}
+N 800 -240 810 -240 {lab=VSS}
 C {ipin.sym} 200 -400 0 0 {name=p2 lab=vn
 }
 C {ipin.sym} 490 -400 2 0 {name=p3 lab=vp}
@@ -113,7 +131,7 @@ C {opin.sym} 800 -400 0 0 {name=p7 lab=vout}
 C {ipin.sym} 110 -480 3 0 {name=p8 lab=ibias
 }
 C {iopin.sym} 80 -660 2 0 {name=p9 lab=VDD}
-C {iopin.sym} 220 -150 2 0 {name=p10 lab=VSS}
+C {iopin.sym} 90 -150 2 0 {name=p10 lab=VSS}
 C {title.sym} 170 -30 0 0 {name=l1 author="Luighi Viton"}
 C {symbols/pfet_05v0.sym} 130 -590 0 1 {name=Mpref0
 L=1u
@@ -227,7 +245,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 250 -830 0 1 {name=Mpref_dumm_L[3:0]
+C {symbols/pfet_05v0.sym} 250 -830 0 1 {name=Mpref_dumm_L[1:0]
 L=1u
 W=0.5u
 nf=1
@@ -242,7 +260,16 @@ model=pfet_05v0
 spiceprefix=X
 }
 C {lab_wire.sym} 260 -880 0 0 {name=p48 sig_type=std_logic lab=VDD}
-C {symbols/pfet_05v0.sym} 450 -830 0 1 {name=Mpref_dumm_TP[23:0]
+C {lab_wire.sym} 310 -480 0 0 {name=p1 sig_type=std_logic lab=vptail}
+C {lab_wire.sym} 260 -270 0 0 {name=p6 sig_type=std_logic lab=vnload}
+C {lab_wire.sym} 490 -280 0 0 {name=p11 sig_type=std_logic lab=vout_1st}
+C {symbols/cap_mim_2f0fF.sym} 540 -330 0 0 {name=C2[3:0]
+W=8e-6
+L=8e-6
+model=cap_mim_2f0fF
+spiceprefix=X
+m=1}
+C {symbols/pfet_05v0.sym} 390 -830 0 1 {name=Mpdiff_dumm_L[3:0]
 L=1u
 W=0.5u
 nf=1
@@ -256,14 +283,32 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {lab_wire.sym} 460 -880 0 0 {name=Mpref2[13:0] sig_type=std_logic lab=VDD
-L=0.6u}
-C {lab_wire.sym} 310 -480 0 0 {name=p1 sig_type=std_logic lab=vptail}
-C {lab_wire.sym} 260 -270 0 0 {name=p6 sig_type=std_logic lab=vnload}
-C {lab_wire.sym} 490 -280 0 0 {name=p11 sig_type=std_logic lab=vout_1st}
-C {symbols/cap_mim_1f0fF.sym} 540 -330 0 0 {name=C1[5:0]
-W=10e-6
-L=10e-6
-model=cap_mim_1f0fF
+C {lab_wire.sym} 400 -880 0 0 {name=p12 sig_type=std_logic lab=VDD}
+C {symbols/nfet_05v0.sym} 120 -210 0 1 {name=Mnload_dummL[1:0]
+L=2u
+W=0.5u
+nf=1
+m=2
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
 spiceprefix=X
-m=1}
+}
+C {symbols/nfet_05v0.sym} 780 -210 0 0 {name=Mncs_dumm[7:0]
+L=2u
+W=0.5u
+nf=1
+m=16
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_05v0
+spiceprefix=X
+}

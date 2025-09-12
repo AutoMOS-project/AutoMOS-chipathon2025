@@ -1,0 +1,82 @@
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0fF are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0fF is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0fF                   
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0fF are equivalent.
+
+Class bandgap_opamp (0):  Merged 1 parallel devices.
+Class bandgap_opamp (1):  Merged 14 parallel devices.
+Subcircuit summary:
+Circuit 1: bandgap_opamp                   |Circuit 2: bandgap_opamp                   
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (22->6)                          |pfet_05v0 (22->6)                          
+nfet_05v0 (30->4)                          |nfet_05v0 (152->4)                         
+cap_mim_2f0_m4m5_noshield (4)              |cap_mim_2f0fF (4)                          
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 1 symmetry with property errors.
+nfet_05v0:2 vs. nfet_05v0:Mnload_dummL[1]:
+ w circuit1: 5e-06   circuit2: 6.6e-05   (delta=172%, cutoff=1%)
+pfet_05v0:1 vs. pfet_05v0:Mpref_dumm_L[1]:
+ w circuit1: 9e-06   circuit2: 3e-06   (delta=100%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: bandgap_opamp                   |Circuit 2: bandgap_opamp                   
+-------------------------------------------|-------------------------------------------
+vn                                         |vn                                         
+vp                                         |vp                                         
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+ibias                                      |ibias                                      
+vout                                       |vout                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bandgap_opamp and bandgap_opamp are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ bandgap_opamp
