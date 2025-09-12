@@ -1,0 +1,20 @@
+* NGSPICE file created from bandgap_opamp.ext - technology: gf180mcuD
+
+.subckt bandgap_opamp vp vn vout ibias VSS VDD
+X0 vout ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=8
+X1 VDD VDD VDD VDD pfet_05v0 ad=1.16p pd=5.16u as=14.04p ps=76.32u w=2u l=1u M=4
+X2 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=11.8p ps=87.2u w=0.5u l=2u M=10
+X3 a_n3877_n280# ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=2
+X4 vout a_n5609_n2907# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=16
+X5 vout a_n5609_n2907# cap_mim_2f0_m4m5_noshield c_width=8u c_length=8u
+X6 VDD VDD VDD VDD pfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=1u M=2
+X7 a_n5609_n2907# vp a_n3877_n280# VDD pfet_05v0 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
+X8 a_n6009_n3115# vn a_n3877_n280# VDD pfet_05v0 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
+X9 ibias ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=2
+X10 vout a_n5609_n2907# cap_mim_2f0_m4m5_noshield c_width=8u c_length=7.995u
+X11 a_n5609_n2907# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X12 vout a_n5609_n2907# cap_mim_2f0_m4m5_noshield c_width=8u c_length=8u
+X13 a_n6009_n3115# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X14 vout a_n5609_n2907# cap_mim_2f0_m4m5_noshield c_width=8u c_length=8u
+.ends
+
