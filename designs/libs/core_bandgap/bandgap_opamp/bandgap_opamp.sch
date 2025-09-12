@@ -263,9 +263,9 @@ C {lab_wire.sym} 260 -880 0 0 {name=p48 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 310 -480 0 0 {name=p1 sig_type=std_logic lab=vptail}
 C {lab_wire.sym} 260 -270 0 0 {name=p6 sig_type=std_logic lab=vnload}
 C {lab_wire.sym} 490 -280 0 0 {name=p11 sig_type=std_logic lab=vout_1st}
-C {symbols/cap_mim_2f0fF.sym} 540 -330 0 0 {name=C2[3:0]
-W=8e-6
-L=8e-6
+C {symbols/cap_mim_2f0fF.sym} 540 -330 0 0 {name=C2
+W=16e-6
+L=16e-6
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}

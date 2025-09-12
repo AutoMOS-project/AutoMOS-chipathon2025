@@ -11,10 +11,7 @@ XMnload1 vout_1st vnload VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
 XMncs vout vout_1st VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
 XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
 XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
-XC2[3] vout vout_1st cap_mim_2f0fF c_width=8e-6 c_length=8e-6 m=1
-XC2[2] vout vout_1st cap_mim_2f0fF c_width=8e-6 c_length=8e-6 m=1
-XC2[1] vout vout_1st cap_mim_2f0fF c_width=8e-6 c_length=8e-6 m=1
-XC2[0] vout vout_1st cap_mim_2f0fF c_width=8e-6 c_length=8e-6 m=1
+XC2 vout vout_1st cap_mim_2f0fF c_width=16e-6 c_length=16e-6 m=1
 XMpdiff_dumm_L[3] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
 XMpdiff_dumm_L[2] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
 XMpdiff_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
