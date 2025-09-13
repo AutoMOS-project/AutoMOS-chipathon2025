@@ -1,0 +1,15 @@
+* NGSPICE file created from top_amux_2x1.ext - technology: gf180mcuD
+
+.subckt top_amux_2x1 VDD VSS EN IN0 IN1 OUT
+X0 IN1 a_n28035_n33470# OUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X1 OUT a_n28035_n31802# IN0 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X2 IN0 a_n28035_n32636# OUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X3 OUT EN IN1 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X4 VDD EN a_n28035_n33470# VDD pfet_05v0 ad=0.462p pd=2.74u as=0.462p ps=2.74u w=0.6u l=0.5u
+X5 VDD EN a_n28035_n31802# VDD pfet_05v0 ad=0.462p pd=2.74u as=0.462p ps=2.74u w=0.6u l=0.5u
+X6 VSS EN a_n28035_n31802# VSS nfet_05v0 ad=0.315p pd=2.34u as=0.315p ps=2.34u w=0.42u l=0.6u
+X7 VDD a_n28035_n31802# a_n28035_n32636# VDD pfet_05v0 ad=0.462p pd=2.74u as=0.462p ps=2.74u w=0.6u l=0.5u
+X8 VSS a_n28035_n31802# a_n28035_n32636# VSS nfet_05v0 ad=0.315p pd=2.34u as=0.315p ps=2.34u w=0.42u l=0.6u
+X9 VSS EN a_n28035_n33470# VSS nfet_05v0 ad=0.315p pd=2.34u as=0.315p ps=2.34u w=0.42u l=0.6u
+.ends
+
