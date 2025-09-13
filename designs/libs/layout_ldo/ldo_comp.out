@@ -1,0 +1,682 @@
+
+Circuit 1 cell ppolyf_u_1k_6p0 and Circuit 2 cell ppolyf_u_1k_6p0 are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k_6p0                 |Circuit 2: ppolyf_u_1k_6p0                 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k_6p0 and ppolyf_u_1k_6p0 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0fF are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0fF is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0fF                   
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0fF are equivalent.
+
+Cell pfet_05v0 (1) disconnected node: drain
+Cell pfet_05v0 (1) disconnected node: gate
+Cell pfet_05v0 (1) disconnected node: source
+Cell pfet_05v0 (1) disconnected node: bulk
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+(no matching pin)                          |drain                                      
+(no matching pin)                          |gate                                       
+(no matching pin)                          |source                                     
+(no matching pin)                          |bulk                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+
+Cell nfet_05v0 (1) disconnected node: drain
+Cell nfet_05v0 (1) disconnected node: gate
+Cell nfet_05v0 (1) disconnected node: source
+Cell nfet_05v0 (1) disconnected node: bulk
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+(no matching pin)                          |drain                                      
+(no matching pin)                          |gate                                       
+(no matching pin)                          |source                                     
+(no matching pin)                          |bulk                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$3 in circuit ldo (0)(30 instances)
+Flattening unmatched subcell cap_mim$1 in circuit ldo (0)(4 instances)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$2 in circuit ldo (0)(42 instances)
+Flattening unmatched subcell ldo_OTA in circuit ldo (1)(1 instance)
+Flattening unmatched subcell ldo_BUFFER in circuit ldo (1)(1 instance)
+
+Cell ldo (0) disconnected node: SUB
+Cell ldo (1) disconnected node: SUB
+Class ldo (0):  Merged 23 parallel devices.
+Class ldo (0):  Merged 47 series devices.
+Class ldo (1):  Merged 93 parallel devices.
+Class ldo (1):  Merged 47 series devices.
+Cell ldo (0) disconnected node: SUB
+Cell ldo (1) disconnected node: SUB
+Subcircuit summary:
+Circuit 1: ldo                             |Circuit 2: ldo                             
+-------------------------------------------|-------------------------------------------
+ppolyf_u_1k_6p0 (72->4)                    |ppolyf_u_1k_6p0 (72->4)                    
+cap_mim_2f0_m4m5_noshield (4)              |cap_mim_2f0fF (4)                          
+pfet_05v0 (47->11)                         |pfet_05v0 (47->11)                         
+nfet_05v0 (99->12)                         |nfet_05v0 (99->12)                         
+Number of devices: 31                      |Number of devices: 31                      
+Number of nets: 109                        |Number of nets: 109                        
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: ldo                             |Circuit 2: ldo                             
+
+---------------------------------------------------------------------------------------
+Net: a_n84169_78410#                       |Net: ENn                                   
+  pfet_05v0/2 = 3                          |  nfet_05v0/gate = 3                       
+  pfet_05v0/(1|3) = 1                      |  nfet_05v0/(drain|source) = 1             
+  nfet_05v0/(1|3) = 1                      |  pfet_05v0/(drain|source) = 1             
+  nfet_05v0/2 = 1                          |  pfet_05v0/gate = 1                       
+                                           |                                           
+Net: a_n85031_78410#                       |Net: ENp                                   
+  nfet_05v0/2 = 3                          |  pfet_05v0/gate = 3                       
+  pfet_05v0/2 = 1                          |  nfet_05v0/gate = 1                       
+  nfet_05v0/(1|3) = 1                      |  nfet_05v0/(drain|source) = 1             
+  pfet_05v0/(1|3) = 1                      |  pfet_05v0/(drain|source) = 1             
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: dummy_164                             |Net: ldo_BUFFER:4/dummy_21                 
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_132                             |Net: ldo_BUFFER:4/dummy_20                 
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_163                             |Net: ldo_BUFFER:4/dummy_19                 
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_131                             |Net: ldo_BUFFER:4/dummy_18                 
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_162                             |Net: ldo_BUFFER:4/dummy_17                 
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_130                             |Net: ldo_BUFFER:4/dummy_16                 
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_161                             |Net: ldo_BUFFER:4/dummy_15                 
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_129                             |Net: ldo_BUFFER:4/dummy_14                 
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_160                             |Net: ldo_BUFFER:4/dummy_13                 
+  nfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_159                             |Net: ldo_BUFFER:4/dummy_12                 
+  nfet_05v0/proxysource = 1                |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_158                             |Net: ldo_BUFFER:4/dummy_11                 
+  nfet_05v0/proxygate = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_157                             |Net: ldo_BUFFER:4/dummy_10                 
+  nfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_156                             |Net: ldo_BUFFER:4/dummy_9                  
+  nfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_155                             |Net: ldo_BUFFER:4/dummy_8                  
+  nfet_05v0/proxysource = 1                |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_154                             |Net: ldo_BUFFER:4/dummy_7                  
+  nfet_05v0/proxygate = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_153                             |Net: ldo_BUFFER:4/dummy_6                  
+  nfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_152                             |Net: ldo_OTA:1/dummy_369                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_151                             |Net: ldo_OTA:1/dummy_368                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_150                             |Net: ldo_OTA:1/dummy_367                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_149                             |Net: ldo_OTA:1/dummy_366                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_148                             |Net: ldo_OTA:1/dummy_365                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_147                             |Net: ldo_OTA:1/dummy_361                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_146                             |Net: ldo_OTA:1/dummy_364                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_145                             |Net: ldo_OTA:1/dummy_360                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_140                             |Net: ldo_OTA:1/dummy_363                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_139                             |Net: ldo_OTA:1/dummy_359                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_138                             |Net: ldo_OTA:1/dummy_362                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_137                             |Net: ldo_OTA:1/dummy_358                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_136                             |Net: ldo_OTA:1/dummy_145                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_128                             |Net: ldo_OTA:1/dummy_144                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_135                             |Net: ldo_OTA:1/dummy_143                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_127                             |Net: ldo_OTA:1/dummy_142                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_134                             |Net: ldo_OTA:1/dummy_141                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_126                             |Net: ldo_OTA:1/dummy_137                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_133                             |Net: ldo_OTA:1/dummy_140                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_125                             |Net: ldo_OTA:1/dummy_136                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_120                             |Net: ldo_OTA:1/dummy_139                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_112                             |Net: ldo_OTA:1/dummy_135                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_119                             |Net: ldo_OTA:1/dummy_138                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_111                             |Net: ldo_OTA:1/dummy_134                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_118                             |Net: ldo_OTA:1/dummy_133                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_110                             |Net: ldo_OTA:1/dummy_132                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_117                             |Net: ldo_OTA:1/dummy_131                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_109                             |Net: ldo_OTA:1/dummy_130                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_116                             |Net: ldo_OTA:1/dummy_129                   
+  nfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_115                             |Net: ldo_OTA:1/dummy_121                   
+  nfet_05v0/proxysource = 1                |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_114                             |Net: ldo_OTA:1/dummy_128                   
+  nfet_05v0/proxygate = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_113                             |Net: ldo_OTA:1/dummy_120                   
+  nfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_108                             |Net: ldo_OTA:1/dummy_127                   
+  pfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_100                             |Net: ldo_OTA:1/dummy_119                   
+  pfet_05v0/proxybulk = 1                  |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_107                             |Net: ldo_OTA:1/dummy_126                   
+  pfet_05v0/proxysource = 1                |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_99                              |Net: ldo_OTA:1/dummy_118                   
+  pfet_05v0/proxysource = 1                |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_106                             |Net: ldo_OTA:1/dummy_125                   
+  pfet_05v0/proxygate = 1                  |  nfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_98                              |Net: ldo_OTA:1/dummy_124                   
+  pfet_05v0/proxygate = 1                  |  nfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_105                             |Net: ldo_OTA:1/dummy_123                   
+  pfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_97                              |Net: ldo_OTA:1/dummy_122                   
+  pfet_05v0/proxydrain = 1                 |  nfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_104                             |Net: ldo_OTA:1/dummy_117                   
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_103                             |Net: ldo_OTA:1/dummy_113                   
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_102                             |Net: ldo_OTA:1/dummy_116                   
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_101                             |Net: ldo_OTA:1/dummy_112                   
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_96                              |Net: ldo_OTA:1/dummy_115                   
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_92                              |Net: ldo_OTA:1/dummy_111                   
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_72                              |Net: ldo_OTA:1/dummy_114                   
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_95                              |Net: ldo_OTA:1/dummy_110                   
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_91                              |Net: ldo_OTA:1/dummy_33                    
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_71                              |Net: ldo_OTA:1/dummy_32                    
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_94                              |Net: ldo_OTA:1/dummy_31                    
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_90                              |Net: ldo_OTA:1/dummy_30                    
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_70                              |Net: ldo_OTA:1/dummy_29                    
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_93                              |Net: ldo_OTA:1/dummy_28                    
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_89                              |Net: ldo_OTA:1/dummy_27                    
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_69                              |Net: ldo_OTA:1/dummy_26                    
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_88                              |Net: ldo_OTA:1/dummy_25                    
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_87                              |Net: ldo_OTA:1/dummy_21                    
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_86                              |Net: ldo_OTA:1/dummy_17                    
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_85                              |Net: ldo_OTA:1/dummy_24                    
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_84                              |Net: ldo_OTA:1/dummy_20                    
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_83                              |Net: ldo_OTA:1/dummy_16                    
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_82                              |Net: ldo_OTA:1/dummy_23                    
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_81                              |Net: ldo_OTA:1/dummy_19                    
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_80                              |Net: ldo_OTA:1/dummy_15                    
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_79                              |Net: ldo_OTA:1/dummy_22                    
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_78                              |Net: ldo_OTA:1/dummy_18                    
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_77                              |Net: ldo_OTA:1/dummy_14                    
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_67                              |Net: dummy_67                              
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_66                              |Net: dummy_66                              
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_65                              |Net: dummy_65                              
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_73                              |Net: dummy_64                              
+  pfet_05v0/proxydrain = 1                 |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: dummy_68                              |Net: dummy_63                              
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy4 = 1                     
+                                           |                                           
+Net: dummy_76                              |Net: dummy_62                              
+  pfet_05v0/proxybulk = 1                  |  pfet_05v0/proxy3 = 1                     
+                                           |                                           
+Net: dummy_75                              |Net: dummy_61                              
+  pfet_05v0/proxysource = 1                |  pfet_05v0/proxy2 = 1                     
+                                           |                                           
+Net: dummy_74                              |Net: dummy_60                              
+  pfet_05v0/proxygate = 1                  |  pfet_05v0/proxy1 = 1                     
+                                           |                                           
+Net: IBIAS                                 |Net: IBIAS                                 
+  nfet_05v0/(1|3) = 1                      |  nfet_05v0/(drain|source) = 1             
+                                           |                                           
+Net: VFB                                   |Net: VFB                                   
+  nfet_05v0/2 = 1                          |  nfet_05v0/gate = 1                       
+                                           |                                           
+Net: VREF                                  |Net: VREF                                  
+  nfet_05v0/2 = 1                          |  nfet_05v0/gate = 1                       
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VSS                                   |Net: VSS                                   
+  ppolyf_u_1k_6p0/(1|2) = 1                |  ppolyf_u_1k_6p0/(1|2) = 1                
+  nfet_05v0/4 = 12                         |  nfet_05v0/bulk = 12                      
+  nfet_05v0/(1|3) = 10                     |  nfet_05v0/gate = 1                       
+  nfet_05v0/2 = 1                          |  nfet_05v0/(drain|source) = 10            
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: LDO_EN                                |Net: LDO_EN                                
+  nfet_05v0/2 = 1                          |  nfet_05v0/gate = 1                       
+  pfet_05v0/2 = 1                          |  pfet_05v0/gate = 1                       
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: a_n83949_68256#                       |Net: VOTA                                  
+  cap_mim_2f0_m4m5_noshield/1 = 4          |  pfet_05v0/gate = 1                       
+  pfet_05v0/(1|3) = 2                      |  pfet_05v0/(drain|source) = 2             
+  pfet_05v0/2 = 1                          |  nfet_05v0/(drain|source) = 1             
+  nfet_05v0/(1|3) = 1                      |  cap_mim_2f0fF/1 = 4                      
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: a_n83949_73102#                       |Net: ldo_OTA:1/Vtail                       
+  nfet_05v0/(1|3) = 3                      |  nfet_05v0/(drain|source) = 3             
+                                           |                                           
+Net: VOUT                                  |Net: VOUT                                  
+  ppolyf_u_1k_6p0/(1|2) = 2                |  ppolyf_u_1k_6p0/(1|2) = 2                
+  pfet_05v0/(1|3) = 1                      |  pfet_05v0/(drain|source) = 1             
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: a_n83949_74452#                       |Net: ldo_OTA:1/Vbn1                        
+  nfet_05v0/2 = 2                          |  nfet_05v0/(drain|source) = 3             
+  nfet_05v0/(1|3) = 3                      |  nfet_05v0/gate = 2                       
+                                           |                                           
+Net: a_n83803_68196#                       |Net: ldo_OTA:1/Vbn2                        
+  pfet_05v0/(1|3) = 1                      |  pfet_05v0/(drain|source) = 1             
+  nfet_05v0/(1|3) = 2                      |  nfet_05v0/(drain|source) = 2             
+  nfet_05v0/2 = 2                          |  nfet_05v0/gate = 2                       
+                                           |                                           
+Net: a_n83693_82724#                       |Net: ldo_OTA:1/Vbp2                        
+  pfet_05v0/2 = 2                          |  pfet_05v0/(drain|source) = 2             
+  nfet_05v0/(1|3) = 1                      |  pfet_05v0/gate = 2                       
+  pfet_05v0/(1|3) = 2                      |  nfet_05v0/(drain|source) = 1             
+                                           |                                           
+Net: a_n83693_84586#                       |Net: ldo_OTA:1/Vbp1                        
+  pfet_05v0/2 = 2                          |  pfet_05v0/(drain|source) = 2             
+  nfet_05v0/(1|3) = 1                      |  pfet_05v0/gate = 2                       
+  pfet_05v0/(1|3) = 2                      |  nfet_05v0/(drain|source) = 1             
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: VDD                                   
+  ppolyf_u_1k_6p0/3 = 4                    |  ppolyf_u_1k_6p0/3 = 4                    
+  ppolyf_u_1k_6p0/(1|2) = 2                |  ppolyf_u_1k_6p0/(1|2) = 2                
+  pfet_05v0/(1|3) = 12                     |  pfet_05v0/bulk = 11                      
+  pfet_05v0/4 = 11                         |  pfet_05v0/(drain|source) = 12            
+  pfet_05v0/2 = 1                          |  pfet_05v0/gate = 1                       
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: ldo                             |Circuit 2: ldo                             
+
+---------------------------------------------------------------------------------------
+Instance: nfet_05v0:24                     |Instance: ldo_BUFFER:4/nfet_05v0:invn2     
+  (1,3) = (24,5)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,6)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:9                      |Instance: ldo_BUFFER:4/nfet_05v0:invn1     
+  (1,3) = (24,5)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,6)                  
+  proxysource = 1                          |  gate = 2                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:22                     |Instance: ldo_OTA:1/nfet_05v0:nenota3      
+  (1,3) = (5,1)                            |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (5,1)                   
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:19                     |Instance: ldo_OTA:1/nfet_05v0:nenota2      
+  (1,3) = (24,6)                           |  proxy1 = 1                               
+  2 = 2                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,5)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:18                     |Instance: ldo_OTA:1/nfet_05v0:nenota1      
+  (1,3) = (24,3)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,5)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:15                     |Instance: ldo_OTA:1/nfet_05v0:ndiff_dummy_ 
+  (1,3) = (24,6)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,24)                 
+  proxysource = 1                          |  gate = 24                                
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:11                     |Instance: ldo_OTA:1/nfet_05v0:2            
+  (1,3) = (24,8)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (5,3)                   
+  proxysource = 1                          |  gate = 1                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:10                     |Instance: ldo_OTA:1/nfet_05v0:1            
+  (1,3) = (24,5)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (5,3)                   
+  proxysource = 1                          |  gate = 1                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:8                      |Instance: ldo_OTA:1/nfet_05v0:8            
+  (1,3) = (24,5)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,8)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:4                      |Instance: ldo_OTA:1/nfet_05v0:7            
+  (1,3) = (5,3)                            |  proxy1 = 1                               
+  2 = 1                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,5)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:1                      |Instance: ldo_OTA:1/nfet_05v0:9            
+  (1,3) = (5,3)                            |  proxy1 = 1                               
+  2 = 1                                    |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,5)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 24                                
+                                           |                                           
+Instance: nfet_05v0:2                      |Instance: ldo_OTA:1/nfet_05v0:10           
+  (1,3) = (24,24)                          |  proxy1 = 1                               
+  2 = 24                                   |  proxy2 = 1                               
+  4 = 24                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (24,3)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 24                                
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: pfet_05v0:23                     |Instance: ldo_BUFFER:4/pfet_05v0:invp2     
+  (1,3) = (30,5)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,6)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:20                     |Instance: ldo_BUFFER:4/pfet_05v0:invp1     
+  (1,3) = (30,5)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,6)                  
+  proxysource = 1                          |  gate = 2                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:21                     |Instance: ldo_OTA:1/pfet_05v0:penota2      
+  (1,3) = (30,6)                           |  proxy1 = 1                               
+  2 = 2                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,5)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:17                     |Instance: ldo_OTA:1/pfet_05v0:penota1      
+  (1,3) = (30,5)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,5)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:16                     |Instance: ldo_OTA:1/pfet_05v0:pota_dummy_L 
+  (1,3) = (30,5)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,30)                 
+  proxysource = 1                          |  gate = 30                                
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:3                      |Instance: ldo_OTA:1/pfet_05v0:6            
+  (1,3) = (30,5)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,8)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:14                     |Instance: ldo_OTA:1/pfet_05v0:5            
+  (1,3) = (30,6)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,5)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:12                     |Instance: ldo_OTA:1/pfet_05v0:4            
+  (1,3) = (30,8)                           |  proxy1 = 1                               
+  2 = 6                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,5)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:6                      |Instance: ldo_OTA:1/pfet_05v0:3            
+  (1,3) = (30,30)                          |  proxy1 = 1                               
+  2 = 30                                   |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,5)                  
+  proxysource = 1                          |  gate = 5                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:5                      |Instance: pfet_05v0:penpass                
+  (1,3) = (30,3)                           |  proxy1 = 1                               
+  2 = 8                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,8)                  
+  proxysource = 1                          |  gate = 6                                 
+  proxybulk = 1                            |  bulk = 30                                
+                                           |                                           
+Instance: pfet_05v0:0                      |Instance: pfet_05v0:pass                   
+  (1,3) = (30,8)                           |  proxy1 = 1                               
+  2 = 5                                    |  proxy2 = 1                               
+  4 = 30                                   |  proxy3 = 1                               
+  proxydrain = 1                           |  proxy4 = 1                               
+  proxygate = 1                            |  (drain,source) = (30,3)                  
+  proxysource = 1                          |  gate = 8                                 
+  proxybulk = 1                            |  bulk = 30                                
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: ldo                             |Circuit 2: ldo                             
+-------------------------------------------|-------------------------------------------
+IBIAS                                      |IBIAS                                      
+VREF                                       |VFB **Mismatch**                           
+VFB                                        |VREF **Mismatch**                          
+VSS                                        |VSS                                        
+LDO_EN                                     |LDO_EN                                     
+VFB_res                                    |VFB_res                                    
+VOUT                                       |VOUT                                       
+VDD                                        |VDD                                        
+SUB                                        |SUB                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for ldo and ldo altered to match.
+Device classes ldo and ldo are equivalent.
+
+Final result: Top level cell failed pin matching.

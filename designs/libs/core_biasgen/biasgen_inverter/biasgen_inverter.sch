@@ -17,9 +17,9 @@ N 160 -310 170 -310 {lab=VDD}
 N 160 -130 170 -130 {lab=VSS}
 N 170 -130 170 -60 {lab=VSS}
 N 160 -60 170 -60 {lab=VSS}
-C {symbols/nfet_05v0.sym} 140 -130 0 0 {name=M1
+C {symbols/nfet_05v0.sym} 140 -130 0 0 {name=MINV1
 L=0.60u
-W=0.30u
+W=0.42u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -31,7 +31,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 140 -250 0 0 {name=M2
+C {symbols/pfet_05v0.sym} 140 -250 0 0 {name=MINV2
 L=0.50u
 W=0.60u
 nf=1
