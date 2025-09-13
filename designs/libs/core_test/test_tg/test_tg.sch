@@ -20,7 +20,7 @@ N 140 -600 210 -600 {lab=VDD}
 N 210 -600 210 -580 {lab=VDD}
 N 140 -440 210 -440 {lab=VSS}
 N 210 -460 210 -440 {lab=VSS}
-C {symbols/nfet_05v0.sym} 210 -120 3 0 {name=M1
+C {symbols/nfet_05v0.sym} 210 -120 3 0 {name=MTG1
 L=0.60u
 W=1.5u
 nf=1
@@ -34,7 +34,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {symbols/pfet_05v0.sym} 210 -330 3 1 {name=M2
+C {symbols/pfet_05v0.sym} 210 -330 3 1 {name=MTG2
 L=0.50u
 W=1.5u
 nf=1
