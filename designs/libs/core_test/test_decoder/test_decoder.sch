@@ -213,7 +213,6 @@ N 1360 -1310 1520 -1310 {lab=EN4_in}
 N 1410 -1030 1520 -1030 {lab=EN5_in}
 N 1300 -770 1520 -770 {lab=EN6_in}
 N 1260 -310 1520 -310 {lab=EN7_in}
-N 1500 -740 1500 -280 {lab=EN}
 N 1500 -1000 1500 -730 {lab=EN}
 N 1500 -1280 1500 -1000 {lab=EN}
 N 1500 -1610 1500 -1280 {lab=EN}
@@ -221,6 +220,7 @@ N 1500 -2090 1500 -1610 {lab=EN}
 N 1500 -2360 1500 -2090 {lab=EN}
 N 1500 -2620 1500 -2360 {lab=EN}
 N 1500 -2730 1500 -2620 {lab=EN}
+N 1500 -730 1500 -280 {lab=EN}
 C {lab_pin.sym} 40 -620 0 1 {name=p5 sig_type=std_logic lab=SEL[0]}
 C {lab_pin.sym} 40 -590 0 1 {name=p6 sig_type=std_logic lab=SEL[1]}
 C {lab_pin.sym} 40 -560 0 1 {name=p7 sig_type=std_logic lab=SEL[2]}
