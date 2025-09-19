@@ -23,7 +23,7 @@ C {iopin.sym} 350 -410 0 0 {name=p3 lab=VDD}
 C {iopin.sym} 350 -130 0 0 {name=p4 lab=VSS}
 C {symbols/nfet_05v0.sym} 330 -220 0 0 {name=M1
 L=0.60u
-W=0.30u
+W=0.50u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -37,8 +37,8 @@ spiceprefix=X
 }
 C {symbols/pfet_05v0.sym} 330 -330 0 0 {name=M2
 L=0.50u
-W=0.30u
-nf=2
+W=0.50u
+nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
