@@ -1,0 +1,60 @@
+** sch_path: /foss/designs/libs/core_test/test_decoder/test_decoder.sch
+.subckt test_decoder SEL[0] SEL[1] SEL[2] VDD VSS EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7 EN
+*.PININFO VDD:B VSS:B SEL[0]:I SEL[1]:I SEL[2]:I EN0:O EN1:O EN2:O EN3:O EN4:O EN5:O EN6:O EN7:O EN:I
+x3 VDD SEL[0] net1 SEL[1] VSS test_and
+x4 VDD net1 net2 SEL[2] VSS test_and
+x5 VDD EN0_in net2 VSS test_inv
+x6 VDD SEL[0] net3 SEL[1] VSS test_and
+x7 VDD net4 net3 VSS test_inv
+x8 VDD net4 EN1_in SEL[2] VSS test_and
+x9 VDD net5 SEL[0] VSS test_inv
+x10 VDD net5 net7 SEL[1] VSS test_and
+x11 VDD net6 SEL[2] VSS test_inv
+x12 VDD net7 EN2_in net6 VSS test_and
+x13 VDD net8 SEL[0] VSS test_inv
+x14 VDD net8 net9 SEL[1] VSS test_and
+x15 VDD net9 EN3_in SEL[2] VSS test_and
+x16 VDD SEL[1] net10 SEL[2] VSS test_and
+x17 VDD net11 net10 VSS test_inv
+x18 VDD SEL[0] EN4_in net11 VSS test_and
+x19 VDD net12 SEL[1] VSS test_inv
+x20 VDD SEL[0] net13 net12 VSS test_and
+x21 VDD net13 EN5_in SEL[2] VSS test_and
+x22 VDD SEL[0] net14 SEL[1] VSS test_and
+x23 VDD net14 EN6_in net15 VSS test_and
+x24 VDD net15 SEL[2] VSS test_inv
+x25 VDD SEL[0] net16 SEL[1] VSS test_and
+x26 VDD net16 EN7_in SEL[2] VSS test_and
+x1 VDD EN0_in EN0 EN VSS test_and
+x2 VDD EN1_in EN1 EN VSS test_and
+x27 VDD EN2_in EN2 EN VSS test_and
+x28 VDD EN3_in EN3 EN VSS test_and
+x29 VDD EN4_in EN4 EN VSS test_and
+x30 VDD EN5_in EN5 EN VSS test_and
+x31 VDD EN6_in EN6 EN VSS test_and
+x32 VDD EN7_in EN7 EN VSS test_and
+.ends
+
+* expanding   symbol:  libs/core_test/test_and/test_and.sym # of pins=5
+** sym_path: /foss/designs/libs/core_test/test_and/test_and.sym
+** sch_path: /foss/designs/libs/core_test/test_and/test_and.sch
+.subckt test_and VDD A Y B VSS
+*.PININFO A:I B:I VDD:B VSS:B Y:O
+XM1 net1 A net2 VSS nfet_05v0 L=0.60u W=0.50u nf=1 m=1
+XM2 net1 A VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 m=1
+XM3 net1 B VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 m=1
+XM4 net2 B VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 m=1
+XM5 Y net1 VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 m=1
+XM6 Y net1 VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_test/test_inv/test_inv.sym # of pins=4
+** sym_path: /foss/designs/libs/core_test/test_inv/test_inv.sym
+** sch_path: /foss/designs/libs/core_test/test_inv/test_inv.sch
+.subckt test_inv VDD OUT IN VSS
+*.PININFO OUT:O IN:I VDD:B VSS:B
+XM1 OUT IN VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 m=1
+XM2 OUT IN VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 m=1
+.ends
+

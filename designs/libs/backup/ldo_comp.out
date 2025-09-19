@@ -61,11 +61,13 @@ Flattening unmatched subcell ppolyf_u_high_Rs_resistor$2 in circuit ldo (0)(42 i
 Flattening unmatched subcell ldo_OTA in circuit ldo (1)(1 instance)
 Flattening unmatched subcell ldo_BUFFER in circuit ldo (1)(1 instance)
 
+Cell ldo (0) disconnected node: SUB
 Cell ldo (1) disconnected node: SUB
 Class ldo (0):  Merged 23 parallel devices.
 Class ldo (0):  Merged 47 series devices.
 Class ldo (1):  Merged 93 parallel devices.
 Class ldo (1):  Merged 47 series devices.
+Cell ldo (0) disconnected node: SUB
 Cell ldo (1) disconnected node: SUB
 Subcircuit summary:
 Circuit 1: ldo                             |Circuit 2: ldo                             
@@ -92,10 +94,11 @@ VSS                                        |VSS
 VFB_res                                    |VFB_res                                    
 LDO_EN                                     |LDO_EN                                     
 VOUT                                       |VOUT                                       
-SUB                                        |VDD **Mismatch**                           
-(no matching pin)                          |SUB                                        
+VDD                                        |VDD                                        
+SUB                                        |SUB                                        
 ---------------------------------------------------------------------------------------
-Cell pin lists for ldo and ldo altered to match.
+Cell pin lists are equivalent.
 Device classes ldo and ldo are equivalent.
 
-Final result: Top level cell failed pin matching.
+Final result: Circuits match uniquely.
+.

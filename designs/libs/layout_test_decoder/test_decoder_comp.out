@@ -1,0 +1,66 @@
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+Flattening unmatched subcell test_and in circuit test_decoder (1)(24 instances)
+Flattening unmatched subcell test_inv in circuit test_decoder (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: test_decoder                    |Circuit 2: test_decoder                    
+-------------------------------------------|-------------------------------------------
+nfet_05v0 (80)                             |nfet_05v0 (80)                             
+pfet_05v0 (80)                             |pfet_05v0 (80)                             
+Number of devices: 160                     |Number of devices: 160                     
+Number of nets: 86                         |Number of nets: 86                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: test_decoder                    |Circuit 2: test_decoder                    
+-------------------------------------------|-------------------------------------------
+EN0                                        |EN0                                        
+EN2                                        |EN2                                        
+EN6                                        |EN6                                        
+EN4                                        |EN4                                        
+EN1                                        |EN1                                        
+EN7                                        |EN7                                        
+EN5                                        |EN5                                        
+EN3                                        |EN3                                        
+SEL[0]                                     |SEL[0]                                     
+SEL[1]                                     |SEL[1]                                     
+SEL[2]                                     |SEL[2]                                     
+EN                                         |EN                                         
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes test_decoder and test_decoder are equivalent.
+
+Final result: Circuits match uniquely.
+.
