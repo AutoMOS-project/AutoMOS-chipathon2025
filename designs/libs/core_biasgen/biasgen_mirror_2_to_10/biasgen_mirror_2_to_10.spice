@@ -1,0 +1,45 @@
+** sch_path: /foss/designs/libs/core_biasgen/biasgen_mirror_2_to_10/biasgen_mirror_2_to_10.sch
+.subckt biasgen_mirror_2_to_10 VDD Ibias_2u EN ENB Iout_10u_src Iout_10u_snk VSS SUB Iout_2u_src Iout_2u_snk
+*.PININFO Ibias_2u:B VDD:B VSS:B Iout_10u_snk:B Iout_10u_src:B EN:I ENB:I SUB:B Iout_2u_src:B Iout_2u_snk:B
+XMnref0 net1 vnref VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
+XMncas0 vnref vncas net1 VSS nfet_05v0 L=0.8u W=0.5u nf=1 m=2
+XMnenbias Ibias_2u EN vncas vncas nfet_05v0 L=0.6u W=2u nf=1 m=1
+XMnref1 net2 vnref VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
+XMncas1 vpcas vncas net2 VSS nfet_05v0 L=0.8u W=0.5u nf=1 m=2
+XMpref1 net3 vpref VDD VDD pfet_05v0 L=1.5u W=1u nf=1 m=2
+XMpcas0 vpref vpcas net3 VDD pfet_05v0 L=0.8u W=1u nf=1 m=2
+XMpcas1 vpcas vpcas VDD VDD pfet_05v0 L=6u W=1u nf=1 m=2
+XMnref2 net4 vnref VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
+XMncas2 vpref vncas net4 VSS nfet_05v0 L=0.8u W=0.5u nf=1 m=2
+XMpref2 net5 vpref VDD VDD pfet_05v0 L=1.5u W=1u nf=1 m=10
+XMpcas2 Iout_10u_src vpcas net5 VDD pfet_05v0 L=0.8u W=1u nf=1 m=10
+XMnref3 net6 vnref VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=10
+XMncas3 Iout_10u_snk vncas net6 VSS nfet_05v0 L=0.8u W=0.5u nf=1 m=10
+XMnennref vnref ENB VSS VSS nfet_05v0 L=0.6u W=2u nf=1 m=1
+XMnenncas vncas ENB VSS VSS nfet_05v0 L=0.6u W=2u nf=1 m=1
+XMpcas3 vpref EN VDD VDD pfet_05v0 L=0.5u W=1u nf=1 m=1
+XMpcas4 vpcas EN VDD VDD pfet_05v0 L=0.5u W=1u nf=1 m=1
+* noconn SUB
+XMpref3 net7 vpref VDD VDD pfet_05v0 L=1.5u W=1u nf=1 m=2
+XMpcas5 Iout_2u_src vpcas net7 VDD pfet_05v0 L=0.8u W=1u nf=1 m=2
+XMnref4 net8 vnref VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
+XMncas4 Iout_2u_snk vncas net8 VSS nfet_05v0 L=0.8u W=0.5u nf=1 m=2
+XMnref_dumm_L VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
+XMncas_dumm_L VSS VSS VSS VSS nfet_05v0 L=0.8u W=0.5u nf=1 m=2
+XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1.5u W=1u nf=1 m=1
+XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1.5u W=1u nf=1 m=1
+XMpcas_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=1u nf=1 m=1
+XMpcas_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=1u nf=1 m=1
+XMpcasref_dumm_L[3] VDD VDD VDD VDD pfet_05v0 L=6u W=1u nf=1 m=1
+XMpcasref_dumm_L[2] VDD VDD VDD VDD pfet_05v0 L=6u W=1u nf=1 m=1
+XMpcasref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=6u W=1u nf=1 m=1
+XMpcasref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=6u W=1u nf=1 m=1
+XRPcas[7] vr_ncas[7] vncas VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[6] vr_ncas[6] vr_ncas[7] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[5] vr_ncas[5] vr_ncas[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[4] vr_ncas[4] vr_ncas[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[3] vr_ncas[3] vr_ncas[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[2] vr_ncas[2] vr_ncas[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[1] vr_ncas[1] vr_ncas[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRPcas[0] vnref vr_ncas[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+.ends
