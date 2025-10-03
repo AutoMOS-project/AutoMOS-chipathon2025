@@ -1,3 +1,6 @@
 [submodule "designs/gLayout"]
 	path = designs/gLayout
 	url = https://github.com/AutoMOS-project/gLayout-AutoMOS-cp25
+[submodule "designs/globalfoundries-pdk-libs-gf180mcu_fd_pv"]
+	path = designs/globalfoundries-pdk-libs-gf180mcu_fd_pv
+	url = git@github.com:LuighiV/globalfoundries-pdk-libs-gf180mcu_fd_pv.git
