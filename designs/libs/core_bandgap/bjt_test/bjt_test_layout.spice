@@ -1,0 +1,20 @@
+* NGSPICE file created from bjt_test.ext - technology: gf180mcuD
+
+.subckt pnp_05p00x00p42_0 E C B
+X0 E B C pnp_05p00x00p42
+**devattr s=84000,2168 d=84000,2168
+.ends
+
+.subckt pnp_05p00x00p42 I1_default_E I1_default_B VSUBS
+Xpnp_05p00x00p42_0_0 I1_default_E VSUBS I1_default_B pnp_05p00x00p42_0
+.ends
+
+.subckt pnp_bjt$1 pnp_05p00x00p42_0/I1_default_E pnp_05p00x00p42_0/I1_default_B VSUBS
+Xpnp_05p00x00p42_0 pnp_05p00x00p42_0/I1_default_E pnp_05p00x00p42_0/I1_default_B VSUBS
++ pnp_05p00x00p42
+.ends
+
+.subckt bjt_test BC E
+Xpnp_bjt$1_0 E BC BC pnp_bjt$1
+.ends
+

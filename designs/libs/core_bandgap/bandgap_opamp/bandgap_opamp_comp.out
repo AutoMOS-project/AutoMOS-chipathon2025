@@ -50,15 +50,11 @@ Circuit 1: bandgap_opamp                   |Circuit 2: bandgap_opamp
 -------------------------------------------|-------------------------------------------
 cap_mim_2f0_m4m5_noshield (1)              |cap_mim_2f0fF (1)                          
 pfet_05v0 (22->6)                          |pfet_05v0 (22->6)                          
-nfet_05v0 (30->4)                          |nfet_05v0 (152->4)                         
+nfet_05v0 (30->4)                          |nfet_05v0 (30->4)                          
 Number of devices: 11                      |Number of devices: 11                      
 Number of nets: 9                          |Number of nets: 9                          
 ---------------------------------------------------------------------------------------
-Netlists match uniquely with property errors.
-nfet_05v0:2 vs. nfet_05v0:Mnload_dummL[1]:
- w circuit1: 5e-06   circuit2: 6.6e-05   (delta=172%, cutoff=1%)
-pfet_05v0:1 vs. pfet_05v0:Mpref_dumm_L[1]:
- w circuit1: 9e-06   circuit2: 3e-06   (delta=100%, cutoff=1%)
+Netlists match uniquely.
 
 Subcircuit pins:
 Circuit 1: bandgap_opamp                   |Circuit 2: bandgap_opamp                   
@@ -74,7 +70,4 @@ Cell pin lists are equivalent.
 Device classes bandgap_opamp and bandgap_opamp are equivalent.
 
 Final result: Circuits match uniquely.
-Property errors were found.
-
-The following cells had property errors:
- bandgap_opamp
+.
