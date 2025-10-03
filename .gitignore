@@ -46,4 +46,7 @@ gf180mcuD_setup.tcl
 run_lvs.sh
 run_lvs.tcl
 
+designs/reports/*
+designs/libs/core_top/chiptop/metal2/*
+
 .Trash*
