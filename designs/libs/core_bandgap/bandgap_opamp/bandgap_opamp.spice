@@ -12,18 +12,18 @@ XMncs vout vout_1st VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
 XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
 XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
 XC2 vout vout_1st cap_mim_2f0fF c_width=16e-6 c_length=16e-6 m=1
-XMpdiff_dumm_L[3] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
-XMpdiff_dumm_L[2] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
-XMpdiff_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
-XMpdiff_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
-XMnload_dummL[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XMnload_dummL[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XMncs_dumm[7] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[6] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[5] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[4] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[3] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[2] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMncs_dumm[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
+XMpdiff_dumm_L[3] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
+XMpdiff_dumm_L[2] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
+XMpdiff_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
+XMpdiff_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
+XMnload_dummL[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMnload_dummL[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[7] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[6] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[5] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[4] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[3] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[2] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMncs_dumm[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
 .ends
