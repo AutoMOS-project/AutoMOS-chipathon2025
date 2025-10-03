@@ -1,0 +1,85 @@
+
+Circuit 1 cell ppolyf_u_1k_6p0 and Circuit 2 cell ppolyf_u_1k_6p0 are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k_6p0                 |Circuit 2: ppolyf_u_1k_6p0                 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k_6p0 and ppolyf_u_1k_6p0 are equivalent.
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor in circuit biasgen_mirror_2_to_10 (0)(8 instances)
+
+Cell biasgen_mirror_2_to_10 (0) disconnected node: SUB
+Cell biasgen_mirror_2_to_10 (1) disconnected node: SUB
+Class biasgen_mirror_2_to_10 (0):  Merged 3 parallel devices.
+Class biasgen_mirror_2_to_10 (0):  Merged 7 series devices.
+Class biasgen_mirror_2_to_10 (1):  Merged 8 parallel devices.
+Class biasgen_mirror_2_to_10 (1):  Merged 7 series devices.
+Cell biasgen_mirror_2_to_10 (0) disconnected node: SUB
+Cell biasgen_mirror_2_to_10 (1) disconnected node: SUB
+Subcircuit summary:
+Circuit 1: biasgen_mirror_2_to_10          |Circuit 2: biasgen_mirror_2_to_10          
+-------------------------------------------|-------------------------------------------
+ppolyf_u_1k_6p0 (8->1)                     |ppolyf_u_1k_6p0 (8->1)                     
+nfet_05v0 (43->14)                         |nfet_05v0 (43->14)                         
+pfet_05v0 (40->10)                         |pfet_05v0 (40->10)                         
+Number of devices: 25                      |Number of devices: 25                      
+Number of nets: 21                         |Number of nets: 21                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: biasgen_mirror_2_to_10          |Circuit 2: biasgen_mirror_2_to_10          
+-------------------------------------------|-------------------------------------------
+Ibias_2u                                   |Ibias_2u                                   
+Iout_2u_src                                |Iout_2u_src                                
+Iout_10u_src                               |Iout_10u_src                               
+Iout_2u_snk                                |Iout_2u_snk                                
+Iout_10u_snk                               |Iout_10u_snk                               
+EN                                         |EN                                         
+VDD                                        |VDD                                        
+ENB                                        |ENB                                        
+VSS                                        |VSS                                        
+SUB                                        |SUB                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes biasgen_mirror_2_to_10 and biasgen_mirror_2_to_10 are equivalent.
+
+Final result: Circuits match uniquely.
+.
