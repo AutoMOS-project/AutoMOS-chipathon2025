@@ -1,0 +1,75 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 0 -300 20 -300 {}
+L 4 0 -280 20 -280 {}
+L 4 0 -160 20 -160 {}
+L 4 0 -140 20 -140 {}
+L 4 0 -260 20 -260 {}
+L 4 0 -440 20 -440 {}
+L 4 0 -420 20 -420 {}
+L 4 0 -380 20 -380 {}
+L 4 0 -120 20 -120 {}
+L 4 0 -100 20 -100 {}
+L 4 0 -500 20 -500 {}
+L 7 120 -540 120 -520 {}
+L 7 220 -440 240 -440 {}
+L 7 220 -300 240 -300 {}
+L 7 220 -180 240 -180 {}
+L 7 160 -20 160 0 {}
+L 7 120 -20 120 0 {}
+L 7 0 -240 20 -240 {}
+L 7 0 -400 20 -400 {}
+L 7 0 -360 20 -360 {}
+L 7 0 -180 20 -180 {}
+B 5 117.5 -542.5 122.5 -537.5 {name=VDD dir=inout}
+B 5 -2.5 -302.5 2.5 -297.5 {name=VCO_IN dir=in}
+B 5 237.5 -442.5 242.5 -437.5 {name=LDO_OUT dir=inout}
+B 5 237.5 -302.5 242.5 -297.5 {name=VCO_OUT dir=inout}
+B 5 -2.5 -282.5 2.5 -277.5 {name=VCO_EN dir=in}
+B 5 237.5 -182.5 242.5 -177.5 {name=TEST_OUT dir=inout}
+B 5 -2.5 -162.5 2.5 -157.5 {name=TEST_EN dir=in}
+B 5 -2.5 -142.5 2.5 -137.5 {name=TEST_SEL_0 dir=in}
+B 5 157.5 -2.5 162.5 2.5 {name=SUB dir=inout}
+B 5 117.5 -2.5 122.5 2.5 {name=VSS dir=inout}
+B 5 -2.5 -262.5 2.5 -257.5 {name=VCO_IBIAS_OVRD dir=in}
+B 5 -2.5 -242.5 2.5 -237.5 {name=VCO_IBIAS dir=inout}
+B 5 -2.5 -442.5 2.5 -437.5 {name=LDO_EN dir=in}
+B 5 -2.5 -422.5 2.5 -417.5 {name=LDO_IBIAS_OVRD dir=in}
+B 5 -2.5 -402.5 2.5 -397.5 {name=LDO_IBIAS dir=inout}
+B 5 -2.5 -382.5 2.5 -377.5 {name=LDO_VREF_OVRD dir=in}
+B 5 -2.5 -362.5 2.5 -357.5 {name=LDO_VREF dir=inout}
+B 5 -2.5 -122.5 2.5 -117.5 {name=TEST_SEL_1 dir=in}
+B 5 -2.5 -102.5 2.5 -97.5 {name=TEST_SEL_2 dir=in}
+B 5 -2.5 -182.5 2.5 -177.5 {name=VTEST dir=inout}
+B 5 -2.5 -502.5 2.5 -497.5 {name=BIAS_EN dir=in}
+P 4 5 220 -520 20 -520 20 -20 220 -20 220 -520 {}
+T {@symname} 68.5 -216 0 0 0.3 0.3 {}
+T {@name} 185 -542 0 0 0.2 0.2 {}
+T {VDD} 116 -515 3 1 0.2 0.2 {}
+T {VCO_IN} 25 -304 0 0 0.2 0.2 {}
+T {LDO_OUT} 215 -444 0 1 0.2 0.2 {}
+T {VCO_OUT} 215 -304 0 1 0.2 0.2 {}
+T {VCO_EN} 25 -284 0 0 0.2 0.2 {}
+T {TEST_OUT} 215 -184 0 1 0.2 0.2 {}
+T {TEST_EN} 25 -164 0 0 0.2 0.2 {}
+T {TEST_SEL_0} 25 -144 0 0 0.2 0.2 {}
+T {SUB} 164 -25 1 1 0.2 0.2 {}
+T {VSS} 124 -25 1 1 0.2 0.2 {}
+T {VCO_IBIAS_OVRD} 25 -264 0 0 0.2 0.2 {}
+T {VCO_IBIAS} 25 -244 0 0 0.2 0.2 {}
+T {LDO_EN} 25 -444 0 0 0.2 0.2 {}
+T {LDO_IBIAS_OVRD} 25 -424 0 0 0.2 0.2 {}
+T {LDO_IBIAS} 25 -404 0 0 0.2 0.2 {}
+T {LDO_VREF_OVRD} 25 -384 0 0 0.2 0.2 {}
+T {LDO_VREF} 25 -364 0 0 0.2 0.2 {}
+T {TEST_SEL_1} 25 -124 0 0 0.2 0.2 {}
+T {TEST_SEL_2} 25 -104 0 0 0.2 0.2 {}
+T {VTEST} 25 -184 0 0 0.2 0.2 {}
+T {BIAS_EN} 25 -504 0 0 0.2 0.2 {}
