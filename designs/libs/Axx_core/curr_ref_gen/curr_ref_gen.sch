@@ -68,6 +68,6 @@ C {iopin.sym} 990 -370 0 0 {name=p14 lab=Iref2n}
 C {iopin.sym} 990 -430 0 0 {name=p16 lab=Iref2p}
 C {lab_pin.sym} 870 -370 0 1 {name=p17 sig_type=std_logic lab=Iref2n}
 C {lab_pin.sym} 870 -430 0 1 {name=p18 sig_type=std_logic lab=Iref2p}
-C {libs/core_top/Axx_top/error_amplifier_N_input_v3.sym} 460 -470 0 0 {}
-C {libs/core_top/Axx_top/current_reference_second_stage_v2.sym} 730 -400 0 0 {name=x1}
 C {title.sym} 170 -30 0 0 {name=l1 author="Julian Romero & Alex Mantilla"}
+C {libs/Axx_core/error_amplifier/error_amplifier.sym} 460 -470 0 0 {}
+C {libs/Axx_core/curr_ref_gen_2nd_stage/curr_ref_gen_2nd_stage.sym} 730 -400 0 0 {name=x1}

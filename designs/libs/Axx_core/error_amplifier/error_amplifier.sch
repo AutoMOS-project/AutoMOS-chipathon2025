@@ -39,6 +39,6 @@ C {noconn.sym} 490 -200 2 0 {name=l1}
 C {devices/lab_wire.sym} 770 -180 0 0 {name=p13 sig_type=std_logic lab=VbiasP2}
 C {devices/lab_wire.sym} 770 -160 0 0 {name=p16 sig_type=std_logic lab=VbiasN2}
 C {devices/lab_wire.sym} 770 -140 0 0 {name=p17 sig_type=std_logic lab=VbiasN1}
-C {libs/core_top/Axx_top/error_amplifier_N_input_core_v3.sym} 840 -330 0 0 {name=x1}
-C {libs/core_top/Axx_top/error_amplifier_N_input_bias_v3.sym} 350 -170 0 0 {name=x2}
 C {title.sym} 160 -30 0 0 {name=l2 author="Julian Romero"}
+C {libs/Axx_core/error_amplifier_bias/error_amplifier_bias.sym} 350 -170 0 0 {name=x2}
+C {libs/Axx_core/error_amplifier_core/error_amplifier_core.sym} 840 -330 0 0 {name=x1}
