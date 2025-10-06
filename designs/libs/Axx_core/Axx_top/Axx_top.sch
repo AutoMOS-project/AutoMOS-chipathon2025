@@ -47,7 +47,6 @@ C {iopin.sym} 1090 -690 0 0 {name=p28 lab=Irefp_50uA}
 C {iopin.sym} 1090 -590 0 0 {name=p14 lab=Irefn_20uA}
 C {iopin.sym} 1090 -670 0 0 {name=p16 lab=Irefp_20uA}
 C {iopin.sym} 220 -440 2 0 {name=p1 lab=Vcomp}
-C {libs/core_top/Axx_top/current_reference_generator_v2.sym} 740 -640 0 0 {name=x1}
 C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 1020 -860 0 0 {name=IO1
 spiceprefix=X
 }
@@ -69,3 +68,4 @@ C {lab_wire.sym} 590 -440 0 0 {name=p6 sig_type=std_logic lab=Vcomp_2nd}
 C {lab_wire.sym} 560 -720 0 0 {name=p7 sig_type=std_logic lab=Vref_2nd}
 C {lab_wire.sym} 960 -860 0 0 {name=p8 sig_type=std_logic lab=Vrefp_2nd}
 C {lab_wire.sym} 960 -470 0 0 {name=p9 sig_type=std_logic lab=Vrefn_2nd}
+C {libs/Axx_core/curr_ref_gen/curr_ref_gen.sym} 740 -640 0 0 {name=x1}
