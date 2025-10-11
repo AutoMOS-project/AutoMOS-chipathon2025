@@ -64,7 +64,6 @@ C {lab_pin.sym} 1080 -520 2 1 {name=p15 lab=VSS}
 C {ipin.sym} 80 -610 0 0 {name=p16 lab=PU}
 C {ipin.sym} 80 -650 0 0 {name=p17 lab=PD}
 C {ipin.sym} 80 -840 0 0 {name=p120 lab=EN}
-C {input_core/top_level.sym} 820 -290 0 0 {name=x1}
 C {/foss/designs/AutoMOS-chipathon2025/designs/Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 490 -760 0 1 {name=IO1
 spiceprefix=X
 }
@@ -77,3 +76,4 @@ spiceprefix=X
 C {/foss/designs/AutoMOS-chipathon2025/designs/gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 440 -570 0 1 {name=SC1
 spiceprefix=X
 }
+C {top_level/top_level.sym} 820 -290 0 0 {name=x1}
