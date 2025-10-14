@@ -1,0 +1,59 @@
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+Flattening unmatched subcell test_tg in circuit top_amux_2x1 (1)(2 instances)
+Flattening unmatched subcell test_inv in circuit top_amux_2x1 (1)(2 instances)
+Flattening unmatched subcell biasgen_inverter in circuit top_amux_2x1 (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: top_amux_2x1                    |Circuit 2: top_amux_2x1                    
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (15->5)                          |pfet_05v0 (15->5)                          
+nfet_05v0 (7->5)                           |nfet_05v0 (7->5)                           
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: top_amux_2x1                    |Circuit 2: top_amux_2x1                    
+-------------------------------------------|-------------------------------------------
+EN                                         |EN                                         
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+OUT                                        |OUT                                        
+IN0                                        |IN0                                        
+IN1                                        |IN1                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes top_amux_2x1 and top_amux_2x1 are equivalent.
+
+Final result: Circuits match uniquely.
+.

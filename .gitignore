@@ -47,6 +47,6 @@ run_lvs.sh
 run_lvs.tcl
 
 designs/reports/*
-designs/libs/core_top/chiptop/metal2/*
+designs/libs/A_track_core/chiptop_A_track/metal2/*
 
 .Trash*
