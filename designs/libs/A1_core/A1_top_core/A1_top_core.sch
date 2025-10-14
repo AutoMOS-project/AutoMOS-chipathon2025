@@ -63,13 +63,13 @@ C {lab_wire.sym} 240 -720 0 0 {name=p18 sig_type=std_logic lab=bandgap_fb}
 C {lab_wire.sym} 1330 -930 0 0 {name=p19 sig_type=std_logic lab=ldo_fb}
 C {lab_wire.sym} 420 -740 0 1 {name=p20 lab=ICTAT}
 C {lab_wire.sym} 420 -780 0 1 {name=p21 lab=VZTC}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -890 0 0 {name=xI_mux_ldoref}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -740 0 0 {name=xI_mux_ldobias}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -890 0 0 {name=xI_mux_ldoref}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -740 0 0 {name=xI_mux_ldobias}
 C {lab_wire.sym} 1110 -860 0 1 {name=p25 lab=VDD}
 C {lab_wire.sym} 1110 -740 2 0 {name=p27 lab=VSS}
 C {lab_wire.sym} 1110 -1010 0 1 {name=p56 lab=VDD}
 C {lab_wire.sym} 1110 -890 2 0 {name=p57 lab=VSS}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -520 0 0 {name=xI_mux_ldobias1}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -520 0 0 {name=xI_mux_ldobias1}
 C {lab_wire.sym} 1110 -640 0 1 {name=p58 lab=VDD}
 C {lab_wire.sym} 1110 -520 2 0 {name=p59 lab=VSS}
 C {lab_wire.sym} 740 -780 0 1 {name=p60 lab=IPTAT_2u_src}

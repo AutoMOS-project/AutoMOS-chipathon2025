@@ -56,7 +56,7 @@ C {lab_wire.sym} 1420 -830 1 1 {name=p29 lab=VSS}
 C {lab_wire.sym} 1430 -420 0 1 {name=p36 lab=VTEST}
 C {lab_wire.sym} 1450 -120 1 1 {name=p37 lab=SUB}
 C {lab_wire.sym} 1430 -120 1 1 {name=p38 lab=VSS}
-C {lab_wire.sym} 1410 -700 0 1 {name=p39 lab=VDD}
+C {lab_wire.sym} 1410 -700 0 1 {name=p39 lab=LDO_OUT}
 C {lab_wire.sym} 1510 -640 0 1 {name=p40 lab=VCO_OUT}
 C {lab_wire.sym} 1430 -540 1 1 {name=p41 lab=SUB}
 C {lab_wire.sym} 1410 -540 1 1 {name=p42 lab=VSS}
@@ -76,13 +76,13 @@ C {lab_wire.sym} 740 -560 0 1 {name=p44 lab=VREF_0P9V}
 C {lab_wire.sym} 740 -540 0 1 {name=p45 lab=VREF_0P5V}
 C {lab_wire.sym} 740 -580 0 1 {name=p54 lab=VREF_1V}
 C {lab_wire.sym} 740 -600 0 1 {name=p55 lab=VBG_buf}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -890 0 0 {name=xI_mux_ldoref}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -740 0 0 {name=xI_mux_ldobias}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -890 0 0 {name=xI_mux_ldoref}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -740 0 0 {name=xI_mux_ldobias}
 C {lab_wire.sym} 1110 -860 0 1 {name=p25 lab=VDD}
 C {lab_wire.sym} 1110 -740 2 0 {name=p27 lab=VSS}
 C {lab_wire.sym} 1110 -1010 0 1 {name=p56 lab=VDD}
 C {lab_wire.sym} 1110 -890 2 0 {name=p57 lab=VSS}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -520 0 0 {name=xI_mux_ldobias1}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -520 0 0 {name=xI_mux_ldobias1}
 C {lab_wire.sym} 1110 -640 0 1 {name=p58 lab=VDD}
 C {lab_wire.sym} 1110 -520 2 0 {name=p59 lab=VSS}
 C {lab_wire.sym} 1030 -970 0 0 {name=p34 lab=VREF_0P9V}
@@ -119,7 +119,7 @@ C {ipin.sym} 180 -250 0 0 {name=p85 lab=VCO_IBIAS_OVRD}
 C {ipin.sym} 180 -220 0 0 {name=p86 lab=TEST_IBIAS_OVRD}
 C {ipin.sym} 180 -840 0 0 {name=p87 lab=BIAS_EN}
 C {lab_wire.sym} 500 -540 0 0 {name=p88 lab=BIAS_EN}
-C {libs/core_top/top_amux_2x1/top_amux_2x1.sym} 1030 -300 0 0 {name=xI_mux_ldobias2}
+C {libs/A1_core/top_amux_2x1/top_amux_2x1.sym} 1030 -300 0 0 {name=xI_mux_ldobias2}
 C {lab_wire.sym} 1110 -420 0 1 {name=p89 lab=VTEST}
 C {lab_wire.sym} 1110 -300 2 0 {name=p90 lab=VSS}
 C {lab_wire.sym} 1030 -360 0 0 {name=p92 lab=TEST_IBIAS}

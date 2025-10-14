@@ -315,8 +315,8 @@ C {lab_pin.sym} 340 -4310 0 0 {name=p172 lab=DVDD}
 C {lab_pin.sym} 340 -4150 0 0 {name=p173 lab=DVSS}
 C {lab_pin.sym} 380 -4310 0 1 {name=p174 lab=VDD}
 C {lab_pin.sym} 380 -4150 0 1 {name=p175 lab=VSS}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1020 -4110 0 1 {name=x21}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 880 -4170 0 1 {name=x22}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1020 -4110 0 1 {name=x21}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 880 -4170 0 1 {name=x22}
 C {lab_pin.sym} 980 -4230 0 1 {name=p176 lab=VDD}
 C {lab_pin.sym} 980 -4110 0 1 {name=p177 lab=VSS}
 C {lab_pin.sym} 840 -4170 0 1 {name=p178 lab=VSS}
