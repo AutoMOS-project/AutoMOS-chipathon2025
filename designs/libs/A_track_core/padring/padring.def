@@ -1,0 +1,741 @@
+DESIGN chipathon2025_1_padring ;
+UNITS DISTANCE MICRONS 100 ; 
+COMPONENTS 368 ;
+  - CORNER_4 gf180mcu_fd_io__cor
+    + PLACED ( 0 258000 ) E ;
+  - CORNER_3 gf180mcu_fd_io__cor
+    + PLACED ( 258000 258000 ) S ;
+  - CORNER_2 gf180mcu_fd_io__cor
+    + PLACED ( 0 0 ) N ;
+  - CORNER_1 gf180mcu_fd_io__cor
+    + PLACED ( 258000 0 ) W ;
+  - FILLER_0 gf180mcu_fd_io__fill10
+    + PLACED ( 35500 258500 )  S ;
+  - f8 gf180mcu_fd_io__brk5
+    + PLACED ( 36500 258500 )  S ;
+  - FILLER_1 gf180mcu_fd_io__fill10
+    + PLACED ( 37000 258500 )  S ;
+  - TEST_OUT gf180mcu_fd_io__asig_5p0
+    + PLACED ( 38000 258500 )  S ;
+  - FILLER_2 gf180mcu_fd_io__fill10
+    + PLACED ( 45500 258500 )  S ;
+  - FILLER_3 gf180mcu_fd_io__fill10
+    + PLACED ( 46500 258500 )  S ;
+  - FILLER_4 gf180mcu_fd_io__fill5
+    + PLACED ( 47500 258500 )  S ;
+  - TEST_SEL_2 gf180mcu_fd_io__bi_t
+    + PLACED ( 48000 258500 )  S ;
+  - FILLER_5 gf180mcu_fd_io__fill10
+    + PLACED ( 55500 258500 )  S ;
+  - FILLER_6 gf180mcu_fd_io__fill10
+    + PLACED ( 56500 258500 )  S ;
+  - FILLER_7 gf180mcu_fd_io__fill5
+    + PLACED ( 57500 258500 )  S ;
+  - TEST_SEL_1 gf180mcu_fd_io__bi_t
+    + PLACED ( 58000 258500 )  S ;
+  - FILLER_8 gf180mcu_fd_io__fill10
+    + PLACED ( 65500 258500 )  S ;
+  - FILLER_9 gf180mcu_fd_io__fill10
+    + PLACED ( 66500 258500 )  S ;
+  - FILLER_10 gf180mcu_fd_io__fill5
+    + PLACED ( 67500 258500 )  S ;
+  - TEST_SEL_0 gf180mcu_fd_io__bi_t
+    + PLACED ( 68000 258500 )  S ;
+  - FILLER_11 gf180mcu_fd_io__fill10
+    + PLACED ( 75500 258500 )  S ;
+  - FILLER_12 gf180mcu_fd_io__fill10
+    + PLACED ( 76500 258500 )  S ;
+  - FILLER_13 gf180mcu_fd_io__fill5
+    + PLACED ( 77500 258500 )  S ;
+  - TEST_EN gf180mcu_fd_io__bi_t
+    + PLACED ( 78000 258500 )  S ;
+  - FILLER_14 gf180mcu_fd_io__fill10
+    + PLACED ( 85500 258500 )  S ;
+  - FILLER_15 gf180mcu_fd_io__fill10
+    + PLACED ( 86500 258500 )  S ;
+  - FILLER_16 gf180mcu_fd_io__fill5
+    + PLACED ( 87500 258500 )  S ;
+  - TEST_IBIAS gf180mcu_fd_io__asig_5p0
+    + PLACED ( 88000 258500 )  S ;
+  - FILLER_17 gf180mcu_fd_io__fill10
+    + PLACED ( 95500 258500 )  S ;
+  - FILLER_18 gf180mcu_fd_io__fill10
+    + PLACED ( 96500 258500 )  S ;
+  - FILLER_19 gf180mcu_fd_io__fill5
+    + PLACED ( 97500 258500 )  S ;
+  - TEST_IBIAS_OVRD gf180mcu_fd_io__bi_t
+    + PLACED ( 98000 258500 )  S ;
+  - FILLER_20 gf180mcu_fd_io__fill10
+    + PLACED ( 105500 258500 )  S ;
+  - FILLER_21 gf180mcu_fd_io__fill10
+    + PLACED ( 106500 258500 )  S ;
+  - FILLER_22 gf180mcu_fd_io__fill5
+    + PLACED ( 107500 258500 )  S ;
+  - VTEST gf180mcu_fd_io__dvdd
+    + PLACED ( 108000 258500 )  S ;
+  - FILLER_23 gf180mcu_fd_io__fill10
+    + PLACED ( 115500 258500 )  S ;
+  - f7 gf180mcu_fd_io__brk5
+    + PLACED ( 116500 258500 )  S ;
+  - FILLER_24 gf180mcu_fd_io__fill10
+    + PLACED ( 117000 258500 )  S ;
+  - VCO_OUT gf180mcu_fd_io__bi_t
+    + PLACED ( 118000 258500 )  S ;
+  - FILLER_25 gf180mcu_fd_io__fill10
+    + PLACED ( 125500 258500 )  S ;
+  - FILLER_26 gf180mcu_fd_io__fill10
+    + PLACED ( 126500 258500 )  S ;
+  - FILLER_27 gf180mcu_fd_io__fill5
+    + PLACED ( 127500 258500 )  S ;
+  - VCO_EN gf180mcu_fd_io__bi_t
+    + PLACED ( 128000 258500 )  S ;
+  - FILLER_28 gf180mcu_fd_io__fill10
+    + PLACED ( 135500 258500 )  S ;
+  - FILLER_29 gf180mcu_fd_io__fill10
+    + PLACED ( 136500 258500 )  S ;
+  - FILLER_30 gf180mcu_fd_io__fill5
+    + PLACED ( 137500 258500 )  S ;
+  - VCO_IN gf180mcu_fd_io__asig_5p0
+    + PLACED ( 138000 258500 )  S ;
+  - FILLER_31 gf180mcu_fd_io__fill10
+    + PLACED ( 145500 258500 )  S ;
+  - FILLER_32 gf180mcu_fd_io__fill10
+    + PLACED ( 146500 258500 )  S ;
+  - FILLER_33 gf180mcu_fd_io__fill5
+    + PLACED ( 147500 258500 )  S ;
+  - LDO_OUT gf180mcu_fd_io__dvdd
+    + PLACED ( 148000 258500 )  S ;
+  - FILLER_34 gf180mcu_fd_io__fill10
+    + PLACED ( 155500 258500 )  S ;
+  - f7 gf180mcu_fd_io__brk5
+    + PLACED ( 156500 258500 )  S ;
+  - FILLER_35 gf180mcu_fd_io__fill10
+    + PLACED ( 157000 258500 )  S ;
+  - VCO_IBIAS gf180mcu_fd_io__asig_5p0
+    + PLACED ( 158000 258500 )  S ;
+  - FILLER_36 gf180mcu_fd_io__fill10
+    + PLACED ( 165500 258500 )  S ;
+  - FILLER_37 gf180mcu_fd_io__fill10
+    + PLACED ( 166500 258500 )  S ;
+  - FILLER_38 gf180mcu_fd_io__fill5
+    + PLACED ( 167500 258500 )  S ;
+  - VCO_IBIAS_OVRD gf180mcu_fd_io__bi_t
+    + PLACED ( 168000 258500 )  S ;
+  - FILLER_39 gf180mcu_fd_io__fill10
+    + PLACED ( 175500 258500 )  S ;
+  - FILLER_40 gf180mcu_fd_io__fill10
+    + PLACED ( 176500 258500 )  S ;
+  - FILLER_41 gf180mcu_fd_io__fill5
+    + PLACED ( 177500 258500 )  S ;
+  - LDO_IBIAS gf180mcu_fd_io__asig_5p0
+    + PLACED ( 178000 258500 )  S ;
+  - FILLER_42 gf180mcu_fd_io__fill10
+    + PLACED ( 185500 258500 )  S ;
+  - FILLER_43 gf180mcu_fd_io__fill10
+    + PLACED ( 186500 258500 )  S ;
+  - FILLER_44 gf180mcu_fd_io__fill5
+    + PLACED ( 187500 258500 )  S ;
+  - LDO_IBIAS_OVRD gf180mcu_fd_io__bi_t
+    + PLACED ( 188000 258500 )  S ;
+  - FILLER_45 gf180mcu_fd_io__fill10
+    + PLACED ( 195500 258500 )  S ;
+  - FILLER_46 gf180mcu_fd_io__fill10
+    + PLACED ( 196500 258500 )  S ;
+  - FILLER_47 gf180mcu_fd_io__fill5
+    + PLACED ( 197500 258500 )  S ;
+  - LDO_VREF gf180mcu_fd_io__asig_5p0
+    + PLACED ( 198000 258500 )  S ;
+  - FILLER_48 gf180mcu_fd_io__fill10
+    + PLACED ( 205500 258500 )  S ;
+  - FILLER_49 gf180mcu_fd_io__fill10
+    + PLACED ( 206500 258500 )  S ;
+  - FILLER_50 gf180mcu_fd_io__fill5
+    + PLACED ( 207500 258500 )  S ;
+  - LDO_VREF_OVRD gf180mcu_fd_io__bi_t
+    + PLACED ( 208000 258500 )  S ;
+  - FILLER_51 gf180mcu_fd_io__fill10
+    + PLACED ( 215500 258500 )  S ;
+  - FILLER_52 gf180mcu_fd_io__fill10
+    + PLACED ( 216500 258500 )  S ;
+  - FILLER_53 gf180mcu_fd_io__fill5
+    + PLACED ( 217500 258500 )  S ;
+  - LDO_EN gf180mcu_fd_io__bi_t
+    + PLACED ( 218000 258500 )  S ;
+  - FILLER_54 gf180mcu_fd_io__fill10
+    + PLACED ( 225500 258500 )  S ;
+  - FILLER_55 gf180mcu_fd_io__fill10
+    + PLACED ( 226500 258500 )  S ;
+  - FILLER_56 gf180mcu_fd_io__fill5
+    + PLACED ( 227500 258500 )  S ;
+  - BIAS_EN gf180mcu_fd_io__bi_t
+    + PLACED ( 228000 258500 )  S ;
+  - FILLER_57 gf180mcu_fd_io__fill10
+    + PLACED ( 235500 258500 )  S ;
+  - FILLER_58 gf180mcu_fd_io__fill10
+    + PLACED ( 236500 258500 )  S ;
+  - FILLER_59 gf180mcu_fd_io__fill5
+    + PLACED ( 237500 258500 )  S ;
+  - VSS_A1 gf180mcu_fd_io__dvss
+    + PLACED ( 238000 258500 )  S ;
+  - FILLER_60 gf180mcu_fd_io__fill10
+    + PLACED ( 245500 258500 )  S ;
+  - FILLER_61 gf180mcu_fd_io__fill10
+    + PLACED ( 246500 258500 )  S ;
+  - FILLER_62 gf180mcu_fd_io__fill5
+    + PLACED ( 247500 258500 )  S ;
+  - VDD_A1 gf180mcu_fd_io__dvdd
+    + PLACED ( 248000 258500 )  S ;
+  - FILLER_63 gf180mcu_fd_io__fill10
+    + PLACED ( 255500 258500 )  S ;
+  - f6 gf180mcu_fd_io__brk5
+    + PLACED ( 256500 258500 )  S ;
+  - FILLER_64 gf180mcu_fd_io__fill10
+    + PLACED ( 257000 258500 )  S ;
+  - FILLER_65 gf180mcu_fd_io__fill10
+    + PLACED ( 35500 0 )  N ;
+  - FILLER_66 gf180mcu_fd_io__fill10
+    + PLACED ( 36500 0 )  N ;
+  - FILLER_67 gf180mcu_fd_io__fill5
+    + PLACED ( 37500 0 )  N ;
+  - VSS_A2 gf180mcu_fd_io__dvss
+    + PLACED ( 38000 0 )  N ;
+  - FILLER_68 gf180mcu_fd_io__fill10
+    + PLACED ( 45500 0 )  N ;
+  - FILLER_69 gf180mcu_fd_io__fill10
+    + PLACED ( 46500 0 )  N ;
+  - FILLER_70 gf180mcu_fd_io__fill5
+    + PLACED ( 47500 0 )  N ;
+  - RST_N_A2 gf180mcu_fd_io__bi_t
+    + PLACED ( 48000 0 )  N ;
+  - FILLER_71 gf180mcu_fd_io__fill10
+    + PLACED ( 55500 0 )  N ;
+  - f2 gf180mcu_fd_io__brk5
+    + PLACED ( 56500 0 )  N ;
+  - FILLER_72 gf180mcu_fd_io__fill10
+    + PLACED ( 57000 0 )  N ;
+  - ana57 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 58000 0 )  N ;
+  - FILLER_73 gf180mcu_fd_io__fill10
+    + PLACED ( 65500 0 )  N ;
+  - FILLER_74 gf180mcu_fd_io__fill10
+    + PLACED ( 66500 0 )  N ;
+  - FILLER_75 gf180mcu_fd_io__fill5
+    + PLACED ( 67500 0 )  N ;
+  - VDD3V3_AXX gf180mcu_fd_io__dvdd
+    + PLACED ( 68000 0 )  N ;
+  - FILLER_76 gf180mcu_fd_io__fill10
+    + PLACED ( 75500 0 )  N ;
+  - FILLER_77 gf180mcu_fd_io__fill10
+    + PLACED ( 76500 0 )  N ;
+  - FILLER_78 gf180mcu_fd_io__fill5
+    + PLACED ( 77500 0 )  N ;
+  - VREF12 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 78000 0 )  N ;
+  - FILLER_79 gf180mcu_fd_io__fill10
+    + PLACED ( 85500 0 )  N ;
+  - FILLER_80 gf180mcu_fd_io__fill10
+    + PLACED ( 86500 0 )  N ;
+  - FILLER_81 gf180mcu_fd_io__fill5
+    + PLACED ( 87500 0 )  N ;
+  - VCOMP gf180mcu_fd_io__asig_5p0
+    + PLACED ( 88000 0 )  N ;
+  - FILLER_82 gf180mcu_fd_io__fill10
+    + PLACED ( 95500 0 )  N ;
+  - FILLER_83 gf180mcu_fd_io__fill10
+    + PLACED ( 96500 0 )  N ;
+  - FILLER_84 gf180mcu_fd_io__fill5
+    + PLACED ( 97500 0 )  N ;
+  - VSS_AXX gf180mcu_fd_io__dvss
+    + PLACED ( 98000 0 )  N ;
+  - FILLER_85 gf180mcu_fd_io__fill10
+    + PLACED ( 105500 0 )  N ;
+  - FILLER_86 gf180mcu_fd_io__fill10
+    + PLACED ( 106500 0 )  N ;
+  - FILLER_87 gf180mcu_fd_io__fill5
+    + PLACED ( 107500 0 )  N ;
+  - IOUTN_2UA gf180mcu_fd_io__asig_5p0
+    + PLACED ( 108000 0 )  N ;
+  - FILLER_88 gf180mcu_fd_io__fill10
+    + PLACED ( 115500 0 )  N ;
+  - FILLER_89 gf180mcu_fd_io__fill10
+    + PLACED ( 116500 0 )  N ;
+  - FILLER_90 gf180mcu_fd_io__fill5
+    + PLACED ( 117500 0 )  N ;
+  - IOUTP_2UA gf180mcu_fd_io__asig_5p0
+    + PLACED ( 118000 0 )  N ;
+  - FILLER_91 gf180mcu_fd_io__fill10
+    + PLACED ( 125500 0 )  N ;
+  - FILLER_92 gf180mcu_fd_io__fill10
+    + PLACED ( 126500 0 )  N ;
+  - FILLER_93 gf180mcu_fd_io__fill5
+    + PLACED ( 127500 0 )  N ;
+  - IOUTN_20UA gf180mcu_fd_io__asig_5p0
+    + PLACED ( 128000 0 )  N ;
+  - FILLER_94 gf180mcu_fd_io__fill10
+    + PLACED ( 135500 0 )  N ;
+  - FILLER_95 gf180mcu_fd_io__fill10
+    + PLACED ( 136500 0 )  N ;
+  - FILLER_96 gf180mcu_fd_io__fill5
+    + PLACED ( 137500 0 )  N ;
+  - IOUTP_20UA gf180mcu_fd_io__asig_5p0
+    + PLACED ( 138000 0 )  N ;
+  - FILLER_97 gf180mcu_fd_io__fill10
+    + PLACED ( 145500 0 )  N ;
+  - FILLER_98 gf180mcu_fd_io__fill10
+    + PLACED ( 146500 0 )  N ;
+  - FILLER_99 gf180mcu_fd_io__fill5
+    + PLACED ( 147500 0 )  N ;
+  - IOUTN_50UA gf180mcu_fd_io__asig_5p0
+    + PLACED ( 148000 0 )  N ;
+  - FILLER_100 gf180mcu_fd_io__fill10
+    + PLACED ( 155500 0 )  N ;
+  - FILLER_101 gf180mcu_fd_io__fill10
+    + PLACED ( 156500 0 )  N ;
+  - FILLER_102 gf180mcu_fd_io__fill5
+    + PLACED ( 157500 0 )  N ;
+  - IOUTP_50UA gf180mcu_fd_io__asig_5p0
+    + PLACED ( 158000 0 )  N ;
+  - FILLER_103 gf180mcu_fd_io__fill10
+    + PLACED ( 165500 0 )  N ;
+  - FILLER_104 gf180mcu_fd_io__fill10
+    + PLACED ( 166500 0 )  N ;
+  - FILLER_105 gf180mcu_fd_io__fill5
+    + PLACED ( 167500 0 )  N ;
+  - VREFN_AXX gf180mcu_fd_io__asig_5p0
+    + PLACED ( 168000 0 )  N ;
+  - FILLER_106 gf180mcu_fd_io__fill10
+    + PLACED ( 175500 0 )  N ;
+  - FILLER_107 gf180mcu_fd_io__fill10
+    + PLACED ( 176500 0 )  N ;
+  - FILLER_108 gf180mcu_fd_io__fill5
+    + PLACED ( 177500 0 )  N ;
+  - VREFP_AXX gf180mcu_fd_io__asig_5p0
+    + PLACED ( 178000 0 )  N ;
+  - FILLER_109 gf180mcu_fd_io__fill10
+    + PLACED ( 185500 0 )  N ;
+  - FILLER_110 gf180mcu_fd_io__fill10
+    + PLACED ( 186500 0 )  N ;
+  - FILLER_111 gf180mcu_fd_io__fill5
+    + PLACED ( 187500 0 )  N ;
+  - ana47 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 188000 0 )  N ;
+  - FILLER_112 gf180mcu_fd_io__fill10
+    + PLACED ( 195500 0 )  N ;
+  - f3 gf180mcu_fd_io__brk5
+    + PLACED ( 196500 0 )  N ;
+  - FILLER_113 gf180mcu_fd_io__fill10
+    + PLACED ( 197000 0 )  N ;
+  - VIN_V_LO_A5 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 198000 0 )  N ;
+  - FILLER_114 gf180mcu_fd_io__fill10
+    + PLACED ( 205500 0 )  N ;
+  - FILLER_115 gf180mcu_fd_io__fill10
+    + PLACED ( 206500 0 )  N ;
+  - FILLER_116 gf180mcu_fd_io__fill5
+    + PLACED ( 207500 0 )  N ;
+  - VIN_V_RF_A5 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 208000 0 )  N ;
+  - FILLER_117 gf180mcu_fd_io__fill10
+    + PLACED ( 215500 0 )  N ;
+  - FILLER_118 gf180mcu_fd_io__fill10
+    + PLACED ( 216500 0 )  N ;
+  - FILLER_119 gf180mcu_fd_io__fill5
+    + PLACED ( 217500 0 )  N ;
+  - VSS_A5 gf180mcu_fd_io__dvss
+    + PLACED ( 218000 0 )  N ;
+  - FILLER_120 gf180mcu_fd_io__fill10
+    + PLACED ( 225500 0 )  N ;
+  - FILLER_121 gf180mcu_fd_io__fill10
+    + PLACED ( 226500 0 )  N ;
+  - FILLER_122 gf180mcu_fd_io__fill5
+    + PLACED ( 227500 0 )  N ;
+  - VIN_V_RFb_A5 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 228000 0 )  N ;
+  - FILLER_123 gf180mcu_fd_io__fill10
+    + PLACED ( 235500 0 )  N ;
+  - FILLER_124 gf180mcu_fd_io__fill10
+    + PLACED ( 236500 0 )  N ;
+  - FILLER_125 gf180mcu_fd_io__fill5
+    + PLACED ( 237500 0 )  N ;
+  - VIN_V_LOb_A5 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 238000 0 )  N ;
+  - FILLER_126 gf180mcu_fd_io__fill10
+    + PLACED ( 245500 0 )  N ;
+  - FILLER_127 gf180mcu_fd_io__fill10
+    + PLACED ( 246500 0 )  N ;
+  - FILLER_128 gf180mcu_fd_io__fill5
+    + PLACED ( 247500 0 )  N ;
+  - I_BIAS_A5 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 248000 0 )  N ;
+  - FILLER_129 gf180mcu_fd_io__fill10
+    + PLACED ( 255500 0 )  N ;
+  - FILLER_130 gf180mcu_fd_io__fill10
+    + PLACED ( 256500 0 )  N ;
+  - FILLER_131 gf180mcu_fd_io__fill5
+    + PLACED ( 257500 0 )  N ;
+  - FILLER_132 gf180mcu_fd_io__fill10
+    + PLACED ( 0 35500 )  E ;
+  - FILLER_133 gf180mcu_fd_io__fill10
+    + PLACED ( 0 36500 )  E ;
+  - FILLER_134 gf180mcu_fd_io__fill5
+    + PLACED ( 0 37500 )  E ;
+  - CLK_IN_A2 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 38000 )  E ;
+  - FILLER_135 gf180mcu_fd_io__fill10
+    + PLACED ( 0 45500 )  E ;
+  - FILLER_136 gf180mcu_fd_io__fill10
+    + PLACED ( 0 46500 )  E ;
+  - FILLER_137 gf180mcu_fd_io__fill5
+    + PLACED ( 0 47500 )  E ;
+  - VDD_A2 gf180mcu_fd_io__dvdd
+    + PLACED ( 0 48000 )  E ;
+  - FILLER_138 gf180mcu_fd_io__fill10
+    + PLACED ( 0 55500 )  E ;
+  - f1 gf180mcu_fd_io__brk5
+    + PLACED ( 0 56500 )  E ;
+  - FILLER_139 gf180mcu_fd_io__fill10
+    + PLACED ( 0 57000 )  E ;
+  - OUT4N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 58000 )  E ;
+  - FILLER_140 gf180mcu_fd_io__fill10
+    + PLACED ( 0 65500 )  E ;
+  - FILLER_141 gf180mcu_fd_io__fill10
+    + PLACED ( 0 66500 )  E ;
+  - FILLER_142 gf180mcu_fd_io__fill5
+    + PLACED ( 0 67500 )  E ;
+  - OUT4P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 68000 )  E ;
+  - FILLER_143 gf180mcu_fd_io__fill10
+    + PLACED ( 0 75500 )  E ;
+  - FILLER_144 gf180mcu_fd_io__fill10
+    + PLACED ( 0 76500 )  E ;
+  - FILLER_145 gf180mcu_fd_io__fill5
+    + PLACED ( 0 77500 )  E ;
+  - OUT3N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 78000 )  E ;
+  - FILLER_146 gf180mcu_fd_io__fill10
+    + PLACED ( 0 85500 )  E ;
+  - FILLER_147 gf180mcu_fd_io__fill10
+    + PLACED ( 0 86500 )  E ;
+  - FILLER_148 gf180mcu_fd_io__fill5
+    + PLACED ( 0 87500 )  E ;
+  - OUT3P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 88000 )  E ;
+  - FILLER_149 gf180mcu_fd_io__fill10
+    + PLACED ( 0 95500 )  E ;
+  - FILLER_150 gf180mcu_fd_io__fill10
+    + PLACED ( 0 96500 )  E ;
+  - FILLER_151 gf180mcu_fd_io__fill5
+    + PLACED ( 0 97500 )  E ;
+  - OUT2N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 98000 )  E ;
+  - FILLER_152 gf180mcu_fd_io__fill10
+    + PLACED ( 0 105500 )  E ;
+  - FILLER_153 gf180mcu_fd_io__fill10
+    + PLACED ( 0 106500 )  E ;
+  - FILLER_154 gf180mcu_fd_io__fill5
+    + PLACED ( 0 107500 )  E ;
+  - OUT2P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 108000 )  E ;
+  - FILLER_155 gf180mcu_fd_io__fill10
+    + PLACED ( 0 115500 )  E ;
+  - FILLER_156 gf180mcu_fd_io__fill10
+    + PLACED ( 0 116500 )  E ;
+  - FILLER_157 gf180mcu_fd_io__fill5
+    + PLACED ( 0 117500 )  E ;
+  - OUT1N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 118000 )  E ;
+  - FILLER_158 gf180mcu_fd_io__fill10
+    + PLACED ( 0 125500 )  E ;
+  - FILLER_159 gf180mcu_fd_io__fill10
+    + PLACED ( 0 126500 )  E ;
+  - FILLER_160 gf180mcu_fd_io__fill5
+    + PLACED ( 0 127500 )  E ;
+  - OUT1P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 128000 )  E ;
+  - FILLER_161 gf180mcu_fd_io__fill10
+    + PLACED ( 0 135500 )  E ;
+  - FILLER_162 gf180mcu_fd_io__fill10
+    + PLACED ( 0 136500 )  E ;
+  - FILLER_163 gf180mcu_fd_io__fill5
+    + PLACED ( 0 137500 )  E ;
+  - IN4N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 138000 )  E ;
+  - FILLER_164 gf180mcu_fd_io__fill10
+    + PLACED ( 0 145500 )  E ;
+  - FILLER_165 gf180mcu_fd_io__fill10
+    + PLACED ( 0 146500 )  E ;
+  - FILLER_166 gf180mcu_fd_io__fill5
+    + PLACED ( 0 147500 )  E ;
+  - IN4P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 148000 )  E ;
+  - FILLER_167 gf180mcu_fd_io__fill10
+    + PLACED ( 0 155500 )  E ;
+  - FILLER_168 gf180mcu_fd_io__fill10
+    + PLACED ( 0 156500 )  E ;
+  - FILLER_169 gf180mcu_fd_io__fill5
+    + PLACED ( 0 157500 )  E ;
+  - IN3N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 158000 )  E ;
+  - FILLER_170 gf180mcu_fd_io__fill10
+    + PLACED ( 0 165500 )  E ;
+  - FILLER_171 gf180mcu_fd_io__fill10
+    + PLACED ( 0 166500 )  E ;
+  - FILLER_172 gf180mcu_fd_io__fill5
+    + PLACED ( 0 167500 )  E ;
+  - IN3P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 168000 )  E ;
+  - FILLER_173 gf180mcu_fd_io__fill10
+    + PLACED ( 0 175500 )  E ;
+  - FILLER_174 gf180mcu_fd_io__fill10
+    + PLACED ( 0 176500 )  E ;
+  - FILLER_175 gf180mcu_fd_io__fill5
+    + PLACED ( 0 177500 )  E ;
+  - IN2N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 178000 )  E ;
+  - FILLER_176 gf180mcu_fd_io__fill10
+    + PLACED ( 0 185500 )  E ;
+  - FILLER_177 gf180mcu_fd_io__fill10
+    + PLACED ( 0 186500 )  E ;
+  - FILLER_178 gf180mcu_fd_io__fill5
+    + PLACED ( 0 187500 )  E ;
+  - IN2P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 188000 )  E ;
+  - FILLER_179 gf180mcu_fd_io__fill10
+    + PLACED ( 0 195500 )  E ;
+  - FILLER_180 gf180mcu_fd_io__fill10
+    + PLACED ( 0 196500 )  E ;
+  - FILLER_181 gf180mcu_fd_io__fill5
+    + PLACED ( 0 197500 )  E ;
+  - IN1N_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 198000 )  E ;
+  - FILLER_182 gf180mcu_fd_io__fill10
+    + PLACED ( 0 205500 )  E ;
+  - FILLER_183 gf180mcu_fd_io__fill10
+    + PLACED ( 0 206500 )  E ;
+  - FILLER_184 gf180mcu_fd_io__fill5
+    + PLACED ( 0 207500 )  E ;
+  - IN1P_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 208000 )  E ;
+  - FILLER_185 gf180mcu_fd_io__fill10
+    + PLACED ( 0 215500 )  E ;
+  - FILLER_186 gf180mcu_fd_io__fill10
+    + PLACED ( 0 216500 )  E ;
+  - FILLER_187 gf180mcu_fd_io__fill5
+    + PLACED ( 0 217500 )  E ;
+  - VBIAS_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 218000 )  E ;
+  - FILLER_188 gf180mcu_fd_io__fill10
+    + PLACED ( 0 225500 )  E ;
+  - FILLER_189 gf180mcu_fd_io__fill10
+    + PLACED ( 0 226500 )  E ;
+  - FILLER_190 gf180mcu_fd_io__fill5
+    + PLACED ( 0 227500 )  E ;
+  - VCM_A2 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 228000 )  E ;
+  - FILLER_191 gf180mcu_fd_io__fill10
+    + PLACED ( 0 235500 )  E ;
+  - FILLER_192 gf180mcu_fd_io__fill10
+    + PLACED ( 0 236500 )  E ;
+  - FILLER_193 gf180mcu_fd_io__fill5
+    + PLACED ( 0 237500 )  E ;
+  - A_VSS_A2 gf180mcu_fd_io__dvss
+    + PLACED ( 0 238000 )  E ;
+  - FILLER_194 gf180mcu_fd_io__fill10
+    + PLACED ( 0 245500 )  E ;
+  - FILLER_195 gf180mcu_fd_io__fill10
+    + PLACED ( 0 246500 )  E ;
+  - FILLER_196 gf180mcu_fd_io__fill5
+    + PLACED ( 0 247500 )  E ;
+  - A_VDD_A2 gf180mcu_fd_io__dvdd
+    + PLACED ( 0 248000 )  E ;
+  - FILLER_197 gf180mcu_fd_io__fill10
+    + PLACED ( 0 255500 )  E ;
+  - FILLER_198 gf180mcu_fd_io__fill10
+    + PLACED ( 0 256500 )  E ;
+  - FILLER_199 gf180mcu_fd_io__fill5
+    + PLACED ( 0 257500 )  E ;
+  - FILLER_200 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 35500 )  W ;
+  - FILLER_201 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 36500 )  W ;
+  - FILLER_202 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 37500 )  W ;
+  - VDD3V3_A5 gf180mcu_fd_io__dvdd
+    + PLACED ( 258500 38000 )  W ;
+  - FILLER_203 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 45500 )  W ;
+  - FILLER_204 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 46500 )  W ;
+  - FILLER_205 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 47500 )  W ;
+  - VOUT_V_IF_A5 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 48000 )  W ;
+  - FILLER_206 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 55500 )  W ;
+  - f4 gf180mcu_fd_io__brk5
+    + PLACED ( 258500 56500 )  W ;
+  - FILLER_207 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 57000 )  W ;
+  - VSS_1_A3 gf180mcu_fd_io__dvss
+    + PLACED ( 258500 58000 )  W ;
+  - FILLER_208 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 65500 )  W ;
+  - FILLER_209 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 66500 )  W ;
+  - FILLER_210 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 67500 )  W ;
+  - VCM_OUT_A3 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 68000 )  W ;
+  - FILLER_211 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 75500 )  W ;
+  - FILLER_212 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 76500 )  W ;
+  - FILLER_213 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 77500 )  W ;
+  - BCM_OUT_A3 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 78000 )  W ;
+  - FILLER_214 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 85500 )  W ;
+  - FILLER_215 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 86500 )  W ;
+  - FILLER_216 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 87500 )  W ;
+  - CCM_OUT_A3 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 88000 )  W ;
+  - FILLER_217 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 95500 )  W ;
+  - FILLER_218 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 96500 )  W ;
+  - FILLER_219 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 97500 )  W ;
+  - V_BIAS_IN_A3 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 98000 )  W ;
+  - FILLER_220 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 105500 )  W ;
+  - FILLER_221 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 106500 )  W ;
+  - FILLER_222 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 107500 )  W ;
+  - EN_A3 gf180mcu_fd_io__bi_t
+    + PLACED ( 258500 108000 )  W ;
+  - FILLER_223 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 115500 )  W ;
+  - FILLER_224 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 116500 )  W ;
+  - FILLER_225 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 117500 )  W ;
+  - V_AUX_A3 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 118000 )  W ;
+  - FILLER_226 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 125500 )  W ;
+  - FILLER_227 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 126500 )  W ;
+  - FILLER_228 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 127500 )  W ;
+  - V_IN_A3 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 128000 )  W ;
+  - FILLER_229 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 135500 )  W ;
+  - FILLER_230 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 136500 )  W ;
+  - FILLER_231 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 137500 )  W ;
+  - VSS_2_A3 gf180mcu_fd_io__dvss
+    + PLACED ( 258500 138000 )  W ;
+  - FILLER_232 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 145500 )  W ;
+  - FILLER_233 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 146500 )  W ;
+  - FILLER_234 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 147500 )  W ;
+  - VDD3V3_A3 gf180mcu_fd_io__dvdd
+    + PLACED ( 258500 148000 )  W ;
+  - FILLER_235 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 155500 )  W ;
+  - f5 gf180mcu_fd_io__brk5
+    + PLACED ( 258500 156500 )  W ;
+  - FILLER_236 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 157000 )  W ;
+  - VDD_A4 gf180mcu_fd_io__dvdd
+    + PLACED ( 258500 158000 )  W ;
+  - FILLER_237 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 165500 )  W ;
+  - FILLER_238 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 166500 )  W ;
+  - FILLER_239 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 167500 )  W ;
+  - VSS_A4 gf180mcu_fd_io__dvss
+    + PLACED ( 258500 168000 )  W ;
+  - FILLER_240 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 175500 )  W ;
+  - FILLER_241 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 176500 )  W ;
+  - FILLER_242 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 177500 )  W ;
+  - EN gf180mcu_fd_io__bi_t
+    + PLACED ( 258500 178000 )  W ;
+  - FILLER_243 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 185500 )  W ;
+  - FILLER_244 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 186500 )  W ;
+  - FILLER_245 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 187500 )  W ;
+  - VREF gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 188000 )  W ;
+  - FILLER_246 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 195500 )  W ;
+  - FILLER_247 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 196500 )  W ;
+  - FILLER_248 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 197500 )  W ;
+  - VCTRL gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 198000 )  W ;
+  - FILLER_249 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 205500 )  W ;
+  - FILLER_250 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 206500 )  W ;
+  - FILLER_251 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 207500 )  W ;
+  - IBIAS gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 208000 )  W ;
+  - FILLER_252 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 215500 )  W ;
+  - FILLER_253 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 216500 )  W ;
+  - FILLER_254 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 217500 )  W ;
+  - VOUT0 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 218000 )  W ;
+  - FILLER_255 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 225500 )  W ;
+  - FILLER_256 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 226500 )  W ;
+  - FILLER_257 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 227500 )  W ;
+  - VOUT90 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 228000 )  W ;
+  - FILLER_258 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 235500 )  W ;
+  - FILLER_259 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 236500 )  W ;
+  - FILLER_260 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 237500 )  W ;
+  - VOUT180 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 238000 )  W ;
+  - FILLER_261 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 245500 )  W ;
+  - FILLER_262 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 246500 )  W ;
+  - FILLER_263 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 247500 )  W ;
+  - VOUT270 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 258500 248000 )  W ;
+  - FILLER_264 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 255500 )  W ;
+  - FILLER_265 gf180mcu_fd_io__fill10
+    + PLACED ( 258500 256500 )  W ;
+  - FILLER_266 gf180mcu_fd_io__fill5
+    + PLACED ( 258500 257500 )  W ;
+END COMPONENTS
+END DESIGN
