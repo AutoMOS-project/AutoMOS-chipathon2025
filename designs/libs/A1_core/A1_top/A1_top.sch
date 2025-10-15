@@ -4,193 +4,210 @@ K {}
 V {}
 S {}
 E {}
-N 1220 -880 1220 -860 {lab=TEST_SEL_2}
-N 360 -880 1220 -880 {lab=TEST_SEL_2}
-N 360 -1300 360 -880 {lab=TEST_SEL_2}
-N 1240 -900 1240 -860 {lab=TEST_SEL_1}
-N 560 -900 1240 -900 {lab=TEST_SEL_1}
-N 560 -1300 560 -900 {lab=TEST_SEL_1}
-N 1260 -920 1260 -860 {lab=TEST_SEL_0}
-N 760 -920 1260 -920 {lab=TEST_SEL_0}
-N 760 -1300 760 -920 {lab=TEST_SEL_0}
-N 1120 -740 1120 -700 {lab=#net1}
-N 1660 -740 2760 -740 {lab=VDD}
-N 30 -1120 1020 -1120 {lab=VTEST
+N 1520 -380 1520 -360 {lab=TEST_SEL_2}
+N 340 -380 1520 -380 {lab=TEST_SEL_2}
+N 340 -800 340 -380 {lab=TEST_SEL_2}
+N 1540 -400 1540 -360 {lab=TEST_SEL_1}
+N 540 -400 1540 -400 {lab=TEST_SEL_1}
+N 540 -800 540 -400 {lab=TEST_SEL_1}
+N 1560 -420 1560 -360 {lab=TEST_SEL_0}
+N 740 -420 1560 -420 {lab=TEST_SEL_0}
+N 740 -800 740 -420 {lab=TEST_SEL_0}
+N 1420 -240 1420 -200 {lab=VSS}
+N 1960 -240 3060 -240 {lab=VDD}
+N 80 -620 1320 -620 {lab=VTEST
 bus=true
 color=blue}
-N 30 -1090 2700 -1090 {lab=VSS
+N 80 -590 3000 -590 {lab=VSS
 bus=true
 color=blue}
-N 260 -1300 260 -1260 {lab=TEST_SEL_2_tiel}
-N 300 -1300 300 -1260 {lab=TEST_SEL_2_tieh}
-N 460 -1300 460 -1260 {lab=TEST_SEL_1_tiel}
-N 500 -1300 500 -1260 {lab=TEST_SEL_1_tieh}
-N 660 -1300 660 -1260 {lab=TEST_SEL_0_tiel}
-N 700 -1300 700 -1260 {lab=TEST_SEL_0_tieh}
-N 1300 -620 1300 -580 {lab=TEST_OUT}
-N 180 -580 1300 -580 {lab=TEST_OUT}
-N 180 -1300 180 -580 {lab=TEST_OUT}
-N 340 -1180 340 -1120 {lab=VTEST}
-N 540 -1180 540 -1120 {lab=VTEST}
-N 740 -1180 740 -1120 {lab=VTEST}
-N 220 -1180 220 -1090 {lab=VSS}
-N 420 -1180 420 -1090 {lab=VSS}
-N 620 -1180 620 -1090 {lab=VSS}
-N 960 -1300 960 -1060 {lab=TEST_EN}
-N 860 -1300 860 -1260 {lab=TEST_EN_tiel}
-N 900 -1300 900 -1260 {lab=TEST_EN_tieh}
-N 940 -1180 940 -1120 {lab=VTEST}
-N 820 -1180 820 -1090 {lab=VSS}
-N 960 -1060 960 -940 {lab=TEST_EN}
-N 1280 -940 1280 -860 {lab=TEST_EN}
-N 960 -940 1280 -940 {lab=TEST_EN}
-N 1300 -960 1300 -860 {lab=VTEST}
-N 1020 -960 1300 -960 {lab=VTEST}
-N 1020 -1120 1020 -960 {lab=VTEST}
-N 1460 -1300 1460 -1060 {lab=VCO_EN}
-N 1360 -1300 1360 -1260 {lab=VCO_EN_tiel}
-N 1400 -1300 1400 -1260 {lab=VCO_EN_tieh}
-N 1440 -1180 1440 -1120 {lab=LDO_OUT}
-N 1320 -1180 1320 -1090 {lab=VSS}
-N 1420 -620 1420 -580 {lab=VCO_OUT}
-N 1340 -580 1420 -580 {lab=VCO_OUT}
-N 1340 -980 1340 -580 {lab=VCO_OUT}
-N 1260 -980 1340 -980 {lab=VCO_OUT}
-N 1260 -1300 1260 -980 {lab=VCO_OUT}
-N 1560 -620 1560 -580 {lab=LDO_OUT}
-N 1440 -580 1560 -580 {lab=LDO_OUT}
-N 1440 -1120 1440 -580 {lab=LDO_OUT}
-N 1080 -1120 1440 -1120 {lab=LDO_OUT
+N 240 -800 240 -760 {lab=TEST_SEL_2_tiel}
+N 280 -800 280 -760 {lab=TEST_SEL_2_tieh}
+N 440 -800 440 -760 {lab=TEST_SEL_1_tiel}
+N 480 -800 480 -760 {lab=TEST_SEL_1_tieh}
+N 640 -800 640 -760 {lab=TEST_SEL_0_tiel}
+N 680 -800 680 -760 {lab=TEST_SEL_0_tieh}
+N 1600 -120 1600 -80 {lab=TEST_OUT}
+N 160 -80 1600 -80 {lab=TEST_OUT}
+N 160 -800 160 -80 {lab=TEST_OUT}
+N 320 -680 320 -620 {lab=VTEST}
+N 520 -680 520 -620 {lab=VTEST}
+N 720 -680 720 -620 {lab=VTEST}
+N 200 -680 200 -590 {lab=VSS}
+N 400 -680 400 -590 {lab=VSS}
+N 600 -680 600 -590 {lab=VSS}
+N 940 -800 940 -560 {lab=TEST_EN}
+N 840 -800 840 -760 {lab=TEST_EN_tiel}
+N 880 -800 880 -760 {lab=TEST_EN_tieh}
+N 920 -680 920 -620 {lab=VTEST}
+N 800 -680 800 -590 {lab=VSS}
+N 940 -440 1260 -440 {lab=TEST_EN}
+N 1580 -440 1580 -360 {lab=TEST_EN}
+N 1260 -440 1580 -440 {lab=TEST_EN}
+N 1600 -540 1600 -360 {lab=VTEST}
+N 1320 -540 1600 -540 {lab=VTEST}
+N 1320 -620 1320 -540 {lab=VTEST}
+N 1760 -800 1760 -560 {lab=VCO_EN}
+N 1660 -800 1660 -760 {lab=VCO_EN_tiel}
+N 1700 -800 1700 -760 {lab=VCO_EN_tieh}
+N 1740 -680 1740 -620 {lab=LDO_OUT}
+N 1620 -680 1620 -590 {lab=VSS}
+N 1720 -120 1720 -80 {lab=VCO_OUT}
+N 1640 -80 1720 -80 {lab=VCO_OUT}
+N 1640 -560 1640 -80 {lab=VCO_OUT}
+N 1560 -560 1640 -560 {lab=VCO_OUT}
+N 1560 -800 1560 -560 {lab=VCO_OUT}
+N 1860 -120 1860 -80 {lab=LDO_OUT}
+N 1740 -80 1860 -80 {lab=LDO_OUT}
+N 1740 -620 1740 -80 {lab=LDO_OUT}
+N 1380 -620 1740 -620 {lab=LDO_OUT
 bus=true}
-N 1160 -1300 1160 -1260 {lab=VCO_OUT_tiel}
-N 1200 -1300 1200 -1260 {lab=VCO_OUT_tieh}
-N 1240 -1180 1240 -1120 {lab=LDO_OUT}
-N 1120 -1180 1120 -1090 {lab=VSS}
-N 1360 -1060 1360 -860 {lab=VCO_EN}
-N 1360 -1060 1460 -1060 {lab=VCO_EN}
-N 1380 -1040 1380 -860 {lab=VCO_IN}
-N 1380 -1040 1500 -1040 {lab=VCO_IN}
-N 1500 -1300 1500 -1040 {lab=VCO_IN}
-N 1400 -1020 1400 -860 {lab=VCO_IBIAS}
-N 1400 -1020 1540 -1020 {lab=VCO_IBIAS}
-N 1540 -1300 1540 -1020 {lab=VCO_IBIAS}
-N 1420 -1000 1420 -860 {lab=VCO_IBIAS_OVRD}
-N 1420 -1000 1740 -1000 {lab=VCO_IBIAS_OVRD}
-N 1480 -980 1480 -860 {lab=LCO_IBIAS}
-N 1480 -980 1780 -980 {lab=LCO_IBIAS}
-N 1500 -960 1500 -860 {lab=LDO_IBIAS_OVRD}
-N 1500 -960 1980 -960 {lab=LDO_IBIAS_OVRD}
-N 1520 -940 1520 -860 {lab=LCO_VREF}
-N 1520 -940 2020 -940 {lab=LCO_VREF}
-N 1540 -920 1540 -860 {lab=LDO_VREF_OVRD}
-N 1540 -920 2220 -920 {lab=LDO_VREF_OVRD}
-N 1560 -900 1560 -860 {lab=LDO_EN}
-N 1560 -900 2420 -900 {lab=LDO_EN}
-N 1620 -880 1620 -860 {lab=BIAS_EN}
-N 1620 -880 2620 -880 {lab=BIAS_EN}
-N 1640 -1300 1640 -1260 {lab=VCO_IBIAS_OVRD_tiel}
-N 1680 -1300 1680 -1260 {lab=VCO_IBIAS_OVRD_tieh}
-N 1720 -1180 1720 -1120 {lab=VDD}
-N 1600 -1180 1600 -1090 {lab=VSS}
-N 1740 -1300 1740 -1000 {lab=VCO_IBIAS_OVRD}
-N 1580 -1120 2760 -1120 {lab=VDD
+N 1460 -800 1460 -760 {lab=VCO_OUT_tiel}
+N 1500 -800 1500 -760 {lab=VCO_OUT_tieh}
+N 1540 -680 1540 -620 {lab=LDO_OUT}
+N 1420 -680 1420 -590 {lab=VSS}
+N 1660 -560 1660 -360 {lab=VCO_EN}
+N 1660 -560 1760 -560 {lab=VCO_EN}
+N 1680 -540 1680 -360 {lab=VCO_IN}
+N 1680 -540 1800 -540 {lab=VCO_IN}
+N 1800 -800 1800 -540 {lab=VCO_IN}
+N 1700 -520 1700 -360 {lab=VCO_IBIAS}
+N 1700 -520 1840 -520 {lab=VCO_IBIAS}
+N 1840 -800 1840 -520 {lab=VCO_IBIAS}
+N 1720 -500 1720 -360 {lab=VCO_IBIAS_OVRD}
+N 1720 -500 2040 -500 {lab=VCO_IBIAS_OVRD}
+N 1780 -480 1780 -360 {lab=LCO_IBIAS}
+N 1780 -480 2080 -480 {lab=LCO_IBIAS}
+N 1800 -460 1800 -360 {lab=LDO_IBIAS_OVRD}
+N 1800 -460 2280 -460 {lab=LDO_IBIAS_OVRD}
+N 1820 -440 1820 -360 {lab=LCO_VREF}
+N 1820 -440 2320 -440 {lab=LCO_VREF}
+N 1840 -420 1840 -360 {lab=LDO_VREF_OVRD}
+N 1840 -420 2520 -420 {lab=LDO_VREF_OVRD}
+N 1860 -400 1860 -360 {lab=LDO_EN}
+N 1860 -400 2720 -400 {lab=LDO_EN}
+N 1920 -380 1920 -360 {lab=BIAS_EN}
+N 1920 -380 2920 -380 {lab=BIAS_EN}
+N 1940 -800 1940 -760 {lab=VCO_IBIAS_OVRD_tiel}
+N 1980 -800 1980 -760 {lab=VCO_IBIAS_OVRD_tieh}
+N 2020 -680 2020 -620 {lab=VDD}
+N 1900 -680 1900 -590 {lab=VSS}
+N 2040 -800 2040 -500 {lab=VCO_IBIAS_OVRD}
+N 1880 -620 3060 -620 {lab=VDD
 bus=true}
-N 1780 -1300 1780 -980 {lab=LCO_IBIAS}
-N 1880 -1300 1880 -1260 {lab=LDO_IBIAS_OVRD_tiel}
-N 1920 -1300 1920 -1260 {lab=LDO_IBIAS_OVRD_tieh}
-N 1960 -1180 1960 -1120 {lab=VDD}
-N 1840 -1180 1840 -1090 {lab=VSS}
-N 1980 -1300 1980 -960 {lab=LDO_IBIAS_OVRD}
-N 2020 -1300 2020 -940 {lab=LCO_VREF}
-N 2120 -1300 2120 -1260 {lab=LDO_VREF_OVRD_tiel}
-N 2160 -1300 2160 -1260 {lab=LDO_VREF_OVRD_tieh}
-N 2200 -1180 2200 -1120 {lab=VDD}
-N 2080 -1180 2080 -1090 {lab=VSS}
-N 2220 -1300 2220 -920 {lab=LDO_VREF_OVRD}
-N 2320 -1300 2320 -1260 {lab=LDO_EN_tiel}
-N 2360 -1300 2360 -1260 {lab=LDO_EN_tieh}
-N 2400 -1180 2400 -1120 {lab=VDD}
-N 2280 -1180 2280 -1090 {lab=VSS}
-N 2520 -1300 2520 -1260 {lab=LDO_VREF_OVRD_tiel}
-N 2560 -1300 2560 -1260 {lab=BIAS_EN_tieh}
-N 2600 -1180 2600 -1120 {lab=VDD}
-N 2480 -1180 2480 -1090 {lab=VSS}
-N 2420 -1300 2420 -900 {lab=LDO_EN}
-N 2620 -1300 2620 -880 {lab=BIAS_EN}
-N 2760 -1120 2760 -740 {lab=VDD}
-C {libs/core_top/top/top_v2.sym} 1120 -860 1 0 {name=x1}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 220 -1140 1 1 {name=SCtest_sel_2
+N 2080 -800 2080 -480 {lab=LCO_IBIAS}
+N 2180 -800 2180 -760 {lab=LDO_IBIAS_OVRD_tiel}
+N 2220 -800 2220 -760 {lab=LDO_IBIAS_OVRD_tieh}
+N 2260 -680 2260 -620 {lab=VDD}
+N 2140 -680 2140 -590 {lab=VSS}
+N 2280 -800 2280 -460 {lab=LDO_IBIAS_OVRD}
+N 2320 -800 2320 -440 {lab=LCO_VREF}
+N 2420 -800 2420 -760 {lab=LDO_VREF_OVRD_tiel}
+N 2460 -800 2460 -760 {lab=LDO_VREF_OVRD_tieh}
+N 2500 -680 2500 -620 {lab=VDD}
+N 2380 -680 2380 -590 {lab=VSS}
+N 2520 -800 2520 -420 {lab=LDO_VREF_OVRD}
+N 2620 -800 2620 -760 {lab=LDO_EN_tiel}
+N 2660 -800 2660 -760 {lab=LDO_EN_tieh}
+N 2700 -680 2700 -620 {lab=VDD}
+N 2580 -680 2580 -590 {lab=VSS}
+N 2820 -800 2820 -760 {lab=BIAS_EN_tiel}
+N 2860 -800 2860 -760 {lab=BIAS_EN_tieh}
+N 2900 -680 2900 -620 {lab=VDD}
+N 2780 -680 2780 -590 {lab=VSS}
+N 2720 -800 2720 -400 {lab=LDO_EN}
+N 2920 -800 2920 -380 {lab=BIAS_EN}
+N 3060 -620 3060 -240 {lab=VDD}
+N 940 -560 940 -540 {lab=TEST_EN}
+N 940 -540 940 -440 {lab=TEST_EN}
+N 1080 -800 1080 -760 {lab=TEST_IBIAS_OVRD_tiel}
+N 1120 -800 1120 -760 {lab=TEST_IBIAS_OVRD_tieh}
+N 1160 -680 1160 -620 {lab=VTEST}
+N 1040 -680 1040 -590 {lab=VSS}
+N 100 -240 1420 -240 {lab=VSS}
+N 100 -590 100 -240 {lab=VSS}
+C {libs/A1_core/A1_top_core/A1_top_core.sym} 1420 -360 1 0 {name=x1}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 200 -640 1 1 {name=SCtest_sel_2
 spiceprefix=X
 }
-C {ipin.sym} 360 -1300 1 0 {name=p1 lab=TEST_SEL_2}
-C {opin.sym} 260 -1300 3 0 {name=p2 lab=TEST_SEL_2_tiel}
-C {opin.sym} 300 -1300 3 0 {name=p3 lab=TEST_SEL_2_tieh}
-C {iopin.sym} 30 -1120 2 0 {name=p4 lab=VTEST}
-C {iopin.sym} 30 -1090 2 0 {name=p5 lab=VSS}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 420 -1140 1 1 {name=SCtest_sel_1
+C {ipin.sym} 340 -800 1 0 {name=p1 lab=TEST_SEL_2}
+C {opin.sym} 240 -800 3 0 {name=p2 lab=TEST_SEL_2_tiel}
+C {opin.sym} 280 -800 3 0 {name=p3 lab=TEST_SEL_2_tieh}
+C {iopin.sym} 80 -620 2 0 {name=p4 lab=VTEST}
+C {iopin.sym} 80 -590 2 0 {name=p5 lab=VSS}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 400 -640 1 1 {name=SCtest_sel_1
 spiceprefix=X
 }
-C {ipin.sym} 560 -1300 1 0 {name=p6 lab=TEST_SEL_1}
-C {opin.sym} 460 -1300 3 0 {name=p7 lab=TEST_SEL_1_tiel}
-C {opin.sym} 500 -1300 3 0 {name=p8 lab=TEST_SEL_1_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 620 -1140 1 1 {name=SCtest_sel_3
+C {ipin.sym} 540 -800 1 0 {name=p6 lab=TEST_SEL_1}
+C {opin.sym} 440 -800 3 0 {name=p7 lab=TEST_SEL_1_tiel}
+C {opin.sym} 480 -800 3 0 {name=p8 lab=TEST_SEL_1_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 600 -640 1 1 {name=SCtest_sel_3
 spiceprefix=X
 }
-C {ipin.sym} 760 -1300 1 0 {name=p9 lab=TEST_SEL_0}
-C {opin.sym} 660 -1300 3 0 {name=p10 lab=TEST_SEL_0_tiel}
-C {opin.sym} 700 -1300 3 0 {name=p11 lab=TEST_SEL_0_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 820 -1140 1 1 {name=SCtest_sel_4
+C {ipin.sym} 740 -800 1 0 {name=p9 lab=TEST_SEL_0}
+C {opin.sym} 640 -800 3 0 {name=p10 lab=TEST_SEL_0_tiel}
+C {opin.sym} 680 -800 3 0 {name=p11 lab=TEST_SEL_0_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 800 -640 1 1 {name=SCtest_sel_4
 spiceprefix=X
 }
-C {ipin.sym} 960 -1300 1 0 {name=p13 lab=TEST_EN}
-C {opin.sym} 860 -1300 3 0 {name=p14 lab=TEST_EN_tiel}
-C {opin.sym} 900 -1300 3 0 {name=p15 lab=TEST_EN_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1320 -1140 1 1 {name=SCtest_sel_5
+C {ipin.sym} 940 -800 1 0 {name=p13 lab=TEST_EN}
+C {opin.sym} 840 -800 3 0 {name=p14 lab=TEST_EN_tiel}
+C {opin.sym} 880 -800 3 0 {name=p15 lab=TEST_EN_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1620 -640 1 1 {name=SCtest_sel_5
 spiceprefix=X
 }
-C {ipin.sym} 1460 -1300 1 0 {name=p16 lab=VCO_EN}
-C {opin.sym} 1360 -1300 3 0 {name=p17 lab=VCO_EN_tiel}
-C {opin.sym} 1400 -1300 3 0 {name=p18 lab=VCO_EN_tieh}
-C {iopin.sym} 1080 -1120 3 0 {name=p19 lab=LDO_OUT}
-C {opin.sym} 1260 -1300 3 0 {name=p20 lab=VCO_OUT}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1120 -1140 1 1 {name=SCtest_sel_6
+C {ipin.sym} 1760 -800 1 0 {name=p16 lab=VCO_EN}
+C {opin.sym} 1660 -800 3 0 {name=p17 lab=VCO_EN_tiel}
+C {opin.sym} 1700 -800 3 0 {name=p18 lab=VCO_EN_tieh}
+C {iopin.sym} 1380 -620 3 0 {name=p19 lab=LDO_OUT}
+C {opin.sym} 1560 -800 3 0 {name=p20 lab=VCO_OUT}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1420 -640 1 1 {name=SCtest_sel_6
 spiceprefix=X
 }
-C {opin.sym} 1160 -1300 3 0 {name=p21 lab=VCO_OUT_tiel}
-C {opin.sym} 1200 -1300 3 0 {name=p22 lab=VCO_OUT_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1600 -1140 1 1 {name=SCtest_sel_7
+C {opin.sym} 1460 -800 3 0 {name=p21 lab=VCO_OUT_tiel}
+C {opin.sym} 1500 -800 3 0 {name=p22 lab=VCO_OUT_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1900 -640 1 1 {name=SCtest_sel_7
 spiceprefix=X
 }
-C {opin.sym} 1640 -1300 3 0 {name=p23 lab=VCO_IBIAS_OVRD_tiel}
-C {opin.sym} 1680 -1300 3 0 {name=p24 lab=VCO_IBIAS_OVRD_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1840 -1140 1 1 {name=SCtest_sel_8
+C {opin.sym} 1940 -800 3 0 {name=p23 lab=VCO_IBIAS_OVRD_tiel}
+C {opin.sym} 1980 -800 3 0 {name=p24 lab=VCO_IBIAS_OVRD_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2140 -640 1 1 {name=SCtest_sel_8
 spiceprefix=X
 }
-C {opin.sym} 2120 -1300 3 0 {name=p25 lab=LDO_VREF_OVRD_tiel}
-C {opin.sym} 2160 -1300 3 0 {name=p26 lab=LDO_VREF_OVRD_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2080 -1140 1 1 {name=SCtest_sel_9
+C {opin.sym} 2420 -800 3 0 {name=p25 lab=LDO_VREF_OVRD_tiel}
+C {opin.sym} 2460 -800 3 0 {name=p26 lab=LDO_VREF_OVRD_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2380 -640 1 1 {name=SCtest_sel_9
 spiceprefix=X
 }
-C {opin.sym} 1880 -1300 3 0 {name=p27 lab=LDO_IBIAS_OVRD_tiel}
-C {opin.sym} 1920 -1300 3 0 {name=p28 lab=LDO_IBIAS_OVRD_tieh}
-C {iopin.sym} 180 -1300 3 0 {name=p29 lab=TEST_OUT}
-C {iopin.sym} 1500 -1300 3 0 {name=p12 lab=VCO_IN}
-C {iopin.sym} 1540 -1300 3 0 {name=p30 lab=VCO_IBIAS}
-C {iopin.sym} 1740 -1300 3 0 {name=p31 lab=VCO_IBIAS_OVRD}
-C {iopin.sym} 2020 -1300 3 0 {name=p32 lab=LCO_VREF}
-C {ipin.sym} 2220 -1300 1 0 {name=p33 lab=LDO_VREF_OVRD}
-C {iopin.sym} 1780 -1300 3 0 {name=p34 lab=LCO_IBIAS}
-C {ipin.sym} 1980 -1300 1 0 {name=p35 lab=LDO_IBIAS_OVRD}
-C {opin.sym} 2320 -1300 3 0 {name=p36 lab=LDO_EN_tiel}
-C {opin.sym} 2360 -1300 3 0 {name=p37 lab=LDO_EN_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2280 -1140 1 1 {name=SCtest_sel_10
+C {opin.sym} 2180 -800 3 0 {name=p27 lab=LDO_IBIAS_OVRD_tiel}
+C {opin.sym} 2220 -800 3 0 {name=p28 lab=LDO_IBIAS_OVRD_tieh}
+C {iopin.sym} 160 -800 3 0 {name=p29 lab=TEST_OUT}
+C {iopin.sym} 1800 -800 3 0 {name=p12 lab=VCO_IN}
+C {iopin.sym} 1840 -800 3 0 {name=p30 lab=VCO_IBIAS}
+C {iopin.sym} 2040 -800 3 0 {name=p31 lab=VCO_IBIAS_OVRD}
+C {iopin.sym} 2320 -800 3 0 {name=p32 lab=LCO_VREF}
+C {ipin.sym} 2520 -800 1 0 {name=p33 lab=LDO_VREF_OVRD}
+C {iopin.sym} 2080 -800 3 0 {name=p34 lab=LCO_IBIAS}
+C {ipin.sym} 2280 -800 1 0 {name=p35 lab=LDO_IBIAS_OVRD}
+C {opin.sym} 2620 -800 3 0 {name=p36 lab=LDO_EN_tiel}
+C {opin.sym} 2660 -800 3 0 {name=p37 lab=LDO_EN_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2580 -640 1 1 {name=SCtest_sel_10
 spiceprefix=X
 }
-C {ipin.sym} 2420 -1300 1 0 {name=p38 lab=LDO_EN}
-C {opin.sym} 2520 -1300 3 0 {name=p39 lab=BIAS_EN_tiel}
-C {opin.sym} 2560 -1300 3 0 {name=p40 lab=BIAS_EN_tieh}
-C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2480 -1140 1 1 {name=SCtest_sel_11
+C {ipin.sym} 2720 -800 1 0 {name=p38 lab=LDO_EN}
+C {opin.sym} 2820 -800 3 0 {name=p39 lab=BIAS_EN_tiel}
+C {opin.sym} 2860 -800 3 0 {name=p40 lab=BIAS_EN_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 2780 -640 1 1 {name=SCtest_sel_11
 spiceprefix=X
 }
-C {ipin.sym} 2620 -1300 1 0 {name=p41 lab=BIAS_EN}
-C {iopin.sym} 2760 -1120 0 0 {name=p42 lab=VDD}
+C {ipin.sym} 2920 -800 1 0 {name=p41 lab=BIAS_EN}
+C {iopin.sym} 3060 -620 0 0 {name=p42 lab=VDD}
+C {opin.sym} 1080 -800 3 0 {name=p43 lab=TEST_IBIAS_OVRD_tiel}
+C {opin.sym} 1120 -800 3 0 {name=p44 lab=TEST_IBIAS_OVRD_tieh}
+C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 1040 -640 1 1 {name=SCtest_sel_12
+spiceprefix=X
+}
+C {iopin.sym} 980 -800 3 0 {name=p45 lab=TEST_IBIAS}
+C {ipin.sym} 1180 -800 1 0 {name=p46 lab=TEST_IBIAS_OVRD}
+C {noconn.sym} 980 -800 3 0 {name=l1}
+C {noconn.sym} 1180 -800 3 0 {name=l2}

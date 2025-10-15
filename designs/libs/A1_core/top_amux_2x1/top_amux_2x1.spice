@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/libs/core_top/top_amux_2x1/top_amux_2x1.sch
+** sch_path: /foss/designs/libs/A1_core/top_amux_2x1/top_amux_2x1.sch
 .subckt top_amux_2x1 IN0 VDD OUT VSS IN1 EN
 *.PININFO VDD:B VSS:B EN:I IN0:B IN1:B OUT:B
 x1 VDD ENB IN0 OUT VSS test_tg

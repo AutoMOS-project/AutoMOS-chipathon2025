@@ -232,32 +232,32 @@ spice_ignore=true
 }
 C {lab_pin.sym} 1760 -430 0 0 {name=p93 lab=DVDD}
 C {lab_pin.sym} 1800 -430 0 1 {name=p152 lab=VDD}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1040 -940 0 1 {name=x1}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 900 -1000 0 1 {name=x2}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1040 -940 0 1 {name=x1}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 900 -1000 0 1 {name=x2}
 C {lab_pin.sym} 1000 -1060 0 1 {name=p16 lab=VTEST}
 C {lab_pin.sym} 860 -1120 0 1 {name=p17 lab=VTEST}
 C {lab_pin.sym} 1000 -940 0 1 {name=p24 lab=VSS}
 C {lab_pin.sym} 860 -1000 0 1 {name=p25 lab=VSS}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1040 -720 0 1 {name=x3}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 900 -780 0 1 {name=x4}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1040 -720 0 1 {name=x3}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 900 -780 0 1 {name=x4}
 C {lab_pin.sym} 1000 -840 0 1 {name=p61 lab=VTEST}
 C {lab_pin.sym} 860 -900 0 1 {name=p62 lab=VTEST}
 C {lab_pin.sym} 1000 -720 0 1 {name=p69 lab=VSS}
 C {lab_pin.sym} 860 -780 0 1 {name=p70 lab=VSS}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1040 -500 0 1 {name=x5}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 900 -560 0 1 {name=x6}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1040 -500 0 1 {name=x5}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 900 -560 0 1 {name=x6}
 C {lab_pin.sym} 1000 -620 0 1 {name=p138 lab=VTEST}
 C {lab_pin.sym} 860 -680 0 1 {name=p139 lab=VTEST}
 C {lab_pin.sym} 1000 -500 0 1 {name=p151 lab=VSS}
 C {lab_pin.sym} 860 -560 0 1 {name=p153 lab=VSS}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1040 -1160 0 1 {name=x7}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 900 -1220 0 1 {name=x8}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1040 -1160 0 1 {name=x7}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 900 -1220 0 1 {name=x8}
 C {lab_pin.sym} 1000 -1280 0 1 {name=p154 lab=VTEST}
 C {lab_pin.sym} 860 -1340 0 1 {name=p155 lab=VTEST}
 C {lab_pin.sym} 1000 -1160 0 1 {name=p156 lab=VSS}
 C {lab_pin.sym} 860 -1220 0 1 {name=p157 lab=VSS}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1040 -1380 0 1 {name=x9}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 900 -1440 0 1 {name=x10}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1040 -1380 0 1 {name=x9}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 900 -1440 0 1 {name=x10}
 C {lab_pin.sym} 1000 -1500 0 1 {name=p158 lab=VTEST}
 C {lab_pin.sym} 860 -1560 0 1 {name=p159 lab=VTEST}
 C {lab_pin.sym} 1000 -1380 0 1 {name=p160 lab=VSS}
@@ -270,37 +270,37 @@ C {opin.sym} 540 -620 0 0 {name=p20 lab=test_ibias_ovrd_int}
 C {iopin.sym} 480 -400 0 0 {name=p4 lab=test_ibias_int}
 C {lab_pin.sym} 340 -2150 0 0 {name=p3 lab=DV1P8}
 C {lab_pin.sym} 380 -2150 0 1 {name=p15 lab=V1P8}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1020 -2170 0 1 {name=x11}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 880 -2230 0 1 {name=x12}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1020 -2170 0 1 {name=x11}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 880 -2230 0 1 {name=x12}
 C {lab_pin.sym} 980 -2290 0 1 {name=p28 lab=VDD}
 C {lab_pin.sym} 840 -2350 0 1 {name=p74 lab=VDD}
 C {lab_pin.sym} 980 -2170 0 1 {name=p100 lab=VSS}
 C {lab_pin.sym} 840 -2230 0 1 {name=p102 lab=VSS}
 C {opin.sym} 520 -2290 0 0 {name=p107 lab=vco_bias_ovrd_int}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1020 -2390 0 1 {name=x13}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 880 -2450 0 1 {name=x14}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1020 -2390 0 1 {name=x13}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 880 -2450 0 1 {name=x14}
 C {lab_pin.sym} 980 -2510 0 1 {name=p108 lab=VDD}
 C {lab_pin.sym} 840 -2570 0 1 {name=p111 lab=VDD}
 C {lab_pin.sym} 980 -2390 0 1 {name=p163 lab=VSS}
 C {lab_pin.sym} 840 -2450 0 1 {name=p164 lab=VSS}
 C {opin.sym} 520 -2510 0 0 {name=p165 lab=vco_en_int}
 C {iopin.sym} 460 -2740 0 0 {name=p31 lab=vco_in_int}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1020 -3150 0 1 {name=x15}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 880 -3210 0 1 {name=x16}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1020 -3150 0 1 {name=x15}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 880 -3210 0 1 {name=x16}
 C {lab_pin.sym} 980 -3270 0 1 {name=p39 lab=VDD}
 C {lab_pin.sym} 840 -3330 0 1 {name=p88 lab=VDD}
 C {lab_pin.sym} 980 -3150 0 1 {name=p90 lab=VSS}
 C {lab_pin.sym} 840 -3210 0 1 {name=p113 lab=VSS}
 C {opin.sym} 520 -3270 0 0 {name=p114 lab=ldo_ibias_ovrd_int}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1020 -3590 0 1 {name=x17}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 880 -3650 0 1 {name=x18}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1020 -3590 0 1 {name=x17}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 880 -3650 0 1 {name=x18}
 C {lab_pin.sym} 980 -3710 0 1 {name=p116 lab=VDD}
 C {lab_pin.sym} 840 -3770 0 1 {name=p122 lab=VDD}
 C {lab_pin.sym} 980 -3590 0 1 {name=p126 lab=VSS}
 C {lab_pin.sym} 840 -3650 0 1 {name=p127 lab=VSS}
 C {opin.sym} 520 -3710 0 0 {name=p129 lab=ldo_vref_ovrd_int}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 1020 -3810 0 1 {name=x19}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 880 -3870 0 1 {name=x20}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 1020 -3810 0 1 {name=x19}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 880 -3870 0 1 {name=x20}
 C {lab_pin.sym} 980 -3930 0 1 {name=p134 lab=VDD}
 C {lab_pin.sym} 980 -3810 0 1 {name=p166 lab=VSS}
 C {lab_pin.sym} 840 -3870 0 1 {name=p167 lab=VSS}
@@ -338,8 +338,8 @@ C {iopin.sym} 2840 -1640 0 1 {name=p143 lab=test_out_int}
 C {iopin.sym} 2730 -2440 0 1 {name=p144 lab=vco_out_int}
 C {lab_pin.sym} 3040 -2620 0 1 {name=p42 lab=DVDD}
 C {lab_pin.sym} 3000 -2620 0 0 {name=p43 lab=VDD}
-C {libs/core_top/top_io_tie_h/top_io_tie_h.sym} 2410 -2320 0 0 {name=x23}
-C {libs/core_top/top_io_tie_l/top_io_tie_l.sym} 2510 -2460 0 0 {name=x24}
+C {libs/A1_core/top_io_tie_h/top_io_tie_h.sym} 2410 -2320 0 0 {name=x23}
+C {libs/A1_core/top_io_tie_l/top_io_tie_l.sym} 2510 -2460 0 0 {name=x24}
 C {lab_pin.sym} 2450 -2440 0 0 {name=p44 lab=VDD}
 C {lab_pin.sym} 2550 -2580 0 0 {name=p46 lab=VDD}
 C {lab_pin.sym} 2450 -2320 0 0 {name=p47 lab=VSS}

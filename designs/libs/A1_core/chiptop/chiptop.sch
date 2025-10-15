@@ -25,8 +25,8 @@ N 820 -540 980 -540 {lab=V1P8}
 N 820 -400 980 -400 {lab=vco_out_int}
 N 820 -280 980 -280 {lab=test_out_int}
 N 700 -680 700 -640 {lab=VDD}
-C {libs/core_top/top/top.sym} 580 -100 0 0 {name=xI_top}
-C {libs/core_top/top_io/top_io.sym} 160 -80 0 0 {name=xI_top_io}
+C {libs/A1_core/A1_top_core/top.sym} 580 -100 0 0 {name=xI_top}
+C {libs/A1_core/top_io/top_io.sym} 160 -80 0 0 {name=xI_top_io}
 C {lab_pin.sym} 700 -680 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 700 -820 0 1 {name=p2 lab=DVDD}
 C {lab_wire.sym} 420 -600 0 1 {name=p3 lab=bias_en_int}
