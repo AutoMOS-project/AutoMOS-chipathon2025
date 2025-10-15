@@ -4,96 +4,383 @@ K {}
 V {}
 S {}
 E {}
-N 420 -600 580 -600 {lab=bias_en_int}
-N 420 -540 580 -540 {lab=ldo_en_int}
-N 420 -520 580 -520 {lab=ldo_vref_ovrd_int}
-N 420 -500 580 -500 {lab=ldo_vref_int}
-N 420 -480 580 -480 {lab=ldo_ibias_ovrd_int}
-N 420 -460 580 -460 {lab=ldo_ibias_int}
-N 420 -400 580 -400 {lab=vco_in_int}
-N 420 -380 580 -380 {lab=vco_en_int}
-N 420 -360 580 -360 {lab=vco_bias_ovrd_int}
-N 420 -340 580 -340 {lab=vco_ibias_int}
-N 420 -280 580 -280 {lab=VTEST}
-N 420 -260 580 -260 {lab=test_en_int}
-N 420 -240 580 -240 {lab=test_sel_0_int}
-N 420 -220 580 -220 {lab=test_sel_1_int}
-N 420 -200 580 -200 {lab=test_sel_2_int}
-N 420 -180 580 -180 {lab=test_ibias_ovrd_int}
-N 420 -160 580 -160 {lab=test_ibias_int}
-N 820 -540 980 -540 {lab=V1P8}
-N 820 -400 980 -400 {lab=vco_out_int}
-N 820 -280 980 -280 {lab=test_out_int}
-N 700 -680 700 -640 {lab=VDD}
-C {libs/core_top/top/top.sym} 580 -100 0 0 {name=xI_top}
-C {libs/core_top/top_io/top_io.sym} 160 -80 0 0 {name=xI_top_io}
-C {lab_pin.sym} 700 -680 0 1 {name=p1 lab=VDD}
-C {lab_pin.sym} 700 -820 0 1 {name=p2 lab=DVDD}
-C {lab_wire.sym} 420 -600 0 1 {name=p3 lab=bias_en_int}
-C {lab_pin.sym} 160 -600 0 0 {name=p4 lab=BIAS_EN}
-C {lab_wire.sym} 420 -540 0 1 {name=p5 lab=ldo_en_int}
-C {lab_pin.sym} 160 -540 0 0 {name=p6 lab=LDO_EN}
-C {lab_wire.sym} 420 -520 0 1 {name=p7 lab=ldo_vref_ovrd_int}
-C {lab_pin.sym} 160 -520 0 0 {name=p8 lab=LDO_VREF_OVRD}
-C {lab_wire.sym} 420 -500 0 1 {name=p9 lab=ldo_vref_int}
-C {lab_pin.sym} 160 -500 0 0 {name=p10 lab=LDO_VREF}
-C {lab_pin.sym} 1240 -540 0 1 {name=p11 lab=DV1P8}
-C {lab_wire.sym} 980 -540 0 0 {name=p12 lab=V1P8}
-C {lab_pin.sym} 160 -480 0 0 {name=p13 lab=LDO_IBIAS_OVRD}
-C {lab_wire.sym} 420 -480 0 1 {name=p14 lab=ldo_ibias_ovrd_int}
-C {lab_pin.sym} 160 -460 0 0 {name=p15 lab=LDO_IBIAS}
-C {lab_wire.sym} 420 -460 0 1 {name=p16 lab=ldo_ibias_int}
-C {lab_pin.sym} 160 -400 0 0 {name=p17 lab=VCO_IN}
-C {lab_wire.sym} 420 -400 0 1 {name=p18 lab=vco_in_int}
-C {lab_wire.sym} 420 -380 0 1 {name=p19 lab=vco_en_int}
-C {lab_pin.sym} 160 -380 0 0 {name=p20 lab=VCO_EN}
-C {lab_pin.sym} 1240 -400 0 1 {name=p21 lab=VCO_OUT}
-C {lab_wire.sym} 980 -400 0 0 {name=p22 lab=vco_out_int}
-C {lab_wire.sym} 420 -360 0 1 {name=p23 lab=vco_bias_ovrd_int}
-C {lab_pin.sym} 160 -360 0 0 {name=p24 lab=VCO_IBIAS_OVRD}
-C {lab_pin.sym} 160 -340 0 0 {name=p25 lab=VCO_IBIAS}
-C {lab_pin.sym} 160 -280 0 0 {name=p26 lab=DVTEST}
-C {lab_wire.sym} 420 -280 0 1 {name=p27 lab=VTEST}
-C {lab_wire.sym} 980 -280 0 0 {name=p28 lab=test_out_int}
-C {lab_pin.sym} 1240 -280 0 1 {name=p29 lab=TEST_OUT}
-C {lab_wire.sym} 420 -260 0 1 {name=p30 lab=test_en_int}
-C {lab_pin.sym} 160 -260 0 0 {name=p31 lab=TEST_EN}
-C {lab_wire.sym} 420 -240 0 1 {name=p32 lab=test_sel_0_int}
-C {lab_pin.sym} 160 -240 0 0 {name=p33 lab=TEST_SEL_0}
-C {lab_pin.sym} 160 -220 0 0 {name=p34 lab=TEST_SEL_1}
-C {lab_wire.sym} 420 -220 0 1 {name=p35 lab=test_sel_1_int}
-C {lab_pin.sym} 160 -200 0 0 {name=p36 lab=TEST_SEL_2}
-C {lab_wire.sym} 420 -200 0 1 {name=p37 lab=test_sel_2_int}
-C {lab_wire.sym} 420 -180 0 1 {name=p38 lab=test_ibias_ovrd_int}
-C {lab_pin.sym} 160 -180 0 0 {name=p39 lab=TEST_IBIAS_OVRD}
-C {lab_wire.sym} 420 -160 0 1 {name=p40 lab=test_ibias_int}
-C {lab_pin.sym} 160 -160 0 0 {name=p41 lab=TEST_IBIAS}
-C {lab_pin.sym} 1240 -180 0 1 {name=p42 lab=DVSS}
-C {lab_wire.sym} 980 -160 0 0 {name=p43 lab=SUB}
-C {lab_wire.sym} 980 -180 0 0 {name=p44 lab=VSS}
-C {lab_wire.sym} 420 -340 0 1 {name=p45 lab=vco_ibias_int}
-C {lab_wire.sym} 740 -100 2 0 {name=p46 lab=SUB}
-C {lab_wire.sym} 700 -100 2 1 {name=p47 lab=VSS}
-C {iopin.sym} 1350 -400 0 0 { name=p48 lab=VCO_OUT }
-C {iopin.sym} 0 -400 0 1 { name=p49 lab=VCO_IN }
-C {ipin.sym} 0 -360 0 0 { name=p50 lab=VCO_IBIAS_OVRD }
-C {iopin.sym} 0 -340 0 1 { name=p51 lab=VCO_IBIAS }
-C {ipin.sym} 0 -380 0 0 { name=p52 lab=VCO_EN }
-C {ipin.sym} 0 -200 0 0 { name=p53 lab=TEST_SEL_2 }
-C {ipin.sym} 0 -220 0 0 { name=p54 lab=TEST_SEL_1 }
-C {ipin.sym} 0 -240 0 0 { name=p55 lab=TEST_SEL_0 }
-C {iopin.sym} 1350 -280 0 0 { name=p56 lab=TEST_OUT }
-C {ipin.sym} 0 -180 0 0 { name=p57 lab=TEST_IBIAS_OVRD }
-C {iopin.sym} 0 -160 0 1 { name=p58 lab=TEST_IBIAS }
-C {ipin.sym} 0 -260 0 0 { name=p59 lab=TEST_EN }
-C {iopin.sym} 740 -40 0 1 { name=p60 lab=SUB }
-C {ipin.sym} 0 -520 0 0 { name=p61 lab=LDO_VREF_OVRD }
-C {iopin.sym} 0 -500 0 1 { name=p62 lab=LDO_VREF }
-C {ipin.sym} 0 -480 0 0 { name=p63 lab=LDO_IBIAS_OVRD }
-C {iopin.sym} 0 -460 0 1 { name=p64 lab=LDO_IBIAS }
-C {ipin.sym} 0 -540 0 0 { name=p65 lab=LDO_EN }
-C {iopin.sym} 0 -280 0 1 { name=p66 lab=DVTEST }
-C {iopin.sym} 1350 -180 0 0 { name=p67 lab=DVSS }
-C {iopin.sym} 700 -850 0 0 { name=p68 lab=DVDD }
-C {iopin.sym} 1340 -540 0 0 { name=p69 lab=DV1P8 }
-C {ipin.sym} 0 -600 0 0 { name=p70 lab=BIAS_EN }
+N 2740 -8140 2740 -8100 {lab=TEST_IBIAS_OVRD}
+N 1140 -8140 1140 -8100 {lab=TEST_SEL_2}
+N 1460 -8140 1460 -8100 {lab=TEST_SEL_1}
+N 1780 -8140 1780 -8100 {lab=TEST_SEL_0}
+N 2100 -8140 2100 -8100 {lab=TEST_EN}
+N 2420 -8140 2420 -8100 {lab=TEST_IBIAS}
+N 3060 -8140 3060 -8110 {lab=VTEST}
+N 3060 -8110 3060 -8100 {lab=VTEST}
+N 4660 -8140 4660 -8100 {lab=VCO_IBIAS}
+N 4980 -8140 4980 -8100 {lab=VCO_IBIAS_OVRD}
+N 820 -8140 820 -8100 {lab=TEST_OUT}
+N 3380 -8140 3380 -8100 {lab=VCO_OUT}
+N 3700 -8140 3700 -8100 {lab=VCO_EN}
+N 4020 -8140 4020 -8100 {lab=VCO_IN}
+N 4340 -8140 4340 -8100 {lab=LDO_OUT}
+N 5300 -8140 5300 -8100 {lab=LDO_IBIAS}
+N 5620 -8140 5620 -8100 {lab=LDO_IBIAS_OVRD}
+N 5940 -8140 5940 -8100 {lab=LDO_VREF}
+N 6260 -8140 6260 -8100 {lab=LDO_VREF_OVRD}
+N 6580 -8140 6580 -8100 {lab=LDO_EN}
+N 6900 -8140 6900 -8100 {lab=BIAS_EN}
+N 7220 -8140 7220 -8100 {lab=VSS_A1}
+N 7540 -8140 7540 -8100 {lab=VDD_A1}
+N 4940 -7280 4940 -7140 {lab=VDD_A1}
+N 4940 -7280 7540 -7280 {lab=VDD_A1}
+N 7540 -7700 7540 -7280 {lab=VDD_A1}
+N 7220 -7700 7220 -7300 {lab=VSS_A1}
+N 6820 -7700 6820 -7680 {lab=#net1}
+N 6820 -7680 6860 -7680 {lab=#net1}
+N 6860 -7700 6860 -7680 {lab=#net1}
+N 6900 -7700 6900 -7640 {lab=#net2}
+N 6880 -7640 6900 -7640 {lab=#net2}
+N 6880 -7700 6880 -7640 {lab=#net2}
+N 6860 -7680 6980 -7680 {lab=#net1}
+N 6980 -7700 6980 -7680 {lab=#net1}
+N 6960 -7700 6960 -7680 {lab=#net1}
+N 6940 -7700 6940 -7680 {lab=#net1}
+N 6920 -7700 6920 -7680 {lab=#net1}
+N 6820 -7460 6820 -7340 {lab=#net1}
+N 6840 -7420 6840 -7320 {lab=#net2}
+N 6840 -7640 6880 -7640 {lab=#net2}
+N 4880 -7300 7220 -7300 {lab=VSS_A1}
+N 4880 -7300 4880 -7140 {lab=VSS_A1}
+N 6800 -7700 6800 -7360 {lab=#net3}
+N 6820 -7680 6820 -7460 {lab=#net1}
+N 6840 -7640 6840 -7420 {lab=#net2}
+N 6500 -7700 6500 -7680 {lab=#net4}
+N 6500 -7680 6540 -7680 {lab=#net4}
+N 6540 -7700 6540 -7680 {lab=#net4}
+N 6580 -7700 6580 -7640 {lab=#net5}
+N 6560 -7640 6580 -7640 {lab=#net5}
+N 6560 -7700 6560 -7640 {lab=#net5}
+N 6540 -7680 6660 -7680 {lab=#net4}
+N 6660 -7700 6660 -7680 {lab=#net4}
+N 6640 -7700 6640 -7680 {lab=#net4}
+N 6620 -7700 6620 -7680 {lab=#net4}
+N 6600 -7700 6600 -7680 {lab=#net4}
+N 6520 -7640 6560 -7640 {lab=#net5}
+N 6480 -7700 6480 -7480 {lab=#net6}
+N 6500 -7680 6500 -7460 {lab=#net4}
+N 6520 -7640 6520 -7420 {lab=#net5}
+N 6180 -7700 6180 -7680 {lab=#net7}
+N 6180 -7680 6220 -7680 {lab=#net7}
+N 6220 -7700 6220 -7680 {lab=#net7}
+N 6260 -7700 6260 -7640 {lab=#net8}
+N 6240 -7640 6260 -7640 {lab=#net8}
+N 6240 -7700 6240 -7640 {lab=#net8}
+N 6220 -7680 6340 -7680 {lab=#net7}
+N 6340 -7700 6340 -7680 {lab=#net7}
+N 6320 -7700 6320 -7680 {lab=#net7}
+N 6300 -7700 6300 -7680 {lab=#net7}
+N 6280 -7700 6280 -7680 {lab=#net7}
+N 6200 -7640 6240 -7640 {lab=#net8}
+N 6160 -7700 6160 -7480 {lab=#net9}
+N 6180 -7680 6180 -7460 {lab=#net7}
+N 6200 -7640 6200 -7440 {lab=#net8}
+N 5540 -7700 5540 -7680 {lab=#net10}
+N 5540 -7680 5580 -7680 {lab=#net10}
+N 5580 -7700 5580 -7680 {lab=#net10}
+N 5620 -7700 5620 -7640 {lab=#net11}
+N 5600 -7640 5620 -7640 {lab=#net11}
+N 5600 -7700 5600 -7640 {lab=#net11}
+N 5580 -7680 5700 -7680 {lab=#net10}
+N 5700 -7700 5700 -7680 {lab=#net10}
+N 5680 -7700 5680 -7680 {lab=#net10}
+N 5660 -7700 5660 -7680 {lab=#net10}
+N 5640 -7700 5640 -7680 {lab=#net10}
+N 5560 -7640 5600 -7640 {lab=#net11}
+N 5520 -7700 5520 -7560 {lab=#net12}
+N 5540 -7680 5540 -7540 {lab=#net10}
+N 5560 -7640 5560 -7520 {lab=#net11}
+N 4900 -7700 4900 -7680 {lab=#net13}
+N 4900 -7680 4940 -7680 {lab=#net13}
+N 4940 -7700 4940 -7680 {lab=#net13}
+N 4980 -7700 4980 -7640 {lab=#net14}
+N 4960 -7640 4980 -7640 {lab=#net14}
+N 4960 -7700 4960 -7640 {lab=#net14}
+N 4940 -7680 5060 -7680 {lab=#net13}
+N 5060 -7700 5060 -7680 {lab=#net13}
+N 5040 -7700 5040 -7680 {lab=#net13}
+N 5020 -7700 5020 -7680 {lab=#net13}
+N 5000 -7700 5000 -7680 {lab=#net13}
+N 4920 -7640 4960 -7640 {lab=#net14}
+N 4880 -7700 4880 -7640 {lab=#net15}
+N 4900 -7680 4900 -7620 {lab=#net13}
+N 4920 -7640 4920 -7600 {lab=#net14}
+N 4800 -7320 6840 -7320 {lab=#net2}
+N 4800 -7320 4800 -7140 {lab=#net2}
+N 4780 -7340 6820 -7340 {lab=#net1}
+N 4780 -7340 4780 -7140 {lab=#net1}
+N 4820 -7360 6800 -7360 {lab=#net3}
+N 4820 -7360 4820 -7140 {lab=#net3}
+N 4200 -7660 4200 -7140 {lab=#net16}
+N 4200 -7660 4660 -7660 {lab=#net16}
+N 4660 -7700 4660 -7660 {lab=#net16}
+N 4140 -7680 4140 -7140 {lab=LDO_OUT}
+N 4140 -7680 4340 -7680 {lab=LDO_OUT}
+N 4340 -7700 4340 -7680 {lab=LDO_OUT}
+N 4080 -7680 4080 -7140 {lab=#net17}
+N 4020 -7680 4080 -7680 {lab=#net17}
+N 4020 -7700 4020 -7680 {lab=#net17}
+N 3620 -7700 3620 -7680 {lab=#net18}
+N 3620 -7680 3660 -7680 {lab=#net18}
+N 3660 -7700 3660 -7680 {lab=#net18}
+N 3660 -7680 3780 -7680 {lab=#net18}
+N 3780 -7700 3780 -7680 {lab=#net18}
+N 3760 -7700 3760 -7680 {lab=#net18}
+N 3740 -7700 3740 -7680 {lab=#net18}
+N 3720 -7700 3720 -7680 {lab=#net18}
+N 3680 -7620 4000 -7620 {lab=#net19}
+N 3600 -7700 3600 -7660 {lab=#net20}
+N 4000 -7620 4000 -7140 {lab=#net19}
+N 6520 -7420 6520 -7380 {lab=#net5}
+N 4700 -7380 6520 -7380 {lab=#net5}
+N 6500 -7460 6500 -7400 {lab=#net4}
+N 4680 -7400 6500 -7400 {lab=#net4}
+N 6480 -7480 6480 -7420 {lab=#net6}
+N 4720 -7420 6480 -7420 {lab=#net6}
+N 4300 -7640 4880 -7640 {lab=#net15}
+N 4300 -7640 4300 -7140 {lab=#net15}
+N 4260 -7620 4900 -7620 {lab=#net13}
+N 4260 -7620 4260 -7140 {lab=#net13}
+N 4280 -7600 4920 -7600 {lab=#net14}
+N 4280 -7600 4280 -7140 {lab=#net14}
+N 5300 -7700 5300 -7580 {lab=#net21}
+N 4360 -7580 5300 -7580 {lab=#net21}
+N 4360 -7580 4360 -7140 {lab=#net21}
+N 4460 -7560 5520 -7560 {lab=#net12}
+N 4460 -7560 4460 -7140 {lab=#net12}
+N 4420 -7540 5540 -7540 {lab=#net10}
+N 4420 -7540 4420 -7140 {lab=#net10}
+N 4440 -7520 5560 -7520 {lab=#net11}
+N 4440 -7520 4440 -7140 {lab=#net11}
+N 5940 -7700 5940 -7500 {lab=#net22}
+N 4520 -7500 5940 -7500 {lab=#net22}
+N 4520 -7500 4520 -7140 {lab=#net22}
+N 4620 -7480 6160 -7480 {lab=#net9}
+N 4620 -7480 4620 -7140 {lab=#net9}
+N 4580 -7460 6180 -7460 {lab=#net7}
+N 4580 -7460 4580 -7140 {lab=#net7}
+N 4600 -7440 6200 -7440 {lab=#net8}
+N 4600 -7440 4600 -7140 {lab=#net8}
+N 4680 -7400 4680 -7140 {lab=#net4}
+N 4700 -7380 4700 -7140 {lab=#net5}
+N 4720 -7420 4720 -7140 {lab=#net6}
+N 3780 -7660 3980 -7660 {lab=#net18}
+N 3980 -7660 3980 -7140 {lab=#net18}
+N 3600 -7640 4020 -7640 {lab=#net20}
+N 4020 -7640 4020 -7140 {lab=#net20}
+N 3300 -7700 3300 -7660 {lab=#net23}
+N 3340 -7700 3340 -7680 {lab=#net24}
+N 3340 -7680 3460 -7680 {lab=#net24}
+N 3460 -7700 3460 -7680 {lab=#net24}
+N 3440 -7700 3440 -7680 {lab=#net24}
+N 3420 -7700 3420 -7680 {lab=#net24}
+N 3400 -7700 3400 -7680 {lab=#net24}
+N 2660 -7700 2660 -7680 {lab=#net25}
+N 2660 -7680 2700 -7680 {lab=#net25}
+N 2700 -7700 2700 -7680 {lab=#net25}
+N 2740 -7700 2740 -7640 {lab=#net26}
+N 2720 -7640 2740 -7640 {lab=#net26}
+N 2720 -7700 2720 -7640 {lab=#net26}
+N 2700 -7680 2820 -7680 {lab=#net25}
+N 2820 -7700 2820 -7680 {lab=#net25}
+N 2800 -7700 2800 -7680 {lab=#net25}
+N 2780 -7700 2780 -7680 {lab=#net25}
+N 2760 -7700 2760 -7680 {lab=#net25}
+N 2640 -7700 2640 -7660 {lab=#net27}
+N 2020 -7700 2020 -7680 {lab=#net28}
+N 2020 -7680 2060 -7680 {lab=#net28}
+N 2060 -7700 2060 -7680 {lab=#net28}
+N 2100 -7700 2100 -7640 {lab=#net29}
+N 2080 -7640 2100 -7640 {lab=#net29}
+N 2080 -7700 2080 -7640 {lab=#net29}
+N 2060 -7680 2180 -7680 {lab=#net28}
+N 2180 -7700 2180 -7680 {lab=#net28}
+N 2160 -7700 2160 -7680 {lab=#net28}
+N 2140 -7700 2140 -7680 {lab=#net28}
+N 2120 -7700 2120 -7680 {lab=#net28}
+N 2000 -7700 2000 -7660 {lab=#net30}
+N 1700 -7700 1700 -7680 {lab=#net31}
+N 1700 -7680 1740 -7680 {lab=#net31}
+N 1740 -7700 1740 -7680 {lab=#net31}
+N 1780 -7700 1780 -7640 {lab=#net32}
+N 1760 -7640 1780 -7640 {lab=#net32}
+N 1760 -7700 1760 -7640 {lab=#net32}
+N 1740 -7680 1860 -7680 {lab=#net31}
+N 1860 -7700 1860 -7680 {lab=#net31}
+N 1840 -7700 1840 -7680 {lab=#net31}
+N 1820 -7700 1820 -7680 {lab=#net31}
+N 1800 -7700 1800 -7680 {lab=#net31}
+N 1680 -7700 1680 -7660 {lab=#net33}
+N 1380 -7700 1380 -7680 {lab=#net34}
+N 1380 -7680 1420 -7680 {lab=#net34}
+N 1420 -7700 1420 -7680 {lab=#net34}
+N 1460 -7700 1460 -7640 {lab=#net35}
+N 1440 -7640 1460 -7640 {lab=#net35}
+N 1440 -7700 1440 -7640 {lab=#net35}
+N 1420 -7680 1540 -7680 {lab=#net34}
+N 1540 -7700 1540 -7680 {lab=#net34}
+N 1520 -7700 1520 -7680 {lab=#net34}
+N 1500 -7700 1500 -7680 {lab=#net34}
+N 1480 -7700 1480 -7680 {lab=#net34}
+N 1360 -7700 1360 -7660 {lab=#net36}
+N 1060 -7700 1060 -7680 {lab=#net37}
+N 1060 -7680 1100 -7680 {lab=#net37}
+N 1100 -7700 1100 -7680 {lab=#net37}
+N 1140 -7700 1140 -7640 {lab=#net38}
+N 1120 -7640 1140 -7640 {lab=#net38}
+N 1120 -7700 1120 -7640 {lab=#net38}
+N 1100 -7680 1220 -7680 {lab=#net37}
+N 1220 -7700 1220 -7680 {lab=#net37}
+N 1200 -7700 1200 -7680 {lab=#net37}
+N 1180 -7700 1180 -7680 {lab=#net37}
+N 1160 -7700 1160 -7680 {lab=#net37}
+N 1040 -7700 1040 -7660 {lab=#net39}
+N 3360 -7700 3360 -7680 {lab=#net24}
+N 3380 -7700 3380 -7680 {lab=#net24}
+N 3320 -7700 3320 -7640 {lab=#net40}
+N 3680 -7700 3680 -7620 {lab=#net19}
+N 3700 -7700 3700 -7620 {lab=#net19}
+N 3780 -7680 3780 -7660 {lab=#net18}
+N 3600 -7660 3600 -7640 {lab=#net20}
+N 3320 -7640 3320 -7600 {lab=#net40}
+N 3320 -7600 3920 -7600 {lab=#net40}
+N 3920 -7600 3920 -7140 {lab=#net40}
+N 3300 -7660 3300 -7580 {lab=#net23}
+N 3300 -7580 3900 -7580 {lab=#net23}
+N 3900 -7580 3900 -7140 {lab=#net23}
+N 3340 -7680 3340 -7560 {lab=#net24}
+N 3340 -7560 3880 -7560 {lab=#net24}
+N 3880 -7560 3880 -7140 {lab=#net24}
+N 3060 -7700 3060 -7540 {lab=VTEST}
+N 3060 -7540 3810 -7540 {lab=VTEST}
+N 3810 -7540 3820 -7540 {lab=VTEST}
+N 3820 -7540 3820 -7140 {lab=VTEST}
+N 2640 -7660 2640 -7520 {lab=#net27}
+N 2640 -7520 3760 -7520 {lab=#net27}
+N 3760 -7520 3760 -7140 {lab=#net27}
+N 2720 -7640 2720 -7500 {lab=#net26}
+N 2720 -7500 3740 -7500 {lab=#net26}
+N 3740 -7500 3740 -7140 {lab=#net26}
+N 2660 -7680 2660 -7480 {lab=#net25}
+N 2660 -7480 3720 -7480 {lab=#net25}
+N 3720 -7480 3720 -7140 {lab=#net25}
+N 2420 -7710 2420 -7460 {lab=#net41}
+N 2420 -7460 3660 -7460 {lab=#net41}
+N 3660 -7460 3660 -7140 {lab=#net41}
+N 2000 -7660 2000 -7440 {lab=#net30}
+N 2000 -7440 3600 -7440 {lab=#net30}
+N 3600 -7440 3600 -7140 {lab=#net30}
+N 2080 -7640 2080 -7420 {lab=#net29}
+N 2080 -7420 3580 -7420 {lab=#net29}
+N 3580 -7420 3580 -7140 {lab=#net29}
+N 2020 -7680 2020 -7400 {lab=#net28}
+N 2020 -7400 3560 -7400 {lab=#net28}
+N 3560 -7400 3560 -7140 {lab=#net28}
+N 1680 -7660 1680 -7380 {lab=#net33}
+N 1680 -7380 3500 -7380 {lab=#net33}
+N 3500 -7380 3500 -7140 {lab=#net33}
+N 1760 -7640 1760 -7360 {lab=#net32}
+N 1760 -7360 3480 -7360 {lab=#net32}
+N 3480 -7360 3480 -7140 {lab=#net32}
+N 1700 -7680 1700 -7340 {lab=#net31}
+N 1700 -7340 3460 -7340 {lab=#net31}
+N 3460 -7340 3460 -7140 {lab=#net31}
+N 1360 -7660 1360 -7320 {lab=#net36}
+N 1360 -7320 3400 -7320 {lab=#net36}
+N 3400 -7320 3400 -7140 {lab=#net36}
+N 1440 -7640 1440 -7300 {lab=#net35}
+N 1440 -7300 3380 -7300 {lab=#net35}
+N 3380 -7300 3380 -7140 {lab=#net35}
+N 1380 -7680 1380 -7280 {lab=#net34}
+N 1380 -7280 3360 -7280 {lab=#net34}
+N 3360 -7280 3360 -7140 {lab=#net34}
+N 1040 -7660 1040 -7260 {lab=#net39}
+N 1040 -7260 3300 -7260 {lab=#net39}
+N 3300 -7260 3300 -7140 {lab=#net39}
+N 1120 -7640 1120 -7240 {lab=#net38}
+N 1120 -7240 3280 -7240 {lab=#net38}
+N 3280 -7240 3280 -7140 {lab=#net38}
+N 1060 -7680 1060 -7220 {lab=#net37}
+N 1060 -7220 3260 -7220 {lab=#net37}
+N 3260 -7220 3260 -7140 {lab=#net37}
+N 820 -7700 820 -7200 {lab=#net42}
+N 3200 -7200 3200 -7140 {lab=#net42}
+N 820 -7200 3200 -7200 {lab=#net42}
+N 660 -740 680 -740 {lab=#net43}
+N 680 -780 680 -740 {lab=#net43}
+N 660 -780 680 -780 {lab=#net43}
+N 680 -900 680 -780 {lab=#net43}
+N 660 -900 680 -900 {lab=#net43}
+N 660 -880 680 -880 {lab=#net43}
+N 660 -860 680 -860 {lab=#net43}
+N 660 -840 680 -840 {lab=#net43}
+N 660 -720 700 -720 {lab=#net44}
+N 660 -800 740 -800 {lab=#net45}
+N 660 -820 740 -820 {lab=#net45}
+N 680 -900 700 -900 {lab=#net43}
+N 1220 -680 1220 -660 {lab=#net46}
+N 1180 -680 1220 -680 {lab=#net46}
+N 1180 -680 1180 -660 {lab=#net46}
+N 1060 -680 1180 -680 {lab=#net46}
+N 1060 -680 1060 -660 {lab=#net46}
+N 1080 -680 1080 -660 {lab=#net46}
+N 1100 -680 1100 -660 {lab=#net46}
+N 1120 -680 1120 -660 {lab=#net46}
+N 1240 -700 1240 -660 {lab=#net47}
+N 1160 -740 1160 -660 {lab=#net48}
+N 1140 -740 1140 -660 {lab=#net48}
+N 1060 -700 1060 -680 {lab=#net46}
+N 740 -820 740 -800 {lab=#net45}
+N 1140 -740 1160 -740 {lab=#net48}
+C {libs/A1_core/A1_top/A1_top.sym} 3160 -6880 0 0 {name=xI_top}
+C {libs/A_track_core/padring/padring.sym} 280 -280 0 0 {name=xI_top_io
+lock=true}
+C {iopin.sym} 3380 -8140 3 0 { name=p48 lab=VCO_OUT }
+C {iopin.sym} 4020 -8140 1 1 { name=p49 lab=VCO_IN }
+C {ipin.sym} 4980 -8140 1 0 { name=p50 lab=VCO_IBIAS_OVRD }
+C {iopin.sym} 4660 -8140 1 1 { name=p51 lab=VCO_IBIAS }
+C {ipin.sym} 3700 -8140 1 0 { name=p52 lab=VCO_EN }
+C {ipin.sym} 1140 -8140 1 0 { name=p53 lab=TEST_SEL_2 }
+C {ipin.sym} 1460 -8140 1 0 { name=p54 lab=TEST_SEL_1 }
+C {ipin.sym} 1780 -8140 1 0 { name=p55 lab=TEST_SEL_0 }
+C {iopin.sym} 820 -8140 3 0 { name=p56 lab=TEST_OUT }
+C {ipin.sym} 2740 -8140 1 0 { name=p57 lab=TEST_IBIAS_OVRD }
+C {iopin.sym} 2420 -8140 1 1 { name=p58 lab=TEST_IBIAS }
+C {ipin.sym} 2100 -8140 1 0 { name=p59 lab=TEST_EN }
+C {ipin.sym} 6260 -8140 1 0 { name=p61 lab=LDO_VREF_OVRD }
+C {iopin.sym} 5940 -8140 1 1 { name=p62 lab=LDO_VREF }
+C {ipin.sym} 5620 -8140 1 0 { name=p63 lab=LDO_IBIAS_OVRD }
+C {iopin.sym} 5300 -8140 1 1 { name=p64 lab=LDO_IBIAS }
+C {ipin.sym} 6580 -8140 1 0 { name=p65 lab=LDO_EN }
+C {iopin.sym} 3060 -8140 1 1 { name=p66 lab=VTEST }
+C {iopin.sym} 7220 -8140 3 0 { name=p67 lab=VSS_A1 }
+C {iopin.sym} 7540 -8140 3 0 { name=p68 lab=VDD_A1 }
+C {iopin.sym} 4340 -8140 3 0 { name=p69 lab=LDO_OUT }
+C {ipin.sym} 6900 -8140 1 0 { name=p70 lab=BIAS_EN }
+C {noconn.sym} 3280 -7700 3 0 {name=l1}
+C {noconn.sym} 3640 -7700 3 0 {name=l2}
+C {noconn.sym} 2680 -7700 3 0 {name=l3}
+C {noconn.sym} 2040 -7700 3 0 {name=l4}
+C {noconn.sym} 1720 -7700 3 0 {name=l5}
+C {noconn.sym} 1400 -7700 3 0 {name=l6}
+C {noconn.sym} 1080 -7700 3 0 {name=l7}
+C {noconn.sym} 4920 -7700 3 0 {name=l8}
+C {noconn.sym} 5560 -7700 3 0 {name=l9}
+C {noconn.sym} 6200 -7700 3 0 {name=l10}
+C {noconn.sym} 6520 -7700 3 0 {name=l11}
+C {noconn.sym} 6840 -7700 3 0 {name=l12}
+C {noconn.sym} 660 -760 2 0 {name=l13}
+C {noconn.sym} 700 -900 2 0 {name=l14}
+C {noconn.sym} 700 -720 2 0 {name=l15}
+C {noconn.sym} 740 -820 2 0 {name=l16}
+C {noconn.sym} 1060 -700 1 0 {name=l17}
+C {noconn.sym} 1140 -740 1 0 {name=l18}
+C {noconn.sym} 1240 -700 1 0 {name=l19}
+C {noconn.sym} 1200 -660 1 0 {name=l20}
+C {noconn.sym} 260 -820 0 0 {name=l21}
+C {noconn.sym} 1140 -260 3 0 {name=l22}
