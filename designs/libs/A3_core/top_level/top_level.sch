@@ -330,7 +330,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {bias/bias.sym} 500 -160 0 0 {name=x4}
-C {vanilla_cm/vanilla_cm.sym} 860 -430 0 0 {name=x1}
-C {biased_cm/biased_cm.sym} 1130 -300 0 0 {name=x2}
-C {cascode_cm/cascode_cm.sym} 1470 -200 0 0 {name=x3}
+C {libs/A3_core/bias/bias.sym} 500 -160 0 0 {name=x4}
+C {libs/A3_core/vanilla_cm/vanilla_cm.sym} 860 -430 0 0 {name=x1}
+C {libs/A3_core/biased_cm/biased_cm.sym} 1130 -300 0 0 {name=x2}
+C {libs/A3_core/cascode_cm/cascode_cm.sym} 1470 -200 0 0 {name=x3}
