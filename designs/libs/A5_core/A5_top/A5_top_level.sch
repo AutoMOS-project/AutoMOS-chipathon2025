@@ -223,7 +223,7 @@ C {lab_pin.sym} 760 -1210 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 760 -1390 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 760 -1580 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 760 -1750 0 0 {name=p16 sig_type=std_logic lab=VDD}
-C {opin.sym} 2520 -1620 0 0 {name=p5 lab=V_out}
+C {opin.sym} 2520 -1620 0 0 {name=p5 lab=V_IF}
 C {libs/A5_core/A5_top/5t-ota/5T-OTA-buffer_no_hierarchy.sym} 1920 -1740 0 0 {name=x_Amplifier}
 C {libs/A5_core/A5_top/output_stage/Output_stage.sym} 2330 -1720 0 0 {name=x_Output_stage}
 C {symbols/ppolyf_u.sym} 1410 -1180 3 0 {name=R1

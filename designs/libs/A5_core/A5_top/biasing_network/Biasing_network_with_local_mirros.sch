@@ -103,12 +103,12 @@ C {opin.sym} 840 -1190 3 0 {name=p7 lab=I_out_1}
 C {opin.sym} 1180 -1190 3 0 {name=p8 lab=I_out_2}
 C {opin.sym} 1600 -1190 3 0 {name=p9 lab=I_out_3}
 C {iopin.sym} 180 -1370 0 1 {name=p3 lab=VDD}
-C {/home/vasil/Downloads/AutoMOS-chipathon2025/designs/libs/core_top/A5_Time_Transcenders/symbol/Local_mirror_pmos.sym} 360 -1270 0 0 {name=x_PMOS_mirror
+C {libs/A5_core/A5_top/biasing_network/Local_mirror_pmos.sym} 360 -1270 0 0 {name=x_PMOS_mirror
 l_ref=pmos_l_ref
 w_ref=pmos_w_ref
 l_mir=pmos_l_mir
 w_mir=pmos_w_mir}
-C {/home/vasil/Downloads/AutoMOS-chipathon2025/designs/libs/core_top/A5_Time_Transcenders/symbol/Local_mirror_nmos.sym} 720 -900 0 0 {name=x_NMOS_mirror_1
+C {libs/A5_core/A5_top/biasing_network/Local_mirror_nmos.sym} 720 -900 0 0 {name=x_NMOS_mirror_1
 l_ref=nmos_l_ref_1
 w_ref=nmos_w_ref_1
 nf_ref=nmos_nf_ref_1
@@ -116,14 +116,14 @@ l_mir=nmos_l_mir_1
 w_mir=nmos_w_mir_1
 nf_mir=nmos_nf_mir_1}
 C {lab_pin.sym} 610 -860 0 0 {name=p4 sig_type=std_logic lab=VSS}
-C {/home/vasil/Downloads/AutoMOS-chipathon2025/designs/libs/core_top/A5_Time_Transcenders/symbol/Local_mirror_nmos.sym} 1060 -900 0 0 {name=x_NMOS_mirror_2
+C {libs/A5_core/A5_top/biasing_network/Local_mirror_nmos.sym} 1060 -900 0 0 {name=x_NMOS_mirror_2
 l_ref=nmos_l_ref_2
 w_ref=nmos_w_ref_2
 nf_ref=nmos_nf_ref_2
 l_mir=nmos_l_mir_2
 w_mir=nmos_w_mir_2
 nf_mir=nmos_nf_mir_2}
-C {/home/vasil/Downloads/AutoMOS-chipathon2025/designs/libs/core_top/A5_Time_Transcenders/symbol/Local_mirror_nmos.sym} 1480 -900 0 0 {name=x_NMOS_mirror_3
+C {libs/A5_core/A5_top/biasing_network/Local_mirror_nmos.sym} 1480 -900 0 0 {name=x_NMOS_mirror_3
 l_ref=nmos_l_ref_3
 w_ref=nmos_w_ref_3
 nf_ref=nmos_nf_ref_3
@@ -132,7 +132,7 @@ w_mir=nmos_w_mir_3
 nf_mir=nmos_nf_mir_3}
 C {lab_pin.sym} 950 -860 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1370 -860 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {/home/vasil/Downloads/AutoMOS-chipathon2025/designs/libs/core_top/A5_Time_Transcenders/symbol/Local_mirror_nmos.sym} 1890 -900 0 0 {name=x_NMOS_mirror_4
+C {libs/A5_core/A5_top/biasing_network/Local_mirror_nmos.sym} 1890 -900 0 0 {name=x_NMOS_mirror_4
 l_ref=nmos_l_ref_4
 w_ref=nmos_w_ref_4
 nf_ref=nmos_nf_ref_4
