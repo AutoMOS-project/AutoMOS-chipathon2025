@@ -1,0 +1,48 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -270 0 -270 20 {}
+L 7 -330 0 -330 20 {}
+L 7 330 0 330 20 {}
+L 7 210 0 210 20 {}
+L 7 90 0 90 20 {}
+L 7 -30 0 -30 20 {}
+L 7 -90 0 -90 20 {}
+L 7 150 0 150 20 {}
+L 7 30 0 30 20 {}
+L 7 -210 0 -210 20 {}
+L 7 270 0 270 20 {}
+L 7 -150 0 -150 20 {}
+B 5 -332.5 17.5 -327.5 22.5 {name=VDD3V3 dir=inout}
+B 5 327.5 17.5 332.5 22.5 {name=Vrefp dir=inout}
+B 5 -272.5 17.5 -267.5 22.5 {name=Vref12 dir=in}
+B 5 207.5 17.5 212.5 22.5 {name=Irefp_50uA dir=inout}
+B 5 87.5 17.5 92.5 22.5 {name=Irefp_20uA dir=inout}
+B 5 -32.5 17.5 -27.5 22.5 {name=Irefp_2uA dir=inout}
+B 5 -92.5 17.5 -87.5 22.5 {name=Irefn_2uA dir=inout}
+B 5 147.5 17.5 152.5 22.5 {name=Irefn_50uA dir=inout}
+B 5 27.5 17.5 32.5 22.5 {name=Irefn_20uA dir=inout}
+B 5 -212.5 17.5 -207.5 22.5 {name=Vcomp dir=inout}
+B 5 267.5 17.5 272.5 22.5 {name=Vrefn dir=inout}
+B 5 -152.5 17.5 -147.5 22.5 {name=VSS dir=inout}
+P 4 5 360 -360 -360 -360 -360 0 360 0 360 -360 {}
+T {@symname} -52 -156 0 0 0.3 0.3 {}
+T {@name} 135 -202 0 0 0.2 0.2 {}
+T {VDD3V3} -334 -55 3 1 0.2 0.2 {}
+T {Vrefp} 334 -5 1 1 0.2 0.2 {}
+T {Vref12} -274 -5 3 0 0.2 0.2 {}
+T {Irefp_50uA} 214 -5 1 1 0.2 0.2 {}
+T {Irefp_20uA} 94 -5 1 1 0.2 0.2 {}
+T {Irefp_2uA} -26 -5 1 1 0.2 0.2 {}
+T {Irefn_2uA} -86 -5 1 1 0.2 0.2 {}
+T {Irefn_50uA} 154 -5 1 1 0.2 0.2 {}
+T {Irefn_20uA} 34 -5 1 1 0.2 0.2 {}
+T {Vcomp} -214 -45 3 1 0.2 0.2 {}
+T {Vrefn} 274 -5 1 1 0.2 0.2 {}
+T {VSS} -154 -25 3 1 0.2 0.2 {}
