@@ -241,4 +241,4 @@ C {gnd.sym} 1400 -550 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 1070 -490 0 0 {name=p3 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1420 -490 0 0 {name=p15 sig_type=std_logic lab=TEST_OUT}
 C {lab_wire.sym} 1390 -610 0 0 {name=p16 sig_type=std_logic lab=VCO_OUT}
-C {libs/core_top/chiptop/chiptop.sym} 1070 -310 0 0 {name=xI_chiptop}
+C {libs/A1_core/chiptop/chiptop.sym} 1070 -310 0 0 {name=xI_chiptop}
