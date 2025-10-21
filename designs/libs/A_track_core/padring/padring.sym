@@ -1,4 +1,5 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
@@ -840,10 +841,10 @@ T {IOUTP_50UA} 4400 -290 1 0 0.8 0.8 {}
 T {VREFN_AXX} 4720 -320 1 0 0.8 0.8 {}
 T {VREFP_AXX} 5050 -320 1 0 0.8 0.8 {}
 T {ana57} 5360 -260 1 0 0.8 0.8 {}
-T {VIN_V_RF_A5} 5690 -310 1 0 0.8 0.8 {}
-T {VIN_V_RFb_A5} 6020 -320 1 0 0.8 0.8 {}
+T {VIN_V_LO_A5} 5690 -310 1 0 0.8 0.8 {}
+T {VIN_V_RF_A5} 6020 -320 1 0 0.8 0.8 {}
 T {VSS_A5} 6320 -290 1 0 0.8 0.8 {}
-T {VIN_V_LO_A5} 6630 -310 1 0 0.8 0.8 {}
+T {VIN_V_RFb_A5} 6630 -310 1 0 0.8 0.8 {}
 T {VIN_V_LOb_A5} 6970 -310 1 0 0.8 0.8 {}
 T {I_BIAS_A5} 7280 -320 1 0 0.8 0.8 {}
 T {@name} 7695 -7782 0 0 0.2 0.2 {}

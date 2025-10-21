@@ -1,4 +1,5 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -1243,14 +1244,14 @@ C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6780 -320 3 0 {name=IO_VIN
 model=gf180mcu_fd_io__asig_5p0_extracted
 spiceprefix=X
 }
-C {iopin.sym} 6700 -320 1 0 {name=p254 lab=VIN_V_LO_A5_PAD}
-C {iopin.sym} 6700 -520 1 1 {name=p255 lab=VIN_V_LO_A5_ASIG5V}
+C {iopin.sym} 6700 -320 1 0 {name=p254 lab=VIN_V_RFb_A5_PAD}
+C {iopin.sym} 6700 -520 1 1 {name=p255 lab=VIN_V_RFb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6260 -320 3 0 {name=IO_VIN_V_RFb_A5
 model=gf180mcu_fd_io__asig_5p0_extracted
 spiceprefix=X
 }
-C {iopin.sym} 6180 -320 1 0 {name=p256 lab=VIN_V_RFb_A5_PAD}
-C {iopin.sym} 6180 -520 1 1 {name=p257 lab=VIN_V_RFb_A5_ASIG5V}
+C {iopin.sym} 6180 -320 1 0 {name=p256 lab=VIN_V_RF_A5_PAD}
+C {iopin.sym} 6180 -520 1 1 {name=p257 lab=VIN_V_RF_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 6520 -320 3 0 {name=IO_VSS_A5
 model=gf180mcu_fd_io__dvss
 spiceprefix=X
@@ -1262,8 +1263,8 @@ C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6000 -320 3 0 {name=IO_VIN
 model=gf180mcu_fd_io__asig_5p0_extracted
 spiceprefix=X
 }
-C {iopin.sym} 5920 -320 1 0 {name=p259 lab=VIN_V_RF_A5_PAD}
-C {iopin.sym} 5920 -520 1 1 {name=p260 lab=VIN_V_RF_A5_ASIG5V}
+C {iopin.sym} 5920 -320 1 0 {name=p259 lab=VIN_V_LO_A5_PAD}
+C {iopin.sym} 5920 -520 1 1 {name=p260 lab=VIN_V_LO_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 2420 -320 3 0 {name=IO_VDD3V3_AXX
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
