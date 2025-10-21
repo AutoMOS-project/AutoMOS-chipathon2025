@@ -77,7 +77,6 @@ C {lab_wire.sym} 740 -760 0 1 {name=p61 lab=IPTAT_10u_src}
 C {lab_wire.sym} 740 -740 0 1 {name=p62 lab=IPTAT_10u_snk}
 C {lab_wire.sym} 1030 -600 0 0 {name=p31 lab=IPTAT_10u_snk}
 C {lab_wire.sym} 1330 -260 0 0 {name=p46 lab=IPTAT_2u_src}
-C {lab_wire.sym} 1330 -240 0 0 {name=p47 lab=IPTAT_2u_snk}
 C {ipin.sym} 180 -530 0 0 {name=p71 lab=TEST_SEL_1}
 C {ipin.sym} 180 -500 0 0 {name=p72 lab=TEST_SEL_2}
 C {iopin.sym} 180 -440 2 0 {name=p73 lab=LDO_VREF}
@@ -104,12 +103,12 @@ C {lab_wire.sym} 1330 -340 0 0 {name=p52 lab=VSS}
 C {noconn.sym} 420 -740 2 0 {name=l2}
 C {noconn.sym} 420 -760 2 0 {name=l3}
 C {noconn.sym} 420 -700 2 0 {name=l4}
-C {libs/core_biasgen/biasgen/biasgen_v2.sym} 520 -800 0 0 {name=x1}
-C {lab_wire.sym} 740 -720 0 1 {name=p44 lab=IPTAT_2u_snk}
-C {libs/core_test/test/test_v2.sym} 1350 -400 0 0 {name=x2}
+C {libs/core_biasgen/biasgen/biasgen_v2.sym} 520 -800 0 0 {name=xI_biasgen}
+C {libs/core_test/test/test_v2.sym} 1350 -400 0 0 {name=xI_test}
 C {lab_wire.sym} 1330 -320 0 0 {name=p33 lab=VSS}
 C {lab_wire.sym} 1330 -300 0 0 {name=p35 lab=VSS}
 C {lab_wire.sym} 1330 -280 0 0 {name=p43 lab=VSS}
 C {lab_wire.sym} 1030 -820 0 0 {name=p45 lab=IPTAT_10u_src}
 C {lab_wire.sym} 1030 -970 0 0 {name=p34 lab=VSS}
 C {lab_wire.sym} 1330 -220 0 0 {name=p53 lab=VSS}
+C {lab_wire.sym} 1330 -240 0 0 {name=p44 lab=VSS}

@@ -31,6 +31,4 @@ C {libs/core_biasgen/biasgen_inverter/biasgen_inverter.sym} 140 -620 0 0 {name=x
 C {lab_wire.sym} 280 -660 0 1 {name=p44 sig_type=std_logic lab=ENB}
 C {lab_wire.sym} 190 -700 0 1 {name=p55 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 190 -620 2 0 {name=p56 sig_type=std_logic lab=VSS}
-C {iopin.sym} 680 -840 0 0 {name=p4 lab=IPTAT_2u_snk
-}
 C {lab_pin.sym} 420 -840 0 1 {name=p6 lab=IPTAT_2u_snk}
