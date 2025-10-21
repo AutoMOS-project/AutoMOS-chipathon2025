@@ -184,7 +184,7 @@ C {lab_pin.sym} 680 -720 0 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 680 -630 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {vsource.sym} 680 -580 0 0 {name=VSS_sense value=0 savecurrent=false}
 C {gnd.sym} 680 -550 0 0 {name=l1 lab=GND}
-C {libs/core_top/top/top.sym} 1070 -310 0 0 {name=x1}
+C {libs/A1_core/A1_top_core/top.sym} 1070 -310 0 0 {name=x1}
 C {lab_pin.sym} 1190 -850 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1190 -310 3 0 {name=p2 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1050 -320 0 0 {name=p4 sig_type=std_logic lab=VSS}
