@@ -208,14 +208,14 @@ C {ipin.sym} 610 -1510 2 1 {name=p2 lab=V_LO_b
 C {ipin.sym} 610 -1320 0 0 {name=p3 lab=V_RF}
 C {ipin.sym} 610 -1140 2 1 {name=p4 lab=V_RF_b
 }
-C {libs/A5_core/A5_top/gilbert_cell_hierarchal_mixing_stage/gilbert_cell_hierarchal_mixing_stage.sym} 1410 -1490 0 0 {name=x_Gilbert_mixer}
-C {libs/A5_core/A5_top/gilbert_cell_hierarchal_loading_stage/gilbert_cell_hierarchal_loading_stage.sym} 1410 -1840 0 0 {name=x_Gilbert_loading}
+C {libs/A5_core/gilbert_cell_hierarchal_mixing_stage/gilbert_cell_hierarchal_mixing_stage.sym} 1410 -1490 0 0 {name=x_Gilbert_mixer}
+C {libs/A5_core/gilbert_cell_hierarchal_loading_stage/gilbert_cell_hierarchal_loading_stage.sym} 1410 -1840 0 0 {name=x_Gilbert_loading}
 C {lab_pin.sym} 1410 -1140 3 0 {name=p15 sig_type=std_logic lab=VDD}
-C {libs/A5_core/A5_top/biasing_network_with_local_mirros/biasing_network_with_local_mirros.sym} 1140 -660 0 0 {name=x_Biasing_network}
-C {libs/A5_core/A5_top/io_secondary_5p0/io_secondary_5p0.sym} 840 -1600 0 1 {name=IO1
+C {libs/A5_core/biasing_network_with_local_mirros/biasing_network_with_local_mirros.sym} 1140 -660 0 0 {name=x_Biasing_network}
+C {libs/A5_core/io_secondary_5p0/io_secondary_5p0.sym} 840 -1600 0 1 {name=IO1
 spiceprefix=X
 }
-C {libs/A5_core/A5_top/io_secondary_5p0/io_secondary_5p0.sym} 840 -1430 0 1 {name=IO3
+C {libs/A5_core/io_secondary_5p0/io_secondary_5p0.sym} 840 -1430 0 1 {name=IO3
 spiceprefix=X
 }
 C {lab_pin.sym} 700 -740 0 0 {name=p6 sig_type=std_logic lab=VDD}
@@ -224,8 +224,8 @@ C {lab_pin.sym} 760 -1390 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 760 -1580 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 760 -1750 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {opin.sym} 2520 -1620 0 0 {name=p5 lab=V_IF}
-C {libs/A5_core/A5_top/5t-ota-buffer_no_hierarchy/5t-ota-buffer_no_hierarchy.sym} 1920 -1740 0 0 {name=x_Amplifier}
-C {libs/A5_core/A5_top/output_stage/output_stage.sym} 2330 -1720 0 0 {name=x_Output_stage}
+C {libs/A5_core/5t-ota-buffer_no_hierarchy/5t-ota-buffer_no_hierarchy.sym} 1920 -1740 0 0 {name=x_Amplifier}
+C {libs/A5_core/output_stage/output_stage.sym} 2330 -1720 0 0 {name=x_Output_stage}
 C {symbols/ppolyf_u.sym} 1410 -1180 3 0 {name=R1
 W=1e-6
 L=4e-6
@@ -251,12 +251,12 @@ C {lab_pin.sym} 1190 -1950 0 0 {name=p25 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1850 -1870 0 0 {name=p26 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 2170 -1800 0 0 {name=p27 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 850 -860 0 0 {name=p28 sig_type=std_logic lab=VDD}
-C {libs/A5_core/A5_top/io_secondary_5p0/io_secondary_5p0.sym} 840 -1240 0 1 {name=IO4
+C {libs/A5_core/io_secondary_5p0/io_secondary_5p0.sym} 840 -1240 0 1 {name=IO4
 spiceprefix=X
 }
-C {libs/A5_core/A5_top/io_secondary_5p0/io_secondary_5p0.sym} 840 -1060 0 1 {name=IO5
+C {libs/A5_core/io_secondary_5p0/io_secondary_5p0.sym} 840 -1060 0 1 {name=IO5
 spiceprefix=X
 }
-C {libs/A5_core/A5_top/io_secondary_5p0/io_secondary_5p0.sym} 780 -590 0 1 {name=IO2
+C {libs/A5_core/io_secondary_5p0/io_secondary_5p0.sym} 780 -590 0 1 {name=IO2
 spiceprefix=X
 }
