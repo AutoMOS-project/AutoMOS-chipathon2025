@@ -177,11 +177,11 @@ N 2190 -270 2230 -270 {lab=VSS}
 N 2230 -340 2230 -270 {lab=VSS}
 N 2010 -370 2010 -340 {lab=VSS}
 N 2010 -280 2010 -270 {lab=VSS}
-N 2230 -680 2240 -680 {lab=vbe2}
+N 2230 -680 2240 -680 {lab=vbjt_ctat[34]}
 N 2090 -680 2190 -680 {lab=vnref_ctat}
-N 2050 -650 2050 -500 {lab=vbe2}
-N 2030 -680 2050 -680 {lab=vbe2}
-N 2240 -680 2250 -680 {lab=vbe2}
+N 2050 -630 2050 -500 {lab=vbe2}
+N 2030 -680 2050 -680 {lab=vbjt_ctat[34]}
+N 2240 -680 2250 -680 {lab=vbjt_ctat[34]}
 N 2010 -340 2010 -280 {lab=VSS}
 N 2050 -270 2190 -270 {lab=VSS}
 N 2220 -600 2220 -550 {lab=vbjt_ctat[34:1]
@@ -343,7 +343,7 @@ N 520 -530 520 -470 {lab=#net11}
 N 520 -530 830 -530 {lab=#net11}
 N 810 -1080 810 -980 {lab=vpref_fb}
 N 330 -270 560 -270 {lab=VSS}
-N 160 -540 160 -490 {lab=vstart_up,vbias[33:1]
+N 160 -540 160 -490 {lab=vstart_up,vbias[35:1]
 bus=true}
 N 160 -430 160 -390 {lab=vbias[35:1],VSS
 bus=true}
@@ -365,9 +365,8 @@ N 330 -1210 330 -470 {lab=vpcas}
 N 330 -1210 640 -1210 {lab=vpcas}
 N 790 -840 790 -700 {lab=#net12}
 N 210 -1210 330 -1210 {lab=vpcas}
-N 2030 -680 2030 -640 {lab=vbe2}
-N 2030 -640 2050 -640 {lab=vbe2}
-N 2250 -680 2250 -640 {lab=vbe2}
+N 2030 -680 2030 -640 {lab=vbjt_ctat[34]}
+N 2250 -680 2250 -640 {lab=vbjt_ctat[34]}
 N 2370 -1370 2380 -1370 {lab=VDD}
 N 2310 -1370 2330 -1370 {lab=vpref_ctat}
 N 2370 -1430 2370 -1400 {lab=VDD}
@@ -469,7 +468,6 @@ N 2330 -1760 2330 -1710 {lab=VDD}
 N 2290 -1760 2330 -1760 {lab=VDD}
 N 1020 -990 1020 -770 {lab=vbjt_ptat[6]}
 N 1130 -530 1130 -470 {lab=#net11}
-N 2050 -640 2250 -640 {lab=vbe2}
 N 670 -1710 680 -1710 {lab=VDD}
 N 670 -1760 670 -1710 {lab=VDD}
 N 670 -1760 680 -1760 {lab=VDD}
@@ -482,14 +480,14 @@ N 10 -280 10 -270 {lab=VSS}
 N 10 -340 30 -340 {lab=VSS}
 N 30 -340 30 -270 {lab=VSS}
 N -30 -310 -30 -270 {lab=VSS}
-N 2250 -640 2370 -640 {lab=vbe2}
-N 2390 -650 2390 -640 {lab=vbe2}
-N 2350 -680 2350 -640 {lab=vbe2}
-N 2390 -710 2410 -710 {lab=vbe2}
-N 2410 -710 2410 -640 {lab=vbe2}
-N 2390 -640 2410 -640 {lab=vbe2}
-N 2390 -680 2410 -680 {lab=vbe2}
-N 2370 -640 2390 -640 {lab=vbe2}
+N 2250 -640 2370 -640 {lab=vbjt_ctat[34]}
+N 2390 -650 2390 -640 {lab=vbjt_ctat[34]}
+N 2350 -680 2350 -640 {lab=vbjt_ctat[34]}
+N 2390 -710 2410 -710 {lab=vbjt_ctat[34]}
+N 2410 -710 2410 -640 {lab=vbjt_ctat[34]}
+N 2390 -640 2410 -640 {lab=vbjt_ctat[34]}
+N 2390 -680 2410 -680 {lab=vbjt_ctat[34]}
+N 2370 -640 2390 -640 {lab=vbjt_ctat[34]}
 N 1310 -440 1310 -270 {lab=VSS}
 N 1310 -470 1320 -470 {lab=VSS}
 N 1320 -470 1320 -270 {lab=VSS}
@@ -497,6 +495,9 @@ N 1270 -470 1270 -270 {lab=VSS}
 N 1310 -500 1320 -500 {lab=VSS}
 N 1320 -500 1320 -470 {lab=VSS}
 N -30 -270 170 -270 {lab=VSS}
+N 2050 -650 2050 -630 {lab=vbe2}
+N 2030 -640 2230 -640 {lab=vbjt_ctat[34]}
+N 2230 -640 2250 -640 {lab=vbjt_ctat[34]}
 C {iopin.sym} 230 -1430 3 0 {name=p1 lab=VDD}
 C {iopin.sym} 170 -270 1 0 {name=p2 lab=VSS}
 C {iopin.sym} 500 -160 1 0 {name=p3 lab=SUB}
@@ -532,7 +533,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {lab_wire.sym} 990 -680 0 0 {name=p9 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 990 -680 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1010 -740 0 0 {name=p10 sig_type=std_logic lab=vbjt_ptat[6:1]}
 C {bus_tap.sym} 1010 -610 1 0 {name=l2 lab=[0]}
 C {lab_wire.sym} 1010 -620 0 0 {name=p11 sig_type=std_logic lab=vbjt_ptat[5:0]}
@@ -551,7 +552,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {lab_wire.sym} 1480 -680 0 0 {name=p12 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1480 -680 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1500 -740 0 0 {name=p13 sig_type=std_logic lab=VBG,vbjt_bg[53:1]}
 C {bus_tap.sym} 1500 -610 1 0 {name=l4 lab=[0]}
 C {lab_wire.sym} 1500 -620 0 0 {name=p14 sig_type=std_logic lab=vbjt_bg[53:0]}
@@ -658,7 +659,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {lab_wire.sym} 2200 -520 0 0 {name=p31 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2200 -520 0 0 {name=p31 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2220 -580 0 0 {name=p32 sig_type=std_logic lab=vbjt_ctat[34:1]}
 C {lab_wire.sym} 2220 -460 0 0 {name=p33 sig_type=std_logic lab=vbjt_ctat[33:1],VSS}
 C {bus_tap.sym} 2220 -600 1 1 {name=l13 lab=[34]}
@@ -739,7 +740,7 @@ C {bus_connect.sym} 2220 -450 1 0 {name=l12 lab=VSS}
 C {lab_wire.sym} 2030 -1430 0 0 {name=p36 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2100 -1370 0 0 {name=p37 sig_type=std_logic lab=vpref_ctat}
 C {lab_wire.sym} 2050 -810 0 0 {name=p39 sig_type=std_logic lab=vgs_ctat}
-C {lab_wire.sym} 1890 -1100 0 0 {name=p38 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1890 -1100 0 0 {name=p38 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1910 -1160 0 0 {name=p40 sig_type=std_logic lab=vpref_ctat,vr_pcas_ctat[7:1]}
 C {lab_wire.sym} 1910 -1040 0 0 {name=p41 sig_type=std_logic lab=vr_pcas_ctat[7:1],vpcas_ctat}
 C {bus_connect.sym} 1910 -1180 0 0 {name=l14 lab=vpref_ctat}
@@ -802,7 +803,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {lab_wire.sym} 2630 -520 0 0 {name=p44 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2630 -520 0 0 {name=p44 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2650 -580 0 0 {name=p45 sig_type=std_logic lab=VZTC,v_ztc[30:1]}
 C {lab_wire.sym} 2650 -470 0 0 {name=p46 sig_type=std_logic lab=v_ztc[30:1],VSS}
 C {bus_connect.sym} 2650 -450 1 0 {name=l17 lab=VSS}
@@ -940,7 +941,7 @@ spiceprefix=X
 }
 C {iopin.sym} 810 -1120 0 0 {name=p18 lab=vpref}
 C {iopin.sym} 810 -1080 0 0 {name=p19 lab=vpref_fb}
-C {lab_wire.sym} 140 -460 0 0 {name=p20 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 140 -460 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 160 -520 0 0 {name=p21 sig_type=std_logic lab=vstart_up,vbias[35:1]}
 C {lab_wire.sym} 160 -400 0 0 {name=p22 sig_type=std_logic lab=vbias[35:1],VSS}
 C {bus_connect.sym} 160 -390 1 0 {name=l8 lab=VSS}
