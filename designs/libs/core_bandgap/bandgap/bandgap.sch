@@ -100,7 +100,6 @@ T {2u} 470 -1520 0 0 0.4 0.4 {}
 T {2u} 1680 -1510 0 0 0.4 0.4 {}
 T {Matching} 1670 -680 0 0 0.4 0.4 {}
 T {Matching} 690 -1280 0 0 0.4 0.4 {}
-N 500 -180 500 -160 {lab=SUB}
 N 560 -270 600 -270 {lab=VSS}
 N 600 -340 600 -270 {lab=VSS}
 N 600 -500 600 -400 {lab=vbe}
@@ -500,11 +499,9 @@ N 2030 -640 2230 -640 {lab=vbjt_ctat[34]}
 N 2230 -640 2250 -640 {lab=vbjt_ctat[34]}
 C {iopin.sym} 230 -1430 3 0 {name=p1 lab=VDD}
 C {iopin.sym} 170 -270 1 0 {name=p2 lab=VSS}
-C {iopin.sym} 500 -160 1 0 {name=p3 lab=SUB}
 C {iopin.sym} 1510 -850 0 0 {name=p4 lab=VBG}
 C {iopin.sym} 1300 -1180 1 0 {name=p5 lab=IPTAT}
 C {iopin.sym} 2910 -1070 1 0 {name=p6 lab=IZTC}
-C {noconn.sym} 500 -180 0 0 {name=l1}
 C {symbols/pfet_05v0.sym} 1000 -1370 0 0 {name=Mpref1
 L=0.8u
 W=3.2u
@@ -1106,7 +1103,7 @@ spiceprefix=X
 }
 C {symbols/nfet_05v0.sym} 1840 -490 3 1 {name=M6
 L=1u
-W=3.2u
+W=4u
 nf=1
 m=32
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
