@@ -1,249 +1,319 @@
 ** sch_path: /foss/designs/libs/core_bandgap/bandgap/bandgap.sch
-.subckt bandgap VDD VBG IPTAT IZTC SUB VSS vpref vpref_fb ICTAT VZTC
-*.PININFO VDD:B VSS:B SUB:B VBG:B IPTAT:B IZTC:B vpref:B vpref_fb:B ICTAT:B VZTC:B
-* noconn SUB
-XMpref1 net2 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
-XMpref2 net1 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
+.subckt bandgap VDD VBG IPTAT IZTC VSS vpref vpref_fb ICTAT VZTC
+*.PININFO VDD:B VSS:B VBG:B IPTAT:B IZTC:B vpref:B vpref_fb:B ICTAT:B VZTC:B
+XMpref1 net2 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref2 net1 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
 * tap: vbjt_ptat[5:0] --> vbjt_ptat[0]
 * tap: vbjt_ptat[6:1] --> vbjt_ptat[6]
-XMpref3 net3 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
+XMpref3 net3 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
 * tap: vbjt_bg[53:0] --> vbjt_bg[0]
-XMpref4 net4 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
-XMpref5 vbjt_ptat[6] vpcas net2 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XMpref6 vbe vpcas net1 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XMpref7 VBG vpcas net3 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XMpref8 IPTAT vpcas net4 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XMnref5 vnref_ctat vnref_ctat vbjt_ctat[34] vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=16
-XMnref6 vgs_ctat vnref_ctat vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=16
+XMpref4 net4 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref5 vbjt_ptat[6] vpcas net2 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref6 vbe vpcas net1 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref7 VBG vpcas net3 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref8 IPTAT vpcas net4 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMnref5 vnref_ctat vnref_ctat vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16
+XMnref6 vgs_ctat vnref_ctat vbe2 vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16
 * tap: vbjt_ctat[34:1] --> vbjt_ctat[34]
-XMnref7 vpcas_ctat vgs_ctat VSS VSS nfet_05v0 L=4u W=1u nf=1 m=1
-XMpref9 net5 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
-XMpref10 vgs_ctat vpcas net5 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XMpref11 net6 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=4
-XMpref12 net7 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=4
-XMpref13 vpref_ctat vpcas_ctat net6 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=4
-XMpref14 vnref_ctat vpcas_ctat net7 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=4
-XMpref15 net8 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=6
-XMpref16 VZTC vpcas_ctat net8 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=6
-XMpref17 net9 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
-XMpref18 VZTC vpcas net9 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=1
-XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=1
+XMnref7 vpcas_ctat vgs_ctat VSS VSS nfet_05v0 L=4u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref9 net5 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref10 vgs_ctat vpcas net5 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref11 net6 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=4
+XMpref12 net7 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=4
+XMpref13 vpref_ctat vpcas_ctat net6 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=4
+XMpref14 vnref_ctat vpcas_ctat net7 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=4
+XMpref15 net8 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=6
+XMpref16 VZTC vpcas_ctat net8 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=6
+XMpref17 net9 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref18 VZTC vpcas net9 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 x1 VDD net12 vbe vbjt_ptat[6] vpref_fb VSS bandgap_opamp
-XMpref19 net10 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
-XMpref20 net11 vpcas net10 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XM1 net11 net11 VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XM2 net16 net11 VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XM3 vpcas net11 VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XMpref21 vpcas vpcas VDD VDD pfet_05v0 L=3.2u W=12.8u nf=1 m=2
-XMpref23 vstart_up vpcas VDD VDD pfet_05v0 L=0.5u W=4u nf=1 m=16
-XMpref24 VSS vstart_up vpcas vpcas pfet_05v0 L=0.5u W=4u nf=1 m=32
-XMpref25 net13 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=4
-XMpref26 ICTAT vpcas_ctat net13 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=4
-XMpref27 net14 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=6
-XMpref28 IZTC vpcas_ctat net14 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=6
-XMpref29 net15 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=2
-XMpref30 IZTC vpcas net15 VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=2
-XM5 VSS vstart_up VSS VSS nfet_05v0 L=1u W=4u nf=1 m=32
-XM4 net12 vstart_up net16 VSS nfet_05v0 L=0.6u W=1u nf=1 m=1
-XMpref22 VSS vstart_up vpref vpref pfet_05v0 L=0.5u W=4u nf=1 m=32
-XM6 VSS vgs_ctat VSS VSS nfet_05v0 L=1u W=3.2u nf=1 m=32
-XMpcas_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=1
-XMpcas_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=1
-XMpref_dumm_L1[3] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=1
-XMpref_dumm_L1[2] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=1
-XMpref_dumm_L1[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=1
-XMpref_dumm_L1[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 m=1
-XMpcas_dumm_L1[3] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=1
-XMpcas_dumm_L1[2] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=1
-XMpcas_dumm_L1[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=1
-XMpcas_dumm_L1[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 m=1
-XMpref_dumm_L2[1] VDD VDD VDD VDD pfet_05v0 L=3.2u W=12.8u nf=1 m=1
-XMpref_dumm_L2[0] VDD VDD VDD VDD pfet_05v0 L=3.2u W=12.8u nf=1 m=1
-XMnref_dumm_L[7] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[6] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[5] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[4] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[3] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[2] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[1] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XMnref_dumm_L[0] vbe2 vbe2 vbe2 vbe2 nfet_05v0 L=0.6u W=4u nf=1 m=1
-XM7[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XM7[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMpref19 net10 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref20 net11 vpcas net10 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XM1 net11 net11 VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XM2 net16 net11 VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XM3 vpcas net11 VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref21 vpcas vpcas VDD VDD pfet_05v0 L=3.2u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref23 vstart_up vpcas VDD VDD pfet_05v0 L=0.5u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16
+XMpref24 VSS vstart_up vpcas vpcas pfet_05v0 L=0.5u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=32
+XMpref25 net13 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=4
+XMpref26 ICTAT vpcas_ctat net13 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=4
+XMpref27 net14 vpref_ctat VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=6
+XMpref28 IZTC vpcas_ctat net14 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=6
+XMpref29 net15 vpref VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref30 IZTC vpcas net15 VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XM5 VSS vstart_up VSS VSS nfet_05v0 L=1u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=32
+XM4 net12 vstart_up net16 VSS nfet_05v0 L=0.6u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref22 VSS vstart_up vpref vpref pfet_05v0 L=0.5u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=32
+XM6 VSS vgs_ctat VSS VSS nfet_05v0 L=1u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=32
+XMpcas_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpcas_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L1[3] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L1[2] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L1[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L1[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=3.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpcas_dumm_L1[3] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpcas_dumm_L1[2] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpcas_dumm_L1[1] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpcas_dumm_L1[0] VDD VDD VDD VDD pfet_05v0 L=0.8u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L2[1] VDD VDD VDD VDD pfet_05v0 L=3.2u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L2[0] VDD VDD VDD VDD pfet_05v0 L=3.2u W=12.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[7] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[6] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[5] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[4] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[3] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[2] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[1] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XMnref_dumm_L[0] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] vbjt_ctat[34] nfet_05v0 L=0.6u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u'
++ as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM7[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XQ1 VSS VSS vbe pnp_05p00x00p42 m=2
 XQ2 VSS VSS vbjt_ptat[0] pnp_05p00x00p42 m=16
 XQ3 VSS VSS vbjt_bg[0] pnp_05p00x00p42 m=2
 XQ4 VSS VSS vbe2 pnp_05p00x00p42 m=2
 XQ5 VSS VSS VSS pnp_05p00x00p42 m=10
-XRstartup[35] vbias[35] vstart_up VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[34] vbias[34] vbias[35] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[33] vbias[33] vbias[34] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[32] vbias[32] vbias[33] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[31] vbias[31] vbias[32] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[30] vbias[30] vbias[31] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[29] vbias[29] vbias[30] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[28] vbias[28] vbias[29] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[27] vbias[27] vbias[28] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[26] vbias[26] vbias[27] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[25] vbias[25] vbias[26] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[24] vbias[24] vbias[25] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[23] vbias[23] vbias[24] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[22] vbias[22] vbias[23] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[21] vbias[21] vbias[22] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[20] vbias[20] vbias[21] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[19] vbias[19] vbias[20] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[18] vbias[18] vbias[19] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[17] vbias[17] vbias[18] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[16] vbias[16] vbias[17] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[15] vbias[15] vbias[16] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[14] vbias[14] vbias[15] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[13] vbias[13] vbias[14] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[12] vbias[12] vbias[13] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[11] vbias[11] vbias[12] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[10] vbias[10] vbias[11] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[9] vbias[9] vbias[10] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[8] vbias[8] vbias[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[7] vbias[7] vbias[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[6] vbias[6] vbias[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[5] vbias[5] vbias[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[4] vbias[4] vbias[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[3] vbias[3] vbias[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[2] vbias[2] vbias[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[1] vbias[1] vbias[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRstartup[0] VSS vbias[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
-XRptat[5] vbjt_ptat[5] vbjt_ptat[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRptat[4] vbjt_ptat[4] vbjt_ptat[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRptat[3] vbjt_ptat[3] vbjt_ptat[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRptat[2] vbjt_ptat[2] vbjt_ptat[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRptat[1] vbjt_ptat[1] vbjt_ptat[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRptat[0] vbjt_ptat[0] vbjt_ptat[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[53] vbjt_bg[53] VBG VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[52] vbjt_bg[52] vbjt_bg[53] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[51] vbjt_bg[51] vbjt_bg[52] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[50] vbjt_bg[50] vbjt_bg[51] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[49] vbjt_bg[49] vbjt_bg[50] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[48] vbjt_bg[48] vbjt_bg[49] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[47] vbjt_bg[47] vbjt_bg[48] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[46] vbjt_bg[46] vbjt_bg[47] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[45] vbjt_bg[45] vbjt_bg[46] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[44] vbjt_bg[44] vbjt_bg[45] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[43] vbjt_bg[43] vbjt_bg[44] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[42] vbjt_bg[42] vbjt_bg[43] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[41] vbjt_bg[41] vbjt_bg[42] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[40] vbjt_bg[40] vbjt_bg[41] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[39] vbjt_bg[39] vbjt_bg[40] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[38] vbjt_bg[38] vbjt_bg[39] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[37] vbjt_bg[37] vbjt_bg[38] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[36] vbjt_bg[36] vbjt_bg[37] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[35] vbjt_bg[35] vbjt_bg[36] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[34] vbjt_bg[34] vbjt_bg[35] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[33] vbjt_bg[33] vbjt_bg[34] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[32] vbjt_bg[32] vbjt_bg[33] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[31] vbjt_bg[31] vbjt_bg[32] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[30] vbjt_bg[30] vbjt_bg[31] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[29] vbjt_bg[29] vbjt_bg[30] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[28] vbjt_bg[28] vbjt_bg[29] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[27] vbjt_bg[27] vbjt_bg[28] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[26] vbjt_bg[26] vbjt_bg[27] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[25] vbjt_bg[25] vbjt_bg[26] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[24] vbjt_bg[24] vbjt_bg[25] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[23] vbjt_bg[23] vbjt_bg[24] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[22] vbjt_bg[22] vbjt_bg[23] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[21] vbjt_bg[21] vbjt_bg[22] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[20] vbjt_bg[20] vbjt_bg[21] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[19] vbjt_bg[19] vbjt_bg[20] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[18] vbjt_bg[18] vbjt_bg[19] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[17] vbjt_bg[17] vbjt_bg[18] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[16] vbjt_bg[16] vbjt_bg[17] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[15] vbjt_bg[15] vbjt_bg[16] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[14] vbjt_bg[14] vbjt_bg[15] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[13] vbjt_bg[13] vbjt_bg[14] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[12] vbjt_bg[12] vbjt_bg[13] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[11] vbjt_bg[11] vbjt_bg[12] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[10] vbjt_bg[10] vbjt_bg[11] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[9] vbjt_bg[9] vbjt_bg[10] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[8] vbjt_bg[8] vbjt_bg[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[7] vbjt_bg[7] vbjt_bg[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[6] vbjt_bg[6] vbjt_bg[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[5] vbjt_bg[5] vbjt_bg[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[4] vbjt_bg[4] vbjt_bg[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[3] vbjt_bg[3] vbjt_bg[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[2] vbjt_bg[2] vbjt_bg[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[1] vbjt_bg[1] vbjt_bg[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRref[0] vbjt_bg[0] vbjt_bg[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[7] vr_pcas_ctat[7] vpref_ctat VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[6] vr_pcas_ctat[6] vr_pcas_ctat[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[5] vr_pcas_ctat[5] vr_pcas_ctat[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[4] vr_pcas_ctat[4] vr_pcas_ctat[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[3] vr_pcas_ctat[3] vr_pcas_ctat[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[2] vr_pcas_ctat[2] vr_pcas_ctat[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[1] vr_pcas_ctat[1] vr_pcas_ctat[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRpcas[0] vpcas_ctat vr_pcas_ctat[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[33] vbjt_ctat[33] vbjt_ctat[34] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[32] vbjt_ctat[32] vbjt_ctat[33] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[31] vbjt_ctat[31] vbjt_ctat[32] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[30] vbjt_ctat[30] vbjt_ctat[31] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[29] vbjt_ctat[29] vbjt_ctat[30] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[28] vbjt_ctat[28] vbjt_ctat[29] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[27] vbjt_ctat[27] vbjt_ctat[28] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[26] vbjt_ctat[26] vbjt_ctat[27] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[25] vbjt_ctat[25] vbjt_ctat[26] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[24] vbjt_ctat[24] vbjt_ctat[25] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[23] vbjt_ctat[23] vbjt_ctat[24] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[22] vbjt_ctat[22] vbjt_ctat[23] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[21] vbjt_ctat[21] vbjt_ctat[22] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[20] vbjt_ctat[20] vbjt_ctat[21] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[19] vbjt_ctat[19] vbjt_ctat[20] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[18] vbjt_ctat[18] vbjt_ctat[19] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[17] vbjt_ctat[17] vbjt_ctat[18] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[16] vbjt_ctat[16] vbjt_ctat[17] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[15] vbjt_ctat[15] vbjt_ctat[16] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[14] vbjt_ctat[14] vbjt_ctat[15] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[13] vbjt_ctat[13] vbjt_ctat[14] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[12] vbjt_ctat[12] vbjt_ctat[13] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[11] vbjt_ctat[11] vbjt_ctat[12] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[10] vbjt_ctat[10] vbjt_ctat[11] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[9] vbjt_ctat[9] vbjt_ctat[10] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[8] vbjt_ctat[8] vbjt_ctat[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[7] vbjt_ctat[7] vbjt_ctat[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[6] vbjt_ctat[6] vbjt_ctat[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[5] vbjt_ctat[5] vbjt_ctat[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[4] vbjt_ctat[4] vbjt_ctat[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[3] vbjt_ctat[3] vbjt_ctat[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[2] vbjt_ctat[2] vbjt_ctat[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[1] vbjt_ctat[1] vbjt_ctat[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRctat[0] VSS vbjt_ctat[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[30] v_ztc[30] VZTC VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[29] v_ztc[29] v_ztc[30] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[28] v_ztc[28] v_ztc[29] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[27] v_ztc[27] v_ztc[28] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[26] v_ztc[26] v_ztc[27] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[25] v_ztc[25] v_ztc[26] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[24] v_ztc[24] v_ztc[25] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[23] v_ztc[23] v_ztc[24] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[22] v_ztc[22] v_ztc[23] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[21] v_ztc[21] v_ztc[22] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[20] v_ztc[20] v_ztc[21] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[19] v_ztc[19] v_ztc[20] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[18] v_ztc[18] v_ztc[19] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[17] v_ztc[17] v_ztc[18] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[16] v_ztc[16] v_ztc[17] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[15] v_ztc[15] v_ztc[16] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[14] v_ztc[14] v_ztc[15] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[13] v_ztc[13] v_ztc[14] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[12] v_ztc[12] v_ztc[13] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[11] v_ztc[11] v_ztc[12] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[10] v_ztc[10] v_ztc[11] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[9] v_ztc[9] v_ztc[10] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[8] v_ztc[8] v_ztc[9] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[7] v_ztc[7] v_ztc[8] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[6] v_ztc[6] v_ztc[7] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[5] v_ztc[5] v_ztc[6] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[4] v_ztc[4] v_ztc[5] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[3] v_ztc[3] v_ztc[4] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[2] v_ztc[2] v_ztc[3] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[1] v_ztc[1] v_ztc[2] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
-XRztc[0] VSS v_ztc[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRstartup[35] vbias[35] vstart_up VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[34] vbias[34] vbias[35] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[33] vbias[33] vbias[34] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[32] vbias[32] vbias[33] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[31] vbias[31] vbias[32] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[30] vbias[30] vbias[31] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[29] vbias[29] vbias[30] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[28] vbias[28] vbias[29] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[27] vbias[27] vbias[28] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[26] vbias[26] vbias[27] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[25] vbias[25] vbias[26] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[24] vbias[24] vbias[25] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[23] vbias[23] vbias[24] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[22] vbias[22] vbias[23] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[21] vbias[21] vbias[22] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[20] vbias[20] vbias[21] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[19] vbias[19] vbias[20] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[18] vbias[18] vbias[19] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[17] vbias[17] vbias[18] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[16] vbias[16] vbias[17] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[15] vbias[15] vbias[16] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[14] vbias[14] vbias[15] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[13] vbias[13] vbias[14] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[12] vbias[12] vbias[13] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[11] vbias[11] vbias[12] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[10] vbias[10] vbias[11] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[9] vbias[9] vbias[10] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[8] vbias[8] vbias[9] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[7] vbias[7] vbias[8] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[6] vbias[6] vbias[7] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[5] vbias[5] vbias[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[4] vbias[4] vbias[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[3] vbias[3] vbias[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[2] vbias[2] vbias[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[1] vbias[1] vbias[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRstartup[0] VSS vbias[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=9e-6 m=1
+XRptat[5] vbjt_ptat[5] vbjt_ptat[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRptat[4] vbjt_ptat[4] vbjt_ptat[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRptat[3] vbjt_ptat[3] vbjt_ptat[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRptat[2] vbjt_ptat[2] vbjt_ptat[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRptat[1] vbjt_ptat[1] vbjt_ptat[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRptat[0] vbjt_ptat[0] vbjt_ptat[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[53] vbjt_bg[53] VBG VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[52] vbjt_bg[52] vbjt_bg[53] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[51] vbjt_bg[51] vbjt_bg[52] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[50] vbjt_bg[50] vbjt_bg[51] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[49] vbjt_bg[49] vbjt_bg[50] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[48] vbjt_bg[48] vbjt_bg[49] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[47] vbjt_bg[47] vbjt_bg[48] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[46] vbjt_bg[46] vbjt_bg[47] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[45] vbjt_bg[45] vbjt_bg[46] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[44] vbjt_bg[44] vbjt_bg[45] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[43] vbjt_bg[43] vbjt_bg[44] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[42] vbjt_bg[42] vbjt_bg[43] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[41] vbjt_bg[41] vbjt_bg[42] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[40] vbjt_bg[40] vbjt_bg[41] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[39] vbjt_bg[39] vbjt_bg[40] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[38] vbjt_bg[38] vbjt_bg[39] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[37] vbjt_bg[37] vbjt_bg[38] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[36] vbjt_bg[36] vbjt_bg[37] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[35] vbjt_bg[35] vbjt_bg[36] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[34] vbjt_bg[34] vbjt_bg[35] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[33] vbjt_bg[33] vbjt_bg[34] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[32] vbjt_bg[32] vbjt_bg[33] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[31] vbjt_bg[31] vbjt_bg[32] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[30] vbjt_bg[30] vbjt_bg[31] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[29] vbjt_bg[29] vbjt_bg[30] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[28] vbjt_bg[28] vbjt_bg[29] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[27] vbjt_bg[27] vbjt_bg[28] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[26] vbjt_bg[26] vbjt_bg[27] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[25] vbjt_bg[25] vbjt_bg[26] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[24] vbjt_bg[24] vbjt_bg[25] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[23] vbjt_bg[23] vbjt_bg[24] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[22] vbjt_bg[22] vbjt_bg[23] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[21] vbjt_bg[21] vbjt_bg[22] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[20] vbjt_bg[20] vbjt_bg[21] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[19] vbjt_bg[19] vbjt_bg[20] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[18] vbjt_bg[18] vbjt_bg[19] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[17] vbjt_bg[17] vbjt_bg[18] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[16] vbjt_bg[16] vbjt_bg[17] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[15] vbjt_bg[15] vbjt_bg[16] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[14] vbjt_bg[14] vbjt_bg[15] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[13] vbjt_bg[13] vbjt_bg[14] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[12] vbjt_bg[12] vbjt_bg[13] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[11] vbjt_bg[11] vbjt_bg[12] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[10] vbjt_bg[10] vbjt_bg[11] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[9] vbjt_bg[9] vbjt_bg[10] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[8] vbjt_bg[8] vbjt_bg[9] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[7] vbjt_bg[7] vbjt_bg[8] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[6] vbjt_bg[6] vbjt_bg[7] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[5] vbjt_bg[5] vbjt_bg[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[4] vbjt_bg[4] vbjt_bg[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[3] vbjt_bg[3] vbjt_bg[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[2] vbjt_bg[2] vbjt_bg[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[1] vbjt_bg[1] vbjt_bg[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRref[0] vbjt_bg[0] vbjt_bg[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[7] vr_pcas_ctat[7] vpref_ctat VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[6] vr_pcas_ctat[6] vr_pcas_ctat[7] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[5] vr_pcas_ctat[5] vr_pcas_ctat[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[4] vr_pcas_ctat[4] vr_pcas_ctat[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[3] vr_pcas_ctat[3] vr_pcas_ctat[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[2] vr_pcas_ctat[2] vr_pcas_ctat[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[1] vr_pcas_ctat[1] vr_pcas_ctat[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRpcas[0] vpcas_ctat vr_pcas_ctat[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[33] vbjt_ctat[33] vbjt_ctat[34] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[32] vbjt_ctat[32] vbjt_ctat[33] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[31] vbjt_ctat[31] vbjt_ctat[32] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[30] vbjt_ctat[30] vbjt_ctat[31] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[29] vbjt_ctat[29] vbjt_ctat[30] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[28] vbjt_ctat[28] vbjt_ctat[29] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[27] vbjt_ctat[27] vbjt_ctat[28] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[26] vbjt_ctat[26] vbjt_ctat[27] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[25] vbjt_ctat[25] vbjt_ctat[26] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[24] vbjt_ctat[24] vbjt_ctat[25] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[23] vbjt_ctat[23] vbjt_ctat[24] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[22] vbjt_ctat[22] vbjt_ctat[23] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[21] vbjt_ctat[21] vbjt_ctat[22] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[20] vbjt_ctat[20] vbjt_ctat[21] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[19] vbjt_ctat[19] vbjt_ctat[20] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[18] vbjt_ctat[18] vbjt_ctat[19] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[17] vbjt_ctat[17] vbjt_ctat[18] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[16] vbjt_ctat[16] vbjt_ctat[17] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[15] vbjt_ctat[15] vbjt_ctat[16] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[14] vbjt_ctat[14] vbjt_ctat[15] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[13] vbjt_ctat[13] vbjt_ctat[14] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[12] vbjt_ctat[12] vbjt_ctat[13] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[11] vbjt_ctat[11] vbjt_ctat[12] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[10] vbjt_ctat[10] vbjt_ctat[11] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[9] vbjt_ctat[9] vbjt_ctat[10] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[8] vbjt_ctat[8] vbjt_ctat[9] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[7] vbjt_ctat[7] vbjt_ctat[8] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[6] vbjt_ctat[6] vbjt_ctat[7] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[5] vbjt_ctat[5] vbjt_ctat[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[4] vbjt_ctat[4] vbjt_ctat[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[3] vbjt_ctat[3] vbjt_ctat[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[2] vbjt_ctat[2] vbjt_ctat[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[1] vbjt_ctat[1] vbjt_ctat[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRctat[0] VSS vbjt_ctat[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[30] v_ztc[30] VZTC VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[29] v_ztc[29] v_ztc[30] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[28] v_ztc[28] v_ztc[29] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[27] v_ztc[27] v_ztc[28] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[26] v_ztc[26] v_ztc[27] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[25] v_ztc[25] v_ztc[26] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[24] v_ztc[24] v_ztc[25] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[23] v_ztc[23] v_ztc[24] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[22] v_ztc[22] v_ztc[23] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[21] v_ztc[21] v_ztc[22] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[20] v_ztc[20] v_ztc[21] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[19] v_ztc[19] v_ztc[20] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[18] v_ztc[18] v_ztc[19] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[17] v_ztc[17] v_ztc[18] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[16] v_ztc[16] v_ztc[17] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[15] v_ztc[15] v_ztc[16] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[14] v_ztc[14] v_ztc[15] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[13] v_ztc[13] v_ztc[14] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[12] v_ztc[12] v_ztc[13] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[11] v_ztc[11] v_ztc[12] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[10] v_ztc[10] v_ztc[11] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[9] v_ztc[9] v_ztc[10] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[8] v_ztc[8] v_ztc[9] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[7] v_ztc[7] v_ztc[8] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[6] v_ztc[6] v_ztc[7] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[5] v_ztc[5] v_ztc[6] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[4] v_ztc[4] v_ztc[5] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[3] v_ztc[3] v_ztc[4] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[2] v_ztc[2] v_ztc[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[1] v_ztc[1] v_ztc[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
+XRztc[0] VSS v_ztc[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
 .ends
 
 * expanding   symbol:  libs/core_bandgap/bandgap_opamp/bandgap_opamp.sym # of pins=6
@@ -251,30 +321,54 @@ XRztc[0] VSS v_ztc[1] VDD ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
 ** sch_path: /foss/designs/libs/core_bandgap/bandgap_opamp/bandgap_opamp.sch
 .subckt bandgap_opamp VDD ibias vn vp vout VSS
 *.PININFO vn:I vp:I vout:O ibias:I VDD:B VSS:B
-XMpref0 ibias ibias VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=2
-XMnload0 vnload vnload VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XMpref1 vptail ibias VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=2
-XMpref2 vout ibias VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=8
-XMpdiff0 vnload vn vptail VDD pfet_05v0 L=1u W=2u nf=1 m=2
-XMpdiff1 vout_1st vp vptail VDD pfet_05v0 L=1u W=2u nf=1 m=2
-XMnload1 vout_1st vnload VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=2
-XMncs vout vout_1st VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=16
-XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
-XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 m=1
+XMpref0 ibias ibias VDD VDD pfet_05v0 L=1u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMnload0 vnload vnload VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref1 vptail ibias VDD VDD pfet_05v0 L=1u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpref2 vout ibias VDD VDD pfet_05v0 L=1u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XMpdiff0 vnload vn vptail VDD pfet_05v0 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMpdiff1 vout_1st vp vptail VDD pfet_05v0 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMnload1 vout_1st vnload VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMncs vout vout_1st VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16
+XMpref_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpref_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XC2 vout vout_1st cap_mim_2f0fF c_width=16e-6 c_length=16e-6 m=1
-XMpdiff_dumm_L[3] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
-XMpdiff_dumm_L[2] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
-XMpdiff_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
-XMpdiff_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 m=1
-XMnload_dummL[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMnload_dummL[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[7] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[6] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[5] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[4] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[3] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[2] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
-XMncs_dumm[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 m=1
+XMpdiff_dumm_L[3] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpdiff_dumm_L[2] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpdiff_dumm_L[1] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMpdiff_dumm_L[0] VDD VDD VDD VDD pfet_05v0 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMnload_dummL[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMnload_dummL[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[7] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[6] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[5] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[4] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[3] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[2] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[1] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMncs_dumm[0] VSS VSS VSS VSS nfet_05v0 L=2u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 .ends
 
