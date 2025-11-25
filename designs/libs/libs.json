@@ -58,6 +58,7 @@
   "core_bandgap_bandgap_startup": "/foss/designs/libs/core_bandgap/bandgap_startup/bandgap_startup.gds",
   "core_bandgap_bandgap_resistors_ptat_ctat": "/foss/designs/libs/core_bandgap/bandgap_resistors_ptat_ctat/bandgap_resistors_ptat_ctat.gds",
   "core_bandgap_bandgap_opamp": "/foss/designs/libs/core_bandgap/bandgap_opamp/bandgap_opamp.gds",
+  "core_bandgap_bandgap_opamp__exported": "/foss/designs/libs/core_bandgap/bandgap_opamp/bandgap_opamp__exported.gds",
   "core_bandgap_bandgap_opamp_layout": "/foss/designs/libs/core_bandgap/bandgap_opamp/bandgap_opamp_layout.gds",
   "core_bandgap_bandgap_resistor_startup": "/foss/designs/libs/core_bandgap/bandgap_resistor_startup/bandgap_resistor_startup.gds",
   "A4_core_A4_top": "/foss/designs/libs/A4_core/A4_top/A4_top.gds",
