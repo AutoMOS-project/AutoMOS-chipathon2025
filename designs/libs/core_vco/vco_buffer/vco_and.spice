@@ -1,0 +1,10 @@
+** sch_path: /foss/designs/libs/core_vco/vco_and/vco_and.sch
+.subckt vco_and VDD A Y B VSS
+*.PININFO A:I B:I VDD:B VSS:B Y:O
+M1 net1 A net2 VSS nfet_03v3 L=0.28u W=1u nf=1 m=1
+M2 net1 A VDD VDD pfet_03v3 L=0.28u W=1u nf=2 m=1
+M3 net1 B VDD VDD pfet_03v3 L=0.28u W=1u nf=2 m=1
+M4 net2 B VSS VSS nfet_03v3 L=0.28u W=1u nf=1 m=1
+M6 Y net1 VSS VSS nfet_03v3 L=0.28u W=1u nf=1 m=1
+M5 Y net1 VDD VDD pfet_03v3 L=0.28u W=1u nf=2 m=1
+.ends

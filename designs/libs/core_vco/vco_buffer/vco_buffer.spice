@@ -1,0 +1,8 @@
+** sch_path: /foss/designs/libs/core_vco/vco_buffer/vco_buffer.sch
+.subckt vco_buffer VDD in out VSS
+*.PININFO in:I out:O VDD:B VSS:B
+M16 net1 in VDD VDD pfet_03v3 L=0.28u W=1u nf=2 m=1
+M17 net1 in VSS VSS nfet_03v3 L=0.28u W=1u nf=1 m=1
+M2 out net1 VSS VSS nfet_03v3 L=0.28u W=1u nf=1 m=1
+M1 out net1 VDD VDD pfet_03v3 L=0.28u W=1u nf=2 m=1
+.ends
