@@ -61,318 +61,39 @@ Flattening unmatched subcell ppolyf_u_high_Rs_resistor$2 in circuit ldo (0)(42 i
 Flattening unmatched subcell ldo_OTA in circuit ldo (1)(1 instance)
 Flattening unmatched subcell ldo_BUFFER in circuit ldo (1)(1 instance)
 
-Class ldo (0):  Merged 22 parallel devices.
-Class ldo (0):  Merged 25 series devices.
+Class ldo (0):  Merged 23 parallel devices.
+Class ldo (0):  Merged 47 series devices.
 Class ldo (1):  Merged 93 parallel devices.
 Class ldo (1):  Merged 47 series devices.
 Subcircuit summary:
 Circuit 1: ldo                             |Circuit 2: ldo                             
 -------------------------------------------|-------------------------------------------
-ppolyf_u_1k_6p0 (72->27)                   |ppolyf_u_1k_6p0 (72->4) **Mismatch**       
+ppolyf_u_1k_6p0 (72->4)                    |ppolyf_u_1k_6p0 (72->4)                    
 cap_mim_2f0_m4m5_noshield (4)              |cap_mim_2f0fF (4)                          
 pfet_05v0 (47->11)                         |pfet_05v0 (47->11)                         
 nfet_05v0 (99->12)                         |nfet_05v0 (99->12)                         
-Number of devices: 54 **Mismatch**         |Number of devices: 31 **Mismatch**         
-Number of nets: 60 **Mismatch**            |Number of nets: 17 **Mismatch**            
+Number of devices: 31                      |Number of devices: 31                      
+Number of nets: 17                         |Number of nets: 17                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: ldo                             |Circuit 2: ldo                             
-
----------------------------------------------------------------------------------------
-Net: VFB_res                               |Net: VFB_res                               
-  ppolyf_u_1k_6p0/(1|2) = 2                |  ppolyf_u_1k_6p0/(1|2) = 2                
-                                           |                                           
-Net: VSS                                   |Net: VSS                                   
-  ppolyf_u_1k_6p0/3 = 6                    |  ppolyf_u_1k_6p0/3 = 4                    
-  ppolyf_u_1k_6p0/(1|2) = 5                |  ppolyf_u_1k_6p0/(1|2) = 3                
-  nfet_05v0/4 = 12                         |  nfet_05v0/4 = 12                         
-  nfet_05v0/(1|3) = 10                     |  nfet_05v0/(1|3) = 10                     
-  nfet_05v0/2 = 1                          |  nfet_05v0/2 = 1                          
-                                           |                                           
-Net: m1_n73487_72909#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n71303_72909#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n73487_73661#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n71303_74413#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n68571_72909#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n68571_74413#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n65839_72909#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n65839_74413#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n63107_72909#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n63107_74413#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n70219_67901#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n70219_68653#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n69035_68653#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n73487_72157#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n67303_68653#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n67303_70157#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n65571_68653#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n65571_70157#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n63839_68653#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n63839_70157#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n73487_74413#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: m1_n69035_70157#                      |(no matching net)                          
-  ppolyf_u_1k_6p0/(1|2) = 2                |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[1|0]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[3|0]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[1|1]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[3|1]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[1|2]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[3|2]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[1|3]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[3|3]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[1|4]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$3_0[3|4]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[0|0]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[2|1]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[2|2]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[4|2]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[2|3]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[4|3]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[2|4]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[4|4]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[2|5]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[4|5]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
-                                           |                                           
-Net: ppolyf_u_high_Rs_resistor$2_0[4|1]/a_ |(no matching net)                          
-  ppolyf_u_1k_6p0/3 = 1                    |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: VOUT                                  |Net: VOUT                                  
-  ppolyf_u_1k_6p0/(1|2) = 2                |  ppolyf_u_1k_6p0/(1|2) = 2                
-  pfet_05v0/(1|3) = 1                      |  pfet_05v0/(1|3) = 1                      
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: m5_n60589_88423#                      |Net: Vmc                                   
-  ppolyf_u_1k_6p0/(1|2) = 1                |  ppolyf_u_1k_6p0/(1|2) = 1                
-  cap_mim_2f0_m4m5_noshield/2 = 4          |  cap_mim_2f0fF/2 = 4                      
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: ldo                             |Circuit 2: ldo                             
-
----------------------------------------------------------------------------------------
-Instance: ppolyf_u_high_Rs_resistor$3_0[0| |Instance: ppolyf_u_1k_6p0:R1[9]            
-  (1,2) = (3,2)                            |  (1,2) = (3,2)                            
-  3 = 34                                   |  3 = 30                                   
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[4| |Instance: ppolyf_u_1k_6p0:Rfb_dummy_L[7]   
-  (1,2) = (3,2)                            |  (1,2) = (30,30)                          
-  3 = 1                                    |  3 = 30                                   
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[1| |Instance: ppolyf_u_1k_6p0:R2[9]            
-  (1,2) = (2,2)                            |  (1,2) = (30,2)                           
-  3 = 1                                    |  3 = 30                                   
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[2| |Instance: ppolyf_u_1k_6p0:Rc[29]           
-  (1,2) = (2,2)                            |  (1,2) = (5,3)                            
-  3 = 34                                   |  3 = 30                                   
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[3| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[1| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[3| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[1| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[3| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[1| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[3| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[1| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[3| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[0| |(no matching instance)                     
-  (1,2) = (34,34)                          |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[1| |(no matching instance)                     
-  (1,2) = (34,34)                          |                                           
-  3 = 34                                   |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[1| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 34                                   |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[2| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[3| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 34                                   |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[2| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[4| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[2| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[4| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[2| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[4| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[2| |(no matching instance)                     
-  (1,2) = (34,2)                           |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$2_0[4| |(no matching instance)                     
-  (1,2) = (2,2)                            |                                           
-  3 = 1                                    |                                           
-                                           |                                           
-                                           |                                           
-Instance: ppolyf_u_high_Rs_resistor$3_0[5| |(no matching instance)                     
-  (1,2) = (5,2)                            |                                           
-  3 = 34                                   |                                           
-                                           |                                           
----------------------------------------------------------------------------------------
-Netlists do not match.
-Port matching may fail to disambiguate symmetries.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 1 symmetry.
 
 Subcircuit pins:
 Circuit 1: ldo                             |Circuit 2: ldo                             
 -------------------------------------------|-------------------------------------------
+VREF                                       |VREF                                       
+VFB                                        |VFB                                        
+IBIAS                                      |IBIAS                                      
+VDD                                        |VDD                                        
+VFB_res                                    |VFB_res                                    
+LDO_EN                                     |LDO_EN                                     
+VOUT                                       |VOUT                                       
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes ldo and ldo are equivalent.
 
-Final result: Netlists do not match.
-Port matching may fail to disambiguate symmetries.
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,38 @@
+* NGSPICE file created from test_all_tg.ext - technology: gf180mcuD
+
+.subckt test_all_tg VDD VSS EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7 IN0 IN1 IN2 IN3 IN4 IN5
++ IN6 IN7 VOUT Vp
+X0 VDD EN3 a_n497_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X1 VDD EN4 a_2235_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X2 IN0 a_n8693_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X3 IN1 a_n5961_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X4 IN5 a_4967_16865# VOUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X5 Vp EN0 IN0 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X6 VDD EN1 a_n5961_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X7 IN2 a_n3229_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X8 IN3 a_n497_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X9 IN4 a_2235_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X10 IN7 a_10431_16865# VOUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X11 VDD EN6 a_7699_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X12 IN6 a_7699_16865# VOUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X13 VDD EN2 a_n3229_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X14 VOUT EN6 IN6 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X15 VOUT EN5 IN5 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X16 VOUT EN7 IN7 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X17 VDD EN7 a_10431_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X18 Vp EN1 IN1 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X19 Vp EN3 IN3 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X20 Vp EN4 IN4 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X21 Vp EN2 IN2 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X22 VSS EN4 a_2235_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X23 VSS EN2 a_n3229_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X24 VSS EN3 a_n497_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X25 VSS EN5 a_4967_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X26 VSS EN6 a_7699_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X27 VSS EN7 a_10431_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X28 VSS EN0 a_n8693_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X29 VDD EN5 a_4967_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+X30 VSS EN1 a_n5961_16865# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X31 VDD EN0 a_n8693_16865# VDD pfet_05v0 ad=0.385p pd=2.54u as=0.385p ps=2.54u w=0.5u l=0.5u
+.ends
+

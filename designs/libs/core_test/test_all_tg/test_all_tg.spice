@@ -1,9 +1,14 @@
-** sch_path: /foss/designs/libs/A1_core/top_amux_2x1/top_amux_2x1.sch
-.subckt top_amux_2x1 IN0 VDD OUT VSS IN1 EN
-*.PININFO VDD:B VSS:B EN:I IN0:B IN1:B OUT:B
-x1 VDD ENB IN0 OUT VSS test_tg
-x2 VDD EN IN1 OUT VSS test_tg
-x3 VDD ENB EN VSS test_inv
+** sch_path: /foss/designs/libs/core_test/test_all_tg/test_all_tg.sch
+.subckt test_all_tg VDD VSS Vp VOUT IN0 IN1 IN2 IN3 IN4 IN5 IN6 IN7 EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7
+*.PININFO VDD:B Vp:B VOUT:B IN0:B IN1:B IN2:B IN3:B IN4:B IN5:B IN6:B IN7:B VSS:B EN0:B EN1:B EN2:B EN3:B EN4:B EN5:B EN6:B EN7:B
+x1 VDD EN0 IN0 Vp VSS test_tg
+x2 VDD EN1 IN1 Vp VSS test_tg
+x3 VDD EN2 IN2 Vp VSS test_tg
+x4 VDD EN3 IN3 Vp VSS test_tg
+x5 VDD EN4 IN4 Vp VSS test_tg
+x6 VDD EN5 IN5 VOUT VSS test_tg
+x7 VDD EN6 IN6 VOUT VSS test_tg
+x8 VDD EN7 IN7 VOUT VSS test_tg
 .ends
 
 * expanding   symbol:  libs/core_test/test_tg/test_tg.sym # of pins=5
