@@ -1,0 +1,74 @@
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+Flattening unmatched subcell test_tg in circuit test_all_tg (1)(8 instances)
+Flattening unmatched subcell test_inv in circuit test_all_tg (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: test_all_tg                     |Circuit 2: test_all_tg                     
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (56->16)                         |pfet_05v0 (56->16)                         
+nfet_05v0 (24->16)                         |nfet_05v0 (24->16)                         
+Number of devices: 32                      |Number of devices: 32                      
+Number of nets: 28                         |Number of nets: 28                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: test_all_tg                     |Circuit 2: test_all_tg                     
+-------------------------------------------|-------------------------------------------
+VOUT                                       |VOUT                                       
+Vp                                         |Vp                                         
+IN0                                        |IN0                                        
+IN1                                        |IN1                                        
+IN2                                        |IN2                                        
+IN3                                        |IN3                                        
+IN4                                        |IN4                                        
+IN5                                        |IN5                                        
+IN6                                        |IN6                                        
+IN7                                        |IN7                                        
+EN0                                        |EN0                                        
+EN1                                        |EN1                                        
+EN2                                        |EN2                                        
+EN3                                        |EN3                                        
+EN4                                        |EN4                                        
+EN5                                        |EN5                                        
+EN6                                        |EN6                                        
+EN7                                        |EN7                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes test_all_tg and test_all_tg are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -29,8 +29,7 @@ Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0
 Cell pin lists are equivalent.
 Device classes pfet_05v0 and pfet_05v0 are equivalent.
 Flattening unmatched subcell test_tg in circuit top_amux_2x1 (1)(2 instances)
-Flattening unmatched subcell test_inv in circuit top_amux_2x1 (1)(2 instances)
-Flattening unmatched subcell biasgen_inverter in circuit top_amux_2x1 (1)(1 instance)
+Flattening unmatched subcell test_inv in circuit top_amux_2x1 (1)(3 instances)
 
 Subcircuit summary:
 Circuit 1: top_amux_2x1                    |Circuit 2: top_amux_2x1                    
