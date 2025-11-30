@@ -41,8 +41,8 @@ D3 ASIG5V DVDD diode_pd2nw_06v0 m=4.0 area=150e-12 pj=106e-6
 * limitations under the License.
 
 .SUBCKT gf180mcu_fd_io__bi_24t A CS DVDD DVSS IE OE PAD PD PU SL VDD VSS Y
-X0 n9 VDD VDD ppolyf_u r_width=800e-9 r_length=1.6e-6 m=1.0 r=907.859 par=1
-X1 n11 VDD VDD ppolyf_u r_width=800e-9 r_length=1.6e-6 m=1.0 r=907.859 par=1
+X0 n9 VDD VSS ppolyf_u r_width=800e-9 r_length=1.6e-6 m=1.0 r=907.859 par=1
+X1 n11 VDD VSS ppolyf_u r_width=800e-9 r_length=1.6e-6 m=1.0 r=907.859 par=1
 X2 DVDD DVSS cap_nmos_06v0 m=4.0 c_length=3e-6 c_width=3e-6
 X3 DVDD DVSS cap_nmos_06v0 m=8.0 c_length=1.5e-6 c_width=5e-6
 X4 n43 n32 DVSS DVSS nfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=2.0 as=1.32e-12 ad=780e-15
@@ -235,14 +235,14 @@ X68 n129 PD VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 X69 n123 PU VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
-X70 n21 n132 DVDD ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
-X71 n132 n131 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X72 n131 n130 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X73 n130 n133 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X74 n133 n138 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X75 n138 n137 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X76 n137 n134 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X77 n134 n135 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X70 n21 n132 DVSS ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
+X71 n132 n131 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X72 n131 n130 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X73 n130 n133 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X74 n133 n138 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X75 n138 n137 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X76 n137 n134 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X77 n134 n135 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
 X78 n135 n51 DVSS DVSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
@@ -251,10 +251,10 @@ X79 n135 n35 DVDD DVDD pfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
 D80 DVSS n21 diode_nd2ps_06v0 m=2.0 area=20e-12 pj=42e-6
 D81 n21 DVDD diode_pd2nw_06v0 m=2.0 area=20e-12 pj=42e-6
-X82 PAD n21 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X83 PAD n21 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
-X84 PAD n21 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X85 PAD n21 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X82 PAD n21 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X83 PAD n21 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X84 PAD n21 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X85 PAD n21 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
 X86 n183 n191 DVSS DVSS nfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12
 + ad=1.32e-12 ps=6.88e-6 pd=6.88e-6 nrd=146.667e-3 nrs=146.667e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
@@ -1159,14 +1159,14 @@ X192 n359 PD VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 X193 n353 PU VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
-X194 n20 n362 DVDD ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
-X195 n362 n361 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X196 n361 n360 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X197 n360 n363 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X198 n363 n368 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X199 n368 n367 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X200 n367 n364 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X201 n364 n365 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X194 n20 n362 DVSS ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
+X195 n362 n361 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X196 n361 n360 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X197 n360 n363 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X198 n363 n368 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X199 n368 n367 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X200 n367 n364 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X201 n364 n365 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
 X202 n365 n281 DVSS DVSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
@@ -1175,10 +1175,10 @@ X203 n365 n265 DVDD DVDD pfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
 D204 DVSS n20 diode_nd2ps_06v0 m=2.0 area=20e-12 pj=42e-6
 D205 n20 DVDD diode_pd2nw_06v0 m=2.0 area=20e-12 pj=42e-6
-X206 PAD n20 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X207 PAD n20 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
-X208 PAD n20 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X209 PAD n20 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X206 PAD n20 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X207 PAD n20 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X208 PAD n20 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X209 PAD n20 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
 .ENDS
 
 
@@ -1250,18 +1250,18 @@ X3 n5 n7 VDD VDD pfet_06v0 m=1.0 w=120e-6 l=700e-9 nf=2.0 as=52.8e-12 ad=31.2e-1
 + ps=241.76e-6 pd=121.04e-6 nrd=2.167e-3 nrs=3.667e-3 sa=440e-9 sb=440e-9
 + sd=520e-9 dtemp=0.0 par=1
 X4 n9 VSS cap_nmos_06v0 m=8.0 c_length=10e-6 c_width=25e-6
-X5 n12 n16 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X6 n11 n12 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X7 n20 n11 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X8 n22 n20 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X9 n18 n22 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X10 n21 n9 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X11 n23 n21 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X12 n19 n23 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X13 n14 n19 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X14 n13 n14 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X15 n16 n13 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X16 VDD n18 VDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X5 n12 n16 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X6 n11 n12 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X7 n20 n11 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X8 n22 n20 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X9 n18 n22 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X10 n21 n9 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X11 n23 n21 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X12 n19 n23 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X13 n14 n19 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X14 n13 n14 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X15 n16 n13 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X16 VDD n18 VSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
 X17 n8 n9 VSS VSS nfet_06v0 m=1.0 w=5e-6 l=700e-9 nf=1.0 as=2.2e-12 ad=2.2e-12
 + ps=10.88e-6 pd=10.88e-6 nrd=88e-3 nrs=88e-3 sa=440e-9 sb=440e-9 sd=0.0
 + dtemp=0.0 par=1
@@ -1284,18 +1284,18 @@ X23 n25 n27 DVDD DVDD pfet_06v0 m=1.0 w=120e-6 l=700e-9 nf=2.0 as=52.8e-12
 + ad=31.2e-12 ps=241.76e-6 pd=121.04e-6 nrd=2.167e-3 nrs=3.667e-3 sa=440e-9
 + sb=440e-9 sd=520e-9 dtemp=0.0 par=1
 X24 n29 DVSS cap_nmos_06v0 m=8.0 c_length=10e-6 c_width=25e-6
-X25 n32 n36 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X26 n31 n32 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X27 n40 n31 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X28 n42 n40 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X29 n38 n42 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X30 n41 n29 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X31 n43 n41 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X32 n39 n43 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X33 n34 n39 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X34 n33 n34 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X35 n36 n33 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X36 DVDD n38 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X25 n32 n36 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X26 n31 n32 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X27 n40 n31 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X28 n42 n40 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X29 n38 n42 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X30 n41 n29 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X31 n43 n41 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X32 n39 n43 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X33 n34 n39 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X34 n33 n34 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X35 n36 n33 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X36 DVDD n38 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
 X37 n28 n29 DVSS DVSS nfet_06v0 m=1.0 w=5e-6 l=700e-9 nf=1.0 as=2.2e-12 ad=2.2e-12
 + ps=10.88e-6 pd=10.88e-6 nrd=88e-3 nrs=88e-3 sa=440e-9 sb=440e-9 sd=0.0
 + dtemp=0.0 par=1
@@ -1338,18 +1338,18 @@ X2 n4 n6 DVDD DVDD pfet_06v0 m=1.0 w=120e-6 l=700e-9 nf=2.0 as=52.8e-12 ad=31.2e
 + ps=241.76e-6 pd=121.04e-6 nrd=2.167e-3 nrs=3.667e-3 sa=440e-9 sb=440e-9
 + sd=520e-9 dtemp=0.0 par=1
 X3 n8 DVSS cap_nmos_06v0 m=8.0 c_length=10e-6 c_width=25e-6
-X4 n11 n15 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X5 n10 n11 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X6 n19 n10 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X7 n21 n19 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X8 n17 n21 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X9 n20 n8 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X10 n22 n20 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X11 n18 n22 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X12 n13 n18 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X13 n12 n13 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X14 n15 n12 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X15 DVDD n17 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X4 n11 n15 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X5 n10 n11 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X6 n19 n10 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X7 n21 n19 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X8 n17 n21 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X9 n20 n8 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X10 n22 n20 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X11 n18 n22 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X12 n13 n18 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X13 n12 n13 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X14 n15 n12 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X15 DVDD n17 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
 X16 n7 n8 DVSS DVSS nfet_06v0 m=1.0 w=5e-6 l=700e-9 nf=1.0 as=2.2e-12 ad=2.2e-12
 + ps=10.88e-6 pd=10.88e-6 nrd=88e-3 nrs=88e-3 sa=440e-9 sb=440e-9 sd=0.0
 + dtemp=0.0 par=1
@@ -1394,18 +1394,18 @@ X2 n4 n6 DVDD DVDD pfet_06v0 m=1.0 w=120e-6 l=700e-9 nf=2.0 as=52.8e-12 ad=31.2e
 + ps=241.76e-6 pd=121.04e-6 nrd=2.167e-3 nrs=3.667e-3 sa=440e-9 sb=440e-9
 + sd=520e-9 dtemp=0.0 par=1
 X3 n8 DVSS cap_nmos_06v0 m=8.0 c_length=10e-6 c_width=25e-6
-X4 n11 n15 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X5 n10 n11 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X6 n19 n10 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X7 n21 n19 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X8 n17 n21 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X9 n20 n8 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X10 n22 n20 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X11 n18 n22 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X12 n13 n18 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X13 n12 n13 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X14 n15 n12 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
-X15 DVDD n17 DVDD ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X4 n11 n15 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X5 n10 n11 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X6 n19 n10 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X7 n21 n19 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X8 n17 n21 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X9 n20 n8 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X10 n22 n20 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X11 n18 n22 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X12 n13 n18 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X13 n12 n13 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X14 n15 n12 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
+X15 DVDD n17 DVSS ppolyf_u r_width=800e-9 r_length=63.855e-6 m=1.0 r=29.999e3 par=1
 X16 n7 n8 DVSS DVSS nfet_06v0 m=1.0 w=5e-6 l=700e-9 nf=1.0 as=2.2e-12 ad=2.2e-12
 + ps=10.88e-6 pd=10.88e-6 nrd=88e-3 nrs=88e-3 sa=440e-9 sb=440e-9 sd=0.0
 + dtemp=0.0 par=1
@@ -1524,8 +1524,8 @@ X0 VDD VSS cap_nmos_06v0 m=32.0 c_length=6e-6 c_width=7e-6
 .SUBCKT gf180mcu_fd_io__in_c DVDD DVSS PAD PD PU VDD VSS Y
 X0 DVDD DVSS cap_nmos_06v0 m=8.0 c_length=1.5e-6 c_width=5e-6
 X1 DVDD DVSS cap_nmos_06v0 m=4.0 c_length=3e-6 c_width=3e-6
-X2 n0 VSS VDD ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
-X3 VDD n6 VDD ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
+X2 n0 VSS VSS ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
+X3 VDD n6 VSS ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
 X4 n62 n70 DVSS DVSS nfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12 ad=1.32e-12
 + ps=6.88e-6 pd=6.88e-6 nrd=146.667e-3 nrs=146.667e-3 sa=440e-9 sb=440e-9
 + sd=0.0 dtemp=0.0 par=1
@@ -2062,14 +2062,14 @@ X194 n354 PD VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 X195 n348 PU VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
-X196 n15 n357 DVDD ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
-X197 n357 n356 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X198 n356 n355 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X199 n355 n358 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X200 n358 n363 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X201 n363 n362 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X202 n362 n359 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X203 n359 n360 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X196 n15 n357 DVSS ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
+X197 n357 n356 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X198 n356 n355 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X199 n355 n358 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X200 n358 n363 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X201 n363 n362 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X202 n362 n359 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X203 n359 n360 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
 X204 n360 n276 DVSS DVSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
@@ -2078,10 +2078,10 @@ X205 n360 n260 DVDD DVDD pfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
 D206 DVSS n15 diode_nd2ps_06v0 m=2.0 area=20e-12 pj=42e-6
 D207 n15 DVDD diode_pd2nw_06v0 m=2.0 area=20e-12 pj=42e-6
-X208 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X209 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
-X210 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X211 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X208 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X209 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X210 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X211 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
 .ENDS
 
 
@@ -2104,8 +2104,8 @@ X211 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
 .SUBCKT gf180mcu_fd_io__in_s DVDD DVSS PAD PD PU VDD VSS Y
 X0 DVDD DVSS cap_nmos_06v0 m=8.0 c_length=1.5e-6 c_width=5e-6
 X1 DVDD DVSS cap_nmos_06v0 m=4.0 c_length=3e-6 c_width=3e-6
-X2 n6 VSS VDD ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
-X3 VDD n1 VDD ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
+X2 n6 VSS VSS ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
+X3 VDD n1 VSS ppolyf_u r_width=800e-9 r_length=3.9e-6 m=1.0 r=1.88247e3 par=1
 X4 n62 n70 DVSS DVSS nfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12 ad=1.32e-12
 + ps=6.88e-6 pd=6.88e-6 nrd=146.667e-3 nrs=146.667e-3 sa=440e-9 sb=440e-9
 + sd=0.0 dtemp=0.0 par=1
@@ -2642,14 +2642,14 @@ X194 n354 PD VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 X195 n348 PU VSS VSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
-X196 n15 n357 DVDD ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
-X197 n357 n356 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X198 n356 n355 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X199 n355 n358 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X200 n358 n363 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X201 n363 n362 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X202 n362 n359 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
-X203 n359 n360 DVDD ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X196 n15 n357 DVSS ppolyf_u r_width=800e-9 r_length=23e-6 m=1.0 r=9.94533e3 par=1
+X197 n357 n356 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X198 n356 n355 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X199 n355 n358 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X200 n358 n363 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X201 n363 n362 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X202 n362 n359 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
+X203 n359 n360 DVSS ppolyf_u r_width=800e-9 r_length=35.7e-6 m=1.0 r=15.3065e3 par=1
 X204 n360 n276 DVSS DVSS nfet_06v0 m=1.0 w=1.5e-6 l=700e-9 nf=1.0 as=660e-15
 + ad=660e-15 ps=3.88e-6 pd=3.88e-6 nrd=293.333e-3 nrs=293.333e-3 sa=440e-9
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
@@ -2658,10 +2658,10 @@ X205 n360 n260 DVDD DVDD pfet_06v0 m=1.0 w=3e-6 l=700e-9 nf=1.0 as=1.32e-12
 + sb=440e-9 sd=0.0 dtemp=0.0 par=1
 D206 DVSS n15 diode_nd2ps_06v0 m=2.0 area=20e-12 pj=42e-6
 D207 n15 DVDD diode_pd2nw_06v0 m=2.0 area=20e-12 pj=42e-6
-X208 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X209 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
-X210 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
-X211 PAD n15 DVDD ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X208 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X209 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
+X210 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=432.59 par=1
+X211 PAD n15 DVSS ppolyf_u r_width=2.5e-6 r_length=2.8e-6 m=1.0 r=449.157 par=1
 .ENDS
 
 
