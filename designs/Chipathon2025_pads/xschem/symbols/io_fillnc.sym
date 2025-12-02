@@ -4,7 +4,7 @@ K {type=subcircuit
 format="@spiceprefix@name @pinlist @model"
 lvs_format="@spiceprefix@name @pinlist @model"
 template="name=IO1
-model=gf180mcu_fd_io__fill10
+model=gf180mcu_fd_io__fillnc
 spiceprefix=X
 "
 spice_sym_def=".include /foss/designs/libs/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
