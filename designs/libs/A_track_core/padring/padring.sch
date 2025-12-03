@@ -1,14 +1,14 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
-L 3 4680 -8040 4680 -7160 {}
-L 3 3320 -8040 3320 -7160 {}
-L 3 800 -8030 800 -7150 {}
-L 3 7600 -8040 7600 -7160 {}
+L 3 4560 -8040 4560 -7160 {}
+L 3 3280 -8050 3280 -7170 {}
+L 3 760 -8030 760 -7150 {}
+L 3 7650 -8040 7650 -7160 {}
 L 3 40 -1660 920 -1660 {}
 L 3 1800 -1020 1800 -140 {}
 L 3 5720 -1020 5720 -140 {}
@@ -29,163 +29,157 @@ T {A4_top} 7000 -5850 2 0 2.8 2.8 {}
 T {LDO_EN} 6000 40 0 0 0.8 0.8 {}
 N 720 -7300 7660 -7300 {lab=#net1
 bus=true}
-N 4720 -7340 7660 -7340 {lab=VSS_A1
-bus=true}
-N 4720 -7380 7660 -7380 {lab=VDD_A1
-bus=true}
-N 4720 -7420 7660 -7420 {lab=VDD_A1
-bus=true}
-N 6980 -7780 7000 -7780 {lab=VDD_A1}
-N 7000 -7780 7000 -7420 {lab=VDD_A1}
-N 6980 -7740 6980 -7380 {lab=VDD_A1}
-N 6720 -7740 6720 -7300 {lab=#net1}
-N 6700 -7780 6720 -7780 {lab=VSS_A1}
-N 6640 -7780 6660 -7780 {lab=VDD_A1}
-N 6660 -7780 6660 -7420 {lab=VDD_A1}
-N 6640 -7740 6640 -7380 {lab=VDD_A1}
-N 6380 -7740 6380 -7300 {lab=#net1}
-N 6360 -7780 6380 -7780 {lab=VSS_A1}
-N 6300 -7780 6320 -7780 {lab=VDD_A1}
-N 6320 -7780 6320 -7420 {lab=VDD_A1}
-N 6300 -7740 6300 -7380 {lab=VDD_A1}
-N 6040 -7740 6040 -7300 {lab=#net1}
-N 6020 -7780 6040 -7780 {lab=VSS_A1}
-N 6700 -7780 6700 -7340 {lab=VSS_A1}
-N 6360 -7780 6360 -7340 {lab=VSS_A1}
-N 6020 -7780 6020 -7340 {lab=VSS_A1}
-N 5940 -7780 5960 -7780 {lab=VDD_A1}
-N 5960 -7780 5960 -7420 {lab=VDD_A1}
-N 5940 -7740 5940 -7380 {lab=VDD_A1}
-N 5780 -7740 5780 -7300 {lab=#net1}
-N 5760 -7780 5780 -7780 {lab=VSS_A1}
-N 5760 -7780 5760 -7340 {lab=VSS_A1}
-N 5340 -7780 5340 -7420 {lab=VDD_A1}
-N 5320 -7740 5320 -7380 {lab=VDD_A1}
-N 5160 -7740 5160 -7300 {lab=#net1}
-N 5140 -7780 5140 -7340 {lab=VSS_A1}
+N 7030 -7780 7050 -7780 {lab=VDD_A1}
+N 7050 -7780 7050 -7420 {lab=VDD_A1}
+N 7030 -7740 7030 -7380 {lab=VDD_A1}
+N 6770 -7740 6770 -7300 {lab=#net1}
+N 6750 -7780 6770 -7780 {lab=VSS_A1}
+N 6690 -7780 6710 -7780 {lab=VDD_A1}
+N 6710 -7780 6710 -7420 {lab=VDD_A1}
+N 6690 -7740 6690 -7380 {lab=VDD_A1}
+N 6430 -7740 6430 -7300 {lab=#net1}
+N 6410 -7780 6430 -7780 {lab=VSS_A1}
+N 6350 -7780 6370 -7780 {lab=VDD_A1}
+N 6370 -7780 6370 -7420 {lab=VDD_A1}
+N 6350 -7740 6350 -7380 {lab=VDD_A1}
+N 6090 -7740 6090 -7300 {lab=#net1}
+N 6070 -7780 6090 -7780 {lab=VSS_A1}
+N 6750 -7780 6750 -7340 {lab=VSS_A1}
+N 6410 -7780 6410 -7340 {lab=VSS_A1}
+N 6070 -7780 6070 -7340 {lab=VSS_A1}
+N 5990 -7780 6010 -7780 {lab=VDD_A1}
+N 6010 -7780 6010 -7420 {lab=VDD_A1}
+N 5990 -7740 5990 -7380 {lab=VDD_A1}
+N 5830 -7740 5830 -7300 {lab=#net1}
+N 5810 -7780 5830 -7780 {lab=VSS_A1}
+N 5810 -7780 5810 -7340 {lab=VSS_A1}
+N 5390 -7780 5390 -7420 {lab=VDD_A1}
+N 5370 -7740 5370 -7380 {lab=VDD_A1}
+N 5210 -7740 5210 -7300 {lab=#net1}
+N 5190 -7780 5190 -7340 {lab=VSS_A1}
 N 240 -6440 600 -6440 {lab=AVDD_A2}
 N 280 -6420 640 -6420 {lab=AVDD_A2}
 N 280 -6260 720 -6260 {lab=#net1}
 N 240 -6240 680 -6240 {lab=AVSS_A2}
-N 5320 -7780 5340 -7780 {lab=VDD_A1}
-N 5140 -7780 5160 -7780 {lab=VSS_A1}
+N 5370 -7780 5390 -7780 {lab=VDD_A1}
+N 5190 -7780 5210 -7780 {lab=VSS_A1}
 N 240 -6440 240 -6420 {lab=AVDD_A2}
 N 240 -6260 240 -6240 {lab=AVSS_A2}
-N 7290 -7780 7310 -7780 {lab=VDD_A1}
-N 7310 -7780 7310 -7420 {lab=VDD_A1}
-N 7290 -7740 7290 -7380 {lab=VDD_A1}
-N 7540 -7780 7560 -7780 {lab=VDD_A1}
-N 7560 -7780 7560 -7420 {lab=VDD_A1}
-N 7380 -7740 7380 -7300 {lab=#net1}
-N 7360 -7780 7380 -7780 {lab=VSS_A1}
-N 7360 -7780 7360 -7340 {lab=VSS_A1}
-N 3420 -7340 4640 -7340 {lab=#net2
+N 7340 -7780 7360 -7780 {lab=VDD_A1}
+N 7360 -7780 7360 -7420 {lab=VDD_A1}
+N 7340 -7740 7340 -7380 {lab=VDD_A1}
+N 7590 -7780 7610 -7780 {lab=VDD_A1}
+N 7610 -7780 7610 -7420 {lab=VDD_A1}
+N 7430 -7740 7430 -7300 {lab=#net1}
+N 7410 -7780 7430 -7780 {lab=VSS_A1}
+N 7410 -7780 7410 -7340 {lab=VSS_A1}
+N 3320 -7340 4540 -7340 {lab=#net2
 bus=true}
-N 3420 -7380 4640 -7380 {lab=LDO_OUT
+N 3320 -7380 4540 -7380 {lab=LDO_OUT
 bus=true}
-N 3420 -7420 4640 -7420 {lab=LDO_OUT
+N 3320 -7420 4540 -7420 {lab=LDO_OUT
 bus=true}
-N 4580 -7780 4600 -7780 {lab=LDO_OUT}
-N 4600 -7780 4600 -7420 {lab=LDO_OUT}
-N 4420 -7740 4420 -7300 {lab=#net1}
-N 4400 -7780 4400 -7340 {lab=#net2}
-N 4400 -7780 4420 -7780 {lab=#net2}
-N 4160 -7740 4160 -7300 {lab=#net1}
-N 4140 -7780 4140 -7340 {lab=#net2}
-N 4140 -7780 4160 -7780 {lab=#net2}
-N 5660 -7780 5680 -7780 {lab=VDD_A1}
-N 5680 -7780 5680 -7420 {lab=VDD_A1}
-N 5660 -7740 5660 -7380 {lab=VDD_A1}
-N 5400 -7740 5400 -7300 {lab=#net1}
-N 5380 -7780 5400 -7780 {lab=VSS_A1}
-N 5380 -7780 5380 -7340 {lab=VSS_A1}
-N 5080 -7780 5100 -7780 {lab=VDD_A1}
-N 5100 -7780 5100 -7420 {lab=VDD_A1}
-N 5080 -7740 5080 -7380 {lab=VDD_A1}
-N 4820 -7740 4820 -7300 {lab=#net1}
-N 4800 -7780 4820 -7780 {lab=VSS_A1}
-N 4800 -7780 4800 -7340 {lab=VSS_A1}
-N 4320 -7780 4340 -7780 {lab=LDO_OUT}
-N 4340 -7780 4340 -7420 {lab=LDO_OUT}
-N 4320 -7740 4320 -7380 {lab=LDO_OUT}
-N 4080 -7780 4100 -7780 {lab=LDO_OUT}
-N 4100 -7780 4100 -7420 {lab=LDO_OUT}
-N 4080 -7740 4080 -7380 {lab=LDO_OUT}
-N 3820 -7740 3820 -7300 {lab=#net1}
-N 3800 -7780 3820 -7780 {lab=#net2}
-N 3800 -7780 3800 -7340 {lab=#net2}
-N 3740 -7780 3760 -7780 {lab=LDO_OUT}
-N 3760 -7780 3760 -7420 {lab=LDO_OUT}
-N 3740 -7740 3740 -7380 {lab=LDO_OUT}
-N 3480 -7740 3480 -7300 {lab=#net1}
-N 3460 -7780 3480 -7780 {lab=#net2}
-N 3460 -7780 3460 -7340 {lab=#net2}
-N 3200 -7780 3220 -7780 {lab=VTEST}
-N 3220 -7780 3220 -7420 {lab=VTEST}
-N 3040 -7740 3040 -7300 {lab=#net1}
-N 3020 -7780 3040 -7780 {lab=#net3}
-N 3020 -7780 3020 -7340 {lab=#net3}
-N 2960 -7780 2980 -7780 {lab=VTEST}
-N 2980 -7780 2980 -7420 {lab=VTEST}
-N 2960 -7740 2960 -7380 {lab=VTEST}
-N 2700 -7740 2700 -7300 {lab=#net1}
-N 2680 -7780 2700 -7780 {lab=#net3}
-N 2680 -7780 2680 -7340 {lab=#net3}
-N 2620 -7780 2640 -7780 {lab=VTEST}
-N 2640 -7780 2640 -7420 {lab=VTEST}
-N 2460 -7740 2460 -7300 {lab=#net1}
-N 2440 -7780 2460 -7780 {lab=#net3}
-N 2440 -7780 2440 -7340 {lab=#net3}
+N 4480 -7780 4500 -7780 {lab=LDO_OUT}
+N 4500 -7780 4500 -7420 {lab=LDO_OUT}
+N 4320 -7740 4320 -7300 {lab=#net1}
+N 4300 -7780 4300 -7340 {lab=#net2}
+N 4300 -7780 4320 -7780 {lab=#net2}
+N 4060 -7740 4060 -7300 {lab=#net1}
+N 4040 -7780 4040 -7340 {lab=#net2}
+N 4040 -7780 4060 -7780 {lab=#net2}
+N 5710 -7780 5730 -7780 {lab=VDD_A1}
+N 5730 -7780 5730 -7420 {lab=VDD_A1}
+N 5710 -7740 5710 -7380 {lab=VDD_A1}
+N 5450 -7740 5450 -7300 {lab=#net1}
+N 5430 -7780 5450 -7780 {lab=VSS_A1}
+N 5430 -7780 5430 -7340 {lab=VSS_A1}
+N 5130 -7780 5150 -7780 {lab=VDD_A1}
+N 5150 -7780 5150 -7420 {lab=VDD_A1}
+N 5130 -7740 5130 -7380 {lab=VDD_A1}
+N 4870 -7740 4870 -7300 {lab=#net1}
+N 4850 -7780 4870 -7780 {lab=VSS_A1}
+N 4850 -7780 4850 -7340 {lab=VSS_A1}
+N 4220 -7780 4240 -7780 {lab=LDO_OUT}
+N 4240 -7780 4240 -7420 {lab=LDO_OUT}
+N 4220 -7740 4220 -7380 {lab=LDO_OUT}
+N 3980 -7780 4000 -7780 {lab=LDO_OUT}
+N 4000 -7780 4000 -7420 {lab=LDO_OUT}
+N 3980 -7740 3980 -7380 {lab=LDO_OUT}
+N 3720 -7740 3720 -7300 {lab=#net1}
+N 3700 -7780 3720 -7780 {lab=#net2}
+N 3700 -7780 3700 -7340 {lab=#net2}
+N 3640 -7780 3660 -7780 {lab=LDO_OUT}
+N 3660 -7780 3660 -7420 {lab=LDO_OUT}
+N 3640 -7740 3640 -7380 {lab=LDO_OUT}
+N 3380 -7740 3380 -7300 {lab=#net1}
+N 3360 -7780 3380 -7780 {lab=#net2}
+N 3360 -7780 3360 -7340 {lab=#net2}
+N 3160 -7780 3180 -7780 {lab=VTEST}
+N 3180 -7780 3180 -7420 {lab=VTEST}
+N 3000 -7740 3000 -7300 {lab=#net1}
+N 2980 -7780 3000 -7780 {lab=#net3}
+N 2980 -7780 2980 -7340 {lab=#net3}
+N 2920 -7780 2940 -7780 {lab=VTEST}
+N 2940 -7780 2940 -7420 {lab=VTEST}
+N 2920 -7740 2920 -7380 {lab=VTEST}
+N 2660 -7740 2660 -7300 {lab=#net1}
+N 2640 -7780 2660 -7780 {lab=#net3}
+N 2640 -7780 2640 -7340 {lab=#net3}
+N 2580 -7780 2600 -7780 {lab=VTEST}
+N 2600 -7780 2600 -7420 {lab=VTEST}
+N 2420 -7740 2420 -7300 {lab=#net1}
+N 2400 -7780 2420 -7780 {lab=#net3}
+N 2400 -7780 2400 -7340 {lab=#net3}
 N 720 -7340 3280 -7340 {lab=#net3
 bus=true}
 N 720 -7380 3280 -7380 {lab=VTEST
 bus=true}
 N 720 -7420 3280 -7420 {lab=VTEST
 bus=true}
-N 2620 -7740 2620 -7380 {lab=VTEST}
-N 2380 -7780 2400 -7780 {lab=VTEST}
-N 2400 -7780 2400 -7420 {lab=VTEST}
-N 2380 -7740 2380 -7380 {lab=VTEST}
-N 2120 -7740 2120 -7300 {lab=#net1}
-N 2100 -7780 2120 -7780 {lab=#net3}
-N 2100 -7780 2100 -7340 {lab=#net3}
-N 2040 -7780 2060 -7780 {lab=VTEST}
-N 2060 -7780 2060 -7420 {lab=VTEST}
-N 2040 -7740 2040 -7380 {lab=VTEST}
-N 1780 -7740 1780 -7300 {lab=#net1}
-N 1760 -7780 1780 -7780 {lab=#net3}
-N 1760 -7780 1760 -7340 {lab=#net3}
-N 1700 -7780 1720 -7780 {lab=VTEST}
-N 1720 -7780 1720 -7420 {lab=VTEST}
-N 1700 -7740 1700 -7380 {lab=VTEST}
-N 1440 -7740 1440 -7300 {lab=#net1}
-N 1420 -7780 1440 -7780 {lab=#net3}
-N 1420 -7780 1420 -7340 {lab=#net3}
-N 1360 -7780 1380 -7780 {lab=VTEST}
-N 1380 -7780 1380 -7420 {lab=VTEST}
-N 1360 -7740 1360 -7380 {lab=VTEST}
-N 1100 -7740 1100 -7300 {lab=#net1}
-N 1080 -7780 1100 -7780 {lab=#net3}
-N 1080 -7780 1080 -7340 {lab=#net3}
-N 1020 -7780 1040 -7780 {lab=VTEST}
-N 1040 -7780 1040 -7420 {lab=VTEST}
-N 1020 -7740 1020 -7380 {lab=VTEST}
-N 860 -7740 860 -7300 {lab=#net1}
-N 840 -7780 860 -7780 {lab=#net3}
-N 840 -7780 840 -7340 {lab=#net3}
-N 7110 -7780 7130 -7780 {lab=VSS_A1}
-N 7110 -7780 7110 -7340 {lab=VSS_A1}
-N 7130 -7780 7130 -7620 {lab=VSS_A1}
-N 7130 -7560 7130 -7300 {lab=#net1}
-N 3200 -7470 3200 -7380 {lab=VTEST}
-N 3200 -7590 3200 -7530 {lab=VTEST}
-N 3200 -7590 3220 -7590 {lab=VTEST}
-N 4580 -7470 4580 -7380 {lab=LDO_OUT}
-N 4580 -7590 4580 -7530 {lab=LDO_OUT}
-N 4580 -7590 4600 -7590 {lab=LDO_OUT}
-N 7540 -7470 7540 -7380 {lab=VDD_A1}
-N 7540 -7590 7540 -7530 {lab=VDD_A1}
-N 7540 -7590 7560 -7590 {lab=VDD_A1}
+N 2580 -7740 2580 -7380 {lab=VTEST}
+N 2340 -7780 2360 -7780 {lab=VTEST}
+N 2360 -7780 2360 -7420 {lab=VTEST}
+N 2340 -7740 2340 -7380 {lab=VTEST}
+N 2080 -7740 2080 -7300 {lab=#net1}
+N 2060 -7780 2080 -7780 {lab=#net3}
+N 2060 -7780 2060 -7340 {lab=#net3}
+N 2000 -7780 2020 -7780 {lab=VTEST}
+N 2020 -7780 2020 -7420 {lab=VTEST}
+N 2000 -7740 2000 -7380 {lab=VTEST}
+N 1740 -7740 1740 -7300 {lab=#net1}
+N 1720 -7780 1740 -7780 {lab=#net3}
+N 1720 -7780 1720 -7340 {lab=#net3}
+N 1660 -7780 1680 -7780 {lab=VTEST}
+N 1680 -7780 1680 -7420 {lab=VTEST}
+N 1660 -7740 1660 -7380 {lab=VTEST}
+N 1400 -7740 1400 -7300 {lab=#net1}
+N 1380 -7780 1400 -7780 {lab=#net3}
+N 1380 -7780 1380 -7340 {lab=#net3}
+N 1320 -7780 1340 -7780 {lab=VTEST}
+N 1340 -7780 1340 -7420 {lab=VTEST}
+N 1320 -7740 1320 -7380 {lab=VTEST}
+N 1060 -7740 1060 -7300 {lab=#net1}
+N 1040 -7780 1060 -7780 {lab=#net3}
+N 1040 -7780 1040 -7340 {lab=#net3}
+N 980 -7780 1000 -7780 {lab=VTEST}
+N 1000 -7780 1000 -7420 {lab=VTEST}
+N 980 -7740 980 -7380 {lab=VTEST}
+N 820 -7740 820 -7300 {lab=#net1}
+N 800 -7780 820 -7780 {lab=#net3}
+N 800 -7780 800 -7340 {lab=#net3}
+N 7160 -7780 7180 -7780 {lab=VSS_A1}
+N 7160 -7780 7160 -7340 {lab=VSS_A1}
+N 7180 -7780 7180 -7620 {lab=VSS_A1}
+N 7180 -7560 7180 -7300 {lab=#net1}
+N 3160 -7470 3160 -7380 {lab=VTEST}
+N 3160 -7590 3160 -7530 {lab=VTEST}
+N 3160 -7590 3180 -7590 {lab=VTEST}
+N 4480 -7470 4480 -7380 {lab=LDO_OUT}
+N 4480 -7590 4480 -7530 {lab=LDO_OUT}
+N 4480 -7590 4500 -7590 {lab=LDO_OUT}
+N 7590 -7470 7590 -7380 {lab=VDD_A1}
+N 7590 -7590 7590 -7530 {lab=VDD_A1}
+N 7590 -7590 7610 -7590 {lab=VDD_A1}
 N 240 -6710 240 -6690 {lab=AVDD_A2}
 N 240 -6710 600 -6710 {lab=AVDD_A2}
 N 280 -6690 640 -6690 {lab=AVDD_A2}
@@ -661,254 +655,266 @@ N 8140 -3980 8150 -3980 {lab=VSS_1_A3}
 N 8210 -3980 8220 -3980 {lab=VSS_1_A3}
 N 7890 -1800 8140 -1800 {lab=VSS_2_A3}
 N 7700 -1800 7830 -1800 {lab=VSS_1_A3}
-C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2460 -7860 1 0 {name=IO_TEST_IBIAS
-model=gf180mcu_fd_io__asig_5p0_extracted
+N 4810 -7780 4810 -7420 {lab=VDD_A1}
+N 4790 -7740 4790 -7380 {lab=VDD_A1}
+N 4630 -7740 4630 -7300 {lab=#net1}
+N 4610 -7780 4610 -7340 {lab=VSS_A1}
+N 4790 -7780 4810 -7780 {lab=VDD_A1}
+N 4610 -7780 4630 -7780 {lab=VSS_A1}
+N 4580 -7340 7660 -7340 {lab=VSS_A1
+bus=true}
+N 4580 -7380 7660 -7380 {lab=VDD_A1
+bus=true}
+N 4580 -7420 7660 -7420 {lab=VDD_A1
+bus=true}
+C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2420 -7860 1 0 {name=IO_TEST_IBIAS
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 7380 -7860 1 0 {name=IO_VDD_A1
+C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 7430 -7860 1 0 {name=IO_VDD_A1
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
 spice_ignore=false
 }
-C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 7130 -7860 1 0 {name=IOVSS
+C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 7180 -7860 1 0 {name=IOVSS
 model=gf180mcu_fd_io__dvss
 spiceprefix=X
 spice_ignore=false
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 2700 -7860 1 0 {name=IO_TEST_IBIAS_OVRD
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 2660 -7860 1 0 {name=IO_TEST_IBIAS_OVRD
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 3480 -7860 1 0 {name=IO_VCO_OUT
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 3380 -7860 1 0 {name=IO_VCO_OUT
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 1100 -7860 1 0 {name=IO_TEST_SEL_2
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 1060 -7860 1 0 {name=IO_TEST_SEL_2
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 1440 -7860 1 0 {name=IO_TEST_SEL_1
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 1400 -7860 1 0 {name=IO_TEST_SEL_1
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 1780 -7860 1 0 {name=IO_TEST_SEL_0
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 1740 -7860 1 0 {name=IO_TEST_SEL_0
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 3040 -7860 1 0 {name=IO_VTEST
+C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 3000 -7860 1 0 {name=IO_VTEST
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
 spice_ignore=false
 }
-C {ipin.sym} 1900 -7860 1 0 {name=p77 lab=TEST_SEL_0_PAD}
-C {ipin.sym} 1560 -7860 1 0 {name=p78 lab=TEST_SEL_1_PAD}
-C {ipin.sym} 1220 -7860 1 0 {name=p79 lab=TEST_SEL_2_PAD}
-C {iopin.sym} 5860 -7860 3 0 {name=p80 lab=LDO_VREF_PAD}
-C {iopin.sym} 5240 -7860 3 0 {name=p81 lab=LDO_IBIAS_PAD}
-C {iopin.sym} 2540 -7860 3 0 {name=p83 lab=TEST_IBIAS_PAD}
-C {ipin.sym} 6160 -7860 1 0 {name=p84 lab=LDO_VREF_OVRD_PAD}
-C {ipin.sym} 5520 -7860 1 0 {name=p85 lab=LDO_IBIAS_OVRD_PAD}
-C {ipin.sym} 2820 -7860 1 0 {name=p87 lab=TEST_IBIAS_OVRD_PAD}
-C {ipin.sym} 2240 -7860 1 0 {name=p89 lab=TEST_EN_PAD}
-C {ipin.sym} 6840 -7860 1 0 {name=p91 lab=BIAS_EN_PAD}
-C {ipin.sym} 6500 -7860 1 0 {name=p94 lab=LDO_EN_PAD}
-C {iopin.sym} 3220 -7840 3 0 {name=p96 lab=VTEST}
-C {iopin.sym} 3600 -7860 1 1 {name=p98 lab=VCO_OUT_PAD}
-C {iopin.sym} 940 -7860 3 0 {name=p99 lab=TEST_OUT_PAD}
+C {ipin.sym} 1860 -7860 1 0 {name=p77 lab=TEST_SEL_0_PAD}
+C {ipin.sym} 1520 -7860 1 0 {name=p78 lab=TEST_SEL_1_PAD}
+C {ipin.sym} 1180 -7860 1 0 {name=p79 lab=TEST_SEL_2_PAD}
+C {iopin.sym} 5910 -7860 3 0 {name=p80 lab=LDO_VREF_PAD}
+C {iopin.sym} 5290 -7860 3 0 {name=p81 lab=LDO_IBIAS_PAD}
+C {iopin.sym} 2500 -7860 3 0 {name=p83 lab=TEST_IBIAS_PAD}
+C {ipin.sym} 6210 -7860 1 0 {name=p84 lab=LDO_VREF_OVRD_PAD}
+C {ipin.sym} 5570 -7860 1 0 {name=p85 lab=LDO_IBIAS_OVRD_PAD}
+C {ipin.sym} 2780 -7860 1 0 {name=p87 lab=TEST_IBIAS_OVRD_PAD}
+C {ipin.sym} 2200 -7860 1 0 {name=p89 lab=TEST_EN_PAD}
+C {ipin.sym} 6890 -7860 1 0 {name=p91 lab=BIAS_EN_PAD}
+C {ipin.sym} 6550 -7860 1 0 {name=p94 lab=LDO_EN_PAD}
+C {iopin.sym} 3180 -7840 3 0 {name=p96 lab=VTEST}
+C {iopin.sym} 3500 -7860 1 1 {name=p98 lab=VCO_OUT_PAD}
+C {iopin.sym} 900 -7860 3 0 {name=p99 lab=TEST_OUT_PAD}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -6260 0 0 {name=IO_VCM_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 4820 -7860 1 0 {name=IO_VCO_IBIAS_OVRD
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 4870 -7860 1 0 {name=IO_VCO_IBIAS_OVRD
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
 C {iopin.sym} 160 -6340 2 0 {name=p103 lab=VCM_A2_PAD}
-C {ipin.sym} 4940 -7860 1 0 {name=p104 lab=VCO_IBIAS_OVRD_PAD}
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 3820 -7860 1 0 {name=IO_VCO_EN
+C {ipin.sym} 4990 -7860 1 0 {name=p104 lab=VCO_IBIAS_OVRD_PAD}
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 3720 -7860 1 0 {name=IO_VCO_EN
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {ipin.sym} 3940 -7860 1 0 {name=p120 lab=VCO_EN_PAD}
-C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4160 -7860 1 0 {name=IO_VCO_IN
-model=gf180mcu_fd_io__asig_5p0_extracted
+C {ipin.sym} 3840 -7860 1 0 {name=p120 lab=VCO_EN_PAD}
+C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4060 -7860 1 0 {name=IO_VCO_IN
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {iopin.sym} 4240 -7860 3 0 {name=p34 lab=VCO_IN_PAD}
-C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5160 -7860 1 0 {name=IO_LDO_IBIAS
-model=gf180mcu_fd_io__asig_5p0_extracted
+C {iopin.sym} 4140 -7860 3 0 {name=p34 lab=VCO_IN_PAD}
+C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5210 -7860 1 0 {name=IO_LDO_IBIAS
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 5400 -7860 1 0 {name=IO_LDO_IBIAS_OVRD
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 5450 -7860 1 0 {name=IO_LDO_IBIAS_OVRD
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5780 -7860 1 0 {name=IO_LCO_VREF
-model=gf180mcu_fd_io__asig_5p0_extracted
+C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5830 -7860 1 0 {name=IO_LCO_VREF
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6040 -7860 1 0 {name=IO_LDO_VREF_OVRD
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6090 -7860 1 0 {name=IO_LDO_VREF_OVRD
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6380 -7860 1 0 {name=IO_LDO_EN
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6430 -7860 1 0 {name=IO_LDO_EN
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 2120 -7860 1 0 {name=IO_TEST_EN
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 2080 -7860 1 0 {name=IO_TEST_EN
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 860 -7860 1 0 {name=IO_LCO_VREF2
-model=gf180mcu_fd_io__asig_5p0_extracted
+C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 820 -7860 1 0 {name=IO_LCO_VREF2
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {iopin.sym} 2540 -7660 1 0 {name=p4 lab=test_ibias_int}
-C {iopin.sym} 4240 -7660 1 0 {name=p31 lab=vco_in_int}
-C {opin.sym} 5580 -7600 1 0 {name=p114 lab=LDO_IBIAS_OVRD_Y}
-C {opin.sym} 6560 -7600 1 0 {name=p168 lab=LDO_EN_Y}
-C {iopin.sym} 5860 -7660 3 1 {name=p169 lab=LDO_VREF_ASIG5V}
-C {iopin.sym} 5240 -7660 3 1 {name=p170 lab=LDO_IBIAS_ASIG5V}
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6720 -7860 1 0 {name=IO_LDO_EN1
+C {iopin.sym} 2500 -7660 1 0 {name=p4 lab=test_ibias_int}
+C {iopin.sym} 4140 -7660 1 0 {name=p31 lab=vco_in_int}
+C {opin.sym} 5630 -7600 1 0 {name=p114 lab=LDO_IBIAS_OVRD_Y}
+C {opin.sym} 6610 -7600 1 0 {name=p168 lab=LDO_EN_Y}
+C {iopin.sym} 5910 -7660 3 1 {name=p169 lab=LDO_VREF_ASIG5V}
+C {iopin.sym} 5290 -7660 3 1 {name=p170 lab=LDO_IBIAS_ASIG5V}
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6770 -7860 1 0 {name=IO_LDO_EN1
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {ipin.sym} 6760 -7600 3 0 {name=p5 lab=BIAS_EN_OE}
-C {ipin.sym} 6780 -7600 3 0 {name=p3 lab=BIAS_EN_SL}
-C {ipin.sym} 6800 -7600 3 0 {name=p2 lab=BIAS_EN_A}
-C {ipin.sym} 6820 -7600 3 0 {name=p6 lab=BIAS_EN_PDRV1}
-C {ipin.sym} 6840 -7600 3 0 {name=p7 lab=BIAS_EN_PDRV0}
-C {ipin.sym} 6860 -7600 3 0 {name=p8 lab=BIAS_EN_PD}
-C {ipin.sym} 6880 -7600 3 0 {name=p9 lab=BIAS_EN_PU}
-C {opin.sym} 6900 -7600 1 0 {name=p179 lab=BIAS_EN_Y}
-C {ipin.sym} 6920 -7600 3 0 {name=p10 lab=BIAS_EN_CS}
-C {ipin.sym} 6940 -7600 3 0 {name=p11 lab=BIAS_EN_IE}
-C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 4420 -7860 1 0 {name=IO_LDO_OUT
+C {ipin.sym} 6810 -7600 3 0 {name=p5 lab=BIAS_EN_OE}
+C {ipin.sym} 6830 -7600 3 0 {name=p3 lab=BIAS_EN_SL}
+C {ipin.sym} 6850 -7600 3 0 {name=p2 lab=BIAS_EN_A}
+C {ipin.sym} 6870 -7600 3 0 {name=p6 lab=BIAS_EN_PDRV1}
+C {ipin.sym} 6890 -7600 3 0 {name=p7 lab=BIAS_EN_PDRV0}
+C {ipin.sym} 6910 -7600 3 0 {name=p8 lab=BIAS_EN_PD}
+C {ipin.sym} 6930 -7600 3 0 {name=p9 lab=BIAS_EN_PU}
+C {opin.sym} 6950 -7600 1 0 {name=p179 lab=BIAS_EN_Y}
+C {ipin.sym} 6970 -7600 3 0 {name=p10 lab=BIAS_EN_CS}
+C {ipin.sym} 6990 -7600 3 0 {name=p11 lab=BIAS_EN_IE}
+C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 4320 -7860 1 0 {name=IO_LDO_OUT
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
 spice_ignore=false
 }
-C {iopin.sym} 7110 -7840 3 0 {name=p51 lab=VSS_A1}
+C {iopin.sym} 7160 -7840 3 0 {name=p51 lab=VSS_A1}
 C {title.sym} 160 -40 0 0 {name=l1 author="Luighi Viton (Analog/AI Track)"}
 C {iopin.sym} 360 -6340 2 1 {name=p23 lab=VCM_A2_ASIG5V}
-C {short.sym} 7110 -7810 0 0 {name=x2 value=0.1}
-C {iopin.sym} 7560 -7840 3 0 {name=p1 lab=VDD_A1}
-C {short.sym} 7560 -7810 0 0 {name=x3 value=0.1}
-C {ipin.sym} 6420 -7600 3 0 {name=p12 lab=LDO_EN_OE}
-C {ipin.sym} 6440 -7600 3 0 {name=p13 lab=LDO_EN_SL}
-C {ipin.sym} 6460 -7600 3 0 {name=p14 lab=LDO_EN_A}
-C {ipin.sym} 6480 -7600 3 0 {name=p15 lab=LDO_EN_PDRV1}
-C {ipin.sym} 6500 -7600 3 0 {name=p18 lab=LDO_EN_PDRV0}
-C {ipin.sym} 6520 -7600 3 0 {name=p19 lab=LDO_EN_PD}
-C {ipin.sym} 6540 -7600 3 0 {name=p21 lab=LDO_EN_PU}
-C {ipin.sym} 6580 -7600 3 0 {name=p22 lab=LDO_EN_CS}
-C {ipin.sym} 6600 -7600 3 0 {name=p26 lab=LDO_EN_IE}
-C {opin.sym} 6220 -7600 1 0 {name=p27 lab=LDO_VREF_OVRD_Y}
-C {ipin.sym} 6080 -7600 3 0 {name=p28 lab=LDO_VREF_OVRD_OE}
-C {ipin.sym} 6100 -7600 3 0 {name=p29 lab=LDO_VREF_OVRD_SL}
-C {ipin.sym} 6120 -7600 3 0 {name=p30 lab=LDO_VREF_OVRD_A}
-C {ipin.sym} 6140 -7600 3 0 {name=p32 lab=LDO_VREF_OVRD_PDRV1}
-C {ipin.sym} 6160 -7600 3 0 {name=p33 lab=LDO_VREF_OVRD_PDRV0}
-C {ipin.sym} 6180 -7600 3 0 {name=p35 lab=LDO_VREF_OVRD_PD}
-C {ipin.sym} 6200 -7600 3 0 {name=p36 lab=LDO_VREF_OVRD_PU}
-C {ipin.sym} 6240 -7600 3 0 {name=p37 lab=LDO_VREF_OVRD_CS}
-C {ipin.sym} 6260 -7600 3 0 {name=p38 lab=LDO_VREF_OVRD_IE}
-C {ipin.sym} 5440 -7600 3 0 {name=p39 lab=LDO_IBIAS_OVRD_OE}
-C {ipin.sym} 5460 -7600 3 0 {name=p40 lab=LDO_IBIAS_OVRD_SL}
-C {ipin.sym} 5480 -7600 3 0 {name=p41 lab=LDO_IBIAS_OVRD_A}
-C {ipin.sym} 5500 -7600 3 0 {name=p42 lab=LDO_IBIAS_OVRD_PDRV1}
-C {ipin.sym} 5520 -7600 3 0 {name=p43 lab=LDO_IBIAS_OVRD_PDRV0}
-C {ipin.sym} 5540 -7600 3 0 {name=p44 lab=LDO_IBIAS_OVRD_PD}
-C {ipin.sym} 5560 -7600 3 0 {name=p45 lab=LDO_IBIAS_OVRD_PU}
-C {ipin.sym} 5600 -7600 3 0 {name=p46 lab=LDO_IBIAS_OVRD_CS}
-C {ipin.sym} 5620 -7600 3 0 {name=p47 lab=LDO_IBIAS_OVRD_IE}
-C {opin.sym} 5000 -7600 1 0 {name=p48 lab=VCO_IBIAS_OVRD_Y}
-C {ipin.sym} 4860 -7600 3 0 {name=p49 lab=VCO_IBIAS_OVRD_OE}
-C {ipin.sym} 4880 -7600 3 0 {name=p52 lab=VCO_IBIAS_OVRD_SL}
-C {ipin.sym} 4900 -7600 3 0 {name=p53 lab=VCO_IBIAS_OVRD_A}
-C {ipin.sym} 4920 -7600 3 0 {name=p54 lab=VCO_IBIAS_OVRD_PDRV1}
-C {ipin.sym} 4940 -7600 3 0 {name=p55 lab=VCO_IBIAS_OVRD_PDRV0}
-C {ipin.sym} 4960 -7600 3 0 {name=p56 lab=VCO_IBIAS_OVRD_PD}
-C {ipin.sym} 4980 -7600 3 0 {name=p57 lab=VCO_IBIAS_OVRD_PU}
-C {ipin.sym} 5020 -7600 3 0 {name=p58 lab=VCO_IBIAS_OVRD_CS}
-C {ipin.sym} 5040 -7600 3 0 {name=p59 lab=VCO_IBIAS_OVRD_IE}
-C {iopin.sym} 4600 -7840 3 0 {name=p60 lab=LDO_OUT}
-C {short.sym} 4600 -7810 0 0 {name=x4 value=0.1}
-C {opin.sym} 4000 -7600 1 0 {name=p61 lab=VCO_EN_Y}
-C {ipin.sym} 3860 -7600 3 0 {name=p62 lab=VCO_EN_OE}
-C {ipin.sym} 3880 -7600 3 0 {name=p63 lab=VCO_EN_SL}
-C {ipin.sym} 3900 -7600 3 0 {name=p64 lab=VCO_EN_A}
-C {ipin.sym} 3920 -7600 3 0 {name=p66 lab=VCO_EN_PDRV1}
-C {ipin.sym} 3940 -7600 3 0 {name=p67 lab=VCO_EN_PDRV0}
-C {ipin.sym} 3960 -7600 3 0 {name=p68 lab=VCO_EN_PD}
-C {ipin.sym} 3980 -7600 3 0 {name=p69 lab=VCO_EN_PU}
-C {ipin.sym} 4020 -7600 3 0 {name=p70 lab=VCO_EN_CS}
-C {ipin.sym} 4040 -7600 3 0 {name=p71 lab=VCO_EN_IE}
-C {opin.sym} 3660 -7600 1 0 {name=p72 lab=VCO_OUT_Y}
-C {ipin.sym} 3520 -7600 3 0 {name=p74 lab=VCO_OUT_OE}
-C {ipin.sym} 3540 -7600 3 0 {name=p75 lab=VCO_OUT_SL}
-C {ipin.sym} 3560 -7600 3 0 {name=p76 lab=VCO_OUT_A}
-C {ipin.sym} 3580 -7600 3 0 {name=p82 lab=VCO_OUT_PDRV1}
-C {ipin.sym} 3600 -7600 3 0 {name=p86 lab=VCO_OUT_PDRV0}
-C {ipin.sym} 3620 -7600 3 0 {name=p88 lab=VCO_OUT_PD}
-C {ipin.sym} 3640 -7600 3 0 {name=p90 lab=VCO_OUT_PU}
-C {ipin.sym} 3680 -7600 3 0 {name=p92 lab=VCO_OUT_CS}
-C {ipin.sym} 3700 -7600 3 0 {name=p93 lab=VCO_OUT_IE}
-C {short.sym} 3220 -7810 0 0 {name=x5 value=0.1}
-C {opin.sym} 2880 -7600 1 0 {name=p20 lab=TEST_IBIAS_OVRD_Y}
-C {ipin.sym} 2740 -7600 3 0 {name=p50 lab=TEST_IBIAS_OVRD_OE}
-C {ipin.sym} 2760 -7600 3 0 {name=p95 lab=TEST_IBIAS_OVRD_SL}
-C {ipin.sym} 2780 -7600 3 0 {name=p97 lab=TEST_IBIAS_OVRD_A}
-C {ipin.sym} 2800 -7600 3 0 {name=p100 lab=TEST_IBIAS_OVRD_PDRV1}
-C {ipin.sym} 2820 -7600 3 0 {name=p101 lab=TEST_IBIAS_OVRD_PDRV0}
-C {ipin.sym} 2840 -7600 3 0 {name=p102 lab=TEST_IBIAS_OVRD_PD}
-C {ipin.sym} 2860 -7600 3 0 {name=p105 lab=TEST_IBIAS_OVRD_PU}
-C {ipin.sym} 2900 -7600 3 0 {name=p106 lab=TEST_IBIAS_OVRD_CS}
-C {ipin.sym} 2920 -7600 3 0 {name=p107 lab=TEST_IBIAS_OVRD_IE}
-C {opin.sym} 2300 -7600 1 0 {name=p65 lab=TEST_EN_Y}
-C {ipin.sym} 2160 -7600 3 0 {name=p108 lab=TEST_EN_OE}
-C {ipin.sym} 2180 -7600 3 0 {name=p109 lab=TEST_EN_SL}
-C {ipin.sym} 2200 -7600 3 0 {name=p110 lab=TEST_EN_A}
-C {ipin.sym} 2220 -7600 3 0 {name=p111 lab=TEST_EN_PDRV1}
-C {ipin.sym} 2240 -7600 3 0 {name=p112 lab=TEST_EN_PDRV0}
-C {ipin.sym} 2260 -7600 3 0 {name=p113 lab=TEST_EN_PD}
-C {ipin.sym} 2280 -7600 3 0 {name=p115 lab=TEST_EN_PU}
-C {ipin.sym} 2320 -7600 3 0 {name=p116 lab=TEST_EN_CS}
-C {ipin.sym} 2340 -7600 3 0 {name=p117 lab=TEST_EN_IE}
-C {opin.sym} 1960 -7600 1 0 {name=p118 lab=TEST_SEL_0_Y}
-C {ipin.sym} 1820 -7600 3 0 {name=p119 lab=TEST_SEL_0_OE}
-C {ipin.sym} 1840 -7600 3 0 {name=p121 lab=TEST_SEL_0_SL}
-C {ipin.sym} 1860 -7600 3 0 {name=p122 lab=TEST_SEL_0_A}
-C {ipin.sym} 1880 -7600 3 0 {name=p123 lab=TEST_SEL_0_PDRV1}
-C {ipin.sym} 1900 -7600 3 0 {name=p124 lab=TEST_SEL_0_PDRV0}
-C {ipin.sym} 1920 -7600 3 0 {name=p125 lab=TEST_SEL_0_PD}
-C {ipin.sym} 1940 -7600 3 0 {name=p126 lab=TEST_SEL_0_PU}
-C {ipin.sym} 1980 -7600 3 0 {name=p127 lab=TEST_SEL_0_CS}
-C {ipin.sym} 2000 -7600 3 0 {name=p128 lab=TEST_SEL_0_IE}
-C {opin.sym} 1620 -7600 1 0 {name=p73 lab=TEST_SEL_1_Y}
-C {ipin.sym} 1480 -7600 3 0 {name=p129 lab=TEST_SEL_1_OE}
-C {ipin.sym} 1500 -7600 3 0 {name=p130 lab=TEST_SEL_1_SL}
-C {ipin.sym} 1520 -7600 3 0 {name=p131 lab=TEST_SEL_1_A}
-C {ipin.sym} 1540 -7600 3 0 {name=p132 lab=TEST_SEL_1_PDRV1}
-C {ipin.sym} 1560 -7600 3 0 {name=p133 lab=TEST_SEL_1_PDRV0}
-C {ipin.sym} 1580 -7600 3 0 {name=p134 lab=TEST_SEL_1_PD}
-C {ipin.sym} 1600 -7600 3 0 {name=p135 lab=TEST_SEL_1_PU}
-C {ipin.sym} 1640 -7600 3 0 {name=p136 lab=TEST_SEL_1_CS}
-C {ipin.sym} 1660 -7600 3 0 {name=p137 lab=TEST_SEL_1_IE}
-C {opin.sym} 1280 -7600 1 0 {name=p138 lab=TEST_SEL_2_Y}
-C {ipin.sym} 1140 -7600 3 0 {name=p139 lab=TEST_SEL_2_OE}
-C {ipin.sym} 1160 -7600 3 0 {name=p140 lab=TEST_SEL_2_SL}
-C {ipin.sym} 1180 -7600 3 0 {name=p141 lab=TEST_SEL_2_A}
-C {ipin.sym} 1200 -7600 3 0 {name=p142 lab=TEST_SEL_2_PDRV1}
-C {ipin.sym} 1220 -7600 3 0 {name=p143 lab=TEST_SEL_2_PDRV0}
-C {ipin.sym} 1240 -7600 3 0 {name=p144 lab=TEST_SEL_2_PD}
-C {ipin.sym} 1260 -7600 3 0 {name=p145 lab=TEST_SEL_2_PU}
-C {ipin.sym} 1300 -7600 3 0 {name=p146 lab=TEST_SEL_2_CS}
-C {ipin.sym} 1320 -7600 3 0 {name=p147 lab=TEST_SEL_2_IE}
-C {iopin.sym} 940 -7660 1 0 {name=p148 lab=TEST_OUT_ASIG5V}
-C {short.sym} 3200 -7500 0 0 {name=x6 value=0.1}
-C {short.sym} 4580 -7500 0 0 {name=x7 value=0.1}
-C {short.sym} 7540 -7500 0 0 {name=x8 value=0.1}
+C {short.sym} 7160 -7810 0 0 {name=x2 value=0.1}
+C {iopin.sym} 7610 -7840 3 0 {name=p1 lab=VDD_A1}
+C {short.sym} 7610 -7810 0 0 {name=x3 value=0.1}
+C {ipin.sym} 6470 -7600 3 0 {name=p12 lab=LDO_EN_OE}
+C {ipin.sym} 6490 -7600 3 0 {name=p13 lab=LDO_EN_SL}
+C {ipin.sym} 6510 -7600 3 0 {name=p14 lab=LDO_EN_A}
+C {ipin.sym} 6530 -7600 3 0 {name=p15 lab=LDO_EN_PDRV1}
+C {ipin.sym} 6550 -7600 3 0 {name=p18 lab=LDO_EN_PDRV0}
+C {ipin.sym} 6570 -7600 3 0 {name=p19 lab=LDO_EN_PD}
+C {ipin.sym} 6590 -7600 3 0 {name=p21 lab=LDO_EN_PU}
+C {ipin.sym} 6630 -7600 3 0 {name=p22 lab=LDO_EN_CS}
+C {ipin.sym} 6650 -7600 3 0 {name=p26 lab=LDO_EN_IE}
+C {opin.sym} 6270 -7600 1 0 {name=p27 lab=LDO_VREF_OVRD_Y}
+C {ipin.sym} 6130 -7600 3 0 {name=p28 lab=LDO_VREF_OVRD_OE}
+C {ipin.sym} 6150 -7600 3 0 {name=p29 lab=LDO_VREF_OVRD_SL}
+C {ipin.sym} 6170 -7600 3 0 {name=p30 lab=LDO_VREF_OVRD_A}
+C {ipin.sym} 6190 -7600 3 0 {name=p32 lab=LDO_VREF_OVRD_PDRV1}
+C {ipin.sym} 6210 -7600 3 0 {name=p33 lab=LDO_VREF_OVRD_PDRV0}
+C {ipin.sym} 6230 -7600 3 0 {name=p35 lab=LDO_VREF_OVRD_PD}
+C {ipin.sym} 6250 -7600 3 0 {name=p36 lab=LDO_VREF_OVRD_PU}
+C {ipin.sym} 6290 -7600 3 0 {name=p37 lab=LDO_VREF_OVRD_CS}
+C {ipin.sym} 6310 -7600 3 0 {name=p38 lab=LDO_VREF_OVRD_IE}
+C {ipin.sym} 5490 -7600 3 0 {name=p39 lab=LDO_IBIAS_OVRD_OE}
+C {ipin.sym} 5510 -7600 3 0 {name=p40 lab=LDO_IBIAS_OVRD_SL}
+C {ipin.sym} 5530 -7600 3 0 {name=p41 lab=LDO_IBIAS_OVRD_A}
+C {ipin.sym} 5550 -7600 3 0 {name=p42 lab=LDO_IBIAS_OVRD_PDRV1}
+C {ipin.sym} 5570 -7600 3 0 {name=p43 lab=LDO_IBIAS_OVRD_PDRV0}
+C {ipin.sym} 5590 -7600 3 0 {name=p44 lab=LDO_IBIAS_OVRD_PD}
+C {ipin.sym} 5610 -7600 3 0 {name=p45 lab=LDO_IBIAS_OVRD_PU}
+C {ipin.sym} 5650 -7600 3 0 {name=p46 lab=LDO_IBIAS_OVRD_CS}
+C {ipin.sym} 5670 -7600 3 0 {name=p47 lab=LDO_IBIAS_OVRD_IE}
+C {opin.sym} 5050 -7600 1 0 {name=p48 lab=VCO_IBIAS_OVRD_Y}
+C {ipin.sym} 4910 -7600 3 0 {name=p49 lab=VCO_IBIAS_OVRD_OE}
+C {ipin.sym} 4930 -7600 3 0 {name=p52 lab=VCO_IBIAS_OVRD_SL}
+C {ipin.sym} 4950 -7600 3 0 {name=p53 lab=VCO_IBIAS_OVRD_A}
+C {ipin.sym} 4970 -7600 3 0 {name=p54 lab=VCO_IBIAS_OVRD_PDRV1}
+C {ipin.sym} 4990 -7600 3 0 {name=p55 lab=VCO_IBIAS_OVRD_PDRV0}
+C {ipin.sym} 5010 -7600 3 0 {name=p56 lab=VCO_IBIAS_OVRD_PD}
+C {ipin.sym} 5030 -7600 3 0 {name=p57 lab=VCO_IBIAS_OVRD_PU}
+C {ipin.sym} 5070 -7600 3 0 {name=p58 lab=VCO_IBIAS_OVRD_CS}
+C {ipin.sym} 5090 -7600 3 0 {name=p59 lab=VCO_IBIAS_OVRD_IE}
+C {iopin.sym} 4500 -7840 3 0 {name=p60 lab=LDO_OUT}
+C {short.sym} 4500 -7810 0 0 {name=x4 value=0.1}
+C {opin.sym} 3900 -7600 1 0 {name=p61 lab=VCO_EN_Y}
+C {ipin.sym} 3760 -7600 3 0 {name=p62 lab=VCO_EN_OE}
+C {ipin.sym} 3780 -7600 3 0 {name=p63 lab=VCO_EN_SL}
+C {ipin.sym} 3800 -7600 3 0 {name=p64 lab=VCO_EN_A}
+C {ipin.sym} 3820 -7600 3 0 {name=p66 lab=VCO_EN_PDRV1}
+C {ipin.sym} 3840 -7600 3 0 {name=p67 lab=VCO_EN_PDRV0}
+C {ipin.sym} 3860 -7600 3 0 {name=p68 lab=VCO_EN_PD}
+C {ipin.sym} 3880 -7600 3 0 {name=p69 lab=VCO_EN_PU}
+C {ipin.sym} 3920 -7600 3 0 {name=p70 lab=VCO_EN_CS}
+C {ipin.sym} 3940 -7600 3 0 {name=p71 lab=VCO_EN_IE}
+C {opin.sym} 3560 -7600 1 0 {name=p72 lab=VCO_OUT_Y}
+C {ipin.sym} 3420 -7600 3 0 {name=p74 lab=VCO_OUT_OE}
+C {ipin.sym} 3440 -7600 3 0 {name=p75 lab=VCO_OUT_SL}
+C {ipin.sym} 3460 -7600 3 0 {name=p76 lab=VCO_OUT_A}
+C {ipin.sym} 3480 -7600 3 0 {name=p82 lab=VCO_OUT_PDRV1}
+C {ipin.sym} 3500 -7600 3 0 {name=p86 lab=VCO_OUT_PDRV0}
+C {ipin.sym} 3520 -7600 3 0 {name=p88 lab=VCO_OUT_PD}
+C {ipin.sym} 3540 -7600 3 0 {name=p90 lab=VCO_OUT_PU}
+C {ipin.sym} 3580 -7600 3 0 {name=p92 lab=VCO_OUT_CS}
+C {ipin.sym} 3600 -7600 3 0 {name=p93 lab=VCO_OUT_IE}
+C {short.sym} 3180 -7810 0 0 {name=x5 value=0.1}
+C {opin.sym} 2840 -7600 1 0 {name=p20 lab=TEST_IBIAS_OVRD_Y}
+C {ipin.sym} 2700 -7600 3 0 {name=p50 lab=TEST_IBIAS_OVRD_OE}
+C {ipin.sym} 2720 -7600 3 0 {name=p95 lab=TEST_IBIAS_OVRD_SL}
+C {ipin.sym} 2740 -7600 3 0 {name=p97 lab=TEST_IBIAS_OVRD_A}
+C {ipin.sym} 2760 -7600 3 0 {name=p100 lab=TEST_IBIAS_OVRD_PDRV1}
+C {ipin.sym} 2780 -7600 3 0 {name=p101 lab=TEST_IBIAS_OVRD_PDRV0}
+C {ipin.sym} 2800 -7600 3 0 {name=p102 lab=TEST_IBIAS_OVRD_PD}
+C {ipin.sym} 2820 -7600 3 0 {name=p105 lab=TEST_IBIAS_OVRD_PU}
+C {ipin.sym} 2860 -7600 3 0 {name=p106 lab=TEST_IBIAS_OVRD_CS}
+C {ipin.sym} 2880 -7600 3 0 {name=p107 lab=TEST_IBIAS_OVRD_IE}
+C {opin.sym} 2260 -7600 1 0 {name=p65 lab=TEST_EN_Y}
+C {ipin.sym} 2120 -7600 3 0 {name=p108 lab=TEST_EN_OE}
+C {ipin.sym} 2140 -7600 3 0 {name=p109 lab=TEST_EN_SL}
+C {ipin.sym} 2160 -7600 3 0 {name=p110 lab=TEST_EN_A}
+C {ipin.sym} 2180 -7600 3 0 {name=p111 lab=TEST_EN_PDRV1}
+C {ipin.sym} 2200 -7600 3 0 {name=p112 lab=TEST_EN_PDRV0}
+C {ipin.sym} 2220 -7600 3 0 {name=p113 lab=TEST_EN_PD}
+C {ipin.sym} 2240 -7600 3 0 {name=p115 lab=TEST_EN_PU}
+C {ipin.sym} 2280 -7600 3 0 {name=p116 lab=TEST_EN_CS}
+C {ipin.sym} 2300 -7600 3 0 {name=p117 lab=TEST_EN_IE}
+C {opin.sym} 1920 -7600 1 0 {name=p118 lab=TEST_SEL_0_Y}
+C {ipin.sym} 1780 -7600 3 0 {name=p119 lab=TEST_SEL_0_OE}
+C {ipin.sym} 1800 -7600 3 0 {name=p121 lab=TEST_SEL_0_SL}
+C {ipin.sym} 1820 -7600 3 0 {name=p122 lab=TEST_SEL_0_A}
+C {ipin.sym} 1840 -7600 3 0 {name=p123 lab=TEST_SEL_0_PDRV1}
+C {ipin.sym} 1860 -7600 3 0 {name=p124 lab=TEST_SEL_0_PDRV0}
+C {ipin.sym} 1880 -7600 3 0 {name=p125 lab=TEST_SEL_0_PD}
+C {ipin.sym} 1900 -7600 3 0 {name=p126 lab=TEST_SEL_0_PU}
+C {ipin.sym} 1940 -7600 3 0 {name=p127 lab=TEST_SEL_0_CS}
+C {ipin.sym} 1960 -7600 3 0 {name=p128 lab=TEST_SEL_0_IE}
+C {opin.sym} 1580 -7600 1 0 {name=p73 lab=TEST_SEL_1_Y}
+C {ipin.sym} 1440 -7600 3 0 {name=p129 lab=TEST_SEL_1_OE}
+C {ipin.sym} 1460 -7600 3 0 {name=p130 lab=TEST_SEL_1_SL}
+C {ipin.sym} 1480 -7600 3 0 {name=p131 lab=TEST_SEL_1_A}
+C {ipin.sym} 1500 -7600 3 0 {name=p132 lab=TEST_SEL_1_PDRV1}
+C {ipin.sym} 1520 -7600 3 0 {name=p133 lab=TEST_SEL_1_PDRV0}
+C {ipin.sym} 1540 -7600 3 0 {name=p134 lab=TEST_SEL_1_PD}
+C {ipin.sym} 1560 -7600 3 0 {name=p135 lab=TEST_SEL_1_PU}
+C {ipin.sym} 1600 -7600 3 0 {name=p136 lab=TEST_SEL_1_CS}
+C {ipin.sym} 1620 -7600 3 0 {name=p137 lab=TEST_SEL_1_IE}
+C {opin.sym} 1240 -7600 1 0 {name=p138 lab=TEST_SEL_2_Y}
+C {ipin.sym} 1100 -7600 3 0 {name=p139 lab=TEST_SEL_2_OE}
+C {ipin.sym} 1120 -7600 3 0 {name=p140 lab=TEST_SEL_2_SL}
+C {ipin.sym} 1140 -7600 3 0 {name=p141 lab=TEST_SEL_2_A}
+C {ipin.sym} 1160 -7600 3 0 {name=p142 lab=TEST_SEL_2_PDRV1}
+C {ipin.sym} 1180 -7600 3 0 {name=p143 lab=TEST_SEL_2_PDRV0}
+C {ipin.sym} 1200 -7600 3 0 {name=p144 lab=TEST_SEL_2_PD}
+C {ipin.sym} 1220 -7600 3 0 {name=p145 lab=TEST_SEL_2_PU}
+C {ipin.sym} 1260 -7600 3 0 {name=p146 lab=TEST_SEL_2_CS}
+C {ipin.sym} 1280 -7600 3 0 {name=p147 lab=TEST_SEL_2_IE}
+C {iopin.sym} 900 -7660 1 0 {name=p148 lab=TEST_OUT_ASIG5V}
+C {short.sym} 3160 -7500 0 0 {name=x6 value=0.1}
+C {short.sym} 4480 -7500 0 0 {name=x7 value=0.1}
+C {short.sym} 7590 -7500 0 0 {name=x8 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 160 -6780 0 0 {name=IO_AVDD_A2
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -925,99 +931,99 @@ C {iopin.sym} 180 -6960 2 0 {name=p17 lab=AVDD_A2}
 C {short.sym} 210 -6960 3 0 {name=x11 value=0.1}
 C {short.sym} 520 -6940 3 0 {name=x12 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -6000 0 0 {name=IO_VBIAS_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -6080 2 0 {name=p24 lab=VBIAS_A2_PAD}
 C {iopin.sym} 360 -6080 2 1 {name=p25 lab=VBIAS_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5740 0 0 {name=IO_IN1P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5820 2 0 {name=p149 lab=IN1P_A2_PAD}
 C {iopin.sym} 360 -5820 2 1 {name=p150 lab=IN1P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5480 0 0 {name=IO_IN1N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5560 2 0 {name=p151 lab=IN1N_A2_PAD}
 C {iopin.sym} 360 -5560 2 1 {name=p152 lab=IN1N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5220 0 0 {name=IO_IN2P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5300 2 0 {name=p153 lab=IN2P_A2_PAD}
 C {iopin.sym} 360 -5300 2 1 {name=p154 lab=IN2P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4960 0 0 {name=IO_IN2N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5040 2 0 {name=p155 lab=IN2N_A2_PAD}
 C {iopin.sym} 360 -5040 2 1 {name=p156 lab=IN2N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4700 0 0 {name=IO_IN3P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4780 2 0 {name=p157 lab=IN3P_A2_PAD}
 C {iopin.sym} 360 -4780 2 1 {name=p158 lab=IN3P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4440 0 0 {name=IO_IN3N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4520 2 0 {name=p159 lab=IN3N_A2_PAD}
 C {iopin.sym} 360 -4520 2 1 {name=p160 lab=IN3N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4180 0 0 {name=IO_IN4P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4260 2 0 {name=p161 lab=IN4P_A2_PAD}
 C {iopin.sym} 360 -4260 2 1 {name=p162 lab=IN4P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3920 0 0 {name=IO_IN4N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4000 2 0 {name=p163 lab=IN4N_A2_PAD}
 C {iopin.sym} 360 -4000 2 1 {name=p164 lab=IN4N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3660 0 0 {name=IO_OUT1P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3740 2 0 {name=p165 lab=OUT1P_A2_PAD}
 C {iopin.sym} 360 -3740 2 1 {name=p166 lab=OUT1P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3400 0 0 {name=IO_OUT1N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3480 2 0 {name=p167 lab=OUT1N_A2_PAD}
 C {iopin.sym} 360 -3480 2 1 {name=p171 lab=OUT1N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3140 0 0 {name=IO_OUT2P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3220 2 0 {name=p172 lab=OUT2P_A2_PAD}
 C {iopin.sym} 360 -3220 2 1 {name=p173 lab=OUT2P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2880 0 0 {name=IO_OUT2N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -2960 2 0 {name=p174 lab=OUT2N_A2_PAD}
 C {iopin.sym} 360 -2960 2 1 {name=p175 lab=OUT2N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2620 0 0 {name=IO_OUT3P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2360 0 0 {name=IO_OUT3N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2100 0 0 {name=IO_OUT4P_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -2180 2 0 {name=p181 lab=OUT4P_A2_PAD}
 C {iopin.sym} 360 -2180 2 1 {name=p182 lab=OUT4P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -1840 0 0 {name=IO_OUT4N_A2
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -1920 2 0 {name=p183 lab=OUT4N_A2_PAD}
@@ -1072,7 +1078,7 @@ C {opin.sym} 1460 -580 3 0 {name=p206 lab=RST_N_A2_Y}
 C {ipin.sym} 1440 -580 1 0 {name=p207 lab=RST_N_A2_CS}
 C {ipin.sym} 1420 -580 1 0 {name=p208 lab=RST_N_A2_IE}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -6500 0 1 {name=IO_VOUT90
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6580 2 1 {name=p209 lab=VOUT90_PAD}
@@ -1093,57 +1099,57 @@ C {iopin.sym} 8200 -4750 2 1 {name=p212 lab=VDD_A4}
 C {short.sym} 8170 -4750 1 1 {name=x19 value=0.1}
 C {short.sym} 7860 -4730 1 1 {name=x20 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -6240 0 1 {name=IO_VOUT0
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6320 2 1 {name=p213 lab=VOUT0_PAD}
 C {iopin.sym} 8020 -6320 2 0 {name=p214 lab=VOUT0_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5980 0 1 {name=IO_IBIAS
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6060 2 1 {name=p215 lab=IBIAS_PAD}
 C {iopin.sym} 8020 -6060 2 0 {name=p216 lab=IBIAS_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5720 0 1 {name=IO_VCTRL
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -5800 2 1 {name=p217 lab=VCTRL_PAD}
 C {iopin.sym} 8020 -5800 2 0 {name=p218 lab=VCTRL_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5460 0 1 {name=IO_VREF
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -5540 2 1 {name=p219 lab=VREF_PAD}
 C {iopin.sym} 8020 -5540 2 0 {name=p220 lab=VREF_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -3740 0 1 {name=IO_V_IN_A3
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -3820 2 1 {name=p231 lab=V_IN_A3_PAD}
 C {iopin.sym} 8020 -3820 2 0 {name=p232 lab=V_IN_A3_ASIGV5}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -3480 0 1 {name=IO_V_AUX_A3
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -3560 2 1 {name=p233 lab=V_AUX_A3_PAD}
 C {iopin.sym} 8020 -3560 2 0 {name=p234 lab=V_AUX_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2860 0 1 {name=IO_V_BIAS_EN_A3
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -2940 2 1 {name=p237 lab=V_BIAS_EN_A3_PAD}
 C {iopin.sym} 8020 -2940 2 0 {name=p238 lab=V_BIAS_EN_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2600 0 1 {name=IO_CCM_OUT_A3
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2340 0 1 {name=IO_BCM_OUT_A3
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2080 0 1 {name=IO_VCM_OUT_A3
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -2160 2 1 {name=p239 lab=VCM_OUT_A3_PAD}
@@ -1161,13 +1167,13 @@ C {iopin.sym} 8200 -1340 2 1 {name=p247 lab=VDD3V3_A5}
 C {short.sym} 8170 -1340 1 1 {name=x21 value=0.1}
 C {short.sym} 7860 -1320 1 1 {name=x22 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -7020 0 1 {name=IO_VOUT270
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -7100 2 1 {name=p271 lab=VOUT270_PAD}
 C {iopin.sym} 8020 -7100 2 0 {name=p272 lab=VOUT270_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -6760 0 1 {name=IO_VOUT180
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6840 2 1 {name=p273 lab=VOUT180_PAD}
@@ -1223,31 +1229,31 @@ C {opin.sym} 7960 -5180 2 0 {name=p236 lab=EN_Y}
 C {ipin.sym} 7960 -5160 0 0 {name=p241 lab=EN_CS}
 C {ipin.sym} 7960 -5140 0 0 {name=p242 lab=EN_IE}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -1420 0 1 {name=IO_VOUT_V_IF_A5
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -1500 2 1 {name=p248 lab=VOUT_V_IF_A5_PAD}
 C {iopin.sym} 8020 -1500 2 0 {name=p249 lab=VOUT_V_IF_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 7300 -320 3 0 {name=IO_I_BIAS_A5
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 7220 -320 1 0 {name=p250 lab=I_BIAS_A5_PAD}
 C {iopin.sym} 7220 -520 1 1 {name=p251 lab=I_BIAS_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 7040 -320 3 0 {name=IO_VIN_V_LOb_A5
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6960 -320 1 0 {name=p252 lab=VIN_V_LOb_A5_PAD}
 C {iopin.sym} 6960 -520 1 1 {name=p253 lab=VIN_V_LOb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6780 -320 3 0 {name=IO_VIN_V_LO_A5
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6700 -320 1 0 {name=p254 lab=VIN_V_RFb_A5_PAD}
 C {iopin.sym} 6700 -520 1 1 {name=p255 lab=VIN_V_RFb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6260 -320 3 0 {name=IO_VIN_V_RFb_A5
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6180 -320 1 0 {name=p256 lab=VIN_V_RF_A5_PAD}
@@ -1260,7 +1266,7 @@ spice_ignore=false
 C {iopin.sym} 6540 -340 1 0 {name=p258 lab=VSS_A5}
 C {short.sym} 6540 -370 2 0 {name=x24 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6000 -320 3 0 {name=IO_VIN_V_RF_A5
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5920 -320 1 0 {name=p259 lab=VIN_V_LO_A5_PAD}
@@ -1274,13 +1280,13 @@ C {iopin.sym} 2240 -340 1 0 {name=p261 lab=VDD3V3_AXX}
 C {short.sym} 2240 -370 2 0 {name=x31 value=0.1}
 C {short.sym} 2260 -680 2 0 {name=x32 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2940 -320 3 0 {name=IO_VCOMP
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2860 -320 1 0 {name=p262 lab=VCOMP_PAD}
 C {iopin.sym} 2860 -520 1 1 {name=p263 lab=VCOMP_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2680 -320 3 0 {name=IO_VREF12
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2600 -320 1 0 {name=p264 lab=VREF12_PAD}
@@ -1293,69 +1299,69 @@ spice_ignore=false
 C {iopin.sym} 3220 -340 1 0 {name=p266 lab=VSS_AXX}
 C {short.sym} 3220 -370 2 0 {name=x34 value=0.1}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3720 -320 3 0 {name=IO_IOUTP_2UA
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3640 -320 1 0 {name=p267 lab=IOUTP_2UA_PAD}
 C {iopin.sym} 3640 -520 1 1 {name=p268 lab=IOUTP_2UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3460 -320 3 0 {name=IO_IOUTN_2UA
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3380 -320 1 0 {name=p269 lab=IOUTN_2UA_PAD}
 C {iopin.sym} 3380 -520 1 1 {name=p270 lab=IOUTN_2UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4240 -320 3 0 {name=IO_IOUTP_20UA
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4160 -320 1 0 {name=p286 lab=IOUTP_20UA_PAD}
 C {iopin.sym} 4160 -520 1 1 {name=p287 lab=IOUTP_20UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3980 -320 3 0 {name=IO_IOUTN_20UA
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3900 -320 1 0 {name=p288 lab=IOUTN_20UA_PAD}
 C {iopin.sym} 3900 -520 1 1 {name=p289 lab=IOUTN_20UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4760 -320 3 0 {name=IO_IOUTP_50UA
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4680 -320 1 0 {name=p290 lab=IOUTP_50UA_PAD}
 C {iopin.sym} 4680 -520 1 1 {name=p291 lab=IOUTP_50UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4500 -320 3 0 {name=IO_IOUTN_50UA
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4420 -320 1 0 {name=p292 lab=IOUTN_50UA_PAD}
 C {iopin.sym} 4420 -520 1 1 {name=p293 lab=IOUTN_50UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5280 -320 3 0 {name=IO_VREFP_AXX
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5200 -320 1 0 {name=p294 lab=VREFP_AXX_PAD}
 C {iopin.sym} 5200 -520 1 1 {name=p295 lab=VREFP_AXX_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5020 -320 3 0 {name=IO_VREFN_AXX
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4940 -320 1 0 {name=p296 lab=VREFN_AXX_PAD}
 C {iopin.sym} 4940 -520 1 1 {name=p297 lab=VREFN_AXX_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2100 -320 3 0 {name=IO_ana47
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2020 -320 1 0 {name=p298 lab=ana47_PAD}
 C {iopin.sym} 2020 -520 1 1 {name=p299 lab=ana47_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5600 -320 3 0 {name=IO_ana57
-model=gf180mcu_fd_io__asig_5p0_extracted
+model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5520 -320 1 0 {name=p300 lab=ana57_PAD}
 C {iopin.sym} 5520 -520 1 1 {name=p301 lab=ana57_ASIG5V}
-C {iopin.sym} 7540 -7590 2 0 {name=p302 lab=VDD_A1}
-C {iopin.sym} 7130 -7640 0 0 {name=p303 lab=VSS_A1}
-C {iopin.sym} 4580 -7590 2 0 {name=p304 lab=LDO_OUT}
-C {iopin.sym} 3200 -7590 2 0 {name=p305 lab=VTEST}
+C {iopin.sym} 7590 -7590 2 0 {name=p302 lab=VDD_A1}
+C {iopin.sym} 7180 -7640 0 0 {name=p303 lab=VSS_A1}
+C {iopin.sym} 4480 -7590 2 0 {name=p304 lab=LDO_OUT}
+C {iopin.sym} 3160 -7590 2 0 {name=p305 lab=VTEST}
 C {iopin.sym} 430 -6940 1 0 {name=p306 lab=AVDD_A2}
 C {iopin.sym} 380 -6530 3 0 {name=p307 lab=AVSS_A2}
 C {iopin.sym} 430 -1580 1 0 {name=p308 lab=VDD_A2}
@@ -1369,7 +1375,7 @@ C {iopin.sym} 8000 -4000 1 1 {name=p315 lab=VSS_1_A3}
 C {iopin.sym} 7950 -4420 3 1 {name=p316 lab=VDD3V3_A3}
 C {iopin.sym} 7950 -4730 3 1 {name=p317 lab=VDD_A4}
 C {iopin.sym} 8000 -4840 1 1 {name=p318 lab=VSS_A4}
-C {res.sym} 7130 -7590 0 0 {name=R_VSS_A1
+C {res.sym} 7180 -7590 0 0 {name=R_VSS_A1
 value=1
 footprint=1206
 device=resistor
@@ -1435,3 +1441,9 @@ footprint=1206
 device=resistor
 m=1
 lvs_format="short"}
+C {iopin.sym} 4710 -7860 3 0 {name=p319 lab=VCO_IBIAS_PAD}
+C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4630 -7860 1 0 {name=IO_LDO_IBIAS1
+model=gf180mcu_fd_io__asig_5p0
+spiceprefix=X
+}
+C {iopin.sym} 4710 -7660 3 1 {name=p320 lab=VCO_IBIAS_ASIG5V}
