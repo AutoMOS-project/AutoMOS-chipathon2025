@@ -380,9 +380,9 @@ N 3830 -1080 5300 -1080 {lab=#net57}
 N 5300 -1080 5300 -660 {lab=#net57}
 N 1460 -700 1460 -660 {lab=#net58}
 N 5620 -700 5620 -660 {lab=#net59}
-N 6990 -3020 7020 -3020 {lab=ana57}
-N 7020 -4340 7020 -3020 {lab=ana57}
-N 7020 -4340 7700 -4340 {lab=ana57}
+N 6990 -3020 7020 -3020 {lab=VDD3V3_A3}
+N 7020 -4340 7020 -3020 {lab=VDD3V3_A3}
+N 7020 -4340 7700 -4340 {lab=VDD3V3_A3}
 N 7080 -4020 7700 -4020 {lab=VSS_2_A3}
 N 7080 -4020 7080 -3000 {lab=VSS_2_A3}
 N 6990 -3000 7080 -3000 {lab=VSS_2_A3}
@@ -488,7 +488,41 @@ N 8120 -3060 8180 -3060 {lab=EN_A3}
 N 8120 -3380 8180 -3380 {lab=V_AUX_A3}
 N 8120 -3700 8180 -3700 {lab=V_IN_A3}
 N 8120 -4020 8180 -4020 {lab=VSS_2_A3}
-N 8120 -4340 8180 -4340 {lab=ana57}
+N 8120 -4340 8180 -4340 {lab=VDD3V3_A3}
+N 8120 -4680 8180 -4680 {lab=VDD_A4}
+N 8120 -4980 8180 -4980 {lab=VSS_A4}
+N 8120 -5300 8180 -5300 {lab=EN}
+N 8120 -5620 8180 -5620 {lab=VREF}
+N 8120 -5950 8180 -5950 {lab=VCTRL}
+N 8120 -6260 8180 -6260 {lab=IBIAS}
+N 8120 -6580 8180 -6580 {lab=VOUT0}
+N 8120 -6910 8180 -6910 {lab=VOUT90}
+N 8120 -7220 8180 -7220 {lab=VOUT180}
+N 8120 -7550 8180 -7550 {lab=VOUT270}
+N 1140 -260 1140 -200 {lab=RST_N_A2}
+N 200 -820 260 -820 {lab=CLK_IN_A2}
+N 810 -260 810 -200 {lab=VSS_A2}
+N 200 -1130 260 -1130 {lab=VDD_A2}
+N 200 -1480 260 -1480 {lab=ana47}
+N 200 -1790 260 -1790 {lab=ana47}
+N 200 -2110 260 -2110 {lab=ana47}
+N 200 -2430 260 -2430 {lab=ana47}
+N 200 -2750 260 -2750 {lab=ana47}
+N 200 -3060 260 -3060 {lab=ana47}
+N 200 -3380 260 -3380 {lab=ana47}
+N 200 -3700 260 -3700 {lab=ana47}
+N 200 -4020 260 -4020 {lab=ana47}
+N 200 -4340 260 -4340 {lab=ana47}
+N 200 -4660 260 -4660 {lab=ana47}
+N 200 -4980 260 -4980 {lab=ana47}
+N 200 -5300 260 -5300 {lab=ana47}
+N 200 -5620 260 -5620 {lab=ana47}
+N 200 -5950 260 -5950 {lab=ana47}
+N 200 -6260 260 -6260 {lab=ana47}
+N 200 -6580 260 -6580 {lab=VBIAS_A2}
+N 200 -6900 260 -6900 {lab=VCM_A2}
+N 200 -7210 260 -7210 {lab=AVSS_A2}
+N 200 -7540 260 -7540 {lab=AVDD_A2}
 C {libs/A1_core/A1_top/A1_top.sym} 3160 -6880 0 0 {name=xI_top}
 C {libs/A_track_core/padring/padring.sym} 280 -280 0 0 {name=xI_top_io
 lock=true}
@@ -534,8 +568,6 @@ C {noconn.sym} 1060 -700 1 0 {name=l17}
 C {noconn.sym} 1140 -740 1 0 {name=l18}
 C {noconn.sym} 1240 -700 1 0 {name=l19}
 C {noconn.sym} 1200 -660 1 0 {name=l20}
-C {noconn.sym} 260 -820 0 0 {name=l21}
-C {noconn.sym} 1140 -260 3 0 {name=l22}
 C {libs/Axx_core/Axx_top/Axx_top.sym} 3500 -1150 0 0 {name=x1}
 C {noconn.sym} 1460 -700 1 0 {name=l23}
 C {noconn.sym} 5620 -700 1 0 {name=l24}
@@ -568,8 +600,44 @@ C {iopin.sym} 8180 -1780 2 1 { name=p24 lab=VCM_OUT_A3 }
 C {iopin.sym} 8180 -2100 2 1 { name=p25 lab=BCM_OUT_A3 }
 C {iopin.sym} 8180 -2420 2 1 { name=p26 lab=CCM_OUT_A3 }
 C {iopin.sym} 8180 -2740 2 1 { name=p27 lab=V_BIAS_EN_A3 }
-C {iopin.sym} 8180 -3060 2 1 { name=p28 lab=EN_A3 }
+C {ipin.sym} 8180 -3060 0 1 { name=p28 lab=EN_A3 }
 C {iopin.sym} 8180 -3380 2 1 { name=p29 lab=V_AUX_A3 }
 C {iopin.sym} 8180 -3700 2 1 { name=p30 lab=V_IN_A3 }
 C {iopin.sym} 8180 -4020 2 1 { name=p31 lab=VSS_1_A3 }
 C {iopin.sym} 8180 -4340 2 1 { name=p32 lab=VDD3V3_A3 }
+C {iopin.sym} 8180 -4680 2 1 { name=p33 lab=VDD_A4 }
+C {iopin.sym} 8180 -4980 2 1 { name=p34 lab=VSS_A4 }
+C {ipin.sym} 8180 -5300 0 1 { name=p35 lab=EN }
+C {iopin.sym} 8180 -5620 2 1 { name=p36 lab=VREF }
+C {iopin.sym} 8180 -5950 2 1 { name=p37 lab=VCTRL }
+C {iopin.sym} 8180 -6260 2 1 { name=p38 lab=IBIAS }
+C {iopin.sym} 8180 -6580 2 1 { name=p39 lab=VOUT0 }
+C {iopin.sym} 8180 -6910 2 1 { name=p40 lab=VOUT90 }
+C {iopin.sym} 8180 -7220 2 1 { name=p41 lab=VOUT180 
+}
+C {iopin.sym} 8180 -7550 2 1 { name=p42 lab=VOUT270 }
+C {ipin.sym} 1140 -200 1 1 { name=p43 lab=RST_N_A2 }
+C {ipin.sym} 200 -820 2 1 { name=p44 lab=CLK_IN_A2 }
+C {iopin.sym} 810 -200 3 1 { name=p45 lab=VSS_A2
+}
+C {iopin.sym} 200 -1130 0 1 { name=p46 lab=VDD_A2}
+C {iopin.sym} 200 -1480 0 1 { name=p47 lab=OUT4N_A2}
+C {iopin.sym} 200 -1790 0 1 { name=p60 lab=OUT4P_A2}
+C {iopin.sym} 200 -2110 0 1 { name=p71 lab=OUT3N_A2}
+C {iopin.sym} 200 -2430 0 1 { name=p72 lab=OUT3P_A2}
+C {iopin.sym} 200 -2750 0 1 { name=p73 lab=OUT2N_A2}
+C {iopin.sym} 200 -3060 0 1 { name=p74 lab=OUT2P_A2}
+C {iopin.sym} 200 -3380 0 1 { name=p75 lab=OUT1N_A2}
+C {iopin.sym} 200 -3700 0 1 { name=p76 lab=OUT1P_A2}
+C {iopin.sym} 200 -4020 0 1 { name=p77 lab=IN4N_A2}
+C {iopin.sym} 200 -4340 0 1 { name=p78 lab=IN4P_A2}
+C {iopin.sym} 200 -4660 0 1 { name=p79 lab=IN3N_A2}
+C {iopin.sym} 200 -4980 0 1 { name=p80 lab=IN3P_A2}
+C {iopin.sym} 200 -5300 0 1 { name=p81 lab=IN2N_A2}
+C {iopin.sym} 200 -5620 0 1 { name=p82 lab=IN2P_A2}
+C {iopin.sym} 200 -5950 0 1 { name=p83 lab=IN1N_A2}
+C {iopin.sym} 200 -6260 0 1 { name=p84 lab=IN1P_A2}
+C {iopin.sym} 200 -6580 0 1 { name=p85 lab=VBIAS_A2}
+C {iopin.sym} 200 -6900 0 1 { name=p86 lab=VCM_A2}
+C {iopin.sym} 200 -7210 0 1 { name=p87 lab=AVSS_A2}
+C {iopin.sym} 200 -7540 0 1 { name=p88 lab=AVDD_A2}
