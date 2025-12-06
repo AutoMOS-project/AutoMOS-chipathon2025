@@ -1,3 +1,12 @@
+** sch_path: /foss/designs/libs/core_biasgen/biasgen_v2/biasgen_v2.sch
+.subckt biasgen_v2 VDD IPTAT_2u_src IPTAT_IN VSS IPTAT_10u_src IPTAT_10u_snk EN
+*.PININFO VSS:B IPTAT_IN:B IPTAT_2u_src:B IPTAT_10u_snk:B VDD:B EN:I IPTAT_10u_src:B
+xI_mirror_ptat VDD IPTAT_IN EN ENB IPTAT_10u_src IPTAT_10u_snk VSS IPTAT_2u_src IPTAT_2u_snk biasgen_mirror_2_to_10
+xINV VDD EN ENB VSS biasgen_inverter
+.ends
+
+* expanding   symbol:  libs/core_biasgen/biasgen_mirror_2_to_10/biasgen_mirror_2_to_10.sym # of pins=9
+** sym_path: /foss/designs/libs/core_biasgen/biasgen_mirror_2_to_10/biasgen_mirror_2_to_10.sym
 ** sch_path: /foss/designs/libs/core_biasgen/biasgen_mirror_2_to_10/biasgen_mirror_2_to_10.sch
 .subckt biasgen_mirror_2_to_10 VDD Ibias_2u EN ENB Iout_10u_src Iout_10u_snk VSS Iout_2u_src Iout_2u_snk
 *.PININFO Ibias_2u:B VDD:B VSS:B Iout_10u_snk:B Iout_10u_src:B EN:I ENB:I Iout_2u_src:B Iout_2u_snk:B
@@ -74,3 +83,16 @@ XRPcas[2] vr_ncas[2] vr_ncas[3] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6
 XRPcas[1] vr_ncas[1] vr_ncas[2] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
 XRPcas[0] vnref vr_ncas[1] VSS ppolyf_u_1k_6p0 r_width=1e-6 r_length=4.5e-6 m=1
 .ends
+
+
+* expanding   symbol:  libs/core_biasgen/biasgen_inverter/biasgen_inverter.sym # of pins=4
+** sym_path: /foss/designs/libs/core_biasgen/biasgen_inverter/biasgen_inverter.sym
+** sch_path: /foss/designs/libs/core_biasgen/biasgen_inverter/biasgen_inverter.sch
+.subckt biasgen_inverter VDD IN OUT VSS
+*.PININFO VDD:B VSS:B IN:I OUT:O
+XMINV1 OUT IN VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XMINV2 OUT IN VDD VDD pfet_05v0 L=0.50u W=0.60u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+

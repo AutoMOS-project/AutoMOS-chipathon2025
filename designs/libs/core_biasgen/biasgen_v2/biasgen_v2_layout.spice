@@ -1,19 +1,19 @@
-* NGSPICE file created from biasgen_mirror_2_to_10.ext - technology: gf180mcuD
+* NGSPICE file created from biasgen_v2.ext - technology: gf180mcuD
 
-.subckt ppolyf_u_high_Rs_resistor a_900_0# a_n128_0# a_n352_0#
+.subckt ppolyf_u_high_Rs_resistor$1 a_900_0# a_n128_0# a_n352_0#
 X0 a_n128_0# a_900_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=4.5u
 .ends
 
-.subckt biasgen_mirror_2_to_10 VSS Iout_2u_snk Iout_10u_snk Iout_10u_src Iout_2u_src
-+ VDD ENB EN Ibias_2u
-Xppolyf_u_high_Rs_resistor_0[0|0] m2_n14544_n53# m1_n15408_n1147# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[1|0] m2_n15347_n57# m1_n15408_n1147# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[0|1] m2_n14544_1542# m2_n14544_n53# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[1|1] m2_n15347_1542# m2_n15347_n57# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[0|2] m2_n14546_3144# m2_n14544_1542# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[1|2] m2_n15347_3143# m2_n15347_1542# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[0|3] a_n8631_3802# m2_n14546_3144# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[1|3] a_n11493_3011# m2_n15347_3143# VSS ppolyf_u_high_Rs_resistor
+.subckt biasgen_mirror_2_to_10$1 VSS Iout_2u_snk Iout_10u_snk Iout_10u_src Iout_2u_src
++ VDD ENB EN Ibias_2u a_n8631_3802#
+Xppolyf_u_high_Rs_resistor$1_0[0|0] m2_n14544_n53# m1_n15408_n1147# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[1|0] m2_n15347_n57# m1_n15408_n1147# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[0|1] m2_n14544_1542# m2_n14544_n53# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[1|1] m2_n15347_1542# m2_n15347_n57# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[0|2] m2_n14546_3144# m2_n14544_1542# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[1|2] m2_n15347_3143# m2_n15347_1542# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[0|3] a_n8631_3802# m2_n14546_3144# VSS ppolyf_u_high_Rs_resistor$1
+Xppolyf_u_high_Rs_resistor$1_0[1|3] a_n11493_3011# m2_n15347_3143# VSS ppolyf_u_high_Rs_resistor$1
 X0 a_n9145_n50# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=10
 X1 a_n1709_4010# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
 X2 VDD EN a_n8046_12395# VDD pfet_05v0 ad=0.77p pd=3.54u as=0.77p ps=3.54u w=1u l=0.5u
@@ -41,5 +41,17 @@ X23 a_n1429_4010# a_n8631_3802# a_n1709_4010# VSS nfet_05v0 ad=0.3p pd=2.2u as=0
 X24 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=0.8u M=2
 X25 VSS ENB a_n8631_3802# VSS nfet_05v0 ad=1.46p pd=5.46u as=1.46p ps=5.46u w=2u l=0.6u
 X26 a_n1150_9913# a_n8046_12395# VDD VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=1.5u M=2
+.ends
+
+.subckt biasgen_inverter VDD VSS IN OUT
+X0 OUT IN VSS VSS nfet_05v0 ad=0.365p pd=2.46u as=0.72p ps=3.88u w=0.5u l=0.6u
+X1 OUT IN VDD VDD pfet_05v0 ad=0.385p pd=2.54u as=0.75p ps=4u w=0.5u l=0.5u
+.ends
+
+.subckt biasgen_v2 VDD EN IPTAT_IN VSS IPTAT_2u_src IPTAT_10u_src IPTAT_10u_snk
+Xbiasgen_mirror_2_to_10$1_0 VSS biasgen_mirror_2_to_10$1_0/Iout_2u_snk IPTAT_10u_snk
++ IPTAT_10u_src IPTAT_2u_src VDD biasgen_inverter_0/OUT EN IPTAT_IN w_n17945_6761#
++ biasgen_mirror_2_to_10$1
+Xbiasgen_inverter_0 VDD VSS EN biasgen_inverter_0/OUT biasgen_inverter
 .ends
 
