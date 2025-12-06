@@ -42,39 +42,66 @@ Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes pfet_05v0 and pfet_05v0 are equivalent.
-Flattening unmatched subcell ppolyf_u_high_Rs_resistor in circuit biasgen_mirror_2_to_10 (0)(8 instances)
 
-Class biasgen_mirror_2_to_10 (0):  Merged 3 parallel devices.
-Class biasgen_mirror_2_to_10 (0):  Merged 7 series devices.
-Class biasgen_mirror_2_to_10 (1):  Merged 8 parallel devices.
-Class biasgen_mirror_2_to_10 (1):  Merged 7 series devices.
 Subcircuit summary:
-Circuit 1: biasgen_mirror_2_to_10          |Circuit 2: biasgen_mirror_2_to_10          
+Circuit 1: biasgen_inverter                |Circuit 2: biasgen_inverter                
+-------------------------------------------|-------------------------------------------
+nfet_05v0 (1)                              |nfet_05v0 (1)                              
+pfet_05v0 (1)                              |pfet_05v0 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely with property errors.
+pfet_05v0:1 vs. pfet_05v0:MINV2:
+ w circuit1: 5e-07   circuit2: 6e-07   (delta=18.2%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: biasgen_inverter                |Circuit 2: biasgen_inverter                
+-------------------------------------------|-------------------------------------------
+OUT                                        |OUT                                        
+IN                                         |IN                                         
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes biasgen_inverter and biasgen_inverter are equivalent.
+Flattening unmatched subcell biasgen_mirror_2_to_10$1 in circuit biasgen_v2 (0)(1 instance)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$1 in circuit biasgen_v2 (0)(8 instances)
+Flattening unmatched subcell biasgen_mirror_2_to_10 in circuit biasgen_v2 (1)(1 instance)
+
+Class biasgen_v2 (0):  Merged 3 parallel devices.
+Class biasgen_v2 (0):  Merged 7 series devices.
+Class biasgen_v2 (1):  Merged 8 parallel devices.
+Class biasgen_v2 (1):  Merged 7 series devices.
+Subcircuit summary:
+Circuit 1: biasgen_v2                      |Circuit 2: biasgen_v2                      
 -------------------------------------------|-------------------------------------------
 ppolyf_u_1k_6p0 (8->1)                     |ppolyf_u_1k_6p0 (8->1)                     
 nfet_05v0 (43->14)                         |nfet_05v0 (43->14)                         
 pfet_05v0 (40->10)                         |pfet_05v0 (40->10)                         
-Number of devices: 25                      |Number of devices: 25                      
+biasgen_inverter (1)                       |biasgen_inverter (1)                       
+Number of devices: 26                      |Number of devices: 26                      
 Number of nets: 21                         |Number of nets: 21                         
 ---------------------------------------------------------------------------------------
 Resolving symmetries by property value.
 Netlists match uniquely.
 
 Subcircuit pins:
-Circuit 1: biasgen_mirror_2_to_10          |Circuit 2: biasgen_mirror_2_to_10          
+Circuit 1: biasgen_v2                      |Circuit 2: biasgen_v2                      
 -------------------------------------------|-------------------------------------------
-Ibias_2u                                   |Ibias_2u                                   
-Iout_2u_src                                |Iout_2u_src                                
-Iout_10u_src                               |Iout_10u_src                               
-Iout_2u_snk                                |Iout_2u_snk                                
-Iout_10u_snk                               |Iout_10u_snk                               
 EN                                         |EN                                         
 VDD                                        |VDD                                        
-ENB                                        |ENB                                        
+IPTAT_IN                                   |IPTAT_IN                                   
+IPTAT_2u_src                               |IPTAT_2u_src                               
+IPTAT_10u_src                              |IPTAT_10u_src                              
+IPTAT_10u_snk                              |IPTAT_10u_snk                              
 VSS                                        |VSS                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes biasgen_mirror_2_to_10 and biasgen_mirror_2_to_10 are equivalent.
+Device classes biasgen_v2 and biasgen_v2 are equivalent.
 
 Final result: Circuits match uniquely.
 .
+
+The following cells had property errors:
+ biasgen_inverter
