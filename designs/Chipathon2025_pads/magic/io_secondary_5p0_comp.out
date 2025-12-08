@@ -1,0 +1,43 @@
+
+Circuit 1 cell ppolyf_u and Circuit 2 cell ppolyf_u are black boxes.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u                        |Circuit 2: ppolyf_u                        
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u and ppolyf_u are equivalent.
+Flattening unmatched subcell ppolyf_u_9H3LNU$1$1 in circuit io_secondary_5p0 (0)(1 instance)
+Flattening unmatched subcell diode_nd2ps_06v0_MV3SZ3$1$1 in circuit io_secondary_5p0 (0)(1 instance)
+Flattening unmatched subcell diode_pd2nw_06v0_5DG9HC$1$1 in circuit io_secondary_5p0 (0)(1 instance)
+
+Class io_secondary_5p0 (0):  Merged 6 parallel devices.
+Subcircuit summary:
+Circuit 1: io_secondary_5p0                |Circuit 2: io_secondary_5p0                
+-------------------------------------------|-------------------------------------------
+ppolyf_u (1)                               |ppolyf_u (1)                               
+diode_nd2ps_06v0 (4->1)                    |diode_nd2ps_06v0 (4->1)                    
+diode_pd2nw_06v0 (4->1)                    |diode_pd2nw_06v0 (4->1)                    
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: io_secondary_5p0                |Circuit 2: io_secondary_5p0                
+-------------------------------------------|-------------------------------------------
+ASIG5V                                     |ASIG5V                                     
+VSS                                        |VSS                                        
+to_gate                                    |to_gate                                    
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes io_secondary_5p0 and io_secondary_5p0 are equivalent.
+
+Final result: Circuits match uniquely.
+.
