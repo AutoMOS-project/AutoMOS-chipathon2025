@@ -1,0 +1,768 @@
+* NGSPICE file created from A1_top.ext - technology: gf180mcuD
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__tieh VDD VSS Z VNW VPW
+X0 Z a_125_157# VDD VNW pfet_05v0 ad=0.396p pd=2.68u as=0.396p ps=2.68u w=0.9u l=0.5u
+X1 a_125_157# a_125_157# VSS VPW nfet_05v0 ad=0.2904p pd=2.2u as=0.2904p ps=2.2u w=0.66u l=0.6u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__tiel VDD VSS ZN VNW VPW
+X0 ZN a_124_157# VSS VPW nfet_05v0 ad=0.2904p pd=2.2u as=0.2904p ps=2.2u w=0.66u l=0.6u
+X1 a_124_157# a_124_157# VDD VNW pfet_05v0 ad=0.396p pd=2.68u as=0.396p ps=2.68u w=0.9u l=0.5u
+.ends
+
+.subckt sc_tieh_tiel VDD VSS tieH tieL
+Xgf180mcu_fd_sc_mcu9t5v0__tieh_0 VDD VSS tieH VDD VSS gf180mcu_fd_sc_mcu9t5v0__tieh
+Xgf180mcu_fd_sc_mcu9t5v0__tiel_0 VDD VSS tieL VDD VSS gf180mcu_fd_sc_mcu9t5v0__tiel
+.ends
+
+.subckt cap_mim$1$1 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=16u c_length=16u
+.ends
+
+.subckt bandgap_opamp$1 VSS vn vp ibias VDD vout
+Xcap_mim$1$1_0 a_n5609_n2907# vout cap_mim$1$1
+X0 vout ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=8
+X1 VDD VDD VDD VDD pfet_05v0 ad=1.16p pd=5.16u as=14.04p ps=76.32u w=2u l=1u M=4
+X2 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=11.8p ps=87.2u w=0.5u l=2u M=10
+X3 a_n3877_n280# ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=2
+X4 vout a_n5609_n2907# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=16
+X5 VDD VDD VDD VDD pfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=1u M=2
+X6 a_n5609_n2907# vp a_n3877_n280# VDD pfet_05v0 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
+X7 a_n6009_n3115# vn a_n3877_n280# VDD pfet_05v0 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
+X8 ibias ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=2
+X9 a_n5609_n2907# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X10 a_n6009_n3115# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+.ends
+
+.subckt ppolyf_u_high_Rs_resistor$3 a_900_0# a_n128_0# a_n352_0#
+X0 a_n128_0# a_900_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=4.5u
+.ends
+
+.subckt ppolyf_u_high_Rs_resistor$1$5 a_n128_0# a_1800_0# a_n352_0#
+X0 a_n128_0# a_1800_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=9u
+.ends
+
+.subckt bandgap$1 vpref vpref_fb VDD ICTAT VZTC IZTC VBG IPTAT VSS w_11108_n5057#
+Xbandgap_opamp$1_0 VSS bandgap_opamp$1_0/vn bandgap_opamp$1_0/vp bandgap_opamp$1_0/ibias
++ VDD vpref_fb bandgap_opamp$1
+Xppolyf_u_high_Rs_resistor$3_0[0|0] m2_2232_15505# m1_1154_15445# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[1|0] m2_2232_16305# m1_1154_15445# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[0|1] m2_3831_15502# m2_2232_15505# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[1|1] m2_3831_16305# m2_2232_16305# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[0|2] m2_5433_15504# m2_3831_15502# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[1|2] m2_5432_16305# m2_3831_16305# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[0|3] m3_9250_15170# m2_5433_15504# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_0[1|3] m3_9499_6017# m2_5432_16305# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|0] m2_n6118_n11554# VSS VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|0] m2_n6118_n10554# m1_n7199_n10552# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|0] m2_n6118_n9554# m1_n7199_n10552# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|0] m2_n6118_n8554# m2_n9000_n8552# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|0] m2_n6118_n7554# VSS VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|1] m2_n4518_n11554# m2_n6118_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|1] m2_n4518_n10554# m2_n6118_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|1] m2_n4518_n9554# m2_n6118_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|1] m2_n4518_n8554# m2_n6118_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|1] m2_n4518_n7554# m2_n6118_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|2] m2_n2918_n11554# m2_n4518_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|2] m2_n2918_n10554# m2_n4518_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|2] m2_n2918_n9554# m2_n4518_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|2] m2_n2918_n8554# m2_n4518_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|2] m2_n2918_n7554# m2_n4518_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|3] m2_n1318_n11554# m2_n2918_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|3] m2_n1318_n10554# m2_n2918_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|3] m2_n1318_n9554# m2_n2918_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|3] m2_n1318_n8554# m2_n2918_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|3] m2_n1318_n7554# m2_n2918_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|4] m2_282_n11554# m2_n1318_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|4] m2_282_n10554# m2_n1318_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|4] m2_282_n9554# m2_n1318_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|4] m2_282_n8554# m2_n1318_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|4] m2_282_n7554# m2_n1318_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|5] m2_1882_n11554# m2_282_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|5] m2_1882_n10554# m2_282_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|5] m2_1882_n9554# m2_282_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|5] m2_1882_n8554# m2_282_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|5] m2_1882_n7554# m2_282_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|6] m2_3482_n11554# m2_1882_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|6] m2_3482_n10554# m2_1882_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|6] m2_3477_n9001# m2_1882_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|6] m2_3482_n8554# m2_1882_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|6] m2_3482_n7554# m2_1882_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|7] m2_5082_n11554# m2_3482_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|7] m2_5082_n10554# m2_3482_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|7] m2_5082_n9554# m1_4002_n9557# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|7] m2_5082_n8554# m2_3482_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|7] m2_5082_n7554# m2_3482_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|8] m2_6682_n11554# m2_5082_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|8] m2_6682_n10554# m2_5082_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|8] m2_6682_n9554# m2_5082_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|8] m2_6682_n8554# m2_5082_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|8] m2_6682_n7554# m2_5082_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|9] m2_8282_n11554# m2_6682_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|9] m2_8282_n10229# m2_6682_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|9] m2_8280_n9231# m2_6682_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|9] m2_8282_n8227# m2_6682_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|9] m2_8282_n7554# m2_6682_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|10] m2_9882_n11554# m2_8282_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|10] m2_9882_n10554# m2_8801_n9876# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|10] m2_9882_n9554# m1_8799_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|10] m2_9882_n8554# m1_8799_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|10] m2_9882_n7554# m2_8282_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|11] m2_11481_n11379# m2_9882_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|11] m2_12002_n11555# m2_9882_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|11] m2_11482_n9554# m2_9882_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|11] m2_11482_n8554# m2_9882_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|11] m2_11481_n7731# m2_9882_n7554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|12] m2_13082_n11554# m2_12002_n11555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|12] m2_13082_n10554# m2_11481_n11379# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|12] m2_13082_n9731# m2_11482_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|12] m2_11999_n7880# m2_11482_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|12] m2_13081_n7555# m2_11999_n7880# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|13] m2_14682_n11554# m2_13082_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|13] m2_14682_n10554# m2_13082_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|13] m2_14682_n9554# m2_8801_n9876# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|13] m2_14682_n8554# m2_11481_n7731# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|13] m2_14681_n7555# m2_13081_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|14] m2_16282_n11554# m2_14682_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|14] m2_13082_n9731# m2_14682_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|14] m1_16283_n9553# m2_14682_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|14] m1_16283_n9553# m2_14682_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|14] m2_16281_n7555# m2_14681_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|15] m2_17882_n11554# m2_16282_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|15] m2_17882_n10554# m2_8282_n10229# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|15] m2_17882_n9554# m2_8280_n9231# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|15] m2_17882_n8554# m2_8282_n8227# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|15] m2_17881_n7555# m2_16281_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|16] m2_19482_n11554# m2_17882_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|16] m2_19482_n10554# m2_17882_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|16] m2_19482_n9554# m2_17882_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|16] m2_19482_n8554# m2_17882_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|16] m2_19481_n7555# m2_17881_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|17] m2_21082_n11554# m2_19482_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|17] m2_21082_n10554# m2_19482_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|17] bandgap_opamp$1_0/vp m2_19482_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|17] m2_21082_n8554# m2_19482_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|17] m2_21081_n7555# m2_19481_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|18] m2_22682_n11554# m2_21082_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|18] m2_22682_n10554# m2_21082_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|18] m2_22682_n9554# m2_3477_n9001# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|18] m2_22682_n8554# m2_21082_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|18] m2_22681_n7555# m2_21081_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|19] m2_24282_n11554# m2_22682_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|19] m2_24282_n10554# m2_22682_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|19] m2_24282_n9554# m2_22682_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|19] m2_24282_n8554# m2_22682_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|19] m2_24281_n7555# m2_22681_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|20] m2_25882_n11554# m2_24282_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|20] m2_25882_n10554# m2_24282_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|20] m2_25882_n9554# m2_24282_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|20] m2_25882_n8554# m2_24282_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|20] m2_25881_n7555# m2_24281_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|21] m2_27482_n11554# m2_25882_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|21] m2_27482_n10554# m2_25882_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|21] m2_27482_n9554# m2_25882_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|21] m2_27482_n8554# m2_25882_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|21] m2_27481_n7555# m2_25881_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|22] m2_29082_n11554# m2_27482_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|22] m2_29082_n10554# m2_27482_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|22] m2_29082_n9554# m2_27482_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|22] m2_29082_n8554# m2_27482_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|22] m2_29081_n7555# m2_27481_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|23] m2_30682_n11554# m2_29082_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|23] m2_30682_n10554# m2_29082_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|23] m2_30682_n9554# m2_29082_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|23] m2_30682_n8554# m2_29082_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|23] m2_30681_n7555# m2_29081_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[0|24] VZTC m2_30682_n11554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[1|24] VBG m2_30682_n10554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[2|24] m1_32282_n9554# m2_30682_n9554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[3|24] m1_32282_n9554# m2_30682_n8554# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$3_1[4|24] w_11108_n5057# m2_30681_n7555# VSS ppolyf_u_high_Rs_resistor$3
+Xppolyf_u_high_Rs_resistor$1$5_0[0|0] a_n22908_n917# m2_n28372_9003# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[1|0] m1_n25775_7400# m2_n28372_8203# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[2|0] m1_n25775_7400# m2_n28372_7403# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[3|0] m1_n25775_5800# m2_n28372_6603# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[4|0] m1_n25775_5800# m2_n28372_5803# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[5|0] m1_n25775_4200# m2_n28372_5003# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[6|0] m1_n25775_4200# m2_n28372_4203# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[7|0] m1_n25775_2600# m2_n28372_3403# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[8|0] m1_n25775_2600# m2_n28372_2603# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[9|0] m1_n25775_1000# m2_n28372_1803# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[10|0] m1_n25775_1000# m2_n28372_1003# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[11|0] VSS m2_n28372_203# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[0|1] m2_n28372_9003# m2_n30972_9003# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[1|1] m2_n28372_8203# m2_n30972_8203# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[2|1] m2_n28372_7403# m2_n30972_7403# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[3|1] m2_n28372_6603# m2_n30972_6603# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[4|1] m2_n28372_5803# m2_n30972_5803# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[5|1] m2_n28372_5003# m2_n30972_5003# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[6|1] m2_n28372_4203# m2_n30972_4203# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[7|1] m2_n28372_3403# m2_n30972_3403# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[8|1] m2_n28372_2603# m2_n30972_2603# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[9|1] m2_n28372_1803# m2_n30972_1803# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[10|1] m2_n28372_1003# m2_n30972_1003# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[11|1] m2_n28372_203# m2_n30972_203# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[0|2] m2_n30972_9003# m1_n32960_8202# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[1|2] m2_n30972_8203# m1_n32960_8202# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[2|2] m2_n30972_7403# m1_n32960_6602# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[3|2] m2_n30972_6603# m1_n32960_6602# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[4|2] m2_n30972_5803# m1_n32960_5002# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[5|2] m2_n30972_5003# m1_n32960_5002# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[6|2] m2_n30972_4203# m1_n32960_3402# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[7|2] m2_n30972_3403# m1_n32960_3402# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[8|2] m2_n30972_2603# m1_n32960_1802# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[9|2] m2_n30972_1803# m1_n32960_1802# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[10|2] m2_n30972_1003# m1_n32960_202# VSS ppolyf_u_high_Rs_resistor$1$5
+Xppolyf_u_high_Rs_resistor$1$5_0[11|2] m2_n30972_203# m1_n32960_202# VSS ppolyf_u_high_Rs_resistor$1$5
+X0 VSS VSS m1_4002_n9557# pnp_05p00x00p42 M=16
+X1 a_n5453_5070# a_n7625_4860# a_n5733_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X2 a_n5453_5070# a_12938_n3515# a_12818_n3307# w_11108_n5057# nfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.6u M=16
+X3 IZTC m3_9499_6017# a_11246_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=6
+X4 a_n22908_n917# a_n7625_4860# VDD VDD pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=16
+X5 a_n4727_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X6 VSS a_n22908_n917# VSS VSS nfet_05v0 ad=2.4p pd=9.2u as=0.10291n ps=0.43224m w=4u l=1u M=32
+X7 IZTC a_n7625_4860# a_n7745_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X8 VSS a_n5453_5070# VSS VSS nfet_05v0 ad=2.4p pd=9.2u as=0 ps=0 w=4u l=1u M=32
+X9 a_14264_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
+X10 VDD VDD VDD VDD pfet_05v0 ad=1.856p pd=7.56u as=0.25402n ps=0.97778m w=3.2u l=0.8u M=2
+X11 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=2u M=2
+X12 VZTC m3_9499_6017# a_13258_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=6
+X13 VSS a_n22908_n917# a_n7625_4860# a_n7625_4860# pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=32
+X14 IPTAT a_n7625_4860# a_n3721_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X15 a_12938_n3515# a_12938_n3515# w_11108_n5057# w_11108_n5057# nfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.6u M=16
+X16 VSS VSS a_12818_n3307# pnp_05p00x00p42 M=2
+X17 VSS VSS VSS pnp_05p00x00p42 M=10
+X18 a_n7745_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X19 a_n1669_n50# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X20 VSS a_n22908_n917# vpref vpref pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=32
+X21 ICTAT m3_9499_6017# a_14264_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
+X22 m3_9250_15170# m3_9499_6017# a_16276_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
+X23 a_15270_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
+X24 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=3.2u M=2
+X25 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=0.8u M=4
+X26 a_n6739_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X27 VDD VDD VDD VDD pfet_05v0 ad=1.856p pd=7.56u as=0 ps=0 w=3.2u l=0.8u M=4
+X28 a_n7625_4860# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X29 w_11108_n5057# w_11108_n5057# w_11108_n5057# w_11108_n5057# nfet_05v0 ad=2.32p pd=9.16u as=21.91862p ps=88.935u w=4u l=0.6u M=8
+X30 a_n3315_n258# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X31 a_16276_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
+X32 VSS VSS bandgap_opamp$1_0/vn pnp_05p00x00p42 M=2
+X33 a_n703_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X34 VBG a_n7625_4860# a_n4727_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X35 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=0.8u M=2
+X36 a_12938_n3515# m3_9499_6017# a_15270_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
+X37 a_13258_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=6
+X38 VZTC a_n7625_4860# a_n6739_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X39 VSS VSS m2_n9000_n8552# pnp_05p00x00p42 M=2
+X40 a_n3315_n258# a_n7625_4860# a_n2715_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X41 a_11246_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=6
+X42 a_n7625_4860# a_n7625_4860# VDD VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=3.2u M=2
+X43 a_n1669_n50# a_n22908_n917# bandgap_opamp$1_0/ibias VSS nfet_05v0 ad=0.73p pd=3.46u as=0.73p ps=3.46u w=1u l=0.6u
+X44 a_n2715_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X45 a_n3721_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X46 a_n1709_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X47 a_n5733_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X48 bandgap_opamp$1_0/vn a_n7625_4860# a_n703_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X49 bandgap_opamp$1_0/vp a_n7625_4860# a_n1709_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X50 VSS a_n5453_5070# m3_9499_6017# VSS nfet_05v0 ad=0.73p pd=3.46u as=0.73p ps=3.46u w=1u l=4u
+.ends
+
+.subckt top_amux_2x1$1 VDD VSS EN IN0 IN1 OUT
+X0 IN1 a_n28035_n33468# OUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X1 OUT a_n28035_n31800# IN0 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X2 IN0 a_n28035_n32634# OUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X3 OUT EN IN1 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X4 VDD EN a_n28035_n33468# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X5 VDD EN a_n28035_n31800# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X6 VSS EN a_n28035_n31800# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X7 VDD a_n28035_n31800# a_n28035_n32634# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X8 VSS a_n28035_n31800# a_n28035_n32634# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X9 VSS EN a_n28035_n33468# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+.ends
+
+.subckt ppolyf_u_high_Rs_resistor$1$4 a_900_0# a_n128_0# a_n352_0#
+X0 a_n128_0# a_900_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=4.5u
+.ends
+
+.subckt biasgen_mirror_2_to_10$1 VSS Iout_2u_snk Iout_10u_snk Iout_10u_src Iout_2u_src
++ VDD ENB EN Ibias_2u a_n8631_3802#
+Xppolyf_u_high_Rs_resistor$1$4_0[0|0] m2_n14544_n53# m1_n15408_n1147# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[1|0] m2_n15347_n57# m1_n15408_n1147# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[0|1] m2_n14544_1542# m2_n14544_n53# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[1|1] m2_n15347_1542# m2_n15347_n57# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[0|2] m2_n14546_3144# m2_n14544_1542# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[1|2] m2_n15347_3143# m2_n15347_1542# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[0|3] a_n8631_3802# m2_n14546_3144# VSS ppolyf_u_high_Rs_resistor$1$4
+Xppolyf_u_high_Rs_resistor$1$4_0[1|3] a_n11493_3011# m2_n15347_3143# VSS ppolyf_u_high_Rs_resistor$1$4
+X0 a_n9145_n50# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=10
+X1 a_n1709_4010# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X2 VDD EN a_n8046_12395# VDD pfet_05v0 ad=0.77p pd=3.54u as=0.77p ps=3.54u w=1u l=0.5u
+X3 a_n6600_12603# a_n8046_12395# VDD VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=1.5u M=10
+X4 a_n8631_3802# EN Ibias_2u a_n8631_3802# nfet_05v0 ad=1.46p pd=5.46u as=1.46p ps=5.46u w=2u l=0.6u
+X5 a_n2915_n50# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X6 Iout_10u_snk a_n8631_3802# a_n9145_n50# VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=0.8u M=10
+X7 a_n703_4010# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X8 VDD VDD VDD VDD pfet_05v0 ad=0.58p pd=3.16u as=19.91692p ps=0.10244m w=1u l=0.8u M=2
+X9 a_n8046_12395# a_n8631_3802# a_n2915_n50# VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=0.8u M=2
+X10 a_n10391_n50# a_n11493_3011# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X11 Iout_10u_src a_n1429_4010# a_n6600_12603# VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=0.8u M=10
+X12 a_n7746_12603# a_n8046_12395# VDD VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=1.5u M=2
+X13 Iout_2u_src a_n1429_4010# a_n7746_12603# VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=0.8u M=2
+X14 a_n8046_12395# a_n1429_4010# a_n1150_9913# VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=0.8u M=2
+X15 a_n1429_4010# a_n1429_4010# VDD VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=6u M=2
+X16 VSS ENB a_n11493_3011# VSS nfet_05v0 ad=1.46p pd=5.46u as=1.46p ps=5.46u w=2u l=0.6u
+X17 VDD VDD VDD VDD pfet_05v0 ad=0.58p pd=3.16u as=0 ps=0 w=1u l=6u M=4
+X18 Iout_2u_snk a_n8631_3802# a_n10391_n50# VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=0.8u M=2
+X19 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=9.63752p ps=60.295u w=0.5u l=2u M=2
+X20 VDD VDD VDD VDD pfet_05v0 ad=0.58p pd=3.16u as=0 ps=0 w=1u l=1.5u M=2
+X21 VDD EN a_n1429_4010# VDD pfet_05v0 ad=0.77p pd=3.54u as=0.77p ps=3.54u w=1u l=0.5u
+X22 a_n11493_3011# a_n8631_3802# a_n703_4010# VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=0.8u M=2
+X23 a_n1429_4010# a_n8631_3802# a_n1709_4010# VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=0.8u M=2
+X24 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=0.8u M=2
+X25 VSS ENB a_n8631_3802# VSS nfet_05v0 ad=1.46p pd=5.46u as=1.46p ps=5.46u w=2u l=0.6u
+X26 a_n1150_9913# a_n8046_12395# VDD VDD pfet_05v0 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=1.5u M=2
+.ends
+
+.subckt biasgen_inverter$1 VDD VSS IN OUT
+X0 OUT IN VSS VSS nfet_05v0 ad=0.365p pd=2.46u as=0.72p ps=3.88u w=0.5u l=0.6u
+X1 OUT IN VDD VDD pfet_05v0 ad=0.385p pd=2.54u as=0.75p ps=4u w=0.5u l=0.5u
+.ends
+
+.subckt biasgen_v2 VDD EN IPTAT_IN IPTAT_2u_src IPTAT_10u_src IPTAT_10u_snk w_n17945_6761#
++ VSS
+Xbiasgen_mirror_2_to_10$1_0 VSS biasgen_mirror_2_to_10$1_0/Iout_2u_snk IPTAT_10u_snk
++ IPTAT_10u_src IPTAT_2u_src VDD biasgen_inverter$1_0/OUT EN IPTAT_IN w_n17945_6761#
++ biasgen_mirror_2_to_10$1
+Xbiasgen_inverter$1_0 VDD VSS EN biasgen_inverter$1_0/OUT biasgen_inverter$1
+.ends
+
+.subckt ppolyf_u_high_Rs_resistor$3$1 a_n128_0# a_n352_0# a_2000_0#
+X0 a_n128_0# a_2000_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=10u
+.ends
+
+.subckt cap_mim$1$2 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=25u c_length=25u
+.ends
+
+.subckt ppolyf_u_high_Rs_resistor$2 a_n128_0# a_n352_0# a_1000_0#
+X0 a_n128_0# a_1000_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=5u
+.ends
+
+.subckt ldo$1 VDD VSS VREF VFB VFB_res LDO_EN IBIAS VOUT
+Xppolyf_u_high_Rs_resistor$3$1_0[0|0] m1_n73487_72157# VSS m1_n71303_72157# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[1|0] m1_n73487_72909# VSS m1_n71303_72909# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[2|0] m1_n73487_73661# VSS m1_n71303_73661# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[3|0] m1_n73487_74413# VSS m1_n71303_74413# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[4|0] m1_n73487_75165# VSS m1_n71303_75165# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[5|0] m5_n60589_88423# VSS m1_n71303_75917# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[0|1] m1_n71303_72157# VSS m1_n68571_72157# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[1|1] m1_n71303_72909# VSS m1_n68571_72909# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[2|1] m1_n71303_73661# VSS m1_n68571_73661# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[3|1] m1_n71303_74413# VSS m1_n68571_74413# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[4|1] m1_n71303_75165# VSS m1_n68571_75165# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[5|1] m1_n71303_75917# VSS m1_n68571_75917# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[0|2] m1_n68571_72157# VSS m1_n65839_72157# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[1|2] m1_n68571_72909# VSS m1_n65839_72909# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[2|2] m1_n68571_73661# VSS m1_n65839_73661# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[3|2] m1_n68571_74413# VSS m1_n65839_74413# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[4|2] m1_n68571_75165# VSS m1_n65839_75165# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[5|2] m1_n68571_75917# VSS m1_n65839_75917# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[0|3] m1_n65839_72157# VSS m1_n63107_72157# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[1|3] m1_n65839_72909# VSS m1_n63107_72909# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[2|3] m1_n65839_73661# VSS m1_n63107_73661# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[3|3] m1_n65839_74413# VSS m1_n63107_74413# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[4|3] m1_n65839_75165# VSS m1_n63107_75165# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[5|3] m1_n65839_75917# VSS m1_n63107_75917# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[0|4] m1_n63107_72157# VSS VOUT ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[1|4] m1_n63107_72909# VSS m1_n73487_72157# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[2|4] m1_n63107_73661# VSS m1_n73487_72909# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[3|4] m1_n63107_74413# VSS m1_n73487_73661# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[4|4] m1_n63107_75165# VSS m1_n73487_74413# ppolyf_u_high_Rs_resistor$3$1
+Xppolyf_u_high_Rs_resistor$3$1_0[5|4] m1_n63107_75917# VSS m1_n73487_75165# ppolyf_u_high_Rs_resistor$3$1
+Xcap_mim$1$2_0[0|0] m5_n60589_88423# a_n83949_68256# cap_mim$1$2
+Xcap_mim$1$2_0[1|0] m5_n60589_88423# a_n83949_68256# cap_mim$1$2
+Xcap_mim$1$2_0[0|1] m5_n60589_88423# a_n83949_68256# cap_mim$1$2
+Xcap_mim$1$2_0[1|1] m5_n60589_88423# a_n83949_68256# cap_mim$1$2
+Xppolyf_u_high_Rs_resistor$2_0[0|0] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|0] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|0] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|0] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|0] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|0] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[0|1] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|1] m1_n70219_67901# VSS m1_n69035_67901# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|1] m1_n70219_68653# VSS m1_n69035_68653# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|1] VFB_res VSS m1_n69035_69405# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|1] VOUT VSS m1_n69035_70157# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|1] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[0|2] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|2] m1_n69035_67901# VSS m1_n67303_67901# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|2] m1_n69035_68653# VSS m1_n67303_68653# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|2] m1_n69035_69405# VSS m1_n67303_69405# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|2] m1_n69035_70157# VSS m1_n67303_70157# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|2] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[0|3] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|3] m1_n67303_67901# VSS m1_n65571_67901# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|3] m1_n67303_68653# VSS m1_n65571_68653# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|3] m1_n67303_69405# VSS m1_n65571_69405# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|3] m1_n67303_70157# VSS m1_n65571_70157# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|3] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[0|4] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|4] m1_n65571_67901# VSS m1_n63839_67901# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|4] m1_n65571_68653# VSS m1_n63839_68653# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|4] m1_n65571_69405# VSS m1_n63839_69405# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|4] m1_n65571_70157# VSS m1_n63839_70157# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|4] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[0|5] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|5] m1_n63839_67901# VSS VFB_res ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|5] m1_n63839_68653# VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|5] m1_n63839_69405# VSS m1_n70219_68653# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|5] m1_n63839_70157# VSS m1_n70219_67901# ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|5] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[0|6] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[1|6] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[2|6] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[3|6] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[4|6] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+Xppolyf_u_high_Rs_resistor$2_0[5|6] VSS VSS VSS ppolyf_u_high_Rs_resistor$2
+X0 VDD a_n83693_84586# a_n83949_68256# VDD pfet_05v0 ad=8.25p pd=14u as=4.235p ps=12.54u w=5.5u l=1u M=6
+X1 a_n83949_73102# VFB a_n83693_84586# VSS nfet_05v0 ad=3.65p pd=11.46u as=3.65p ps=11.46u w=5u l=0.6u M=14
+X2 VSS VSS VSS VSS nfet_05v0 ad=3.65p pd=11.46u as=0.29117n ps=0.9788m w=5u l=0.6u M=26
+X3 VDD a_n83693_82724# a_n83803_68196# VDD pfet_05v0 ad=8.25p pd=14u as=4.235p ps=12.54u w=5.5u l=1u M=2
+X4 a_n83949_73102# VREF a_n83693_82724# VSS nfet_05v0 ad=3.65p pd=11.46u as=3.65p ps=11.46u w=5u l=0.6u M=14
+X5 VDD a_n83949_68256# VOUT VDD pfet_05v0 ad=75p pd=0.103m as=38.5p ps=0.10154m w=50u l=0.5u M=10
+X6 VDD VDD VDD VDD pfet_05v0 ad=4.235p pd=12.54u as=0.61076n ps=1.68958m w=5.5u l=1u M=20
+X7 VSS VSS VSS VSS nfet_05v0 ad=2.19p pd=7.46u as=0 ps=0 w=3u l=1u M=12
+X8 VSS a_n83949_74452# a_n83949_74452# VSS nfet_05v0 ad=4.32p pd=8.88u as=2.19p ps=7.46u w=3u l=1u M=2
+X9 VSS a_n85031_78410# a_n83803_68196# VSS nfet_05v0 ad=2.88p pd=6.88u as=1.46p ps=5.46u w=2u l=0.6u
+X10 VSS a_n83803_68196# a_n83803_68196# VSS nfet_05v0 ad=1.8p pd=5.38u as=0.9125p ps=3.96u w=1.25u l=1u M=2
+X11 VSS a_n83803_68196# a_n83949_68256# VSS nfet_05v0 ad=1.8p pd=5.38u as=0.9125p ps=3.96u w=1.25u l=1u M=6
+X12 VDD a_n84169_78410# a_n83949_68256# VDD pfet_05v0 ad=3p pd=7u as=1.54p ps=5.54u w=2u l=0.5u
+X13 VSS VSS VSS VSS nfet_05v0 ad=0.9125p pd=3.96u as=0 ps=0 w=1.25u l=1u M=16
+X14 VDD a_n85031_78410# a_n84169_78410# VDD pfet_05v0 ad=0.9p pd=4.2u as=0.462p ps=2.74u w=0.6u l=0.5u
+X15 VSS a_n85031_78410# a_n84169_78410# VSS nfet_05v0 ad=0.6274p pd=3.76u as=0.315p ps=2.34u w=0.42u l=0.6u
+X16 VDD a_n83693_84586# a_n83693_84586# VDD pfet_05v0 ad=8.25p pd=14u as=4.235p ps=12.54u w=5.5u l=1u M=2
+X17 VDD a_n83693_82724# a_n83693_82724# VDD pfet_05v0 ad=8.25p pd=14u as=4.235p ps=12.54u w=5.5u l=1u M=2
+X18 VSS a_n83949_74452# a_n83949_73102# VSS nfet_05v0 ad=4.32p pd=8.88u as=2.19p ps=7.46u w=3u l=1u M=2
+X19 VSS LDO_EN a_n85031_78410# VSS nfet_05v0 ad=0.6274p pd=3.76u as=0.315p ps=2.34u w=0.42u l=0.6u
+X20 VDD a_n84169_78410# a_n83693_82724# VDD pfet_05v0 ad=3p pd=7u as=1.54p ps=5.54u w=2u l=0.5u
+X21 VDD LDO_EN a_n85031_78410# VDD pfet_05v0 ad=0.9p pd=4.2u as=0.462p ps=2.74u w=0.6u l=0.5u
+X22 a_n83949_74452# a_n84169_78410# IBIAS VSS nfet_05v0 ad=1.46p pd=5.46u as=1.46p ps=5.46u w=2u l=0.6u
+X23 VDD a_n84169_78410# a_n83693_84586# VDD pfet_05v0 ad=3p pd=7u as=1.54p ps=5.54u w=2u l=0.5u
+X24 VSS a_n85031_78410# a_n83949_74452# VSS nfet_05v0 ad=2.88p pd=6.88u as=1.46p ps=5.46u w=2u l=0.6u
+.ends
+
+.subckt vco VOUT VDD ibias EN VSS vin
+X0 VDD VDD VDD VDD pfet_03v3 ad=0.58p pd=3.16u as=50.95102p ps=0.27308m w=1u l=0.4u M=8
+X1 a_2714_n1768# vin VSS VSS nfet_03v3 ad=0.43p pd=1.86u as=0.43p ps=1.86u w=1u l=0.28u M=40
+X2 a_9006_4562# ibias VDD VDD pfet_03v3 ad=0.28p pd=1.56u as=0.28p ps=1.56u w=1u l=0.4u M=40
+X3 VSS vin a_n838_n1768# VSS nfet_03v3 ad=0.43p pd=1.86u as=0.43p ps=1.86u w=1u l=0.28u M=40
+X4 a_6454_n1768# vin VSS VSS nfet_03v3 ad=0.43p pd=1.86u as=0.75p ps=3.5u w=1u l=0.28u M=40
+X5 VDD ibias a_2437_4562# VDD pfet_03v3 ad=0.28p pd=1.56u as=0.28p ps=1.56u w=1u l=0.4u M=40
+X6 a_5817_4562# ibias VDD VDD pfet_03v3 ad=0.28p pd=1.56u as=0.6p ps=3.2u w=1u l=0.4u M=40
+X7 VSS VSS VSS VSS nfet_03v3 ad=0.73p pd=3.46u as=52.57002p ps=0.23514m w=1u l=0.28u M=8
+X8 a_13772_4327# a_13694_4535# a_2714_n1768# VSS nfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X9 a_n838_n1768# ibias VDD VDD pfet_03v3 ad=0.28p pd=1.56u as=0.6p ps=3.2u w=1u l=0.4u M=40
+X10 VDD a_15309_449# a_20267_175# VDD pfet_03v3 ad=0.75p pd=3.5u as=0.43p ps=1.86u w=1u l=0.28u M=2
+X11 VDD EN a_15309_449# VDD pfet_03v3 ad=0.75p pd=3.5u as=0.43p ps=1.86u w=1u l=0.28u M=2
+X12 VDD a_13694_4535# a_15309_449# VDD pfet_03v3 ad=0.75p pd=3.5u as=0.43p ps=1.86u w=1u l=0.28u M=2
+X13 a_9946_n1768# a_14514_4327# a_13694_4535# VSS nfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X14 VSS vin a_9946_n1768# VSS nfet_03v3 ad=0.43p pd=1.86u as=0.43p ps=1.86u w=1u l=0.28u M=40
+X15 VDD ibias ibias VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X16 a_6454_n1768# a_13772_4327# a_14514_4327# VSS nfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X17 VOUT a_21703_175# VSS VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X18 a_21703_175# a_20267_175# VSS VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X19 a_13772_4327# a_13694_4535# a_2437_4562# VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X20 a_21703_175# a_20267_175# VDD VDD pfet_03v3 ad=0.43p pd=1.86u as=0.75p ps=3.5u w=1u l=0.28u M=2
+X21 a_15309_449# a_13694_4535# a_15217_n1789# VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X22 a_9006_4562# a_14514_4327# a_13694_4535# VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X23 VOUT a_21703_175# VDD VDD pfet_03v3 ad=0.43p pd=1.86u as=0.75p ps=3.5u w=1u l=0.28u M=2
+X24 a_5817_4562# a_13772_4327# a_14514_4327# VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X25 VSS a_15309_449# a_20267_175# VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X26 a_15217_n1789# EN VSS VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+.ends
+
+.subckt test_all_tg VDD VSS EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7 IN0 IN1 IN2 IN3 IN4 IN5
++ IN6 IN7 VOUT Vp
+X0 VDD EN3 a_n497_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X1 VDD EN4 a_2235_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X2 IN0 a_n8693_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X3 IN1 a_n5961_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X4 IN5 a_4967_16865# VOUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X5 Vp EN0 IN0 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X6 VDD EN1 a_n5961_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X7 IN2 a_n3229_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X8 IN3 a_n497_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X9 IN4 a_2235_16865# Vp VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X10 IN7 a_10431_16865# VOUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X11 VDD EN6 a_7699_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X12 IN6 a_7699_16865# VOUT VDD pfet_05v0 ad=1.155p pd=4.54u as=1.155p ps=4.54u w=1.5u l=0.5u M=6
+X13 VDD EN2 a_n3229_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X14 VOUT EN6 IN6 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X15 VOUT EN5 IN5 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X16 VOUT EN7 IN7 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X17 VDD EN7 a_10431_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X18 Vp EN1 IN1 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X19 Vp EN3 IN3 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X20 Vp EN4 IN4 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X21 Vp EN2 IN2 VSS nfet_05v0 ad=1.095p pd=4.46u as=1.095p ps=4.46u w=1.5u l=0.6u M=2
+X22 VSS EN4 a_2235_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X23 VSS EN2 a_n3229_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X24 VSS EN3 a_n497_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X25 VSS EN5 a_4967_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X26 VSS EN6 a_7699_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X27 VSS EN7 a_10431_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X28 VSS EN0 a_n8693_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X29 VDD EN5 a_4967_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X30 VSS EN1 a_n5961_16865# VSS nfet_05v0 ad=0.72p pd=3.88u as=0.365p ps=2.46u w=0.5u l=0.6u
+X31 VDD EN0 a_n8693_16865# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+.ends
+
+.subckt test_decoder$1 VDD VSS EN SEL[0] SEL[1] SEL[2] EN0 EN1 EN2 EN3 EN4 EN5 EN6
++ EN7
+X0 VSS a_n56986_5965# a_n56986_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X1 VDD a_n47266_6815# a_n47266_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X2 VDD SEL[1] a_n44836_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X3 VDD a_n47266_3415# a_n47266_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X4 VDD a_n49696_5115# a_n49696_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X5 VSS a_n52126_5115# a_n52126_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X6 VDD a_n39976_5115# a_n39976_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X7 VSS EN a_n49696_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X8 VDD EN a_n54556_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X9 a_n56986_8515# a_n56986_6815# a_n56986_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X10 VDD a_n42406_6815# a_n42406_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X11 VSS EN a_n44836_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X12 VSS a_n54556_5115# a_n54556_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X13 VDD SEL[2] a_n42406_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X14 a_n52126_8515# a_n52126_6815# a_n52126_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X15 VDD a_n44836_5115# a_n44836_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X16 VSS a_n39976_5115# a_n39976_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X17 VDD SEL[1] a_n49696_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X18 VSS EN a_n47266_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X19 VSS a_n49696_7665# EN3 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X20 VDD SEL[1] a_n39976_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X21 VSS EN a_n42406_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X22 VSS a_n44836_7665# EN5 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X23 a_n54556_8515# a_n54556_6815# a_n54556_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X24 VDD SEL[1] a_n47266_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X25 VDD a_n56986_6815# a_n56986_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X26 VDD a_n56986_3415# a_n56986_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X27 a_n39976_8515# a_n39976_6815# a_n39976_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X28 VDD a_n44836_1715# a_n44836_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X29 VSS a_n47266_7665# EN4 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X30 VSS a_n42406_7665# EN6 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X31 VDD SEL[0] a_n42406_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X32 VDD a_n47266_5115# a_n47266_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X33 VDD a_n52126_6815# a_n52126_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X34 VDD a_n52126_2565# a_n52126_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X35 VSS a_n49696_5115# a_n49696_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X36 VSS a_n44836_5115# a_n44836_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X37 VSS SEL[2] a_n56986_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X38 VSS a_n56986_4265# a_n56986_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X39 VDD a_n42406_5115# a_n42406_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X40 VDD SEL[0] a_n56986_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X41 a_n52126_5965# a_n52126_4265# a_n52126_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X42 VSS a_n51980_5905# a_n52126_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X43 VDD a_n47266_1715# a_n47266_3415# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X44 VDD SEL[2] a_n49696_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X45 a_n49696_8515# a_n49696_6815# a_n49696_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X46 VDD SEL[2] a_n39976_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X47 VSS a_n47266_5115# a_n47266_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X48 a_n44836_8515# a_n44836_6815# a_n44836_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X49 VDD a_n54556_6815# a_n54556_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X50 VSS a_n42406_5115# a_n42406_6815# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X51 a_n54556_5965# a_n54556_4265# a_n54556_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X52 VSS SEL[2] a_n54556_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X53 VDD SEL[0] a_n52126_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X54 VDD a_n54556_3415# a_n54556_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X55 VDD a_n56986_5965# a_n56986_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X56 VDD a_n42406_1715# a_n42406_3415# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X57 VSS SEL[2] a_n39976_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X58 VDD SEL[2] a_n44836_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X59 a_n39976_5965# a_n39976_4265# a_n39976_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X60 a_n47266_8515# a_n47266_6815# a_n47266_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X61 a_n42406_8515# a_n42406_6815# a_n42406_7665# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X62 VDD a_n52126_5115# a_n52126_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X63 VDD a_n56986_1715# a_n56986_3415# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X64 VSS a_n56986_1715# a_n56986_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X65 VDD SEL[0] a_n54556_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X66 VDD a_n47266_4265# a_n47266_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X67 VSS SEL[1] a_n52126_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X68 VDD SEL[1] a_n52126_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X69 a_n49696_5965# a_n49696_4265# a_n49696_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X70 VSS SEL[2] a_n49696_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X71 a_n44836_5965# a_n44836_4265# a_n44836_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X72 VSS SEL[2] a_n44836_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X73 a_n56986_5115# a_n56986_3415# a_n56986_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X74 VDD a_n54556_5115# a_n54556_6815# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X75 VSS a_n54556_1715# a_n54556_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X76 VSS a_n52126_2565# a_n52126_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X77 VDD a_n42406_4265# a_n42406_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X78 VSS SEL[1] a_n39976_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X79 VDD a_n49696_4265# a_n49696_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X80 a_n47266_5965# SEL[0] a_n47266_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X81 VSS a_n47266_4265# a_n47266_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X82 VDD a_n39976_4265# a_n39976_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X83 a_n42406_5965# a_n42406_3415# a_n42406_5115# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X84 VSS a_n42406_4265# a_n42406_5965# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X85 VSS a_n54556_3415# a_n54556_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X86 VDD a_n54556_1715# a_n54556_3415# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X87 VDD a_n56986_4265# a_n56986_5965# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X88 VSS a_n39976_2565# a_n39976_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X89 VDD a_n49696_7665# EN3 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X90 VDD a_n39976_7665# EN7 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X91 VDD a_n44836_4265# a_n44836_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X92 a_n56986_2565# SEL[0] a_n56986_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X93 VSS SEL[0] a_n52126_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X94 VDD a_n44836_7665# EN5 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X95 VDD a_n51980_5905# a_n52126_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X96 VDD a_n49696_1715# a_n49696_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X97 VSS SEL[1] a_n49696_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X98 VDD SEL[0] a_n39976_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X99 VSS a_n44836_1715# a_n44836_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X100 a_n54556_2565# SEL[0] a_n54556_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X101 VSS SEL[1] a_n56986_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X102 a_n52126_3415# a_n52126_1715# a_n52126_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X103 VSS SEL[2] a_n51980_5905# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X104 VDD SEL[0] a_n44836_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X105 VDD SEL[0] a_n47266_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X106 VSS a_n49696_2565# a_n49696_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X107 VSS a_n47266_1715# a_n47266_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X108 VSS a_n42406_1715# a_n42406_3415# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X109 VSS a_n44836_2565# a_n44836_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X110 VSS SEL[1] a_n54556_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X111 VDD a_n47266_7665# EN4 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X112 VDD SEL[2] a_n54556_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X113 a_n39976_3415# SEL[0] a_n39976_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X114 VDD a_n42406_3415# a_n42406_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X115 VSS a_n47266_3415# a_n47266_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X116 VSS SEL[2] a_n42406_4265# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X117 VDD a_n42406_7665# EN6 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X118 VDD SEL[2] a_n47266_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X119 VDD EN a_n49696_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X120 VDD SEL[2] a_n56986_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X121 VSS SEL[0] a_n49696_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X122 VDD EN a_n39976_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X123 VSS SEL[1] a_n44836_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X124 VDD a_n56986_7665# EN0 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X125 VDD SEL[1] a_n42406_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X126 VDD EN a_n44836_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X127 VDD a_n52126_4265# a_n52126_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X128 a_n47266_2565# SEL[1] a_n47266_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X129 a_n49696_3415# a_n49696_1715# a_n49696_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X130 a_n42406_2565# SEL[0] a_n42406_1715# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X131 a_n44836_3415# SEL[0] a_n44836_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X132 VDD a_n52126_7665# EN2 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X133 VDD SEL[1] a_n56986_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X134 VSS SEL[2] a_n47266_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X135 VSS SEL[1] a_n42406_2565# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X136 VDD a_n54556_4265# a_n54556_5115# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X137 VDD EN a_n47266_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X138 VDD a_n52126_1715# a_n52126_2565# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X139 VDD a_n54556_7665# EN1 VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X140 VDD EN a_n42406_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X141 VSS EN a_n56986_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X142 VDD a_n49696_6815# a_n49696_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X143 VDD a_n49696_2565# a_n49696_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X144 VSS EN a_n52126_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X145 VDD a_n39976_2565# a_n39976_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X146 VDD a_n39976_6815# a_n39976_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X147 VDD SEL[1] a_n54556_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X148 VSS EN a_n54556_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X149 VSS a_n56986_7665# EN0 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X150 VDD EN a_n56986_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X151 VDD a_n44836_2565# a_n44836_4265# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X152 VDD a_n44836_6815# a_n44836_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X153 VSS a_n52126_7665# EN2 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X154 VSS EN a_n39976_8515# VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X155 VSS a_n54556_7665# EN1 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+X156 VDD EN a_n52126_7665# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X157 VDD SEL[0] a_n49696_1715# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X158 VDD SEL[2] a_n51980_5905# VDD pfet_05v0 ad=0.75p pd=4u as=0.385p ps=2.54u w=0.5u l=0.5u
+X159 VSS a_n39976_7665# EN7 VSS nfet_05v0 ad=0.365p pd=2.46u as=0.365p ps=2.46u w=0.5u l=0.6u
+.ends
+
+.subckt test_v2 VDD VSS IN0 IN1 IN2 IN3 IN4 IN5 IN6 IN7 SEL[2] EN SEL[1] SEL[0] VOUT
+Xtest_all_tg_0 VDD VSS test_all_tg_0/EN0 test_all_tg_0/EN1 test_all_tg_0/EN2 test_all_tg_0/EN3
++ test_all_tg_0/EN4 test_all_tg_0/EN5 test_all_tg_0/EN6 test_all_tg_0/EN7 IN0 IN1
++ IN2 IN3 IN4 IN5 IN6 IN7 VOUT test_all_tg_0/Vp test_all_tg
+Xtest_decoder$1_0 VDD VSS EN SEL[0] SEL[1] SEL[2] test_all_tg_0/EN0 test_all_tg_0/EN1
++ test_all_tg_0/EN2 test_all_tg_0/EN3 test_all_tg_0/EN4 test_all_tg_0/EN5 test_all_tg_0/EN6
++ test_all_tg_0/EN7 test_decoder$1
+.ends
+
+.subckt A1_top_core VTEST LDO_IBIAS_OVRD LDO_IBIAS TEST_OUT TEST_SEL_0 TEST_SEL_1
++ TEST_SEL_2 BIAS_EN LDO_VREF LDO_EN LDO_OUT VCO_EN VCO_OUT LDO_VREF_OVRD TEST_EN
++ VCO_IBIAS w_14041_n24289# VCO_IBIAS_OVRD VCO_IN w_11077_n5044# VSS VDD
+Xbandgap$1_0 bandgap$1_0/vpref bandgap$1_0/vpref VDD bandgap$1_0/ICTAT bandgap$1_0/VZTC
++ bandgap$1_0/IZTC bandgap$1_0/VBG bandgap$1_0/IPTAT VSS w_11077_n5044# bandgap$1
+Xtop_amux_2x1$1_0 VDD VSS VCO_IBIAS_OVRD top_amux_2x1$1_0/IN0 VCO_IBIAS vco_0/ibias
++ top_amux_2x1$1
+Xtop_amux_2x1$1_1 VDD VSS LDO_IBIAS_OVRD top_amux_2x1$1_1/IN0 LDO_IBIAS ldo$1_0/IBIAS
++ top_amux_2x1$1
+Xtop_amux_2x1$1_2 VDD VSS LDO_VREF_OVRD VSS LDO_VREF ldo$1_0/VREF top_amux_2x1$1
+Xbiasgen_v2_0 VDD BIAS_EN bandgap$1_0/IPTAT test_v2_0/IN5 top_amux_2x1$1_1/IN0 top_amux_2x1$1_0/IN0
++ w_14041_n24289# VSS biasgen_v2
+Xldo$1_0 VDD VSS ldo$1_0/VREF ldo$1_0/VFB ldo$1_0/VFB LDO_EN ldo$1_0/IBIAS LDO_OUT
++ ldo$1
+Xvco_0 VCO_OUT LDO_OUT vco_0/ibias VCO_EN VSS VCO_IN vco
+Xtest_v2_0 VTEST VSS VSS VSS VSS VSS VSS test_v2_0/IN5 VSS VSS TEST_SEL_2 TEST_EN
++ TEST_SEL_1 TEST_SEL_0 TEST_OUT test_v2
+.ends
+
+.subckt ppolyf_u_9H3LNU$1$1 w_n634_n11028# a_n418_n10812# a_1684_n10812#
+X0 a_n418_n10812# a_1684_n10812# w_n634_n11028# ppolyf_u r_width=40u r_length=10u
+.ends
+
+.subckt diode_nd2ps_06v0_MV3SZ3$1$1 a_n5528_10444# a_n5528_8212# a_n5528_14908# a_n5528_12676#
++ a_n5680_8060#
+D0 a_n5680_8060# a_n5528_8212# diode_nd2ps_06v0 pj=40u area=99.99999p
+D1 a_n5680_8060# a_n5528_14908# diode_nd2ps_06v0 pj=40u area=99.99999p
+D2 a_n5680_8060# a_n5528_10444# diode_nd2ps_06v0 pj=40u area=99.99999p
+D3 a_n5680_8060# a_n5528_12676# diode_nd2ps_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt diode_pd2nw_06v0_5DG9HC$1$1 w_5580_n3168# a_5756_n776# a_5756_3656# a_5756_1440#
++ a_5756_n2992#
+D0 a_5756_1440# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+D1 a_5756_n776# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+D2 a_5756_3656# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+D3 a_5756_n2992# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt io_secondary_5p0 VDD VSS ASIG5V to_gate
+Xppolyf_u_9H3LNU_0 VDD to_gate ASIG5V ppolyf_u_9H3LNU$1$1
+Xdiode_nd2ps_06v0_MV3SZ3_0 to_gate to_gate to_gate to_gate VSS diode_nd2ps_06v0_MV3SZ3$1$1
+Xdiode_pd2nw_06v0_5DG9HC_0 VDD to_gate to_gate to_gate to_gate diode_pd2nw_06v0_5DG9HC$1$1
+.ends
+
+.subckt A1_top VDD VSS BIAS_EN BIAS_EN_tiel BIAS_EN_tieh LDO_EN LDO_EN_tiel LDO_EN_tieh
++ LDO_VREF_OVRD LDO_VREF_OVRD_tiel LDO_VREF_OVRD_tieh LDO_VREF LDO_IBIAS_OVRD LDO_IBIAS_OVRD_tiel
++ VCO_IBIAS_OVRD VCO_IBIAS_OVRD_tiel VCO_EN VCO_EN_tiel VCO_IBIAS_OVRD_tieh VCO_EN_tieh
++ LDO_IBIAS_OVRD_tieh LDO_IBIAS VCO_IBIAS LDO_OUT VCO_IN VCO_OUT VCO_OUT_tiel VCO_OUT_tieh
++ VTEST TEST_IBIAS_OVRD TEST_IBIAS_OVRD_tiel TEST_IBIAS_OVRD_tieh TEST_IBIAS TEST_EN
++ TEST_EN_tiel TEST_EN_tieh TEST_SEL_0_tieh TEST_SEL_0 TEST_SEL_0_tiel TEST_SEL_1_tieh
++ TEST_SEL_1 TEST_SEL_1_tiel TEST_SEL_2_tieh TEST_SEL_2 TEST_SEL_2_tiel TEST_OUT
+Xsc_tieh_tiel_10 VDD VSS BIAS_EN_tieh BIAS_EN_tiel sc_tieh_tiel
+Xsc_tieh_tiel_11 VDD VSS LDO_EN_tieh LDO_EN_tiel sc_tieh_tiel
+XA1_top_core_0 VTEST LDO_IBIAS_OVRD A1_top_core_0/LDO_IBIAS TEST_OUT TEST_SEL_0 TEST_SEL_1
++ TEST_SEL_2 BIAS_EN A1_top_core_0/LDO_VREF LDO_EN LDO_OUT VCO_EN VCO_OUT LDO_VREF_OVRD
++ TEST_EN A1_top_core_0/VCO_IBIAS w_318661_429030# VCO_IBIAS_OVRD A1_top_core_0/VCO_IN
++ w_337906_423392# VSS VDD A1_top_core
+Xsc_tieh_tiel_0 VTEST VSS TEST_SEL_2_tieh TEST_SEL_2_tiel sc_tieh_tiel
+Xsc_tieh_tiel_1 VTEST VSS TEST_EN_tieh TEST_EN_tiel sc_tieh_tiel
+Xio_secondary_5p0_0 LDO_OUT VSS VCO_IN A1_top_core_0/VCO_IN io_secondary_5p0
+Xsc_tieh_tiel_2 VTEST VSS TEST_SEL_0_tieh TEST_SEL_0_tiel sc_tieh_tiel
+Xio_secondary_5p0_1 VTEST VSS TEST_IBIAS io_secondary_5p0_1/to_gate io_secondary_5p0
+Xsc_tieh_tiel_3 VTEST VSS TEST_SEL_1_tieh TEST_SEL_1_tiel sc_tieh_tiel
+Xio_secondary_5p0_2 VDD VSS LDO_VREF A1_top_core_0/LDO_VREF io_secondary_5p0
+Xsc_tieh_tiel_4 LDO_OUT VSS VCO_EN_tieh VCO_EN_tiel sc_tieh_tiel
+Xio_secondary_5p0_3 VDD VSS LDO_IBIAS A1_top_core_0/LDO_IBIAS io_secondary_5p0
+Xsc_tieh_tiel_5 VTEST VSS TEST_IBIAS_OVRD_tieh TEST_IBIAS_OVRD_tiel sc_tieh_tiel
+Xio_secondary_5p0_4 VDD VSS VCO_IBIAS A1_top_core_0/VCO_IBIAS io_secondary_5p0
+Xsc_tieh_tiel_6 LDO_OUT VSS VCO_OUT_tieh VCO_OUT_tiel sc_tieh_tiel
+Xsc_tieh_tiel_7 VDD VSS LDO_VREF_OVRD_tieh LDO_VREF_OVRD_tiel sc_tieh_tiel
+Xsc_tieh_tiel_8 VDD VSS VCO_IBIAS_OVRD_tieh VCO_IBIAS_OVRD_tiel sc_tieh_tiel
+Xsc_tieh_tiel_9 VDD VSS LDO_IBIAS_OVRD_tieh LDO_IBIAS_OVRD_tiel sc_tieh_tiel
+.ends
+

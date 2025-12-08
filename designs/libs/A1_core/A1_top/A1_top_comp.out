@@ -1,0 +1,492 @@
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0fF are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0fF is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0fF                   
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0fF are equivalent.
+
+Circuit 1 cell ppolyf_u_1k_6p0 and Circuit 2 cell ppolyf_u_1k_6p0 are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k_6p0                 |Circuit 2: ppolyf_u_1k_6p0                 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k_6p0 and ppolyf_u_1k_6p0 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pnp_05p00x00p42 and Circuit 2 cell pnp_05p00x00p42 are black boxes.
+Warning: Equate pins:  cell pnp_05p00x00p42 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pnp_05p00x00p42 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pnp_05p00x00p42                 |Circuit 2: pnp_05p00x00p42                 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pnp_05p00x00p42 and pnp_05p00x00p42 are equivalent.
+Flattening unmatched subcell test_tg in circuit test_all_tg (1)(8 instances)
+Flattening unmatched subcell test_inv in circuit test_all_tg (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: test_all_tg                     |Circuit 2: test_all_tg                     
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (56->16)                         |pfet_05v0 (56->16)                         
+nfet_05v0 (24->16)                         |nfet_05v0 (24->16)                         
+Number of devices: 32                      |Number of devices: 32                      
+Number of nets: 28                         |Number of nets: 28                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: test_all_tg                     |Circuit 2: test_all_tg                     
+-------------------------------------------|-------------------------------------------
+VOUT                                       |VOUT                                       
+Vp                                         |Vp                                         
+IN0                                        |IN0                                        
+IN1                                        |IN1                                        
+IN2                                        |IN2                                        
+IN3                                        |IN3                                        
+IN4                                        |IN4                                        
+IN5                                        |IN5                                        
+IN6                                        |IN6                                        
+IN7                                        |IN7                                        
+EN0                                        |EN0                                        
+EN1                                        |EN1                                        
+EN2                                        |EN2                                        
+EN3                                        |EN3                                        
+EN4                                        |EN4                                        
+EN5                                        |EN5                                        
+EN6                                        |EN6                                        
+EN7                                        |EN7                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes test_all_tg and test_all_tg are equivalent.
+
+Circuit 1 cell ppolyf_u and Circuit 2 cell ppolyf_u are black boxes.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u                        |Circuit 2: ppolyf_u                        
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u and ppolyf_u are equivalent.
+
+Subcircuit summary:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__tieh   |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__tieh   
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (1)                              |pfet_05v0 (1)                              
+nfet_05v0 (1)                              |nfet_05v0 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__tieh   |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__tieh   
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VPW                                        |VPW                                        
+VDD                                        |VDD                                        
+Z                                          |Z                                          
+VNW                                        |VNW                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gf180mcu_fd_sc_mcu9t5v0__tieh and gf180mcu_fd_sc_mcu9t5v0__tieh are equivalent.
+
+Subcircuit summary:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__tiel   |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__tiel   
+-------------------------------------------|-------------------------------------------
+nfet_05v0 (1)                              |nfet_05v0 (1)                              
+pfet_05v0 (1)                              |pfet_05v0 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__tiel   |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__tiel   
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+ZN                                         |ZN                                         
+VPW                                        |VPW                                        
+VDD                                        |VDD                                        
+VNW                                        |VNW                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gf180mcu_fd_sc_mcu9t5v0__tiel and gf180mcu_fd_sc_mcu9t5v0__tiel are equivalent.
+Flattening unmatched subcell biasgen_mirror_2_to_10$1 in circuit biasgen_v2 (0)(1 instance)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$1$4 in circuit biasgen_v2 (0)(8 instances)
+Flattening unmatched subcell biasgen_inverter$1 in circuit biasgen_v2 (0)(1 instance)
+Flattening unmatched subcell biasgen_mirror_2_to_10 in circuit biasgen_v2 (1)(1 instance)
+Flattening unmatched subcell biasgen_inverter in circuit biasgen_v2 (1)(1 instance)
+
+Class biasgen_v2 (0):  Merged 3 parallel devices.
+Class biasgen_v2 (0):  Merged 7 series devices.
+Class biasgen_v2 (1):  Merged 8 parallel devices.
+Class biasgen_v2 (1):  Merged 7 series devices.
+Subcircuit summary:
+Circuit 1: biasgen_v2                      |Circuit 2: biasgen_v2                      
+-------------------------------------------|-------------------------------------------
+ppolyf_u_1k_6p0 (8->1)                     |ppolyf_u_1k_6p0 (8->1)                     
+nfet_05v0 (44->15)                         |nfet_05v0 (44->15)                         
+pfet_05v0 (41->11)                         |pfet_05v0 (41->11)                         
+Number of devices: 27                      |Number of devices: 27                      
+Number of nets: 21                         |Number of nets: 21                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely with port and property errors.
+biasgen_inverter$1_0/pfet_05v0:1 vs. biasgen_inverter:INV/pfet_05v0:MINV2:
+ w circuit1: 5e-07   circuit2: 6e-07   (delta=18.2%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: biasgen_v2                      |Circuit 2: biasgen_v2                      
+-------------------------------------------|-------------------------------------------
+w_n17945_6761#                             |(no pin, node is biasgen_mirror_2_to_10:I_ 
+EN                                         |EN                                         
+VDD                                        |VDD                                        
+IPTAT_IN                                   |IPTAT_IN                                   
+IPTAT_2u_src                               |IPTAT_2u_src                               
+IPTAT_10u_src                              |IPTAT_10u_src                              
+IPTAT_10u_snk                              |IPTAT_10u_snk                              
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for biasgen_v2 and biasgen_v2 altered to match.
+Device classes biasgen_v2 and biasgen_v2 are equivalent.
+Flattening unmatched subcell vco_buffer in circuit vco (1)(1 instance)
+Flattening unmatched subcell vco_and in circuit vco (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: vco                             |Circuit 2: vco                             
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (182->14)                        |pfet_03v3 (33->14)                         
+nfet_03v3 (176->13)                        |nfet_03v3 (32->13)                         
+Number of devices: 27                      |Number of devices: 27                      
+Number of nets: 20                         |Number of nets: 20                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco                             |Circuit 2: vco                             
+-------------------------------------------|-------------------------------------------
+ibias                                      |IBIAS                                      
+VSS                                        |VSS                                        
+vin                                        |VIN                                        
+VOUT                                       |VOUT                                       
+EN                                         |EN                                         
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco and vco are equivalent.
+Flattening unmatched subcell test_decoder$1 in circuit test_v2 (0)(1 instance)
+Flattening unmatched subcell test_decoder in circuit test_v2 (1)(1 instance)
+Flattening unmatched subcell test_and in circuit test_v2 (1)(24 instances)
+Flattening unmatched subcell test_inv in circuit test_v2 (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: test_v2                         |Circuit 2: test_v2                         
+-------------------------------------------|-------------------------------------------
+test_all_tg (1)                            |test_all_tg (1)                            
+nfet_05v0 (80)                             |nfet_05v0 (80)                             
+pfet_05v0 (80)                             |pfet_05v0 (80)                             
+Number of devices: 161                     |Number of devices: 161                     
+Number of nets: 96                         |Number of nets: 96                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: test_v2                         |Circuit 2: test_v2                         
+-------------------------------------------|-------------------------------------------
+SEL[0]                                     |SEL[0]                                     
+SEL[1]                                     |SEL[1]                                     
+SEL[2]                                     |SEL[2]                                     
+EN                                         |EN                                         
+VOUT                                       |VOUT                                       
+IN0                                        |IN0                                        
+IN1                                        |IN1                                        
+IN2                                        |IN2                                        
+IN3                                        |IN3                                        
+IN4                                        |IN4                                        
+IN5                                        |IN5                                        
+IN6                                        |IN6                                        
+IN7                                        |IN7                                        
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes test_v2 and test_v2 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sc_tieh_tiel                    |Circuit 2: sc_tieh_tiel                    
+-------------------------------------------|-------------------------------------------
+gf180mcu_fd_sc_mcu9t5v0__tieh (1)          |gf180mcu_fd_sc_mcu9t5v0__tieh (1)          
+gf180mcu_fd_sc_mcu9t5v0__tiel (1)          |gf180mcu_fd_sc_mcu9t5v0__tiel (1)          
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sc_tieh_tiel                    |Circuit 2: sc_tieh_tiel                    
+-------------------------------------------|-------------------------------------------
+tieH                                       |tieH                                       
+tieL                                       |tieL                                       
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sc_tieh_tiel and sc_tieh_tiel are equivalent.
+Flattening unmatched subcell bandgap$1 in circuit A1_top_core (0)(1 instance)
+Flattening unmatched subcell bandgap_opamp$1 in circuit A1_top_core (0)(1 instance)
+Flattening unmatched subcell cap_mim$1$1 in circuit A1_top_core (0)(1 instance)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$3 in circuit A1_top_core (0)(133 instances)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$1$5 in circuit A1_top_core (0)(36 instances)
+Flattening unmatched subcell top_amux_2x1$1 in circuit A1_top_core (0)(3 instances)
+Flattening unmatched subcell ldo$1 in circuit A1_top_core (0)(1 instance)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$3$1 in circuit A1_top_core (0)(30 instances)
+Flattening unmatched subcell cap_mim$1$2 in circuit A1_top_core (0)(4 instances)
+Flattening unmatched subcell ppolyf_u_high_Rs_resistor$2 in circuit A1_top_core (0)(42 instances)
+Flattening unmatched subcell bandgap in circuit A1_top_core (1)(1 instance)
+Flattening unmatched subcell bandgap_opamp in circuit A1_top_core (1)(1 instance)
+Flattening unmatched subcell ldo in circuit A1_top_core (1)(1 instance)
+Flattening unmatched subcell ldo_OTA in circuit A1_top_core (1)(1 instance)
+Flattening unmatched subcell ldo_BUFFER in circuit A1_top_core (1)(1 instance)
+Flattening unmatched subcell top_amux_2x1 in circuit A1_top_core (1)(3 instances)
+Flattening unmatched subcell test_tg in circuit A1_top_core (1)(6 instances)
+Flattening unmatched subcell test_inv in circuit A1_top_core (1)(9 instances)
+
+Class A1_top_core (0):  Merged 32 parallel devices.
+Class A1_top_core (0):  Merged 210 series devices.
+Class A1_top_core (1):  Merged 132 parallel devices.
+Class A1_top_core (1):  Merged 210 series devices.
+Subcircuit summary:
+Circuit 1: A1_top_core                     |Circuit 2: A1_top_core                     
+-------------------------------------------|-------------------------------------------
+cap_mim_2f0_m4m5_noshield (5)              |cap_mim_2f0fF (5)                          
+pfet_05v0 (290->61)                        |pfet_05v0 (290->61)                        
+nfet_05v0 (264->40)                        |nfet_05v0 (264->40)                        
+ppolyf_u_1k_6p0 (241->10)                  |ppolyf_u_1k_6p0 (241->10)                  
+pnp_05p00x00p42 (32->5)                    |pnp_05p00x00p42 (32->5)                    
+biasgen_v2 (1)                             |biasgen_v2 (1)                             
+vco (1)                                    |vco (1)                                    
+test_v2 (1)                                |test_v2 (1)                                
+Number of devices: 124                     |Number of devices: 124                     
+Number of nets: 83                         |Number of nets: 83                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 1 symmetry.
+
+Subcircuit pins:
+Circuit 1: A1_top_core                     |Circuit 2: A1_top_core                     
+-------------------------------------------|-------------------------------------------
+LDO_OUT                                    |LDO_OUT                                    
+LDO_VREF_OVRD                              |LDO_VREF_OVRD                              
+LDO_IBIAS_OVRD                             |LDO_IBIAS_OVRD                             
+VCO_IBIAS_OVRD                             |VCO_IBIAS_OVRD                             
+w_11077_n5044#                             |(no pin, node is bandgap:I_bandgap/vbjt_ct 
+VSS                                        |VSS                                        
+LDO_EN                                     |LDO_EN                                     
+LDO_VREF                                   |LDO_VREF                                   
+LDO_IBIAS                                  |LDO_IBIAS                                  
+VCO_IBIAS                                  |VCO_IBIAS                                  
+VCO_OUT                                    |VCO_OUT                                    
+VCO_EN                                     |VCO_EN                                     
+VCO_IN                                     |VCO_IN                                     
+BIAS_EN                                    |BIAS_EN                                    
+VTEST                                      |VTEST                                      
+TEST_OUT                                   |TEST_OUT                                   
+TEST_EN                                    |TEST_EN                                    
+TEST_SEL_2                                 |TEST_SEL_2                                 
+TEST_SEL_1                                 |TEST_SEL_1                                 
+TEST_SEL_0                                 |TEST_SEL_0                                 
+w_14041_n24289#                            |(no pin, node is dummy_34)                 
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for A1_top_core and A1_top_core altered to match.
+Device classes A1_top_core and A1_top_core are equivalent.
+Flattening unmatched subcell ppolyf_u_9H3LNU$1$1 in circuit io_secondary_5p0 (0)(1 instance)
+Flattening unmatched subcell diode_nd2ps_06v0_MV3SZ3$1$1 in circuit io_secondary_5p0 (0)(1 instance)
+Flattening unmatched subcell diode_pd2nw_06v0_5DG9HC$1$1 in circuit io_secondary_5p0 (0)(1 instance)
+
+Class io_secondary_5p0 (0):  Merged 6 parallel devices.
+Subcircuit summary:
+Circuit 1: io_secondary_5p0                |Circuit 2: io_secondary_5p0                
+-------------------------------------------|-------------------------------------------
+ppolyf_u (1)                               |ppolyf_u (1)                               
+diode_nd2ps_06v0 (4->1)                    |diode_nd2ps_06v0 (4->1)                    
+diode_pd2nw_06v0 (4->1)                    |diode_pd2nw_06v0 (4->1)                    
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: io_secondary_5p0                |Circuit 2: io_secondary_5p0                
+-------------------------------------------|-------------------------------------------
+ASIG5V                                     |ASIG5V                                     
+VSS                                        |VSS                                        
+to_gate                                    |to_gate                                    
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes io_secondary_5p0 and io_secondary_5p0 are equivalent.
+
+Cell A1_top (0) disconnected node: TEST_IBIAS_OVRD
+Cell A1_top (1) disconnected node: TEST_IBIAS_OVRD
+Subcircuit summary:
+Circuit 1: A1_top                          |Circuit 2: A1_top                          
+-------------------------------------------|-------------------------------------------
+sc_tieh_tiel (12)                          |sc_tieh_tiel (12)                          
+A1_top_core (1)                            |A1_top_core (1)                            
+io_secondary_5p0 (5)                       |io_secondary_5p0 (5)                       
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 52                         |Number of nets: 52                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: A1_top                          |Circuit 2: A1_top                          
+-------------------------------------------|-------------------------------------------
+LDO_OUT                                    |LDO_OUT                                    
+VTEST                                      |VTEST                                      
+VCO_OUT                                    |VCO_OUT                                    
+VCO_EN                                     |VCO_EN                                     
+TEST_OUT                                   |TEST_OUT                                   
+TEST_EN                                    |TEST_EN                                    
+TEST_SEL_0                                 |TEST_SEL_0                                 
+VCO_IBIAS_OVRD                             |VCO_IBIAS_OVRD                             
+LDO_EN                                     |LDO_EN                                     
+LDO_IBIAS_OVRD                             |LDO_IBIAS_OVRD                             
+LDO_VREF_OVRD                              |LDO_VREF_OVRD                              
+TEST_SEL_1                                 |TEST_SEL_1                                 
+TEST_SEL_2                                 |TEST_SEL_2                                 
+BIAS_EN                                    |BIAS_EN                                    
+VCO_EN_tiel                                |VCO_EN_tiel                                
+VCO_OUT_tiel                               |VCO_OUT_tiel                               
+VCO_EN_tieh                                |VCO_EN_tieh                                
+VCO_OUT_tieh                               |VCO_OUT_tieh                               
+VCO_IBIAS_OVRD_tiel                        |VCO_IBIAS_OVRD_tiel                        
+LDO_IBIAS_OVRD_tiel                        |LDO_IBIAS_OVRD_tiel                        
+LDO_VREF_OVRD_tiel                         |LDO_VREF_OVRD_tiel                         
+LDO_EN_tiel                                |LDO_EN_tiel                                
+BIAS_EN_tiel                               |BIAS_EN_tiel                               
+VCO_IBIAS_OVRD_tieh                        |VCO_IBIAS_OVRD_tieh                        
+LDO_IBIAS_OVRD_tieh                        |LDO_IBIAS_OVRD_tieh                        
+LDO_VREF_OVRD_tieh                         |LDO_VREF_OVRD_tieh                         
+LDO_EN_tieh                                |LDO_EN_tieh                                
+BIAS_EN_tieh                               |BIAS_EN_tieh                               
+TEST_SEL_2_tiel                            |TEST_SEL_2_tiel                            
+TEST_SEL_1_tiel                            |TEST_SEL_1_tiel                            
+TEST_SEL_0_tiel                            |TEST_SEL_0_tiel                            
+TEST_EN_tiel                               |TEST_EN_tiel                               
+TEST_IBIAS_OVRD_tiel                       |TEST_IBIAS_OVRD_tiel                       
+TEST_SEL_2_tieh                            |TEST_SEL_2_tieh                            
+TEST_SEL_1_tieh                            |TEST_SEL_1_tieh                            
+TEST_SEL_0_tieh                            |TEST_SEL_0_tieh                            
+TEST_EN_tieh                               |TEST_EN_tieh                               
+TEST_IBIAS_OVRD_tieh                       |TEST_IBIAS_OVRD_tieh                       
+TEST_IBIAS                                 |TEST_IBIAS                                 
+VCO_IN                                     |VCO_IN                                     
+VCO_IBIAS                                  |VCO_IBIAS                                  
+LDO_IBIAS                                  |LDO_IBIAS                                  
+LDO_VREF                                   |LDO_VREF                                   
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+TEST_IBIAS_OVRD                            |TEST_IBIAS_OVRD                            
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes A1_top and A1_top are equivalent.
+
+Final result: Circuits match uniquely.
+.
