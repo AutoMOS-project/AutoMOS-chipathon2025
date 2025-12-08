@@ -24,7 +24,6 @@ C {ipin.sym} 180 -560 0 0 {name=p1 lab=TEST_SEL_0}
 C {ipin.sym} 180 -930 0 0 {name=p2 lab=VCO_IN}
 C {iopin.sym} 320 -870 3 0 {name=p4 lab=VDD}
 C {iopin.sym} 310 -230 1 0 {name=p5 lab=VSS}
-C {iopin.sym} 340 -230 1 0 {name=p6 lab=SUB}
 C {iopin.sym} 1600 -910 0 0 {name=p3 lab=LDO_OUT}
 C {iopin.sym} 1590 -640 0 0 {name=p7 lab=VCO_OUT}
 C {iopin.sym} 1610 -360 0 0 {name=p8 lab=TEST_OUT}
@@ -37,22 +36,17 @@ C {lab_wire.sym} 320 -820 0 1 {name=p11 lab=VDD}
 C {lab_wire.sym} 420 -760 0 1 {name=p12 lab=VBG}
 C {lab_wire.sym} 420 -720 0 1 {name=p13 lab=IPTAT}
 C {lab_wire.sym} 420 -700 0 1 {name=p14 lab=IZTC}
-C {lab_wire.sym} 340 -660 1 1 {name=p15 lab=SUB}
 C {lab_wire.sym} 320 -660 1 1 {name=p16 lab=VSS}
 C {lab_wire.sym} 600 -820 0 1 {name=p17 lab=VDD}
-C {lab_wire.sym} 620 -500 1 1 {name=p22 lab=SUB}
 C {lab_wire.sym} 600 -500 1 1 {name=p23 lab=VSS
 }
 C {lab_wire.sym} 1420 -990 0 1 {name=p24 lab=VDD}
 C {lab_wire.sym} 1500 -910 0 1 {name=p26 lab=LDO_OUT}
-C {lab_wire.sym} 1440 -830 1 1 {name=p28 lab=SUB}
 C {lab_wire.sym} 1420 -830 1 1 {name=p29 lab=VSS}
 C {lab_wire.sym} 1430 -420 0 1 {name=p36 lab=VTEST}
-C {lab_wire.sym} 1450 -120 1 1 {name=p37 lab=SUB}
 C {lab_wire.sym} 1430 -120 1 1 {name=p38 lab=VSS}
 C {lab_wire.sym} 1410 -700 0 1 {name=p39 lab=LDO_OUT}
 C {lab_wire.sym} 1510 -640 0 1 {name=p40 lab=VCO_OUT}
-C {lab_wire.sym} 1430 -540 1 1 {name=p41 lab=SUB}
 C {lab_wire.sym} 1410 -540 1 1 {name=p42 lab=VSS}
 C {lab_wire.sym} 1330 -580 0 0 {name=p30 lab=VCO_EN}
 C {lab_wire.sym} 1330 -180 0 0 {name=p48 lab=TEST_EN}
@@ -103,8 +97,8 @@ C {lab_wire.sym} 1330 -340 0 0 {name=p52 lab=VSS}
 C {noconn.sym} 420 -740 2 0 {name=l2}
 C {noconn.sym} 420 -760 2 0 {name=l3}
 C {noconn.sym} 420 -700 2 0 {name=l4}
-C {libs/core_biasgen/biasgen/biasgen_v2.sym} 520 -800 0 0 {name=xI_biasgen}
-C {libs/core_test/test/test_v2.sym} 1350 -400 0 0 {name=xI_test}
+C {libs/core_biasgen/biasgen_v2/biasgen_v2.sym} 520 -800 0 0 {name=xI_biasgen}
+C {libs/core_test/test_v2/test_v2.sym} 1350 -400 0 0 {name=xI_test}
 C {lab_wire.sym} 1330 -320 0 0 {name=p33 lab=VSS}
 C {lab_wire.sym} 1330 -300 0 0 {name=p35 lab=VSS}
 C {lab_wire.sym} 1330 -280 0 0 {name=p43 lab=VSS}
