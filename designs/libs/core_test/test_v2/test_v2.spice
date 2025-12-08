@@ -1,0 +1,108 @@
+** sch_path: /foss/designs/libs/core_test/test_v2/test_v2.sch
+.subckt test_v2 VDD VOUT EN SEL[2] SEL[1] SEL[0] VSS IN0 IN1 IN2 IN3 IN4 IN5 IN6 IN7
+*.PININFO VDD:B VSS:B VOUT:B EN:I SEL[2:0]:I IN0:B IN1:B IN2:B IN3:B IN4:B IN5:B IN6:B IN7:B
+xI_decoder SEL[0] SEL[1] SEL[2] VDD VSS EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7 EN test_decoder
+* noconn Vp
+x9 VDD VSS Vp VOUT IN0 IN1 IN2 IN3 IN4 IN5 IN6 IN7 EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7 test_all_tg
+.ends
+
+* expanding   symbol:  libs/core_test/test_decoder/test_decoder.sym # of pins=14
+** sym_path: /foss/designs/libs/core_test/test_decoder/test_decoder.sym
+** sch_path: /foss/designs/libs/core_test/test_decoder/test_decoder.sch
+.subckt test_decoder SEL[0] SEL[1] SEL[2] VDD VSS EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7 EN
+*.PININFO VDD:B VSS:B SEL[0]:I SEL[1]:I SEL[2]:I EN0:O EN1:O EN2:O EN3:O EN4:O EN5:O EN6:O EN7:O EN:I
+x3 VDD SEL[0] net1 SEL[1] VSS test_and
+x4 VDD net1 net2 SEL[2] VSS test_and
+x5 VDD EN0_in net2 VSS test_inv
+x6 VDD SEL[0] net3 SEL[1] VSS test_and
+x7 VDD net4 net3 VSS test_inv
+x8 VDD net4 EN1_in SEL[2] VSS test_and
+x9 VDD net5 SEL[0] VSS test_inv
+x10 VDD net5 net7 SEL[1] VSS test_and
+x11 VDD net6 SEL[2] VSS test_inv
+x12 VDD net7 EN2_in net6 VSS test_and
+x13 VDD net8 SEL[0] VSS test_inv
+x14 VDD net8 net9 SEL[1] VSS test_and
+x15 VDD net9 EN3_in SEL[2] VSS test_and
+x16 VDD SEL[1] net10 SEL[2] VSS test_and
+x17 VDD net11 net10 VSS test_inv
+x18 VDD SEL[0] EN4_in net11 VSS test_and
+x19 VDD net12 SEL[1] VSS test_inv
+x20 VDD SEL[0] net13 net12 VSS test_and
+x21 VDD net13 EN5_in SEL[2] VSS test_and
+x22 VDD SEL[0] net14 SEL[1] VSS test_and
+x23 VDD net14 EN6_in net15 VSS test_and
+x24 VDD net15 SEL[2] VSS test_inv
+x25 VDD SEL[0] net16 SEL[1] VSS test_and
+x26 VDD net16 EN7_in SEL[2] VSS test_and
+x1 VDD EN0_in EN0 EN VSS test_and
+x2 VDD EN1_in EN1 EN VSS test_and
+x27 VDD EN2_in EN2 EN VSS test_and
+x28 VDD EN3_in EN3 EN VSS test_and
+x29 VDD EN4_in EN4 EN VSS test_and
+x30 VDD EN5_in EN5 EN VSS test_and
+x31 VDD EN6_in EN6 EN VSS test_and
+x32 VDD EN7_in EN7 EN VSS test_and
+.ends
+
+
+* expanding   symbol:  libs/core_test/test_all_tg/test_all_tg.sym # of pins=20
+** sym_path: /foss/designs/libs/core_test/test_all_tg/test_all_tg.sym
+** sch_path: /foss/designs/libs/core_test/test_all_tg/test_all_tg.sch
+.subckt test_all_tg VDD VSS Vp VOUT IN0 IN1 IN2 IN3 IN4 IN5 IN6 IN7 EN0 EN1 EN2 EN3 EN4 EN5 EN6 EN7
+*.PININFO VDD:B Vp:B VOUT:B IN0:B IN1:B IN2:B IN3:B IN4:B IN5:B IN6:B IN7:B VSS:B EN0:B EN1:B EN2:B EN3:B EN4:B EN5:B EN6:B EN7:B
+x1 VDD EN0 IN0 Vp VSS test_tg
+x2 VDD EN1 IN1 Vp VSS test_tg
+x3 VDD EN2 IN2 Vp VSS test_tg
+x4 VDD EN3 IN3 Vp VSS test_tg
+x5 VDD EN4 IN4 Vp VSS test_tg
+x6 VDD EN5 IN5 VOUT VSS test_tg
+x7 VDD EN6 IN6 VOUT VSS test_tg
+x8 VDD EN7 IN7 VOUT VSS test_tg
+.ends
+
+
+* expanding   symbol:  libs/core_test/test_and/test_and.sym # of pins=5
+** sym_path: /foss/designs/libs/core_test/test_and/test_and.sym
+** sch_path: /foss/designs/libs/core_test/test_and/test_and.sch
+.subckt test_and VDD A Y B VSS
+*.PININFO A:I B:I VDD:B VSS:B Y:O
+XM1 net1 A net2 VSS nfet_05v0 L=0.60u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 net1 A VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 net1 B VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 net2 B VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 Y net1 VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 Y net1 VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_test/test_inv/test_inv.sym # of pins=4
+** sym_path: /foss/designs/libs/core_test/test_inv/test_inv.sym
+** sch_path: /foss/designs/libs/core_test/test_inv/test_inv.sch
+.subckt test_inv VDD OUT IN VSS
+*.PININFO OUT:O IN:I VDD:B VSS:B
+XM1 OUT IN VSS VSS nfet_05v0 L=0.60u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 OUT IN VDD VDD pfet_05v0 L=0.50u W=0.50u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_test/test_tg/test_tg.sym # of pins=5
+** sym_path: /foss/designs/libs/core_test/test_tg/test_tg.sym
+** sch_path: /foss/designs/libs/core_test/test_tg/test_tg.sch
+.subckt test_tg VDD EN VIN VOUT VSS
+*.PININFO VIN:B VOUT:B EN:I VDD:B VSS:B
+XMTG1 VIN EN VOUT VSS nfet_05v0 L=0.60u W=1.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2
+XMTG2 VOUT ENB VIN VDD pfet_05v0 L=0.50u W=1.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=6
+x1 VDD ENB EN VSS test_inv
+.ends
+
