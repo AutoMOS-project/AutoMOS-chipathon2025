@@ -61,7 +61,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 630 -520 0 0 {name=M2
 L=0.28u
-W=1u
+W=2u
 nf=2
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -75,7 +75,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 960 -520 0 1 {name=M3
 L=0.28u
-W=1u
+W=2u
 nf=2
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -124,7 +124,7 @@ C {lab_pin.sym} 810 -520 1 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1470 -340 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {symbols/pfet_03v3.sym} 1380 -340 0 0 {name=M5
 L=0.28u
-W=1u
+W=2u
 nf=2
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
