@@ -42,8 +42,8 @@ context/
 *.gds.backup
 
 extfiles/
-gf180mcuD_setup.tcl
-run_lvs.sh
+#gf180mcuD_setup.tcl
+#run_lvs.sh
 run_lvs.tcl
 
 designs/reports/*
