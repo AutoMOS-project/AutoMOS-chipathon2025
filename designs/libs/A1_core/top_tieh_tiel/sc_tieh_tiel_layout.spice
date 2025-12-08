@@ -1,0 +1,17 @@
+* NGSPICE file created from sc_tieh_tiel.ext - technology: gf180mcuD
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__tieh VDD VSS Z VNW VPW
+X0 Z a_125_157# VDD VNW pfet_05v0 ad=0.396p pd=2.68u as=0.396p ps=2.68u w=0.9u l=0.5u
+X1 a_125_157# a_125_157# VSS VPW nfet_05v0 ad=0.2904p pd=2.2u as=0.2904p ps=2.2u w=0.66u l=0.6u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__tiel VDD VSS ZN VNW VPW
+X0 ZN a_124_157# VSS VPW nfet_05v0 ad=0.2904p pd=2.2u as=0.2904p ps=2.2u w=0.66u l=0.6u
+X1 a_124_157# a_124_157# VDD VNW pfet_05v0 ad=0.396p pd=2.68u as=0.396p ps=2.68u w=0.9u l=0.5u
+.ends
+
+.subckt sc_tieh_tiel VDD VSS tieH tieL
+Xgf180mcu_fd_sc_mcu9t5v0__tieh_0 VDD VSS tieH VDD VSS gf180mcu_fd_sc_mcu9t5v0__tieh
+Xgf180mcu_fd_sc_mcu9t5v0__tiel_0 VDD VSS tieL VDD VSS gf180mcu_fd_sc_mcu9t5v0__tiel
+.ends
+

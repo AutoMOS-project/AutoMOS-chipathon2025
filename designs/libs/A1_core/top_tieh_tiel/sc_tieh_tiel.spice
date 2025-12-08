@@ -1,0 +1,6 @@
+** sch_path: /foss/designs/gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sch
+.subckt sc_tieh_tiel tieL VDD VSS tieH
+*.PININFO VDD:B VSS:B tieH:O tieL:O
+XSC1 tieH VDD VDD VSS VSS gf180mcu_fd_sc_mcu9t5v0__tieh
+XSC2 tieL VDD VDD VSS VSS gf180mcu_fd_sc_mcu9t5v0__tiel
+.ends
