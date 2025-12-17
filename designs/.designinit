@@ -44,6 +44,14 @@ if [ ! -L ~/.klayout/libraries/gf180mcu_fd_io.gds ]; then
 fi
 
 
+# Use IOs from wafer space that fixes CU DRC issues
+#if [ ! -L ~/.klayout/libraries/gf181mcu_fd_io.gds ]; then
+#  ln -s /foss/designs/gf180mcu/gf180mcuD/libs.ref/gf180mcu_fd_io/gds/gf180mcu_fd_io.gds ~/.klayout/libraries/
+#fi
+if [ ! -L ~/.klayout/libraries/gf180mcu_ws_io.gds ]; then
+  ln -s /foss/designs/gf180mcu/gf180mcuD/libs.ref/gf180mcu_fd_io/gds/gf180mcu_ws_io.gds ~/.klayout/libraries/
+fi
+
 
 #==============================================================
 # GDS3D
