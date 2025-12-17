@@ -1,0 +1,627 @@
+
+Circuit 1 cell ppolyf_u and Circuit 2 cell ppolyf_u are black boxes.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u                        |Circuit 2: ppolyf_u                        
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u and ppolyf_u are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell ppolyf_u_9H3LNU$1 in circuit io_secondary_5p0 (0)(1 instance)
+Flattening unmatched subcell diode_nd2ps_06v0_MV3SZ3$1 in circuit io_secondary_5p0 (0)(1 instance)
+Flattening unmatched subcell diode_pd2nw_06v0_5DG9HC$1 in circuit io_secondary_5p0 (0)(1 instance)
+
+Class io_secondary_5p0 (0):  Merged 6 parallel devices.
+Subcircuit summary:
+Circuit 1: io_secondary_5p0                |Circuit 2: io_secondary_5p0                
+-------------------------------------------|-------------------------------------------
+ppolyf_u (1)                               |ppolyf_u (1)                               
+diode_nd2ps_06v0 (4->1)                    |diode_nd2ps_06v0 (4->1)                    
+diode_pd2nw_06v0 (4->1)                    |diode_pd2nw_06v0 (4->1)                    
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: io_secondary_5p0                |Circuit 2: io_secondary_5p0                
+-------------------------------------------|-------------------------------------------
+ASIG5V                                     |ASIG5V                                     
+VSS                                        |VSS                                        
+to_gate                                    |to_gate                                    
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes io_secondary_5p0 and io_secondary_5p0 are equivalent.
+Flattening unmatched subcell curr_ref_gen in circuit Axx_top (1)(1 instance)
+Flattening unmatched subcell curr_ref_gen_2nd_stage in circuit Axx_top (1)(1 instance)
+
+Cell Axx_top (0) disconnected node: Iref20p
+Cell Axx_top (0) disconnected node: Iref2p
+Flattening instances of io_secondary_5p0 in cell Axx_top (0) makes a better match
+Flattening instances of io_secondary_5p0 in cell Axx_top (1) makes a better match
+Making another compare attempt.
+
+Cell Axx_top (0) disconnected node: Iref20p
+Cell Axx_top (0) disconnected node: Iref2p
+Class Axx_top (0):  Merged 30 parallel devices.
+Cell Axx_top (0) disconnected node: Iref20p
+Cell Axx_top (0) disconnected node: Iref2p
+Subcircuit summary:
+Circuit 1: Axx_top                         |Circuit 2: Axx_top                         
+-------------------------------------------|-------------------------------------------
+ppolyf_u (4->2)                            |ppolyf_u (4) **Mismatch**                  
+diode_nd2ps_06v0 (16->2)                   |diode_nd2ps_06v0 (16->4) **Mismatch**      
+diode_pd2nw_06v0 (16->2)                   |diode_pd2nw_06v0 (16->4) **Mismatch**      
+nfet_03v3 (791->30)                        |nfet_03v3 (344->10) **Mismatch**           
+pfet_03v3 (471->23)                        |pfet_03v3 (404->12) **Mismatch**           
+Number of devices: 59 **Mismatch**         |Number of devices: 34 **Mismatch**         
+Number of nets: 42 **Mismatch**            |Number of nets: 26 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: Axx_top                         |Circuit 2: Axx_top                         
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: Vrefp                                 
+  ppolyf_u/3 = 2                           |  ppolyf_u/(1|2) = 1                       
+  diode_pd2nw_06v0/cathode = 2             |                                           
+  pfet_03v3/(1|3) = 14                     |                                           
+  pfet_03v3/4 = 22                         |                                           
+  pfet_03v3/2 = 1                          |                                           
+  nfet_03v3/2 = 1                          |                                           
+                                           |                                           
+Net: a_n70317_n55859#                      |Net: Vrefn                                 
+  nfet_03v3/(1|3) = 2                      |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: io_secondary_5p0_0/ASIG5V             |Net: Vref12                                
+  ppolyf_u/(1|2) = 1                       |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: a_16432_n47894#                       |Net: Vcomp                                 
+  pfet_03v3/(1|3) = 1                      |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: Iref50p                               |Net: Irefn_2uA                             
+  pfet_03v3/(1|3) = 1                      |  nfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: m3_n726_n82053#                       |Net: Irefn_20uA                            
+  pfet_03v3/(1|3) = 1                      |  nfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: Iref20n                               |Net: Irefn_50uA                            
+  nfet_03v3/(1|3) = 1                      |  nfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: Iref50n                               |Net: Irefp_2uA                             
+  nfet_03v3/(1|3) = 1                      |  pfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: Iref2n                                |Net: Irefp_50uA                            
+  nfet_03v3/(1|3) = 1                      |  pfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: ASIG5V                                |Net: Irefp_20uA                            
+  ppolyf_u/(1|2) = 1                       |  pfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: Vref                                  |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  ppolyf_u/(1|2) = 1                       |  nfet_03v3/(1|3) = 2                      
+  diode_nd2ps_06v0/cathode = 1             |                                           
+  diode_pd2nw_06v0/anode = 1               |                                           
+  nfet_03v3/2 = 3                          |                                           
+                                           |                                           
+Net: a_30562_n57326#                       |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  nfet_03v3/(1|3) = 2                      |  nfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_9894_n57326#                        |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  nfet_03v3/(1|3) = 2                      |  nfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_3878_n57326#                        |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  nfet_03v3/(1|3) = 2                      |  nfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_36580_n47894#                       |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  pfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_15912_n47894#                       |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  pfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_9896_n47894#                        |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  pfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_n79881_n62479#                      |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  nfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_n80401_n61203#                      |Net: curr_ref_gen:1/curr_ref_gen_2nd_stage 
+  nfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 2                      
+                                           |                                           
+Net: a_n78253_n62479#                      |Net: Vcomp_2nd                             
+  nfet_03v3/(1|3) = 2                      |  diode_pd2nw_06v0/anode = 1               
+                                           |  ppolyf_u/(1|2) = 1                       
+                                           |  diode_nd2ps_06v0/cathode = 1             
+                                           |  pfet_03v3/2 = 1                          
+                                           |  pfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: a_n81509_n62479#                      |Net: Vref_2nd                              
+  nfet_03v3/(1|3) = 2                      |  diode_pd2nw_06v0/anode = 1               
+                                           |  ppolyf_u/(1|2) = 1                       
+                                           |  diode_nd2ps_06v0/cathode = 1             
+                                           |                                           
+Net: a_n9176_n55100#                       |Net: curr_ref_gen:1/net1                   
+  nfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 2                      
+                                           |  pfet_03v3/4 = 1                          
+                                           |                                           
+Net: a_n82029_n61203#                      |Net: Vrefp_2nd                             
+  nfet_03v3/(1|3) = 2                      |  diode_pd2nw_06v0/anode = 1               
+                                           |  ppolyf_u/(1|2) = 1                       
+                                           |  diode_nd2ps_06v0/cathode = 1             
+                                           |  pfet_03v3/2 = 10                         
+                                           |                                           
+Net: a_n78773_n61203#                      |Net: Vrefn_2nd                             
+  nfet_03v3/(1|3) = 2                      |  diode_pd2nw_06v0/anode = 1               
+                                           |  ppolyf_u/(1|2) = 1                       
+                                           |  diode_nd2ps_06v0/cathode = 1             
+                                           |  nfet_03v3/(1|3) = 1                      
+                                           |  nfet_03v3/2 = 8                          
+                                           |  pfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: VSS                                   |Net: VSS                                   
+  diode_nd2ps_06v0/anode = 2               |  diode_nd2ps_06v0/anode = 4               
+  nfet_03v3/(1|3) = 16                     |  nfet_03v3/(1|3) = 8                      
+  nfet_03v3/2 = 1                          |  nfet_03v3/2 = 1                          
+  nfet_03v3/4 = 30                         |  nfet_03v3/4 = 10                         
+                                           |                                           
+Net: a_n73985_n55909#                      |(no matching net)                          
+  nfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n2138_n57326#                       |(no matching net)                          
+  nfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_3880_n47894#                        |(no matching net)                          
+  pfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n2138_n47894#                       |(no matching net)                          
+  pfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n51453_n55859#                      |(no matching net)                          
+  pfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n56047_n55909#                      |(no matching net)                          
+  pfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n81909_n62747#                      |(no matching net)                          
+  nfet_03v3/2 = 9                          |                                           
+  nfet_03v3/(1|3) = 1                      |                                           
+  pfet_03v3/(1|3) = 1                      |                                           
+                                           |                                           
+Net: w_n3778_n63973#                       |(no matching net)                          
+  pfet_03v3/(1|3) = 2                      |                                           
+  pfet_03v3/4 = 1                          |                                           
+  nfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n74505_n55909#                      |(no matching net)                          
+  pfet_03v3/2 = 3                          |                                           
+  pfet_03v3/(1|3) = 1                      |                                           
+  nfet_03v3/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_n37384_n58129#                      |(no matching net)                          
+  nfet_03v3/(1|3) = 1                      |                                           
+  pfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n38304_n58129#                      |(no matching net)                          
+  nfet_03v3/(1|3) = 3                      |                                           
+                                           |                                           
+Net: a_n37384_n56415#                      |(no matching net)                          
+  nfet_03v3/(1|3) = 1                      |                                           
+  pfet_03v3/(1|3) = 2                      |                                           
+                                           |                                           
+Net: a_n59445_n55859#                      |(no matching net)                          
+  pfet_03v3/2 = 1                          |                                           
+  pfet_03v3/(1|3) = 1                      |                                           
+  nfet_03v3/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_n60259_n55859#                      |(no matching net)                          
+  pfet_03v3/2 = 5                          |                                           
+  nfet_03v3/(1|3) = 1                      |                                           
+  pfet_03v3/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_n8956_n41847#                       |(no matching net)                          
+  pfet_03v3/2 = 2                          |                                           
+  nfet_03v3/(1|3) = 1                      |                                           
+  pfet_03v3/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_n70197_n56067#                      |(no matching net)                          
+  nfet_03v3/2 = 7                          |                                           
+  pfet_03v3/(1|3) = 1                      |                                           
+  nfet_03v3/(1|3) = 1                      |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: to_gate                               |Net: VDD3V3                                
+  diode_nd2ps_06v0/cathode = 1             |  diode_pd2nw_06v0/cathode = 4             
+  diode_pd2nw_06v0/anode = 1               |  ppolyf_u/3 = 4                           
+  pfet_03v3/(1|3) = 3                      |  pfet_03v3/(1|3) = 7                      
+  nfet_03v3/(1|3) = 2                      |  pfet_03v3/4 = 11                         
+  pfet_03v3/2 = 11                         |  pfet_03v3/2 = 1                          
+  nfet_03v3/2 = 9                          |  nfet_03v3/2 = 1                          
+  ppolyf_u/(1|2) = 1                       |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: Axx_top                         |Circuit 2: Axx_top                         
+
+---------------------------------------------------------------------------------------
+Instance: io_secondary_5p0_0/ppolyf_u_9H3L |Instance: io_secondary_5p0:IO1/ppolyf_u:R1 
+  (1,2) = (6,1)                            |  (1,2) = (13,1)                           
+  3 = 42                                   |  3 = 28                                   
+                                           |                                           
+Instance: ppolyf_u:52                      |Instance: io_secondary_5p0:IO2/ppolyf_u:R1 
+  (1,2) = (28,1)                           |  (1,2) = (13,1)                           
+  3 = 42                                   |  3 = 28                                   
+                                           |                                           
+Instance: io_secondary_5p0_0/diode_nd2ps_0 |Instance: io_secondary_5p0:IO3/ppolyf_u:R1 
+  anode = 49                               |  (1,2) = (3,1)                            
+  cathode = 6                              |  3 = 28                                   
+                                           |                                           
+                                           |                                           
+Instance: diode_nd2ps_06v0:0               |Instance: io_secondary_5p0:IO4/ppolyf_u:R1 
+  anode = 49                               |  (1,2) = (5,1)                            
+  cathode = 28                             |  3 = 28                                   
+                                           |                                           
+                                           |                                           
+Instance: io_secondary_5p0_0/diode_pd2nw_0 |Instance: io_secondary_5p0:IO1/diode_nd2ps 
+  anode = 6                                |  anode = 23                               
+  cathode = 42                             |  cathode = 13                             
+                                           |                                           
+Instance: diode_pd2nw_06v0:1               |Instance: io_secondary_5p0:IO2/diode_nd2ps 
+  anode = 28                               |  anode = 23                               
+  cathode = 42                             |  cathode = 13                             
+                                           |                                           
+Instance: nfet_03v3:0                      |Instance: io_secondary_5p0:IO3/diode_nd2ps 
+  (1,3) = (49,49)                          |  anode = 23                               
+  2 = 49                                   |  cathode = 3                              
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:7                      |Instance: io_secondary_5p0:IO4/diode_nd2ps 
+  (1,3) = (2,2)                            |  anode = 23                               
+  2 = 11                                   |  cathode = 5                              
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:16                     |Instance: io_secondary_5p0:IO1/diode_pd2nw 
+  (1,3) = (3,3)                            |  anode = 13                               
+  2 = 6                                    |  cathode = 28                             
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:18                     |Instance: io_secondary_5p0:IO2/diode_pd2nw 
+  (1,3) = (49,2)                           |  anode = 13                               
+  2 = 11                                   |  cathode = 28                             
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:24                     |Instance: io_secondary_5p0:IO3/diode_pd2nw 
+  (1,3) = (49,2)                           |  anode = 3                                
+  2 = 11                                   |  cathode = 28                             
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:25                     |Instance: io_secondary_5p0:IO4/diode_pd2nw 
+  (1,3) = (49,2)                           |  anode = 5                                
+  2 = 11                                   |  cathode = 28                             
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:26                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (13,2)                           
+  2 = 11                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:28                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,49)                          |  (1,3) = (2,1)                            
+  2 = 42                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:29                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,3)                           |  (1,3) = (2,1)                            
+  2 = 11                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:30                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (2,2)                            |  (1,3) = (2,1)                            
+  2 = 11                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:32                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (2,2)                            |  (1,3) = (23,2)                           
+  2 = 11                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:36                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (23,2)                           
+  2 = 9                                    |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:40                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,5)                           |  (1,3) = (23,2)                           
+  2 = 11                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:43                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (4,2)                            |  (1,3) = (23,2)                           
+  2 = 9                                    |  2 = 13                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:46                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (9,2)                            |  (1,3) = (23,23)                          
+  2 = 9                                    |  2 = 23                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:50                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (23,23)                          
+  2 = 6                                    |  2 = 28                                   
+  4 = 49                                   |  4 = 23                                   
+                                           |                                           
+Instance: nfet_03v3:51                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (7,2)                            |  (1,3) = (3,3)                            
+  2 = 9                                    |  2 = 5                                    
+  4 = 49                                   |  4 = 3                                    
+                                           |                                           
+Instance: nfet_03v3:54                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (11,2)                           |  (1,3) = (28,2)                           
+  2 = 9                                    |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:55                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (5,2)                            |  (1,3) = (28,2)                           
+  2 = 6                                    |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:56                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (3,2)                            |  (1,3) = (28,2)                           
+  2 = 9                                    |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:1                      |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (28,2)                           
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:9                      |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (28,2)                           
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:10                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (3,3)                            |  (1,3) = (5,2)                            
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:20                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (2,1)                            |  (1,3) = (13,2)                           
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:22                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (2,1)                            |  (1,3) = (2,1)                            
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:35                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (2,1)                            
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:38                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (49,2)                           |  (1,3) = (2,1)                            
+  2 = 28                                   |  2 = 13                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:41                     |Instance: curr_ref_gen:1/curr_ref_gen_2nd_ 
+  (1,3) = (2,1)                            |  (1,3) = (28,28)                          
+  2 = 28                                   |  2 = 28                                   
+  4 = 49                                   |  4 = 28                                   
+                                           |                                           
+Instance: nfet_03v3:14                     |(no matching instance)                     
+  (1,3) = (28,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_03v3:48                     |(no matching instance)                     
+  (1,3) = (28,5)                           |                                           
+  2 = 9                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:2                      |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:6                      |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:8                      |(no matching instance)                     
+  (1,3) = (5,5)                            |                                           
+  2 = 28                                   |                                           
+  4 = 5                                    |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:11                     |(no matching instance)                     
+  (1,3) = (2,1)                            |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:13                     |(no matching instance)                     
+  (1,3) = (2,1)                            |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:21                     |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:33                     |(no matching instance)                     
+  (1,3) = (2,1)                            |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:34                     |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:47                     |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:4                      |(no matching instance)                     
+  (1,3) = (42,42)                          |                                           
+  2 = 42                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:27                     |(no matching instance)                     
+  (1,3) = (42,5)                           |                                           
+  2 = 5                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:31                     |(no matching instance)                     
+  (1,3) = (42,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:37                     |(no matching instance)                     
+  (1,3) = (42,9)                           |                                           
+  2 = 5                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:39                     |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 3                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:44                     |(no matching instance)                     
+  (1,3) = (3,2)                            |                                           
+  2 = 7                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:45                     |(no matching instance)                     
+  (1,3) = (4,3)                            |                                           
+  2 = 7                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:53                     |(no matching instance)                     
+  (1,3) = (42,2)                           |                                           
+  2 = 7                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:58                     |(no matching instance)                     
+  (1,3) = (7,2)                            |                                           
+  2 = 7                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:59                     |(no matching instance)                     
+  (1,3) = (42,11)                          |                                           
+  2 = 5                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:61                     |(no matching instance)                     
+  (1,3) = (42,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:17                     |(no matching instance)                     
+  (1,3) = (28,3)                           |                                           
+  2 = 7                                    |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:42                     |(no matching instance)                     
+  (1,3) = (28,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_03v3:49                     |(no matching instance)                     
+  (1,3) = (28,2)                           |                                           
+  2 = 28                                   |                                           
+  4 = 42                                   |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: Axx_top                         |Circuit 2: Axx_top                         
+-------------------------------------------|-------------------------------------------
+VDD                                        |Vrefp **Mismatch**                         
+VSS                                        |Vrefn **Mismatch**                         
+Iref50p                                    |Irefn_2uA **Mismatch**                     
+Iref20n                                    |Irefn_50uA **Mismatch**                    
+Iref50n                                    |Irefp_2uA **Mismatch**                     
+Iref2n                                     |Irefp_50uA **Mismatch**                    
+ASIG5V                                     |Irefp_20uA **Mismatch**                    
+Vref                                       |(no pin, node is curr_ref_gen:1/curr_ref_g 
+to_gate                                    |VDD3V3 **Mismatch**                        
+(no pin, node is a_n70197_n56067#)         |Vref12                                     
+(no pin, node is a_n70197_n56067#)         |Irefn_20uA                                 
+(no pin, node is a_n70197_n56067#)         |Vcomp                                      
+(no pin, node is a_n70197_n56067#)         |VSS                                        
+Iref20p                                    |(no matching pin)                          
+Iref2p                                     |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for Axx_top and Axx_top altered to match.
+Device classes Axx_top and Axx_top are equivalent.
+
+Final result: Top level cell failed pin matching.
