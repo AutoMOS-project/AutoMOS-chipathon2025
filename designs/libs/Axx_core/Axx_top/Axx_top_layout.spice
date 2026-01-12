@@ -1,0 +1,119 @@
+* NGSPICE file created from Axx_top.ext - technology: gf180mcuD
+
+.subckt ppolyf_u_9H3LNU$1 w_n20666_n11028# a_n20450_n10812# a_n18348_n10812#
+X0 a_n20450_n10812# a_n18348_n10812# w_n20666_n11028# ppolyf_u r_width=40u r_length=10u
+.ends
+
+.subckt diode_nd2ps_06v0_MV3SZ3$1 a_n5528_34940# a_n5680_28092# a_n5528_32708# a_n5528_30476#
++ a_n5528_28244#
+D0 a_n5680_28092# a_n5528_28244# diode_nd2ps_06v0 pj=40u area=99.99999p
+D1 a_n5680_28092# a_n5528_32708# diode_nd2ps_06v0 pj=40u area=99.99999p
+D2 a_n5680_28092# a_n5528_30476# diode_nd2ps_06v0 pj=40u area=99.99999p
+D3 a_n5680_28092# a_n5528_34940# diode_nd2ps_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt diode_pd2nw_06v0_5DG9HC$1 a_5756_23688# a_5756_19256# a_5756_21472# w_5580_16864#
++ a_5756_17040#
+D0 a_5756_21472# w_5580_16864# diode_pd2nw_06v0 pj=40u area=99.99999p
+D1 a_5756_23688# w_5580_16864# diode_pd2nw_06v0 pj=40u area=99.99999p
+D2 a_5756_17040# w_5580_16864# diode_pd2nw_06v0 pj=40u area=99.99999p
+D3 a_5756_19256# w_5580_16864# diode_pd2nw_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt io_secondary_5p0 VDD VSS ASIG5V to_gate
+Xppolyf_u_9H3LNU_0 VDD to_gate ASIG5V ppolyf_u_9H3LNU$1
+Xdiode_nd2ps_06v0_MV3SZ3_0 to_gate VSS to_gate to_gate to_gate diode_nd2ps_06v0_MV3SZ3$1
+Xdiode_pd2nw_06v0_5DG9HC_0 to_gate to_gate to_gate VDD to_gate diode_pd2nw_06v0_5DG9HC$1
+.ends
+
+.subckt Axx_top Vref VDD VSS ASIG5V to_gate Iref20p Iref50p Iref50n Iref20n Iref2n
++ Iref2p
+Xio_secondary_5p0_0 VDD VSS io_secondary_5p0_0/ASIG5V Vref io_secondary_5p0
+X0 VSS VSS VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.69493n ps=6.8673m w=2u l=4u M=50
+X1 a_30562_n57326# to_gate VSS VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=50
+X2 a_36580_n47894# to_gate VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=50
+X3 VSS VSS VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=0 ps=0 w=2u l=2u M=174
+X4 VDD VDD VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=0.61438n ps=2.70178m w=2u l=2u M=192
+X5 VSS VSS VSS VSS nfet_03v3 ad=2.4p pd=9.2u as=0 ps=0 w=4u l=2u M=180
+X6 a_15912_n47894# to_gate VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=20
+D0 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X7 a_n79881_n62479# a_n81909_n62747# a_n80401_n61203# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=16
+X8 w_n3778_n63973# to_gate w_n3778_n63973# w_n3778_n63973# pfet_03v3 ad=3p pd=11.2u as=0.36n ps=1.344m w=5u l=5u M=60
+X9 a_9894_n57326# to_gate VSS VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=20
+X10 a_n37384_n58129# to_gate a_n38304_n58129# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=4u M=30
+X11 a_16432_n47894# to_gate a_15912_n47894# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=20
+X12 VDD VDD VDD VDD pfet_03v3 ad=0.6p pd=3.2u as=0 ps=0 w=1u l=2u M=32
+X13 Iref50p to_gate a_36580_n47894# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=50
+X14 to_gate to_gate a_n2138_n57326# VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=2
+D1 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X15 VSS VSS VSS VSS nfet_03v3 ad=0.3p pd=2.2u as=0 ps=0 w=0.5u l=2u M=22
+X16 a_n37384_n56415# Vref a_n38304_n58129# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=4u M=30
+X17 to_gate a_n60259_n55859# a_n37384_n56415# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
+X18 a_n78253_n62479# a_n81909_n62747# VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=16
+X19 VDD VDD VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=0 ps=0 w=2u l=1u M=22
+X20 Iref20n to_gate a_9894_n57326# VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=20
+X21 a_9896_n47894# to_gate VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+X22 Iref50n to_gate a_30562_n57326# VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=50
+X23 VSS VSS VSS VSS nfet_03v3 ad=0.6p pd=3.2u as=0 ps=0 w=1u l=2u M=10
+D2 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X24 a_n79881_n62479# a_n81909_n62747# VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=16
+X25 a_n81509_n62479# a_n81909_n62747# VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=16
+X26 a_n9176_n55100# a_n81909_n62747# VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+X27 VDD a_n74505_n55909# a_n74505_n55909# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+X28 VSS VDD VSS VSS nfet_03v3 ad=2.4p pd=9.2u as=0 ps=0 w=4u l=2u M=16
+X29 a_n38304_n58129# a_n81909_n62747# VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=20
+X30 a_n81509_n62479# a_n81909_n62747# a_n82029_n61203# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=16
+D3 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X31 a_n37384_n56415# a_n8956_n41847# VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u
+X32 a_n78253_n62479# a_n81909_n62747# a_n78773_n61203# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=16
+D4 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X33 m3_n726_n82053# to_gate a_9896_n47894# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+X34 a_3880_n47894# to_gate VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+X35 a_3878_n57326# to_gate VSS VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=2
+D5 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X36 VSS a_n70197_n56067# a_n70317_n55859# VSS nfet_03v3 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u
+X37 VDD a_n74505_n55909# a_n70197_n56067# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+X38 a_n2138_n57326# to_gate VSS VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=2
+D6 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X39 VDD a_n59445_n55859# a_n51453_n55859# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+D7 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X40 w_n3778_n63973# a_n81909_n62747# VSS VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+X41 Iref2n to_gate a_3878_n57326# VSS nfet_03v3 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=2u M=2
+D8 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X42 to_gate to_gate a_3880_n47894# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+D9 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+D10 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X43 a_n8956_n41847# a_n70197_n56067# a_n9176_n55100# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+D11 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X44 a_n51453_n55859# a_n60259_n55859# a_n59445_n55859# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+D12 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X45 a_n8956_n41847# a_n60259_n55859# a_n37384_n58129# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
+D13 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X46 a_n70317_n55859# a_n70197_n56067# a_n70197_n56067# VSS nfet_03v3 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u
+X47 a_n2138_n47894# to_gate VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+D14 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+D15 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+D16 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+D17 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X48 to_gate a_n70197_n56067# w_n3778_n63973# VSS nfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+X49 to_gate to_gate a_n2138_n47894# VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=2u M=2
+D18 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X50 VSS Vref a_n73985_n55909# VSS nfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+D19 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X51 a_n80401_n61203# a_n70197_n56067# a_n60259_n55859# VSS nfet_03v3 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u
+X52 to_gate ASIG5V VDD ppolyf_u r_width=40u r_length=10u
+D20 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X53 VDD a_n60259_n55859# a_n56047_n55909# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+D21 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X54 a_n78773_n61203# a_n70197_n56067# a_n81909_n62747# VSS nfet_03v3 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u
+X55 a_n73985_n55909# Vref a_n74505_n55909# VSS nfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+X56 a_n82029_n61203# a_n70197_n56067# a_n59445_n55859# VSS nfet_03v3 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u
+D22 to_gate VDD diode_pd2nw_06v0 pj=40u area=99.99999p
+X57 to_gate ASIG5V VDD ppolyf_u r_width=40u r_length=10u
+X58 a_n56047_n55909# a_n60259_n55859# a_n60259_n55859# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+X59 VDD a_n74505_n55909# a_n81909_n62747# VDD pfet_03v3 ad=0.6p pd=3.2u as=0.6p ps=3.2u w=1u l=2u
+D23 VSS to_gate diode_nd2ps_06v0 pj=40u area=99.99999p
+X60 to_gate ASIG5V VDD ppolyf_u r_width=40u r_length=10u
+X61 a_n37384_n58129# a_n8956_n41847# VDD VDD pfet_03v3 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u
+.ends
+

@@ -506,8 +506,6 @@ C {lab_wire.sym} 1010 -750 0 0 {name=p14 sig_type=std_logic lab=EN}
 C {title.sym} 160 -40 0 0 {name=l11 author="Luighi Viton (AutoMOS-Project)"}
 C {lab_wire.sym} 960 -590 0 0 {name=p15 sig_type=std_logic lab=vpcas}
 C {lab_wire.sym} 930 -700 0 0 {name=p16 sig_type=std_logic lab=vpref}
-C {iopin.sym} 170 -100 2 0 {name=p17 lab=SUB}
-C {noconn.sym} 170 -100 2 0 {name=l1}
 C {symbols/pfet_05v0.sym} 820 -750 0 0 {name=Mpref3
 L=1.5u
 W=1u

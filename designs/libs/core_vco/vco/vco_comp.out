@@ -1,0 +1,58 @@
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+Flattening unmatched subcell vco_buffer in circuit vco (1)(1 instance)
+Flattening unmatched subcell vco_and in circuit vco (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: vco                             |Circuit 2: vco                             
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (182->14)                        |pfet_03v3 (33->14)                         
+nfet_03v3 (176->13)                        |nfet_03v3 (32->13)                         
+Number of devices: 27                      |Number of devices: 27                      
+Number of nets: 20                         |Number of nets: 20                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco                             |Circuit 2: vco                             
+-------------------------------------------|-------------------------------------------
+ibias                                      |IBIAS                                      
+VSS                                        |VSS                                        
+vin                                        |VIN                                        
+VOUT                                       |VOUT                                       
+EN                                         |EN                                         
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco and vco are equivalent.
+
+Final result: Circuits match uniquely.
+.

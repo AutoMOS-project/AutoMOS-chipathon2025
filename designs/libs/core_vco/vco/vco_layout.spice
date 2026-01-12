@@ -1,0 +1,32 @@
+* NGSPICE file created from vco.ext - technology: gf180mcuD
+
+.subckt vco VOUT VDD ibias EN VSS vin
+X0 VDD VDD VDD VDD pfet_03v3 ad=0.58p pd=3.16u as=50.95102p ps=0.27308m w=1u l=0.4u M=8
+X1 a_2714_n1768# vin VSS VSS nfet_03v3 ad=0.43p pd=1.86u as=0.43p ps=1.86u w=1u l=0.28u M=40
+X2 a_9006_4562# ibias VDD VDD pfet_03v3 ad=0.28p pd=1.56u as=0.28p ps=1.56u w=1u l=0.4u M=40
+X3 VSS vin a_n838_n1768# VSS nfet_03v3 ad=0.43p pd=1.86u as=0.43p ps=1.86u w=1u l=0.28u M=40
+X4 a_6454_n1768# vin VSS VSS nfet_03v3 ad=0.43p pd=1.86u as=0.75p ps=3.5u w=1u l=0.28u M=40
+X5 VDD ibias a_2437_4562# VDD pfet_03v3 ad=0.28p pd=1.56u as=0.28p ps=1.56u w=1u l=0.4u M=40
+X6 a_5817_4562# ibias VDD VDD pfet_03v3 ad=0.28p pd=1.56u as=0.6p ps=3.2u w=1u l=0.4u M=40
+X7 VSS VSS VSS VSS nfet_03v3 ad=0.73p pd=3.46u as=52.57002p ps=0.23514m w=1u l=0.28u M=8
+X8 a_13772_4327# a_13694_4535# a_2714_n1768# VSS nfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X9 a_n838_n1768# ibias VDD VDD pfet_03v3 ad=0.28p pd=1.56u as=0.6p ps=3.2u w=1u l=0.4u M=40
+X10 VDD a_15309_449# a_20267_175# VDD pfet_03v3 ad=0.75p pd=3.5u as=0.43p ps=1.86u w=1u l=0.28u M=2
+X11 VDD EN a_15309_449# VDD pfet_03v3 ad=0.75p pd=3.5u as=0.43p ps=1.86u w=1u l=0.28u M=2
+X12 VDD a_13694_4535# a_15309_449# VDD pfet_03v3 ad=0.75p pd=3.5u as=0.43p ps=1.86u w=1u l=0.28u M=2
+X13 a_9946_n1768# a_14514_4327# a_13694_4535# VSS nfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X14 VSS vin a_9946_n1768# VSS nfet_03v3 ad=0.43p pd=1.86u as=0.43p ps=1.86u w=1u l=0.28u M=40
+X15 VDD ibias ibias VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X16 a_6454_n1768# a_13772_4327# a_14514_4327# VSS nfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X17 VOUT a_21703_175# VSS VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X18 a_21703_175# a_20267_175# VSS VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X19 a_13772_4327# a_13694_4535# a_2437_4562# VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X20 a_21703_175# a_20267_175# VDD VDD pfet_03v3 ad=0.43p pd=1.86u as=0.75p ps=3.5u w=1u l=0.28u M=2
+X21 a_15309_449# a_13694_4535# a_15217_n1789# VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X22 a_9006_4562# a_14514_4327# a_13694_4535# VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X23 VOUT a_21703_175# VDD VDD pfet_03v3 ad=0.43p pd=1.86u as=0.75p ps=3.5u w=1u l=0.28u M=2
+X24 a_5817_4562# a_13772_4327# a_14514_4327# VDD pfet_03v3 ad=0.375p pd=2.5u as=0.375p ps=2.5u w=0.5u l=0.28u
+X25 VSS a_15309_449# a_20267_175# VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+X26 a_15217_n1789# EN VSS VSS nfet_03v3 ad=0.75p pd=3.5u as=0.75p ps=3.5u w=1u l=0.28u
+.ends
+

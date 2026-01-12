@@ -44,14 +44,10 @@ Cell pin lists are equivalent.
 Device classes pfet_05v0 and pfet_05v0 are equivalent.
 Flattening unmatched subcell ppolyf_u_high_Rs_resistor in circuit biasgen_mirror_2_to_10 (0)(8 instances)
 
-Cell biasgen_mirror_2_to_10 (0) disconnected node: SUB
-Cell biasgen_mirror_2_to_10 (1) disconnected node: SUB
 Class biasgen_mirror_2_to_10 (0):  Merged 3 parallel devices.
 Class biasgen_mirror_2_to_10 (0):  Merged 7 series devices.
 Class biasgen_mirror_2_to_10 (1):  Merged 8 parallel devices.
 Class biasgen_mirror_2_to_10 (1):  Merged 7 series devices.
-Cell biasgen_mirror_2_to_10 (0) disconnected node: SUB
-Cell biasgen_mirror_2_to_10 (1) disconnected node: SUB
 Subcircuit summary:
 Circuit 1: biasgen_mirror_2_to_10          |Circuit 2: biasgen_mirror_2_to_10          
 -------------------------------------------|-------------------------------------------
@@ -76,7 +72,6 @@ EN                                         |EN
 VDD                                        |VDD                                        
 ENB                                        |ENB                                        
 VSS                                        |VSS                                        
-SUB                                        |SUB                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes biasgen_mirror_2_to_10 and biasgen_mirror_2_to_10 are equivalent.

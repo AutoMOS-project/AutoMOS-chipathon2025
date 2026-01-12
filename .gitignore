@@ -42,11 +42,16 @@ context/
 *.gds.backup
 
 extfiles/
-gf180mcuD_setup.tcl
-run_lvs.sh
+#gf180mcuD_setup.tcl
+#run_lvs.sh
 run_lvs.tcl
 
 designs/reports/*
 designs/libs/A_track_core/chiptop_A_track/metal2/*
+designs/libs/A_track_core/chiptop_A_track_ws_embedded/reports/*
+designs/libs/A_track_core/chiptop_A_track_ws_embedded/chiptop_A_track_ws_embedded.gds
+designs/libs/A_track_core/chiptop_A_track_ws_embedded/chiptop_A_track_ws_embedded__exported.gds
+designs/libs/A_track_core/chiptop_A_track_ws_embedded/chiptop_A_track_ws_embedded__fixed.gds
+designs/libs/A_track_core/chiptop_A_track_ws_embedded/chiptop_A_track_ws_embedded__fixed_filled.gds
 
 .Trash*

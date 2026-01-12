@@ -1,0 +1,28 @@
+* NGSPICE file created from io_secondary_5p0.ext - technology: gf180mcuD
+
+.subckt ppolyf_u_9H3LNU$1$1 w_n634_n11028# a_n418_n10812# a_1684_n10812#
+X0 a_n418_n10812# a_1684_n10812# w_n634_n11028# ppolyf_u r_width=40u r_length=10u
+.ends
+
+.subckt diode_nd2ps_06v0_MV3SZ3$1$1 a_n5528_10444# a_n5528_8212# a_n5528_14908# a_n5528_12676#
++ a_n5680_8060#
+D0 a_n5680_8060# a_n5528_8212# diode_nd2ps_06v0 pj=40u area=99.99999p
+D1 a_n5680_8060# a_n5528_14908# diode_nd2ps_06v0 pj=40u area=99.99999p
+D2 a_n5680_8060# a_n5528_10444# diode_nd2ps_06v0 pj=40u area=99.99999p
+D3 a_n5680_8060# a_n5528_12676# diode_nd2ps_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt diode_pd2nw_06v0_5DG9HC$1$1 w_5580_n3168# a_5756_n776# a_5756_3656# a_5756_1440#
++ a_5756_n2992#
+D0 a_5756_1440# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+D1 a_5756_n776# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+D2 a_5756_3656# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+D3 a_5756_n2992# w_5580_n3168# diode_pd2nw_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt io_secondary_5p0 VDD VSS ASIG5V to_gate
+Xppolyf_u_9H3LNU_0 VDD to_gate ASIG5V ppolyf_u_9H3LNU$1$1
+Xdiode_nd2ps_06v0_MV3SZ3_0 to_gate to_gate to_gate to_gate VSS diode_nd2ps_06v0_MV3SZ3$1$1
+Xdiode_pd2nw_06v0_5DG9HC_0 VDD to_gate to_gate to_gate to_gate diode_pd2nw_06v0_5DG9HC$1$1
+.ends
+

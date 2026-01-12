@@ -1,10 +1,11 @@
 * NGSPICE file created from bandgap.ext - technology: gf180mcuD
 
-.subckt ppolyf_u_high_Rs_resistor$1 a_n128_0# a_1800_0# a_n352_0#
-X0 a_n128_0# a_1800_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=9u
+.subckt cap_mim$1 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=16u c_length=16u
 .ends
 
-.subckt bandgap_opamp vp vn vout ibias VSS VDD
+.subckt bandgap_opamp$1 VSS vn vp ibias VDD vout
+Xcap_mim$1_0 a_n5609_n2907# vout cap_mim$1
 X0 vout ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=8
 X1 VDD VDD VDD VDD pfet_05v0 ad=1.16p pd=5.16u as=14.04p ps=76.32u w=2u l=1u M=4
 X2 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=11.8p ps=87.2u w=0.5u l=2u M=10
@@ -15,15 +16,20 @@ X6 a_n5609_n2907# vp a_n3877_n280# VDD pfet_05v0 ad=1.2p pd=5.2u as=1.2p ps=5.2u
 X7 a_n6009_n3115# vn a_n3877_n280# VDD pfet_05v0 ad=1.2p pd=5.2u as=1.2p ps=5.2u w=2u l=1u M=2
 X8 ibias ibias VDD VDD pfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=1u M=2
 X9 a_n5609_n2907# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
-X10 vout a_n5609_n2907# cap_mim_2f0_m4m5_noshield c_width=16u c_length=16u
-X11 a_n6009_n3115# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X10 a_n6009_n3115# a_n6009_n3115# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+.ends
+
+.subckt ppolyf_u_high_Rs_resistor$1 a_n128_0# a_1800_0# a_n352_0#
+X0 a_n128_0# a_1800_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=9u
 .ends
 
 .subckt ppolyf_u_high_Rs_resistor a_900_0# a_n128_0# a_n352_0#
 X0 a_n128_0# a_900_0# a_n352_0# ppolyf_u_1k_6p0 r_width=1u r_length=4.5u
 .ends
 
-.subckt bandgap SUB VBG VSS pref_fb pref VDD ICTAT IPTAT VZTC IZTC
+.subckt bandgap vpref vpref_fb VSS VDD ICTAT VZTC IZTC VBG IPTAT
+Xbandgap_opamp$1_0 VSS bandgap_opamp$1_0/vn bandgap_opamp$1_0/vp bandgap_opamp$1_0/ibias
++ VDD vpref_fb bandgap_opamp$1
 Xppolyf_u_high_Rs_resistor$1_0[0|0] a_n22908_n917# m2_n28372_9003# VSS ppolyf_u_high_Rs_resistor$1
 Xppolyf_u_high_Rs_resistor$1_0[1|0] m1_n25775_7400# m2_n28372_8203# VSS ppolyf_u_high_Rs_resistor$1
 Xppolyf_u_high_Rs_resistor$1_0[2|0] m1_n25775_7400# m2_n28372_7403# VSS ppolyf_u_high_Rs_resistor$1
@@ -60,10 +66,8 @@ Xppolyf_u_high_Rs_resistor$1_0[8|2] m2_n30972_2603# m1_n32960_1802# VSS ppolyf_u
 Xppolyf_u_high_Rs_resistor$1_0[9|2] m2_n30972_1803# m1_n32960_1802# VSS ppolyf_u_high_Rs_resistor$1
 Xppolyf_u_high_Rs_resistor$1_0[10|2] m2_n30972_1003# m1_n32960_202# VSS ppolyf_u_high_Rs_resistor$1
 Xppolyf_u_high_Rs_resistor$1_0[11|2] m2_n30972_203# m1_n32960_202# VSS ppolyf_u_high_Rs_resistor$1
-Xbandgap_opamp_0 bandgap_opamp_0/vp bandgap_opamp_0/vn pref_fb bandgap_opamp_0/ibias
-+ VSS VDD bandgap_opamp
-Xppolyf_u_high_Rs_resistor_0[0|0] m2_2232_15505# via_dev$1_26[0|0]/m1_0_0# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_0[1|0] m2_2232_16305# via_dev$1_26[1|0]/m1_0_0# VSS ppolyf_u_high_Rs_resistor
+Xppolyf_u_high_Rs_resistor_0[0|0] m2_2232_15505# m1_1154_15445# VSS ppolyf_u_high_Rs_resistor
+Xppolyf_u_high_Rs_resistor_0[1|0] m2_2232_16305# m1_1154_15445# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_0[0|1] m2_3831_15502# m2_2232_15505# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_0[1|1] m2_3831_16305# m2_2232_16305# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_0[0|2] m2_5433_15504# m2_3831_15502# VSS ppolyf_u_high_Rs_resistor
@@ -73,7 +77,7 @@ Xppolyf_u_high_Rs_resistor_0[1|3] m3_9499_6017# m2_5432_16305# VSS ppolyf_u_high
 Xppolyf_u_high_Rs_resistor_1[0|0] m2_n6118_n11554# VSS VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[1|0] m2_n6118_n10554# m1_n7199_n10552# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[2|0] m2_n6118_n9554# m1_n7199_n10552# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_1[3|0] m2_n6118_n8554# m2_n9326_n8552# VSS ppolyf_u_high_Rs_resistor
+Xppolyf_u_high_Rs_resistor_1[3|0] m2_n6118_n8554# m2_n9000_n8552# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[4|0] m2_n6118_n7554# VSS VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[0|1] m2_n4518_n11554# m2_n6118_n11554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[1|1] m2_n4518_n10554# m2_n6118_n10554# VSS ppolyf_u_high_Rs_resistor
@@ -102,7 +106,7 @@ Xppolyf_u_high_Rs_resistor_1[3|5] m2_1882_n8554# m2_282_n8554# VSS ppolyf_u_high
 Xppolyf_u_high_Rs_resistor_1[4|5] m2_1882_n7554# m2_282_n7554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[0|6] m2_3482_n11554# m2_1882_n11554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[1|6] m2_3482_n10554# m2_1882_n10554# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_1[2|6] via_dev$1_28[2|6]/m1_0_0# m2_1882_n9554# VSS ppolyf_u_high_Rs_resistor
+Xppolyf_u_high_Rs_resistor_1[2|6] m2_3477_n9001# m2_1882_n9554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[3|6] m2_3482_n8554# m2_1882_n8554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[4|6] m2_3482_n7554# m2_1882_n7554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[0|7] m2_5082_n11554# m2_3482_n11554# VSS ppolyf_u_high_Rs_resistor
@@ -157,7 +161,7 @@ Xppolyf_u_high_Rs_resistor_1[3|16] m2_19482_n8554# m2_17882_n8554# VSS ppolyf_u_
 Xppolyf_u_high_Rs_resistor_1[4|16] m2_19481_n7555# m2_17881_n7555# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[0|17] m2_21082_n11554# m2_19482_n11554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[1|17] m2_21082_n10554# m2_19482_n10554# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_1[2|17] bandgap_opamp_0/vp m2_19482_n9554# VSS ppolyf_u_high_Rs_resistor
+Xppolyf_u_high_Rs_resistor_1[2|17] bandgap_opamp$1_0/vp m2_19482_n9554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[3|17] m2_21082_n8554# m2_19482_n8554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[4|17] m2_21081_n7555# m2_19481_n7555# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[0|18] m2_22682_n11554# m2_21082_n11554# VSS ppolyf_u_high_Rs_resistor
@@ -194,62 +198,57 @@ Xppolyf_u_high_Rs_resistor_1[0|24] VZTC m2_30682_n11554# VSS ppolyf_u_high_Rs_re
 Xppolyf_u_high_Rs_resistor_1[1|24] VBG m2_30682_n10554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[2|24] m1_32282_n9554# m2_30682_n9554# VSS ppolyf_u_high_Rs_resistor
 Xppolyf_u_high_Rs_resistor_1[3|24] m1_32282_n9554# m2_30682_n8554# VSS ppolyf_u_high_Rs_resistor
-Xppolyf_u_high_Rs_resistor_1[4|24] a_15350_n2587# m2_30681_n7555# VSS ppolyf_u_high_Rs_resistor
-X0 m2_n9326_n8552# VSS VSS pnp_05p00x00p42 M=16
-**devattr s=84000,2168 d=84000,2168
-X1 a_n5453_5070# w_n23323_5795# a_n5733_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
-X2 VSS VSS VSS VSS nfet_05v0 ad=2.32p pd=9.16u as=0.31862n ps=1.24778m w=4u l=0.6u M=8
-X3 IZTC m3_9499_6017# a_11246_6327# w_9995_4737# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=6
-X4 a_n22908_n917# w_n23323_5795# VDD VDD pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=16
-X5 a_n4727_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X6 VSS a_n22908_n917# VSS VSS nfet_05v0 ad=2.4p pd=9.2u as=0 ps=0 w=4u l=1u M=32
-X7 IZTC w_n23323_5795# a_n7745_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+Xppolyf_u_high_Rs_resistor_1[4|24] w_11108_n5057# m2_30681_n7555# VSS ppolyf_u_high_Rs_resistor
+X0 VSS VSS m1_4002_n9557# pnp_05p00x00p42 M=16
+X1 a_n5453_5070# a_n7625_4860# a_n5733_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X2 a_n5453_5070# a_12938_n3515# a_12818_n3307# w_11108_n5057# nfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.6u M=16
+X3 IZTC m3_9499_6017# a_11246_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=6
+X4 a_n22908_n917# a_n7625_4860# VDD VDD pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=16
+X5 a_n4727_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X6 VSS a_n22908_n917# VSS VSS nfet_05v0 ad=2.4p pd=9.2u as=0.10291n ps=0.43224m w=4u l=1u M=32
+X7 IZTC a_n7625_4860# a_n7745_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
 X8 VSS a_n5453_5070# VSS VSS nfet_05v0 ad=2.4p pd=9.2u as=0 ps=0 w=4u l=1u M=32
 X9 a_14264_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
-X10 VDD VDD VDD VDD pfet_05v0 ad=1.856p pd=7.56u as=0.19657n ps=0.77888m w=3.2u l=0.8u M=2
-X11 VZTC m3_9499_6017# a_13258_6327# w_9995_4737# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=6
-X12 a_n5453_5070# a_13538_n2795# a_13418_n2587# VSS nfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.6u M=16
-X13 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=2u M=2
-X14 a_n22645_6505# a_n22908_n917# w_n23323_5795# w_n23323_5795# pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=32
-X15 IPTAT w_n23323_5795# a_n3721_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
-X16 a_13418_n2587# VSS VSS pnp_05p00x00p42 M=2
-**devattr s=84000,2168 d=84000,2168
+X10 VDD VDD VDD VDD pfet_05v0 ad=1.856p pd=7.56u as=0.25402n ps=0.97778m w=3.2u l=0.8u M=2
+X11 VSS VSS VSS VSS nfet_05v0 ad=0.29p pd=2.16u as=0 ps=0 w=0.5u l=2u M=2
+X12 VZTC m3_9499_6017# a_13258_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=6
+X13 VSS a_n22908_n917# a_n7625_4860# a_n7625_4860# pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=32
+X14 IPTAT a_n7625_4860# a_n3721_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X15 a_12938_n3515# a_12938_n3515# w_11108_n5057# w_11108_n5057# nfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.6u M=16
+X16 VSS VSS a_12818_n3307# pnp_05p00x00p42 M=2
 X17 VSS VSS VSS pnp_05p00x00p42 M=10
-**devattr s=84000,2168 d=84000,2168
-X18 a_n7745_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X18 a_n7745_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
 X19 a_n1669_n50# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
-X20 a_n18269_6505# a_n22908_n917# pref pref pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=32
-X21 a_13538_n2795# a_13538_n2795# a_15350_n2587# VSS nfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.6u M=16
-X22 ICTAT m3_9499_6017# a_14264_6327# w_9995_4737# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
-X23 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=0.8u M=2
-X24 m3_9250_15170# m3_9499_6017# a_16276_6327# w_9995_4737# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
-X25 a_15270_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
-X26 w_9995_4737# w_9995_4737# w_9995_4737# w_9995_4737# pfet_05v0 ad=7.424p pd=26.76u as=59.392p ps=0.21408m w=12.8u l=0.8u M=4
-X27 a_n6739_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X28 VDD VDD VDD VDD pfet_05v0 ad=1.856p pd=7.56u as=0 ps=0 w=3.2u l=0.8u M=4
-X29 w_n23323_5795# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X20 VSS a_n22908_n917# vpref vpref pfet_05v0 ad=2.4p pd=9.2u as=2.4p ps=9.2u w=4u l=0.5u M=32
+X21 ICTAT m3_9499_6017# a_14264_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
+X22 m3_9250_15170# m3_9499_6017# a_16276_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
+X23 a_15270_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
+X24 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=3.2u M=2
+X25 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=0.8u M=4
+X26 a_n6739_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X27 VDD VDD VDD VDD pfet_05v0 ad=1.856p pd=7.56u as=0 ps=0 w=3.2u l=0.8u M=4
+X28 a_n7625_4860# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
+X29 w_11108_n5057# w_11108_n5057# w_11108_n5057# w_11108_n5057# nfet_05v0 ad=2.32p pd=9.16u as=21.91862p ps=88.935u w=4u l=0.6u M=8
 X30 a_n3315_n258# a_n3315_n258# VSS VSS nfet_05v0 ad=0.3p pd=2.2u as=0.3p ps=2.2u w=0.5u l=2u M=2
 X31 a_16276_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=4
-X32 bandgap_opamp_0/vn VSS VSS pnp_05p00x00p42 M=2
-**devattr s=84000,2168 d=84000,2168
-X33 a_n703_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X34 VBG w_n23323_5795# a_n4727_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
-X35 w_n8995_2820# w_n8995_2820# w_n8995_2820# w_n8995_2820# pfet_05v0 ad=7.424p pd=26.76u as=29.696p ps=0.10704m w=12.8u l=0.8u M=2
-X36 a_13538_n2795# m3_9499_6017# a_15270_6327# w_9995_4737# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
+X32 VSS VSS bandgap_opamp$1_0/vn pnp_05p00x00p42 M=2
+X33 a_n703_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X34 VBG a_n7625_4860# a_n4727_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X35 VDD VDD VDD VDD pfet_05v0 ad=7.424p pd=26.76u as=0 ps=0 w=12.8u l=0.8u M=2
+X36 a_12938_n3515# m3_9499_6017# a_15270_6327# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=4
 X37 a_13258_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=6
-X38 VZTC w_n23323_5795# a_n6739_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
-X39 m1_4002_n9557# VSS VSS pnp_05p00x00p42 M=2
-**devattr s=84000,2168 d=84000,2168
-X40 a_n3315_n258# w_n23323_5795# a_n2715_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X38 VZTC a_n7625_4860# a_n6739_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X39 VSS VSS m2_n9000_n8552# pnp_05p00x00p42 M=2
+X40 a_n3315_n258# a_n7625_4860# a_n2715_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
 X41 a_11246_6327# m3_9250_15170# VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=6
-X42 a_n1669_n50# a_n22908_n917# bandgap_opamp_0/ibias VSS nfet_05v0 ad=0.73p pd=3.46u as=0.73p ps=3.46u w=1u l=0.6u
-X43 a_n2715_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X44 a_n3721_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X45 w_n23323_5795# w_n23323_5795# VDD VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
-X46 a_n1709_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X47 a_n5733_5070# pref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
-X48 bandgap_opamp_0/vn w_n23323_5795# a_n703_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
-X49 bandgap_opamp_0/vp w_n23323_5795# a_n1709_5070# w_n8995_2820# pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X42 a_n7625_4860# a_n7625_4860# VDD VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=3.2u M=2
+X43 a_n1669_n50# a_n22908_n917# bandgap_opamp$1_0/ibias VSS nfet_05v0 ad=0.73p pd=3.46u as=0.73p ps=3.46u w=1u l=0.6u
+X44 a_n2715_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X45 a_n3721_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X46 a_n1709_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X47 a_n5733_5070# vpref VDD VDD pfet_05v0 ad=1.92p pd=7.6u as=1.92p ps=7.6u w=3.2u l=0.8u M=2
+X48 bandgap_opamp$1_0/vn a_n7625_4860# a_n703_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
+X49 bandgap_opamp$1_0/vp a_n7625_4860# a_n1709_5070# VDD pfet_05v0 ad=7.68p pd=26.8u as=7.68p ps=26.8u w=12.8u l=0.8u M=2
 X50 VSS a_n5453_5070# m3_9499_6017# VSS nfet_05v0 ad=0.73p pd=3.46u as=0.73p ps=3.46u w=1u l=4u
 .ends
 

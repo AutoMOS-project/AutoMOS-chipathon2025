@@ -1,13 +1,14 @@
 v {xschem version=3.4.7 file_version=1.2}
 G {}
-K {type=io
+K {type=subcircuit
 format="@spiceprefix@name @pinlist @model"
 lvs_format="@spiceprefix@name @pinlist @model"
 template="name=IO1
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
 "
-}
+spice_sym_def=".include /foss/designs/libs/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
+spice_stop=true}
 V {}
 S {}
 E {}

@@ -13,7 +13,6 @@ N 340 -800 340 -400 {lab=TEST_SEL_1}
 N 1560 -420 1560 -360 {lab=TEST_SEL_0}
 N 540 -420 1560 -420 {lab=TEST_SEL_0}
 N 540 -800 540 -420 {lab=TEST_SEL_0}
-N 1420 -240 1420 -200 {lab=VSS}
 N 1960 -240 3640 -240 {lab=VDD}
 N -120 -620 1320 -620 {lab=VTEST
 bus=true
@@ -123,18 +122,18 @@ N 1160 -680 1160 -620 {lab=VTEST}
 N 1040 -680 1040 -590 {lab=VSS}
 N -100 -240 1420 -240 {lab=VSS}
 N -100 -590 -100 -240 {lab=VSS}
-N 800 -760 800 -590 {lab=VSS}
-N 960 -760 960 -620 {lab=VTEST}
-N 1800 -760 1800 -590 {lab=VSS}
-N 1960 -760 1960 -620 {lab=LDO_OUT}
-N 2040 -760 2040 -590 {lab=VSS}
-N 2200 -760 2200 -620 {lab=VDD}
-N 2440 -760 2440 -590 {lab=VSS}
-N 2600 -760 2600 -620 {lab=VDD}
 N 2520 -640 2520 -480 {lab=#net3}
-N 2840 -760 2840 -590 {lab=VSS}
-N 3000 -760 3000 -620 {lab=VDD}
 N 3640 -620 3640 -240 {lab=VDD}
+N 960 -720 960 -620 {lab=VTEST}
+N 800 -720 800 -590 {lab=VSS}
+N 1960 -720 1960 -620 {lab=VTEST}
+N 1800 -720 1800 -590 {lab=VSS}
+N 2200 -720 2200 -620 {lab=VTEST}
+N 2040 -720 2040 -590 {lab=VSS}
+N 2600 -720 2600 -620 {lab=VTEST}
+N 2440 -720 2440 -590 {lab=VSS}
+N 3000 -720 3000 -620 {lab=VTEST}
+N 2840 -720 2840 -590 {lab=VSS}
 C {libs/A1_core/A1_top_core/A1_top_core.sym} 1420 -360 1 0 {name=xtop}
 C {gf180mcu_fd_sc_mcu9t5v0/xschem/symbols/sc_tieh_tiel.sym} 0 -640 1 1 {name=SC_test_sel_2
 spiceprefix=X
@@ -219,19 +218,19 @@ C {iopin.sym} 880 -840 3 0 {name=p45 lab=TEST_IBIAS}
 C {ipin.sym} 1180 -800 1 0 {name=p46 lab=TEST_IBIAS_OVRD}
 C {noconn.sym} 880 -640 3 0 {name=l1}
 C {noconn.sym} 1180 -800 3 0 {name=l2}
-C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 800 -840 1 0 {name=IO_test_ibias
+C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 800 -640 1 1 {name=IO_test_ibias
 spiceprefix=X
 }
 C {iopin.sym} 1880 -840 3 0 {name=p47 lab=VCO_IN}
-C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 1800 -840 1 0 {name=IO_vco_in
+C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 1800 -640 1 1 {name=IO_vco_in
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 2040 -840 1 0 {name=IO_vco_ibias
+C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 2040 -640 1 1 {name=IO_vco_ibias
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 2440 -840 1 0 {name=IO_ldo_ibias
+C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 2440 -640 1 1 {name=IO_ldo_ibias
 spiceprefix=X
 }
-C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 2840 -840 1 0 {name=IO_ldo_vref
+C {Chipathon2025_pads/xschem/symbols/io_secondary_5p0/io_secondary_5p0.sym} 2840 -640 1 1 {name=IO_ldo_vref
 spiceprefix=X
 }

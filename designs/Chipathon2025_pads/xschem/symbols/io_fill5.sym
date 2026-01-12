@@ -1,0 +1,29 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@spiceprefix@name @pinlist @model"
+lvs_format="@spiceprefix@name @pinlist @model"
+template="name=IO1
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+"
+spice_sym_def=".include /foss/designs/libs/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
+spice_stop=true}
+V {}
+S {}
+E {}
+L 7 80 -160 80 -140 {}
+L 7 120 -20 120 0 {}
+L 7 80 -20 80 0 {}
+L 7 120 -160 120 -140 {}
+B 5 77.5 -162.5 82.5 -157.5 {name=DVDD dir=inout sim_pinnumber=1}
+B 5 77.5 -2.5 82.5 2.5 {name=DVSS dir=inout sim_pinnumber=2}
+B 5 117.5 -162.5 122.5 -157.5 {name=VDD dir=inout sim_pinnumber=3}
+B 5 117.5 -2.5 122.5 2.5 {name=VSS dir=inout sim_pinnumber=4}
+P 4 5 180 -140 20 -140 20 -20 180 -20 180 -140 {}
+T {@symname} 52.5 -96 0 0 0.3 0.3 {}
+T {@name} 135 -152 0 0 0.2 0.2 {}
+T {DVSS} 55 -26 2 1 0.2 0.2 {}
+T {DVDD} 75 -134 0 1 0.2 0.2 {}
+T {VSS} 105 -26 2 1 0.2 0.2 {}
+T {VDD} 125 -134 0 1 0.2 0.2 {}
