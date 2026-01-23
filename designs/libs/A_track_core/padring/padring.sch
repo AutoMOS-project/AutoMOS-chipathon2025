@@ -936,12 +936,8 @@ C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 820 -7860 1 0 {name=IO_LCO
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {iopin.sym} 2500 -7660 1 0 {name=p4 lab=test_ibias_int}
-C {iopin.sym} 4140 -7660 1 0 {name=p31 lab=vco_in_int}
 C {opin.sym} 5630 -7600 1 0 {name=p114 lab=LDO_IBIAS_OVRD_Y}
 C {opin.sym} 6610 -7600 1 0 {name=p168 lab=LDO_EN_Y}
-C {iopin.sym} 5910 -7660 3 1 {name=p169 lab=LDO_VREF_ASIG5V}
-C {iopin.sym} 5290 -7660 3 1 {name=p170 lab=LDO_IBIAS_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6770 -7860 1 0 {name=IO_LDO_EN1
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
@@ -963,7 +959,6 @@ spice_ignore=false
 }
 C {iopin.sym} 7160 -7840 3 0 {name=p51 lab=VSS_A1}
 C {title.sym} 160 -40 0 0 {name=l1 author="Luighi Viton (Analog/AI Track)"}
-C {iopin.sym} 360 -6340 2 1 {name=p23 lab=VCM_A2_ASIG5V}
 C {short.sym} 7160 -7810 0 0 {name=x2 value=0.1}
 C {iopin.sym} 7610 -7840 3 0 {name=p1 lab=VDD_A1}
 C {short.sym} 7610 -7810 0 0 {name=x3 value=0.1}
@@ -1078,7 +1073,6 @@ C {ipin.sym} 1200 -7600 3 0 {name=p144 lab=TEST_SEL_2_PD}
 C {ipin.sym} 1220 -7600 3 0 {name=p145 lab=TEST_SEL_2_PU}
 C {ipin.sym} 1260 -7600 3 0 {name=p146 lab=TEST_SEL_2_CS}
 C {ipin.sym} 1280 -7600 3 0 {name=p147 lab=TEST_SEL_2_IE}
-C {iopin.sym} 900 -7660 1 0 {name=p148 lab=TEST_OUT_ASIG5V}
 C {short.sym} 3160 -7500 0 0 {name=x6 value=0.1}
 C {short.sym} 4480 -7500 0 0 {name=x7 value=0.1}
 C {short.sym} 7590 -7500 0 0 {name=x8 value=0.1}
@@ -1102,79 +1096,66 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -6080 2 0 {name=p24 lab=VBIAS_A2_PAD}
-C {iopin.sym} 360 -6080 2 1 {name=p25 lab=VBIAS_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5740 0 0 {name=IO_IN1P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5820 2 0 {name=p149 lab=IN1P_A2_PAD}
-C {iopin.sym} 360 -5820 2 1 {name=p150 lab=IN1P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5480 0 0 {name=IO_IN1N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5560 2 0 {name=p151 lab=IN1N_A2_PAD}
-C {iopin.sym} 360 -5560 2 1 {name=p152 lab=IN1N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5220 0 0 {name=IO_IN2P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5300 2 0 {name=p153 lab=IN2P_A2_PAD}
-C {iopin.sym} 360 -5300 2 1 {name=p154 lab=IN2P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4960 0 0 {name=IO_IN2N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5040 2 0 {name=p155 lab=IN2N_A2_PAD}
-C {iopin.sym} 360 -5040 2 1 {name=p156 lab=IN2N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4700 0 0 {name=IO_IN3P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4780 2 0 {name=p157 lab=IN3P_A2_PAD}
-C {iopin.sym} 360 -4780 2 1 {name=p158 lab=IN3P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4440 0 0 {name=IO_IN3N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4520 2 0 {name=p159 lab=IN3N_A2_PAD}
-C {iopin.sym} 360 -4520 2 1 {name=p160 lab=IN3N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4180 0 0 {name=IO_IN4P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4260 2 0 {name=p161 lab=IN4P_A2_PAD}
-C {iopin.sym} 360 -4260 2 1 {name=p162 lab=IN4P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3920 0 0 {name=IO_IN4N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4000 2 0 {name=p163 lab=IN4N_A2_PAD}
-C {iopin.sym} 360 -4000 2 1 {name=p164 lab=IN4N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3660 0 0 {name=IO_OUT1P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3740 2 0 {name=p165 lab=OUT1P_A2_PAD}
-C {iopin.sym} 360 -3740 2 1 {name=p166 lab=OUT1P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3400 0 0 {name=IO_OUT1N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3480 2 0 {name=p167 lab=OUT1N_A2_PAD}
-C {iopin.sym} 360 -3480 2 1 {name=p171 lab=OUT1N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3140 0 0 {name=IO_OUT2P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3220 2 0 {name=p172 lab=OUT2P_A2_PAD}
-C {iopin.sym} 360 -3220 2 1 {name=p173 lab=OUT2P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2880 0 0 {name=IO_OUT2N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -2960 2 0 {name=p174 lab=OUT2N_A2_PAD}
-C {iopin.sym} 360 -2960 2 1 {name=p175 lab=OUT2N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2620 0 0 {name=IO_OUT3P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
@@ -1188,17 +1169,13 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -2180 2 0 {name=p181 lab=OUT4P_A2_PAD}
-C {iopin.sym} 360 -2180 2 1 {name=p182 lab=OUT4P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -1840 0 0 {name=IO_OUT4N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -1920 2 0 {name=p183 lab=OUT4N_A2_PAD}
-C {iopin.sym} 360 -1920 2 1 {name=p184 lab=OUT4N_A2_ASIG5V}
 C {iopin.sym} 160 -2700 2 0 {name=p176 lab=OUT3P_A2_PAD}
-C {iopin.sym} 360 -2700 2 1 {name=p177 lab=OUT3P_A2_ASIG5V}
 C {iopin.sym} 160 -2440 2 0 {name=p178 lab=OUT3N_A2_PAD}
-C {iopin.sym} 360 -2440 2 1 {name=p180 lab=OUT3N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 160 -1420 0 0 {name=IO_VDD_A2
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1249,7 +1226,6 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6580 2 1 {name=p209 lab=VOUT90_PAD}
-C {iopin.sym} 8020 -6580 2 0 {name=p210 lab=VOUT90_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 8220 -4570 0 1 {name=IO_AVDD_A1
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1270,43 +1246,36 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6320 2 1 {name=p213 lab=VOUT0_PAD}
-C {iopin.sym} 8020 -6320 2 0 {name=p214 lab=VOUT0_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5980 0 1 {name=IO_IBIAS
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6060 2 1 {name=p215 lab=IBIAS_PAD}
-C {iopin.sym} 8020 -6060 2 0 {name=p216 lab=IBIAS_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5720 0 1 {name=IO_VCTRL
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -5800 2 1 {name=p217 lab=VCTRL_PAD}
-C {iopin.sym} 8020 -5800 2 0 {name=p218 lab=VCTRL_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5460 0 1 {name=IO_VREF
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -5540 2 1 {name=p219 lab=VREF_PAD}
-C {iopin.sym} 8020 -5540 2 0 {name=p220 lab=VREF_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -3740 0 1 {name=IO_V_IN_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -3820 2 1 {name=p231 lab=V_IN_A3_PAD}
-C {iopin.sym} 8020 -3820 2 0 {name=p232 lab=V_IN_A3_ASIGV5}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -3480 0 1 {name=IO_V_AUX_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -3560 2 1 {name=p233 lab=V_AUX_A3_PAD}
-C {iopin.sym} 8020 -3560 2 0 {name=p234 lab=V_AUX_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2860 0 1 {name=IO_V_BIAS_EN_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -2940 2 1 {name=p237 lab=V_BIAS_EN_A3_PAD}
-C {iopin.sym} 8020 -2940 2 0 {name=p238 lab=V_BIAS_EN_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2600 0 1 {name=IO_CCM_OUT_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
@@ -1320,11 +1289,8 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -2160 2 1 {name=p239 lab=VCM_OUT_A3_PAD}
-C {iopin.sym} 8020 -2160 2 0 {name=p240 lab=VCM_OUT_A3_ASIG5V}
 C {iopin.sym} 8220 -2680 2 1 {name=p243 lab=CCM_OUT_A3_PAD}
-C {iopin.sym} 8020 -2680 2 0 {name=p244 lab=CCM_OUT_A3_ASIG5V}
 C {iopin.sym} 8220 -2420 2 1 {name=p245 lab=BCM_OUT_A3_PAD}
-C {iopin.sym} 8020 -2420 2 0 {name=p246 lab=BCM_OUT_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 8220 -1160 0 1 {name=IO_VDD_A3
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1338,13 +1304,11 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -7100 2 1 {name=p271 lab=VOUT270_PAD}
-C {iopin.sym} 8020 -7100 2 0 {name=p272 lab=VOUT270_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -6760 0 1 {name=IO_VOUT180
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6840 2 1 {name=p273 lab=VOUT180_PAD}
-C {iopin.sym} 8020 -6840 2 0 {name=p274 lab=VOUT180_ASIG5V}
 C {ipin.sym} 8220 -3260 0 1 {name=p275 lab=EN_A3_PAD}
 C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 8220 -3120 0 1 {name=IO_EN_A3
 model=gf180mcu_fd_io__bi_t
@@ -1400,31 +1364,26 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -1500 2 1 {name=p248 lab=VOUT_V_IF_A5_PAD}
-C {iopin.sym} 8020 -1500 2 0 {name=p249 lab=VOUT_V_IF_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 7300 -320 3 0 {name=IO_I_BIAS_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 7220 -320 1 0 {name=p250 lab=I_BIAS_A5_PAD}
-C {iopin.sym} 7220 -520 1 1 {name=p251 lab=I_BIAS_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 7040 -320 3 0 {name=IO_VIN_V_LOb_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6960 -320 1 0 {name=p252 lab=VIN_V_LOb_A5_PAD}
-C {iopin.sym} 6960 -520 1 1 {name=p253 lab=VIN_V_LOb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6780 -320 3 0 {name=IO_VIN_V_LO_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6700 -320 1 0 {name=p254 lab=VIN_V_RFb_A5_PAD}
-C {iopin.sym} 6700 -520 1 1 {name=p255 lab=VIN_V_RFb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6260 -320 3 0 {name=IO_VIN_V_RFb_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6180 -320 1 0 {name=p256 lab=VIN_V_RF_A5_PAD}
-C {iopin.sym} 6180 -520 1 1 {name=p257 lab=VIN_V_RF_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 6520 -320 3 0 {name=IO_VSS_A5
 model=gf180mcu_fd_io__dvss
 spiceprefix=X
@@ -1437,7 +1396,6 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5920 -320 1 0 {name=p259 lab=VIN_V_LO_A5_PAD}
-C {iopin.sym} 5920 -520 1 1 {name=p260 lab=VIN_V_LO_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 2420 -320 3 0 {name=IO_VDD3V3_AXX
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1451,13 +1409,11 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2860 -320 1 0 {name=p262 lab=VCOMP_PAD}
-C {iopin.sym} 2860 -520 1 1 {name=p263 lab=VCOMP_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2680 -320 3 0 {name=IO_VREF12
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2600 -320 1 0 {name=p264 lab=VREF12_PAD}
-C {iopin.sym} 2600 -520 1 1 {name=p265 lab=VREF12_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 3200 -320 3 0 {name=IO_VSS_AXX
 model=gf180mcu_fd_io__dvss
 spiceprefix=X
@@ -1470,61 +1426,51 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3640 -320 1 0 {name=p267 lab=IOUTP_2UA_PAD}
-C {iopin.sym} 3640 -520 1 1 {name=p268 lab=IOUTP_2UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3460 -320 3 0 {name=IO_IOUTN_2UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3380 -320 1 0 {name=p269 lab=IOUTN_2UA_PAD}
-C {iopin.sym} 3380 -520 1 1 {name=p270 lab=IOUTN_2UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4240 -320 3 0 {name=IO_IOUTP_20UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4160 -320 1 0 {name=p286 lab=IOUTP_20UA_PAD}
-C {iopin.sym} 4160 -520 1 1 {name=p287 lab=IOUTP_20UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3980 -320 3 0 {name=IO_IOUTN_20UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3900 -320 1 0 {name=p288 lab=IOUTN_20UA_PAD}
-C {iopin.sym} 3900 -520 1 1 {name=p289 lab=IOUTN_20UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4760 -320 3 0 {name=IO_IOUTP_50UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4680 -320 1 0 {name=p290 lab=IOUTP_50UA_PAD}
-C {iopin.sym} 4680 -520 1 1 {name=p291 lab=IOUTP_50UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4500 -320 3 0 {name=IO_IOUTN_50UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4420 -320 1 0 {name=p292 lab=IOUTN_50UA_PAD}
-C {iopin.sym} 4420 -520 1 1 {name=p293 lab=IOUTN_50UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5280 -320 3 0 {name=IO_VREFP_AXX
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5200 -320 1 0 {name=p294 lab=VREFP_AXX_PAD}
-C {iopin.sym} 5200 -520 1 1 {name=p295 lab=VREFP_AXX_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5020 -320 3 0 {name=IO_VREFN_AXX
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4940 -320 1 0 {name=p296 lab=VREFN_AXX_PAD}
-C {iopin.sym} 4940 -520 1 1 {name=p297 lab=VREFN_AXX_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2100 -320 3 0 {name=IO_ana47
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2020 -320 1 0 {name=p298 lab=ana47_PAD}
-C {iopin.sym} 2020 -520 1 1 {name=p299 lab=ana47_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5600 -320 3 0 {name=IO_ana57
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5520 -320 1 0 {name=p300 lab=ana57_PAD}
-C {iopin.sym} 5520 -520 1 1 {name=p301 lab=ana57_ASIG5V}
 C {iopin.sym} 7590 -7590 2 0 {name=p302 lab=VDD_A1}
 C {iopin.sym} 7180 -7640 0 0 {name=p303 lab=VSS_A1}
 C {iopin.sym} 4480 -7590 2 0 {name=p304 lab=LDO_OUT}
@@ -1613,7 +1559,6 @@ C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4630 -7860 1 0 {name=IO_LD
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {iopin.sym} 4710 -7660 3 1 {name=p320 lab=VCO_IBIAS_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_cor.sym} 8220 -7490 0 1 {name=IO1
 model=gf180mcu_fd_io__cor
 spiceprefix=X
