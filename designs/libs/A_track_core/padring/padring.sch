@@ -6,7 +6,7 @@ S {}
 F {}
 E {}
 L 3 4560 -8040 4560 -7160 {}
-L 3 3280 -8050 3280 -7170 {}
+L 3 3300 -8050 3300 -7170 {}
 L 3 760 -8030 760 -7150 {}
 L 3 7650 -8040 7650 -7160 {}
 L 3 40 -1660 920 -1660 {}
@@ -18,14 +18,14 @@ B 3 2990 -6980 5220 -5740 {fill=false}
 B 3 1040 -4980 2280 -2750 {fill=false}
 B 3 2640 -2310 4870 -1070 {fill=false}
 B 3 5760 -1700 7360 -1060 {fill=false}
-B 3 6200 -4220 7440 -1990 {fill=false}
-B 3 6200 -6970 7440 -4740 {fill=false}
+B 3 6010 -4220 7250 -1990 {fill=false}
+B 3 6010 -6970 7250 -4740 {fill=false}
 T {A1_top} 4110 -6540 1 0 2.8 2.8 {}
 T {A2_top} 1840 -3860 2 0 2.8 2.8 {}
 T {AXX_top} 3750 -1510 3 0 2.8 2.8 {}
 T {A5_top} 6470 -1140 3 0 2.8 2.8 {}
-T {A3_top} 7000 -3100 2 0 2.8 2.8 {}
-T {A4_top} 7000 -5850 2 0 2.8 2.8 {}
+T {A3_top} 6890 -3100 2 0 2.8 2.8 {}
+T {A4_top} 6900 -5850 2 0 2.8 2.8 {}
 T {LDO_EN} 6000 40 0 0 0.8 0.8 {}
 N 720 -7300 7660 -7300 {lab=#net1
 bus=true}
@@ -130,11 +130,11 @@ N 2600 -7780 2600 -7420 {lab=VTEST}
 N 2420 -7740 2420 -7300 {lab=#net1}
 N 2400 -7780 2420 -7780 {lab=#net3}
 N 2400 -7780 2400 -7340 {lab=#net3}
-N 720 -7340 3280 -7340 {lab=#net3
+N 780 -7340 3280 -7340 {lab=#net3
 bus=true}
-N 720 -7380 3280 -7380 {lab=VTEST
+N 780 -7380 3280 -7380 {lab=VTEST
 bus=true}
-N 720 -7420 3280 -7420 {lab=VTEST
+N 780 -7420 3280 -7420 {lab=VTEST
 bus=true}
 N 2580 -7740 2580 -7380 {lab=VTEST}
 N 2340 -7780 2360 -7780 {lab=VTEST}
@@ -195,12 +195,6 @@ N 460 -6530 720 -6530 {lab=#net1}
 N 550 -6940 640 -6940 {lab=AVDD_A2}
 N 430 -6940 490 -6940 {lab=AVDD_A2}
 N 430 -6960 430 -6940 {lab=AVDD_A2}
-N 600 -7060 600 -1730 {lab=AVDD_A2
-bus=true}
-N 640 -7060 640 -1730 {lab=AVDD_A2
-bus=true}
-N 680 -7060 680 -1710 {lab=AVSS_A2
-bus=true}
 N 720 -7300 720 -880 {lab=#net1
 bus=true}
 N 240 -6180 600 -6180 {lab=AVDD_A2}
@@ -326,19 +320,14 @@ N 1280 -400 1300 -400 {lab=VSS_A2}
 N 1300 -840 1300 -400 {lab=VSS_A2}
 N 1280 -560 1280 -400 {lab=VSS_A2}
 N 1280 -880 1280 -620 {lab=#net1}
-N 680 -1620 680 -840 {lab=VSS_A2
+N 680 -1640 680 -840 {lab=VSS_A2
 bus=true}
-N 680 -840 1760 -840 {lab=VSS_A2
+N 640 -1640 640 -800 {lab=VDD_A2
 bus=true}
-N 640 -1620 640 -800 {lab=VDD_A2
+N 600 -1640 600 -760 {lab=VDD_A2
 bus=true}
-N 640 -800 1760 -800 {lab=VDD_A2
+N 1360 -400 1380 -400 {lab=VDD_A2
 bus=true}
-N 600 -1620 600 -760 {lab=VDD_A2
-bus=true}
-N 600 -760 1760 -760 {lab=VDD_A2
-bus=true}
-N 1360 -400 1380 -400 {lab=VDD_A2}
 N 1360 -760 1360 -400 {lab=VDD_A2}
 N 1380 -800 1380 -440 {lab=VDD_A2}
 N 1640 -880 1640 -440 {lab=#net1}
@@ -365,11 +354,11 @@ N 7660 -4840 7920 -4840 {lab=#net1}
 N 7740 -4730 7830 -4730 {lab=VDD_A4}
 N 7890 -4730 7950 -4730 {lab=VDD_A4}
 N 7950 -4750 7950 -4730 {lab=VDD_A4}
-N 7780 -7200 7780 -4700 {lab=VDD_A4
+N 7780 -7420 7780 -4520 {lab=VDD_A4
 bus=true}
-N 7740 -7180 7740 -4700 {lab=VDD_A4
+N 7740 -7420 7740 -4520 {lab=VDD_A4
 bus=true}
-N 7700 -7140 7700 -4520 {lab=VSS_A4
+N 7700 -7420 7700 -4520 {lab=VSS_A4
 bus=true}
 N 7780 -6420 8140 -6420 {lab=VDD_A4}
 N 7740 -6400 8100 -6400 {lab=VDD_A4}
@@ -398,45 +387,45 @@ N 8140 -5460 8140 -5440 {lab=VSS_A4}
 N 7780 -3400 8140 -3400 {lab=VDD3V3_A3}
 N 7740 -3380 8100 -3380 {lab=VDD3V3_A3}
 N 7660 -3120 8100 -3120 {lab=#net1}
-N 7700 -3100 8140 -3100 {lab=VSS_1_A3}
+N 7700 -3100 8140 -3100 {lab=VDD3V3_A3}
 N 8140 -3400 8140 -3380 {lab=VDD3V3_A3}
-N 8140 -3120 8140 -3100 {lab=VSS_1_A3}
+N 8140 -3120 8140 -3100 {lab=VDD3V3_A3}
 N 7780 -3920 8140 -3920 {lab=VDD3V3_A3}
 N 7740 -3900 8100 -3900 {lab=VDD3V3_A3}
 N 7660 -3740 8100 -3740 {lab=#net1}
-N 7700 -3720 8140 -3720 {lab=VSS_1_A3}
+N 7700 -3720 8140 -3720 {lab=VDD3V3_A3}
 N 8140 -3920 8140 -3900 {lab=VDD3V3_A3}
-N 8140 -3740 8140 -3720 {lab=VSS_1_A3}
+N 8140 -3740 8140 -3720 {lab=VDD3V3_A3}
 N 7780 -3660 8140 -3660 {lab=VDD3V3_A3}
 N 7740 -3640 8100 -3640 {lab=VDD3V3_A3}
 N 7660 -3480 8100 -3480 {lab=#net1}
-N 7700 -3460 8140 -3460 {lab=VSS_1_A3}
+N 7700 -3460 8140 -3460 {lab=VDD3V3_A3}
 N 8140 -3660 8140 -3640 {lab=VDD3V3_A3}
-N 8140 -3480 8140 -3460 {lab=VSS_1_A3}
+N 8140 -3480 8140 -3460 {lab=VDD3V3_A3}
 N 7780 -3040 8140 -3040 {lab=VDD3V3_A3}
 N 7740 -3020 8100 -3020 {lab=VDD3V3_A3}
 N 7660 -2860 8100 -2860 {lab=#net1}
-N 7700 -2840 8140 -2840 {lab=VSS_1_A3}
+N 7700 -2840 8140 -2840 {lab=VDD3V3_A3}
 N 8140 -3040 8140 -3020 {lab=VDD3V3_A3}
-N 8140 -2860 8140 -2840 {lab=VSS_1_A3}
+N 8140 -2860 8140 -2840 {lab=VDD3V3_A3}
 N 7780 -2780 8140 -2780 {lab=VDD3V3_A3}
 N 7740 -2760 8100 -2760 {lab=VDD3V3_A3}
 N 7660 -2600 8100 -2600 {lab=#net1}
-N 7700 -2580 8140 -2580 {lab=VSS_1_A3}
+N 7700 -2580 8140 -2580 {lab=VDD3V3_A3}
 N 8140 -2780 8140 -2760 {lab=VDD3V3_A3}
-N 8140 -2600 8140 -2580 {lab=VSS_1_A3}
+N 8140 -2600 8140 -2580 {lab=VDD3V3_A3}
 N 7780 -2520 8140 -2520 {lab=VDD3V3_A3}
 N 7740 -2500 8100 -2500 {lab=VDD3V3_A3}
 N 7660 -2340 8100 -2340 {lab=#net1}
-N 7700 -2320 8140 -2320 {lab=VSS_1_A3}
+N 7700 -2320 8140 -2320 {lab=VDD3V3_A3}
 N 8140 -2520 8140 -2500 {lab=VDD3V3_A3}
-N 8140 -2340 8140 -2320 {lab=VSS_1_A3}
+N 8140 -2340 8140 -2320 {lab=VDD3V3_A3}
 N 7780 -2260 8140 -2260 {lab=VDD3V3_A3}
 N 7740 -2240 8100 -2240 {lab=VDD3V3_A3}
 N 7660 -2080 8100 -2080 {lab=#net1}
-N 7700 -2060 8140 -2060 {lab=VSS_1_A3}
+N 7700 -2060 8140 -2060 {lab=VDD3V3_A3}
 N 8140 -2260 8140 -2240 {lab=VDD3V3_A3}
-N 8140 -2080 8140 -2060 {lab=VSS_1_A3}
+N 8140 -2080 8140 -2060 {lab=VDD3V3_A3}
 N 8140 -1340 8140 -1320 {lab=VDD3V3_A5}
 N 7780 -1340 8140 -1340 {lab=VDD3V3_A5}
 N 7660 -1160 8100 -1160 {lab=#net1}
@@ -445,12 +434,8 @@ N 7700 -1140 8140 -1140 {lab=VSS_A5}
 N 7740 -1320 7830 -1320 {lab=VDD3V3_A5}
 N 7890 -1320 7950 -1320 {lab=VDD3V3_A5}
 N 7950 -1340 7950 -1320 {lab=VDD3V3_A5}
-N 7700 -1630 7700 -920 {lab=VSS_A5}
-N 5780 -840 7700 -840 {lab=VSS_A5}
-N 7740 -1630 7740 -880 {lab=VDD3V3_A5}
-N 5780 -800 7740 -800 {lab=VDD3V3_A5}
-N 7780 -1630 7780 -840 {lab=VDD3V3_A5}
-N 6340 -760 7780 -760 {lab=VDD3V3_A5}
+N 6340 -760 7780 -760 {lab=VDD3V3_A5
+bus=true}
 N 720 -880 2050 -880 {lab=#net1
 bus=true}
 N 7780 -7200 8140 -7200 {lab=VDD_A4}
@@ -470,22 +455,24 @@ bus=true}
 N 8140 -4440 8140 -4420 {lab=VDD3V3_A3}
 N 7780 -4440 8140 -4440 {lab=VDD3V3_A3}
 N 7660 -4260 8100 -4260 {lab=#net1}
-N 8140 -4260 8140 -4240 {lab=VSS_1_A3}
-N 7700 -4240 8140 -4240 {lab=VSS_1_A3}
+N 8140 -4260 8140 -4240 {lab=VDD3V3_A3}
+N 7700 -4240 8140 -4240 {lab=VDD3V3_A3}
 N 7740 -4420 7830 -4420 {lab=VDD3V3_A3}
 N 7890 -4420 7950 -4420 {lab=VDD3V3_A3}
 N 7950 -4440 7950 -4420 {lab=VDD3V3_A3}
 N 8140 -4180 8140 -4160 {lab=VDD3V3_A3}
 N 7780 -4180 8140 -4180 {lab=VDD3V3_A3}
 N 7740 -4160 8100 -4160 {lab=VDD3V3_A3}
-N 8140 -4000 8140 -3980 {lab=VSS_1_A3}
-N 7700 -3980 8140 -3980 {lab=VSS_1_A3}
-N 7980 -4000 8140 -4000 {lab=VSS_1_A3}
+N 8140 -4000 8140 -3980 {lab=VDD3V3_A3}
+N 7700 -3980 8140 -3980 {lab=VDD3V3_A3}
+N 7980 -4000 8140 -4000 {lab=VDD3V3_A3}
 N 7660 -4000 7920 -4000 {lab=#net1}
-N 7700 -4460 7700 -1760 {lab=VSS_1_A3
+N 7700 -4480 7700 -1720 {lab=VDD3V3_A3
 bus=true}
-N 7740 -4460 7740 -1760 {lab=VDD3V3_A3}
-N 7780 -4460 7780 -1760 {lab=VDD3V3_A3}
+N 7740 -4480 7740 -1720 {lab=VDD3V3_A3
+bus=true}
+N 7780 -4480 7780 -1720 {lab=VDD3V3_A3
+bus=true}
 N 8140 -2000 8140 -1980 {lab=VDD3V3_A3}
 N 7780 -2000 8140 -2000 {lab=VDD3V3_A3}
 N 7740 -1980 8100 -1980 {lab=VDD3V3_A3}
@@ -537,31 +524,12 @@ N 6520 -560 6520 -400 {lab=VSS_A5}
 N 6520 -880 6520 -620 {lab=#net1}
 N 2050 -880 7660 -880 {lab=#net1
 bus=true}
-N 7700 -920 7700 -840 {lab=VSS_A5}
-N 7660 -960 7660 -880 {lab=#net1
-bus=true}
-N 7700 -920 7700 -840 {lab=VSS_A5}
-N 7740 -880 7740 -800 {lab=VDD3V3_A5}
-N 7660 -960 7660 -880 {lab=#net1
-bus=true}
-N 7700 -920 7700 -840 {lab=VSS_A5}
-N 7740 -880 7740 -800 {lab=VDD3V3_A5}
-N 7780 -840 7780 -760 {lab=VDD3V3_A5}
-N 7660 -960 7660 -880 {lab=#net1
-bus=true}
 N 5820 -760 5820 -400 {lab=VDD3V3_A5}
 N 5840 -800 5840 -440 {lab=VDD3V3_A5}
 N 6000 -880 6000 -440 {lab=#net1}
 N 6020 -840 6020 -400 {lab=VSS_A5}
 N 5820 -400 5840 -400 {lab=VDD3V3_A5}
 N 6000 -400 6020 -400 {lab=VSS_A5}
-N 5780 -760 6340 -760 {lab=VDD3V3_A5}
-N 1840 -840 5690 -840 {lab=VSS_AXX
-bus=true}
-N 1840 -800 5690 -800 {lab=VDD3V3_AXX
-bus=true}
-N 1840 -760 5690 -760 {lab=VDD3V3_AXX
-bus=true}
 N 2240 -400 2260 -400 {lab=VDD3V3_AXX}
 N 2240 -760 2240 -400 {lab=VDD3V3_AXX}
 N 2420 -880 2420 -440 {lab=#net1}
@@ -651,22 +619,221 @@ N 5420 -400 5440 -400 {lab=VDD3V3_AXX}
 N 5600 -400 5620 -400 {lab=VSS_AXX}
 N 8140 -1800 8150 -1800 {lab=VSS_2_A3}
 N 8210 -1800 8220 -1800 {lab=VSS_2_A3}
-N 8140 -3980 8150 -3980 {lab=VSS_1_A3}
+N 8140 -3980 8150 -3980 {lab=VDD3V3_A3}
 N 8210 -3980 8220 -3980 {lab=VSS_1_A3}
 N 7890 -1800 8140 -1800 {lab=VSS_2_A3}
-N 7700 -1800 7830 -1800 {lab=VSS_1_A3}
+N 7700 -1800 7830 -1800 {lab=VDD3V3_A3}
 N 4810 -7780 4810 -7420 {lab=VDD_A1}
 N 4790 -7740 4790 -7380 {lab=VDD_A1}
 N 4630 -7740 4630 -7300 {lab=#net1}
 N 4610 -7780 4610 -7340 {lab=VSS_A1}
 N 4790 -7780 4810 -7780 {lab=VDD_A1}
 N 4610 -7780 4630 -7780 {lab=VSS_A1}
-N 4580 -7340 7660 -7340 {lab=VSS_A1
+N 4580 -7340 7640 -7340 {lab=VSS_A1
 bus=true}
-N 4580 -7380 7660 -7380 {lab=VDD_A1
+N 4580 -7380 7640 -7380 {lab=VDD_A1
 bus=true}
-N 4580 -7420 7660 -7420 {lab=VDD_A1
+N 4580 -7420 7640 -7420 {lab=VDD_A1
 bus=true}
+N 8100 -7490 8100 -7300 {lab=#net1}
+N 7660 -7300 8100 -7300 {lab=#net1}
+N 7700 -7340 8140 -7340 {lab=VSS_A4}
+N 8140 -7490 8140 -7340 {lab=VSS_A4}
+N 7740 -7650 7740 -7420 {lab=VDD_A4}
+N 7780 -7700 7780 -7420 {lab=VDD_A4}
+N 7780 -7700 8140 -7700 {lab=VDD_A4}
+N 8140 -7700 8140 -7650 {lab=VDD_A4}
+N 680 -7420 680 -1680 {lab=AVSS_A2
+bus=true}
+N 640 -7420 640 -1680 {lab=AVDD_A2
+bus=true}
+N 600 -7420 600 -1680 {lab=AVDD_A2
+bus=true}
+N 280 -7340 280 -7300 {lab=#net1}
+N 280 -7300 720 -7300 {lab=#net1}
+N 240 -7340 240 -7320 {lab=AVSS_A2}
+N 240 -7320 680 -7320 {lab=AVSS_A2}
+N 240 -7560 240 -7500 {lab=AVDD_A2}
+N 240 -7560 600 -7560 {lab=AVDD_A2}
+N 600 -7560 600 -7420 {lab=AVDD_A2}
+N 640 -7540 640 -7420 {lab=AVDD_A2}
+N 280 -7540 640 -7540 {lab=AVDD_A2}
+N 280 -7540 280 -7500 {lab=AVDD_A2}
+N 300 -920 300 -740 {lab=VDD_A2}
+N 300 -920 600 -920 {lab=VDD_A2}
+N 340 -880 340 -740 {lab=VDD_A2}
+N 340 -880 640 -880 {lab=VDD_A2}
+N 720 -880 720 -550 {lab=#net1}
+N 340 -550 720 -550 {lab=#net1}
+N 340 -580 340 -550 {lab=#net1}
+N 300 -580 300 -520 {lab=VSS_A2}
+N 300 -520 680 -520 {lab=VSS_A2}
+N 680 -840 680 -520 {lab=VSS_A2}
+N 7700 -1680 7700 -840 {lab=VSS_A5
+bus=true}
+N 7740 -1680 7740 -800 {lab=VDD3V3_A5
+bus=true}
+N 7780 -1680 7780 -760 {lab=VDD3V3_A5
+bus=true}
+N 8100 -940 8100 -850 {lab=VDD3V3_A5}
+N 7740 -940 8100 -940 {lab=VDD3V3_A5}
+N 8140 -980 8140 -850 {lab=VDD3V3_A5}
+N 7780 -980 8140 -980 {lab=VDD3V3_A5}
+N 8100 -690 8100 -640 {lab=#net1}
+N 7660 -640 8100 -640 {lab=#net1}
+N 7660 -880 7660 -640 {lab=#net1}
+N 8140 -690 8140 -600 {lab=VSS_A5}
+N 7620 -600 8140 -600 {lab=VSS_A5}
+N 7620 -840 7620 -600 {lab=VSS_A5}
+N 600 -760 1780 -760 {bus=true
+lab=VDD_A2}
+N 640 -800 1780 -800 {lab=VDD_A2
+bus=true}
+N 680 -840 1780 -840 {lab=VSS_A2
+bus=true}
+N 1820 -840 5690 -840 {lab=VSS_AXX
+bus=true}
+N 1820 -800 5690 -800 {lab=VDD3V3_AXX
+bus=true}
+N 1820 -760 5690 -760 {lab=VDD3V3_AXX
+bus=true}
+N 5740 -760 6340 -760 {lab=VDD3V3_A5
+bus=true}
+N 5740 -800 7740 -800 {lab=VDD3V3_A5
+bus=true}
+N 5740 -840 7700 -840 {lab=VSS_A5
+bus=true
+}
+N 7800 -520 7800 -460 {lab=VDD3V3_A5}
+N 7560 -520 7800 -520 {lab=VDD3V3_A5}
+N 7560 -520 7560 -460 {lab=VDD3V3_A5}
+N 7560 -800 7560 -520 {lab=VDD3V3_A5}
+N 7760 -480 7760 -460 {lab=VDD3V3_A5}
+N 7520 -480 7760 -480 {lab=VDD3V3_A5}
+N 7520 -480 7520 -460 {lab=VDD3V3_A5}
+N 7520 -760 7520 -480 {lab=VDD3V3_A5}
+N 7420 -840 7420 -280 {lab=VSS_A5}
+N 7380 -880 7380 -280 {lab=#net1}
+N 7420 -280 7520 -280 {lab=VSS_A5}
+N 7520 -300 7520 -280 {lab=VSS_A5}
+N 7380 -280 7380 -240 {lab=#net1}
+N 7380 -240 7560 -240 {lab=#net1}
+N 7560 -300 7560 -240 {lab=#net1}
+N 7520 -280 7760 -280 {lab=VSS_A5}
+N 7760 -300 7760 -280 {lab=VSS_A5}
+N 7560 -240 7800 -240 {lab=#net1}
+N 7800 -300 7800 -240 {lab=#net1}
+N 5400 -1190 5400 -1130 {lab=VDD3V3_AXX}
+N 5160 -1190 5400 -1190 {lab=VDD3V3_AXX}
+N 5360 -1150 5360 -1130 {lab=VDD3V3_AXX}
+N 5120 -1150 5360 -1150 {lab=VDD3V3_AXX}
+N 5120 -1150 5120 -1130 {lab=VDD3V3_AXX}
+N 5120 -970 5120 -950 {lab=VSS_AXX}
+N 5160 -970 5160 -910 {lab=#net1}
+N 5360 -970 5360 -950 {lab=VSS_AXX}
+N 5400 -970 5400 -910 {lab=#net1}
+N 5160 -1190 5160 -1130 {lab=VDD3V3_AXX}
+N 5160 -910 5160 -880 {lab=#net1}
+N 5400 -910 5400 -880 {lab=#net1}
+N 5120 -950 5120 -840 {lab=VSS_AXX}
+N 5360 -950 5360 -840 {lab=VSS_AXX}
+N 5400 -1190 5500 -1190 {lab=VDD3V3_AXX}
+N 5500 -1190 5500 -800 {lab=VDD3V3_AXX}
+N 5360 -1150 5540 -1150 {lab=VDD3V3_AXX}
+N 5540 -1150 5540 -760 {lab=VDD3V3_AXX}
+N 590 -460 590 -430 {lab=VDD_A2}
+N 590 -460 830 -460 {lab=VDD_A2}
+N 830 -460 830 -430 {lab=VDD_A2}
+N 830 -760 830 -460 {lab=VDD_A2}
+N 870 -800 870 -430 {lab=VDD_A2}
+N 590 -270 590 -220 {lab=VSS_A2}
+N 590 -220 980 -220 {lab=VSS_A2}
+N 980 -840 980 -220 {lab=VSS_A2}
+N 630 -270 630 -240 {lab=#net1}
+N 630 -240 1020 -240 {lab=#net1}
+N 1020 -880 1020 -240 {lab=#net1}
+N 830 -270 830 -220 {lab=VSS_A2}
+N 870 -270 870 -240 {lab=#net1}
+N 630 -440 630 -430 {lab=VDD_A2}
+N 630 -440 870 -440 {lab=VDD_A2}
+N 100 -7270 100 -7230 {lab=AVDD_A2}
+N 100 -7270 600 -7270 {lab=AVDD_A2}
+N 140 -7240 140 -7230 {lab=AVDD_A2}
+N 140 -7240 640 -7240 {lab=AVDD_A2}
+N 340 -7270 340 -7230 {lab=AVDD_A2}
+N 380 -7240 380 -7230 {lab=AVDD_A2}
+N 100 -7070 100 -7020 {lab=AVSS_A2}
+N 100 -7020 680 -7020 {lab=AVSS_A2}
+N 140 -7070 140 -7050 {lab=#net1}
+N 140 -7050 720 -7050 {lab=#net1}
+N 340 -7070 340 -7020 {lab=AVSS_A2}
+N 380 -7070 380 -7050 {lab=#net1}
+N 1820 -7420 1820 -7240 {lab=VTEST}
+N 2140 -7420 2140 -7240 {lab=VTEST}
+N 2180 -7380 2180 -7240 {lab=VTEST}
+N 1860 -7380 1860 -7240 {lab=VTEST}
+N 1820 -7080 1820 -7040 {lab=#net3}
+N 1820 -7040 2140 -7040 {lab=#net3}
+N 2140 -7080 2140 -7040 {lab=#net3}
+N 2180 -7080 2180 -7060 {lab=#net1}
+N 1860 -7060 2180 -7060 {lab=#net1}
+N 1860 -7080 1860 -7060 {lab=#net1}
+N 1960 -7300 1960 -7060 {lab=#net1}
+N 2000 -7340 2000 -7040 {lab=#net3}
+N 3810 -7420 3810 -7240 {lab=LDO_OUT}
+N 4130 -7420 4130 -7240 {lab=LDO_OUT}
+N 4170 -7380 4170 -7240 {lab=LDO_OUT}
+N 3850 -7380 3850 -7240 {lab=LDO_OUT}
+N 3810 -7080 3810 -7040 {lab=#net2}
+N 3810 -7040 4130 -7040 {lab=#net2}
+N 4130 -7080 4130 -7040 {lab=#net2}
+N 4170 -7080 4170 -7060 {lab=#net1}
+N 3850 -7060 4170 -7060 {lab=#net1}
+N 3850 -7080 3850 -7060 {lab=#net1}
+N 3950 -7300 3950 -7060 {lab=#net1}
+N 3990 -7340 3990 -7040 {lab=#net2}
+N 5300 -7420 5300 -7240 {lab=VDD_A1}
+N 5620 -7420 5620 -7240 {lab=VDD_A1}
+N 5660 -7380 5660 -7240 {lab=VDD_A1}
+N 5340 -7380 5340 -7240 {lab=VDD_A1}
+N 5300 -7080 5300 -7040 {lab=VSS_A1}
+N 5300 -7040 5620 -7040 {lab=VSS_A1}
+N 5620 -7080 5620 -7040 {lab=VSS_A1}
+N 5660 -7080 5660 -7060 {lab=#net1}
+N 5340 -7060 5660 -7060 {lab=#net1}
+N 5340 -7080 5340 -7060 {lab=#net1}
+N 5440 -7300 5440 -7060 {lab=#net1}
+N 5480 -7340 5480 -7040 {lab=VSS_A1}
+N 8100 -7300 8340 -7300 {lab=#net1}
+N 7740 -7660 7740 -7650 {lab=VDD_A4}
+N 7740 -7660 8100 -7660 {lab=VDD_A4}
+N 8100 -7660 8100 -7650 {lab=VDD_A4}
+N 8100 -7660 8500 -7660 {lab=VDD_A4}
+N 8500 -7660 8500 -7650 {lab=VDD_A4}
+N 8140 -7700 8540 -7700 {lab=VDD_A4}
+N 8540 -7700 8540 -7650 {lab=VDD_A4}
+N 8300 -7660 8300 -7650 {lab=VDD_A4}
+N 8340 -7700 8340 -7650 {lab=VDD_A4}
+N 8300 -7490 8300 -7300 {lab=#net1}
+N 8340 -7490 8340 -7340 {lab=VSS_A4}
+N 8500 -7490 8500 -7300 {lab=#net1}
+N 8540 -7490 8540 -7340 {lab=VSS_A4}
+N 8140 -7340 8540 -7340 {lab=VSS_A4}
+N 8340 -7300 8500 -7300 {lab=#net1}
+N 7360 -3100 7420 -3100 {lab=VDD3V3_A3}
+N 7360 -3320 7360 -3120 {lab=VDD3V3_A3}
+N 7360 -3320 7420 -3320 {lab=VDD3V3_A3}
+N 7400 -3140 7420 -3140 {lab=#net1}
+N 7400 -3360 7400 -3160 {lab=#net1}
+N 7400 -3360 7420 -3360 {lab=#net1}
+N 7360 -3120 7360 -3100 {lab=VDD3V3_A3}
+N 7400 -3160 7400 -3140 {lab=#net1}
+N 7580 -3320 7780 -3320 {lab=VDD3V3_A3}
+N 7580 -3360 7740 -3360 {lab=VDD3V3_A3}
+N 7580 -3100 7780 -3100 {lab=VDD3V3_A3}
+N 7580 -3140 7740 -3140 {lab=VDD3V3_A3}
+N 7400 -3240 7660 -3240 {lab=#net1}
+N 7360 -3220 7700 -3220 {lab=VDD3V3_A3}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2420 -7860 1 0 {name=IO_TEST_IBIAS
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
@@ -769,12 +936,8 @@ C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 820 -7860 1 0 {name=IO_LCO
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {iopin.sym} 2500 -7660 1 0 {name=p4 lab=test_ibias_int}
-C {iopin.sym} 4140 -7660 1 0 {name=p31 lab=vco_in_int}
 C {opin.sym} 5630 -7600 1 0 {name=p114 lab=LDO_IBIAS_OVRD_Y}
 C {opin.sym} 6610 -7600 1 0 {name=p168 lab=LDO_EN_Y}
-C {iopin.sym} 5910 -7660 3 1 {name=p169 lab=LDO_VREF_ASIG5V}
-C {iopin.sym} 5290 -7660 3 1 {name=p170 lab=LDO_IBIAS_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 6770 -7860 1 0 {name=IO_LDO_EN1
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
@@ -796,7 +959,6 @@ spice_ignore=false
 }
 C {iopin.sym} 7160 -7840 3 0 {name=p51 lab=VSS_A1}
 C {title.sym} 160 -40 0 0 {name=l1 author="Luighi Viton (Analog/AI Track)"}
-C {iopin.sym} 360 -6340 2 1 {name=p23 lab=VCM_A2_ASIG5V}
 C {short.sym} 7160 -7810 0 0 {name=x2 value=0.1}
 C {iopin.sym} 7610 -7840 3 0 {name=p1 lab=VDD_A1}
 C {short.sym} 7610 -7810 0 0 {name=x3 value=0.1}
@@ -911,7 +1073,6 @@ C {ipin.sym} 1200 -7600 3 0 {name=p144 lab=TEST_SEL_2_PD}
 C {ipin.sym} 1220 -7600 3 0 {name=p145 lab=TEST_SEL_2_PU}
 C {ipin.sym} 1260 -7600 3 0 {name=p146 lab=TEST_SEL_2_CS}
 C {ipin.sym} 1280 -7600 3 0 {name=p147 lab=TEST_SEL_2_IE}
-C {iopin.sym} 900 -7660 1 0 {name=p148 lab=TEST_OUT_ASIG5V}
 C {short.sym} 3160 -7500 0 0 {name=x6 value=0.1}
 C {short.sym} 4480 -7500 0 0 {name=x7 value=0.1}
 C {short.sym} 7590 -7500 0 0 {name=x8 value=0.1}
@@ -935,79 +1096,66 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -6080 2 0 {name=p24 lab=VBIAS_A2_PAD}
-C {iopin.sym} 360 -6080 2 1 {name=p25 lab=VBIAS_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5740 0 0 {name=IO_IN1P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5820 2 0 {name=p149 lab=IN1P_A2_PAD}
-C {iopin.sym} 360 -5820 2 1 {name=p150 lab=IN1P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5480 0 0 {name=IO_IN1N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5560 2 0 {name=p151 lab=IN1N_A2_PAD}
-C {iopin.sym} 360 -5560 2 1 {name=p152 lab=IN1N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -5220 0 0 {name=IO_IN2P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5300 2 0 {name=p153 lab=IN2P_A2_PAD}
-C {iopin.sym} 360 -5300 2 1 {name=p154 lab=IN2P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4960 0 0 {name=IO_IN2N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -5040 2 0 {name=p155 lab=IN2N_A2_PAD}
-C {iopin.sym} 360 -5040 2 1 {name=p156 lab=IN2N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4700 0 0 {name=IO_IN3P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4780 2 0 {name=p157 lab=IN3P_A2_PAD}
-C {iopin.sym} 360 -4780 2 1 {name=p158 lab=IN3P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4440 0 0 {name=IO_IN3N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4520 2 0 {name=p159 lab=IN3N_A2_PAD}
-C {iopin.sym} 360 -4520 2 1 {name=p160 lab=IN3N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -4180 0 0 {name=IO_IN4P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4260 2 0 {name=p161 lab=IN4P_A2_PAD}
-C {iopin.sym} 360 -4260 2 1 {name=p162 lab=IN4P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3920 0 0 {name=IO_IN4N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -4000 2 0 {name=p163 lab=IN4N_A2_PAD}
-C {iopin.sym} 360 -4000 2 1 {name=p164 lab=IN4N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3660 0 0 {name=IO_OUT1P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3740 2 0 {name=p165 lab=OUT1P_A2_PAD}
-C {iopin.sym} 360 -3740 2 1 {name=p166 lab=OUT1P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3400 0 0 {name=IO_OUT1N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3480 2 0 {name=p167 lab=OUT1N_A2_PAD}
-C {iopin.sym} 360 -3480 2 1 {name=p171 lab=OUT1N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -3140 0 0 {name=IO_OUT2P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -3220 2 0 {name=p172 lab=OUT2P_A2_PAD}
-C {iopin.sym} 360 -3220 2 1 {name=p173 lab=OUT2P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2880 0 0 {name=IO_OUT2N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -2960 2 0 {name=p174 lab=OUT2N_A2_PAD}
-C {iopin.sym} 360 -2960 2 1 {name=p175 lab=OUT2N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -2620 0 0 {name=IO_OUT3P_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
@@ -1021,17 +1169,13 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -2180 2 0 {name=p181 lab=OUT4P_A2_PAD}
-C {iopin.sym} 360 -2180 2 1 {name=p182 lab=OUT4P_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 160 -1840 0 0 {name=IO_OUT4N_A2
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 160 -1920 2 0 {name=p183 lab=OUT4N_A2_PAD}
-C {iopin.sym} 360 -1920 2 1 {name=p184 lab=OUT4N_A2_ASIG5V}
 C {iopin.sym} 160 -2700 2 0 {name=p176 lab=OUT3P_A2_PAD}
-C {iopin.sym} 360 -2700 2 1 {name=p177 lab=OUT3P_A2_ASIG5V}
 C {iopin.sym} 160 -2440 2 0 {name=p178 lab=OUT3N_A2_PAD}
-C {iopin.sym} 360 -2440 2 1 {name=p180 lab=OUT3N_A2_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 160 -1420 0 0 {name=IO_VDD_A2
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1082,7 +1226,6 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6580 2 1 {name=p209 lab=VOUT90_PAD}
-C {iopin.sym} 8020 -6580 2 0 {name=p210 lab=VOUT90_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 8220 -4570 0 1 {name=IO_AVDD_A1
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1103,43 +1246,36 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6320 2 1 {name=p213 lab=VOUT0_PAD}
-C {iopin.sym} 8020 -6320 2 0 {name=p214 lab=VOUT0_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5980 0 1 {name=IO_IBIAS
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6060 2 1 {name=p215 lab=IBIAS_PAD}
-C {iopin.sym} 8020 -6060 2 0 {name=p216 lab=IBIAS_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5720 0 1 {name=IO_VCTRL
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -5800 2 1 {name=p217 lab=VCTRL_PAD}
-C {iopin.sym} 8020 -5800 2 0 {name=p218 lab=VCTRL_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -5460 0 1 {name=IO_VREF
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -5540 2 1 {name=p219 lab=VREF_PAD}
-C {iopin.sym} 8020 -5540 2 0 {name=p220 lab=VREF_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -3740 0 1 {name=IO_V_IN_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -3820 2 1 {name=p231 lab=V_IN_A3_PAD}
-C {iopin.sym} 8020 -3820 2 0 {name=p232 lab=V_IN_A3_ASIGV5}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -3480 0 1 {name=IO_V_AUX_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -3560 2 1 {name=p233 lab=V_AUX_A3_PAD}
-C {iopin.sym} 8020 -3560 2 0 {name=p234 lab=V_AUX_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2860 0 1 {name=IO_V_BIAS_EN_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -2940 2 1 {name=p237 lab=V_BIAS_EN_A3_PAD}
-C {iopin.sym} 8020 -2940 2 0 {name=p238 lab=V_BIAS_EN_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -2600 0 1 {name=IO_CCM_OUT_A3
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
@@ -1153,11 +1289,8 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -2160 2 1 {name=p239 lab=VCM_OUT_A3_PAD}
-C {iopin.sym} 8020 -2160 2 0 {name=p240 lab=VCM_OUT_A3_ASIG5V}
 C {iopin.sym} 8220 -2680 2 1 {name=p243 lab=CCM_OUT_A3_PAD}
-C {iopin.sym} 8020 -2680 2 0 {name=p244 lab=CCM_OUT_A3_ASIG5V}
 C {iopin.sym} 8220 -2420 2 1 {name=p245 lab=BCM_OUT_A3_PAD}
-C {iopin.sym} 8020 -2420 2 0 {name=p246 lab=BCM_OUT_A3_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 8220 -1160 0 1 {name=IO_VDD_A3
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1171,28 +1304,26 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -7100 2 1 {name=p271 lab=VOUT270_PAD}
-C {iopin.sym} 8020 -7100 2 0 {name=p272 lab=VOUT270_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 8220 -6760 0 1 {name=IO_VOUT180
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -6840 2 1 {name=p273 lab=VOUT180_PAD}
-C {iopin.sym} 8020 -6840 2 0 {name=p274 lab=VOUT180_ASIG5V}
-C {ipin.sym} 8220 -3260 2 0 {name=p275 lab=EN_A3_PAD}
-C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 8220 -3380 2 0 {name=IO_EN_A3
+C {ipin.sym} 8220 -3260 0 1 {name=p275 lab=EN_A3_PAD}
+C {Chipathon2025_pads/xschem/symbols/io_bi_t.sym} 8220 -3120 0 1 {name=IO_EN_A3
 model=gf180mcu_fd_io__bi_t
 spiceprefix=X
 }
-C {ipin.sym} 7960 -3340 0 0 {name=p276 lab=EN_A3_OE}
-C {ipin.sym} 7960 -3320 0 0 {name=p277 lab=EN_A3_SL}
-C {ipin.sym} 7960 -3300 0 0 {name=p278 lab=EN_A3_A}
-C {ipin.sym} 7960 -3280 0 0 {name=p279 lab=EN_A3_PDRV1}
-C {ipin.sym} 7960 -3260 0 0 {name=p280 lab=EN_A3_PDRV0}
-C {ipin.sym} 7960 -3240 0 0 {name=p281 lab=EN_A3_PD}
-C {ipin.sym} 7960 -3220 0 0 {name=p282 lab=EN_A3_PU}
-C {opin.sym} 7960 -3200 2 0 {name=p283 lab=EN_A3_Y}
-C {ipin.sym} 7960 -3180 0 0 {name=p284 lab=EN_A3_CS}
-C {ipin.sym} 7960 -3160 0 0 {name=p285 lab=EN_A3_IE}
+C {ipin.sym} 7960 -3160 2 1 {name=p276 lab=EN_A3_OE}
+C {ipin.sym} 7960 -3180 2 1 {name=p277 lab=EN_A3_SL}
+C {ipin.sym} 7960 -3200 2 1 {name=p278 lab=EN_A3_A}
+C {ipin.sym} 7960 -3220 2 1 {name=p279 lab=EN_A3_PDRV1}
+C {ipin.sym} 7960 -3240 2 1 {name=p280 lab=EN_A3_PDRV0}
+C {ipin.sym} 7960 -3260 2 1 {name=p281 lab=EN_A3_PD}
+C {ipin.sym} 7960 -3280 2 1 {name=p282 lab=EN_A3_PU}
+C {opin.sym} 7960 -3300 0 1 {name=p283 lab=EN_A3_Y}
+C {ipin.sym} 7960 -3320 2 1 {name=p284 lab=EN_A3_CS}
+C {ipin.sym} 7960 -3340 2 1 {name=p285 lab=EN_A3_IE}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 8220 -4260 0 1 {name=IO_VDD3V3_A3
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1233,31 +1364,26 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 8220 -1500 2 1 {name=p248 lab=VOUT_V_IF_A5_PAD}
-C {iopin.sym} 8020 -1500 2 0 {name=p249 lab=VOUT_V_IF_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 7300 -320 3 0 {name=IO_I_BIAS_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 7220 -320 1 0 {name=p250 lab=I_BIAS_A5_PAD}
-C {iopin.sym} 7220 -520 1 1 {name=p251 lab=I_BIAS_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 7040 -320 3 0 {name=IO_VIN_V_LOb_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6960 -320 1 0 {name=p252 lab=VIN_V_LOb_A5_PAD}
-C {iopin.sym} 6960 -520 1 1 {name=p253 lab=VIN_V_LOb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6780 -320 3 0 {name=IO_VIN_V_LO_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6700 -320 1 0 {name=p254 lab=VIN_V_RFb_A5_PAD}
-C {iopin.sym} 6700 -520 1 1 {name=p255 lab=VIN_V_RFb_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 6260 -320 3 0 {name=IO_VIN_V_RFb_A5
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 6180 -320 1 0 {name=p256 lab=VIN_V_RF_A5_PAD}
-C {iopin.sym} 6180 -520 1 1 {name=p257 lab=VIN_V_RF_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 6520 -320 3 0 {name=IO_VSS_A5
 model=gf180mcu_fd_io__dvss
 spiceprefix=X
@@ -1270,7 +1396,6 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5920 -320 1 0 {name=p259 lab=VIN_V_LO_A5_PAD}
-C {iopin.sym} 5920 -520 1 1 {name=p260 lab=VIN_V_LO_A5_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvdd.sym} 2420 -320 3 0 {name=IO_VDD3V3_AXX
 model=gf180mcu_fd_io__dvdd
 spiceprefix=X
@@ -1284,13 +1409,11 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2860 -320 1 0 {name=p262 lab=VCOMP_PAD}
-C {iopin.sym} 2860 -520 1 1 {name=p263 lab=VCOMP_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2680 -320 3 0 {name=IO_VREF12
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2600 -320 1 0 {name=p264 lab=VREF12_PAD}
-C {iopin.sym} 2600 -520 1 1 {name=p265 lab=VREF12_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_dvss.sym} 3200 -320 3 0 {name=IO_VSS_AXX
 model=gf180mcu_fd_io__dvss
 spiceprefix=X
@@ -1303,61 +1426,51 @@ model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3640 -320 1 0 {name=p267 lab=IOUTP_2UA_PAD}
-C {iopin.sym} 3640 -520 1 1 {name=p268 lab=IOUTP_2UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3460 -320 3 0 {name=IO_IOUTN_2UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3380 -320 1 0 {name=p269 lab=IOUTN_2UA_PAD}
-C {iopin.sym} 3380 -520 1 1 {name=p270 lab=IOUTN_2UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4240 -320 3 0 {name=IO_IOUTP_20UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4160 -320 1 0 {name=p286 lab=IOUTP_20UA_PAD}
-C {iopin.sym} 4160 -520 1 1 {name=p287 lab=IOUTP_20UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 3980 -320 3 0 {name=IO_IOUTN_20UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 3900 -320 1 0 {name=p288 lab=IOUTN_20UA_PAD}
-C {iopin.sym} 3900 -520 1 1 {name=p289 lab=IOUTN_20UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4760 -320 3 0 {name=IO_IOUTP_50UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4680 -320 1 0 {name=p290 lab=IOUTP_50UA_PAD}
-C {iopin.sym} 4680 -520 1 1 {name=p291 lab=IOUTP_50UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4500 -320 3 0 {name=IO_IOUTN_50UA
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4420 -320 1 0 {name=p292 lab=IOUTN_50UA_PAD}
-C {iopin.sym} 4420 -520 1 1 {name=p293 lab=IOUTN_50UA_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5280 -320 3 0 {name=IO_VREFP_AXX
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5200 -320 1 0 {name=p294 lab=VREFP_AXX_PAD}
-C {iopin.sym} 5200 -520 1 1 {name=p295 lab=VREFP_AXX_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5020 -320 3 0 {name=IO_VREFN_AXX
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 4940 -320 1 0 {name=p296 lab=VREFN_AXX_PAD}
-C {iopin.sym} 4940 -520 1 1 {name=p297 lab=VREFN_AXX_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2100 -320 3 0 {name=IO_ana47
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 2020 -320 1 0 {name=p298 lab=ana47_PAD}
-C {iopin.sym} 2020 -520 1 1 {name=p299 lab=ana47_ASIG5V}
 C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 5600 -320 3 0 {name=IO_ana57
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
 C {iopin.sym} 5520 -320 1 0 {name=p300 lab=ana57_PAD}
-C {iopin.sym} 5520 -520 1 1 {name=p301 lab=ana57_ASIG5V}
 C {iopin.sym} 7590 -7590 2 0 {name=p302 lab=VDD_A1}
 C {iopin.sym} 7180 -7640 0 0 {name=p303 lab=VSS_A1}
 C {iopin.sym} 4480 -7590 2 0 {name=p304 lab=LDO_OUT}
@@ -1446,4 +1559,91 @@ C {Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 4630 -7860 1 0 {name=IO_LD
 model=gf180mcu_fd_io__asig_5p0
 spiceprefix=X
 }
-C {iopin.sym} 4710 -7660 3 1 {name=p320 lab=VCO_IBIAS_ASIG5V}
+C {Chipathon2025_pads/xschem/symbols/io_cor.sym} 8220 -7490 0 1 {name=IO1
+model=gf180mcu_fd_io__cor
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_cor.sym} 160 -7340 0 0 {name=IO2
+model=gf180mcu_fd_io__cor
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_cor.sym} 220 -580 0 0 {name=IO3
+model=gf180mcu_fd_io__cor
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_cor.sym} 8220 -690 0 1 {name=IO4
+model=gf180mcu_fd_io__cor
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 7440 -300 0 0 {name=IO5[0:17]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 7680 -300 0 0 {name=IO6[0:7]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 5040 -970 0 0 {name=IO1[0:27]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 5280 -970 0 0 {name=IO2[0:12]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 510 -270 0 0 {name=IO3[0:9]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 750 -270 0 0 {name=IO4[0:3]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 20 -7070 0 0 {name=IO7[0:41]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 260 -7070 0 0 {name=IO8[0:19]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 1740 -7080 0 0 {name=IO9[0:15]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 2060 -7080 0 0 {name=IO10[0:6]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 3730 -7080 0 0 {name=IO11[0:7]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 4050 -7080 0 0 {name=IO12[0:2]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 5220 -7080 0 0 {name=IO13[0:19]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 5540 -7080 0 0 {name=IO14[0:8]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 8420 -7490 0 1 {name=IO15[0:21]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 8620 -7490 0 1 {name=IO16[0:9]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill10.sym} 7420 -3240 1 1 {name=IO17[0:19]
+model=gf180mcu_fd_io__fill10
+spiceprefix=X
+}
+C {Chipathon2025_pads/xschem/symbols/io_fill5.sym} 7420 -3020 1 1 {name=IO18[0:8]
+model=gf180mcu_fd_io__fill5
+spiceprefix=X
+}
